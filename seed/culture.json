@@ -69,7 +69,7 @@
     "title": "多人商业访谈:听观点交锋",
     "source": "The Bottom Line (BBC Radio 4)",
     "url": "https://www.bbc.co.uk/programmes/b006sz6t",
-    "task": "任选一集,听前十分钟。三位嘉宾加主持人,语速自然、互相接话打断,是英国会议的高保真样本。",
+    "task": "任选一集,听前十分钟。三位嘉宾加主持人,语速自然、互相接话打断,是英国会议的高保真样本。链接失效就直接搜节目名。",
     "questions": [
       "找一处嘉宾不同意另一位嘉宾的地方:他用了什么措辞开头?有没有出现 I might be missing something 或 I'd push back 这类缓冲?",
       "主持人打断嘉宾时用的是什么句式?记下一句你下次开会可以直接用的打断用语。"
@@ -82,7 +82,7 @@
     "title": "财经对谈:听轻松语域里的专业内容",
     "source": "The Rest Is Money (YouTube / 各播客平台)",
     "url": "https://www.youtube.com/@TheRestIsMoney",
-    "task": "任选一期,听开头十五分钟。两位主持人用闲聊的语气讨论严肃的金融话题,注意专业内容和玩笑之间的无缝切换。",
+    "task": "任选一期,听开头十五分钟。两位主持人用闲聊的语气讨论严肃的金融话题,注意专业内容和玩笑之间的无缝切换。链接失效就直接搜节目名。",
     "questions": [
       "找一处两人开玩笑或互相调侃的地方:玩笑结束后,是谁、用哪句话把对话拉回正题的?",
       "记下两个他们用来表达\"大概、差不多\"的模糊限定词(比如 roughly、something like、in the region of),这类词是英式报数字时的标配。"
@@ -95,7 +95,7 @@
     "title": "新闻深度报道:听单人叙事加采访",
     "source": "Today in Focus (The Guardian)",
     "url": "https://www.theguardian.com/news/series/todayinfocus",
-    "task": "任选一集,完整听完(约三十分钟)。主持人语速平缓,但采访对象口音多样,适合练不同口音的适应力。",
+    "task": "任选一集,完整听完(约三十分钟)。主持人语速平缓,但采访对象口音多样,适合练不同口音的适应力。链接失效就直接搜节目名。",
     "questions": [
       "采访对象里有没有非伦敦口音(苏格兰、北方、威尔士)?哪些词的发音和你熟悉的版本差别最大?",
       "主持人追问敏感问题时怎么措辞?对比一下如果直译成中文的问法,英文版本软化在哪里。"
@@ -108,10 +108,23 @@
     "title": "早间财经快讯:听高密度信息",
     "source": "Wake Up to Money (BBC Radio 5 Live)",
     "url": "https://www.bbc.co.uk/programmes/b0070lr5",
-    "task": "任选一集,听前十分钟。语速快、话题切换密集、常有电话连线音质,最接近真实晨会的听力条件。",
+    "task": "任选一集,听前十分钟。语速快、话题切换密集、常有电话连线音质,最接近真实晨会的听力条件。链接失效就直接搜节目名。",
     "questions": [
       "记下节目里出现的三个金融术语,以及它们在句子里的搭配动词(比如 rates 是 hiked 还是 held?shares 是 slid 还是 rallied?)",
       "电话连线的嘉宾和棚内主持人相比,哪个更难听懂?具体难在语速、口音还是音质?这决定你之后要专门补哪一块。"
+    ]
+  },
+  {
+    "id": "culture-14",
+    "type": "listen",
+    "scene": "culture",
+    "title": "全球口音专项:印度、欧洲、非洲口音",
+    "source": "Business Daily (BBC World Service)",
+    "url": "https://www.bbc.co.uk/programmes/p002vsxs",
+    "task": "任选一集,完整听完(约二十分钟)。World Service 面向全球,受访者常带印度、欧洲大陆、非洲口音——这正是伦敦办公室的真实口音构成,英国本土口音只是其中一部分。链接失效就直接搜节目名。",
+    "questions": [
+      "挑一位非英美口音的受访者:哪些音和你习惯的发音差别最大(比如 t/d、th、r 的处理)?听第二遍时理解率有没有明显上升?",
+      "主持人和口音较重的受访者对话时,有没有换说法重问(rephrase)?记下一句这种确认用语,比如 so what you're saying is...——这也是你会上没听懂时的救生圈。"
     ]
   }
 ]

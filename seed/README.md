@@ -13,9 +13,9 @@
 | `asking-help.json` | `asking-help` | 20 | 请人帮忙 |
 | `presenting.json` | `presenting` | 20 | 做汇报 |
 | `small-talk.json` | `small-talk` | 21 | Small talk |
-| `culture.json` | `culture` | 13 | note(文化笔记)9 张 + listen(听力外链)4 张 |
+| `culture.json` | `culture` | 14 | note(文化笔记)9 张 + listen(听力外链)5 张 |
 
-共 **157 张**:produce 96、pick 28、register 20、note 9、listen 4。
+共 **158 张**:produce 96、pick 28、register 20、note 9、listen 5。
 
 ## 卡片格式
 
