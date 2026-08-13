@@ -1,0 +1,177 @@
+[
+  {
+    "id": "presenting-01",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "轮到你汇报了,要用一句开场让大家知道结构和你的目的",
+    "answer": "Thanks everyone — I'll keep this short. Three things from me: where we are, what's changed, and what I need from this group.",
+    "note": "I'll keep this short 是英国会议最受欢迎的承诺,说了就要做到。先报结构(three things)再展开是高级汇报的默认格式,听众有了地图就不会中途打断问\"重点是什么\"。what I need from this group 提前声明这不是纯通报,是要东西的。"
+  },
+  {
+    "id": "presenting-02",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "整体进展是好的,但有一个问题你不想藏着,开头就要预告",
+    "answer": "The headline is we're on track — with one caveat I'll come to in a minute.",
+    "note": "headline 是英式汇报的\"一句话结论\"。caveat 预告有保留条件,先给结论再给例外是建立信任的讲法——听众最恨的是听完十分钟好消息才发现埋着雷。I'll come to 表示节奏在你手里,不会被当场追问带跑。"
+  },
+  {
+    "id": "presenting-03",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "项目延误了两周,汇报时要直接认下来并马上转到恢复计划",
+    "answer": "I'll be upfront: we've slipped two weeks. Here's what caused it, and more importantly, here's the recovery plan.",
+    "note": "upfront 宣告不绕弯子,英国职场对坏消息的评判标准不是有没有延误,而是你报得多快多直接。slip 是延期的标准动词。more importantly 把听众注意力从追责引向方案,这半句是整段话的方向盘。"
+  },
+  {
+    "id": "presenting-04",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "屏幕上是一张数字很多的表,要引导大家看关键的那一列",
+    "answer": "There's a lot on this slide — the column that matters is the middle one, the unreconciled balance. Everything else is context.",
+    "note": "主动承认 slide 信息量大,然后立刻指路,这是有经验的汇报者的标志。everything else is context 给听众降噪的许可:别的可以不看。让听众自己在表里找重点,是数字类汇报最常见的失败方式。"
+  },
+  {
+    "id": "presenting-05",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "被问到一个你手头没有答案的数据问题",
+    "answer": "I don't have that figure to hand — let me take it away and come back to you by tomorrow morning.",
+    "note": "to hand 是英式的\"手头上\"。take it away 是会议标准动作:把问题带走线下解决。当场编数字是汇报的死罪,承认没有并给出交付时间反而加分。之后必须真的在承诺时间回复,这句话的信用是攒出来的。"
+  },
+  {
+    "id": "presenting-06",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "你的方案被质疑为什么不走另一条路,而那条路你们其实评估过",
+    "answer": "Fair challenge. We did look at that route — the blocker was the custodian cut-off, which we can't move. Happy to share the comparison after.",
+    "note": "fair challenge 先给对方的质疑发个奖,是英式接招的标准第一拍。we did look at that 证明不是没想到而是想过并否决,这是两种完全不同的位置。给出具体 blocker 而不是\"综合考虑\",质疑当场就能落地。"
+  },
+  {
+    "id": "presenting-07",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "两位听众开始就一个细节争论起来,你要把会议拉回主线",
+    "answer": "Can I suggest we take that one offline? It's worth resolving, but I want to make sure we get to the decision today.",
+    "note": "take it offline 是把跑题讨论移出会议的万能句。先肯定争论有价值(worth resolving)再收走,双方都有面子。汇报人对时间的掌控欲在英国会议文化里是加分项,放任跑题反而显得驾驭不了场面。"
+  },
+  {
+    "id": "presenting-08",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "汇报到结尾,要明确说出你需要这个会议给你什么",
+    "answer": "So the ask from today is sign-off on option B by Friday. Is there anything stopping us doing that now?",
+    "note": "the ask 名词化是英国职场高频用法,指\"我要的东西\"。结尾不明确要 ask 的汇报等于白讲。最后的问句是收网:把\"以后再说\"的空间压掉,要么当场批,要么当场说出障碍。"
+  },
+  {
+    "id": "presenting-09",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "周会上轮到你更新进度,要在三十秒内讲完",
+    "answer": "Quick update from me: recs are clear, the one outstanding item is the dividend claim with the broker — I'm chasing that this week. Nothing I need from anyone today.",
+    "note": "周会更新的黄金结构:一句现状、一个卡点、一句要不要人帮。nothing I need from anyone today 是很专业的收尾,明确告诉大家可以翻篇。把三十秒的更新讲成三分钟,是英国周会上最消耗好感的行为。"
+  },
+  {
+    "id": "presenting-10",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "展示预测数字时,要提醒大家这个数的不确定性很大",
+    "answer": "Treat the Q4 number as directional rather than precise — it moves a lot with the FX assumption.",
+    "note": "directional 是金融汇报里\"看趋势别抠数字\"的行话。主动给数字标注置信度是资深的表现,比被人质疑后才承认要体面得多。说清楚敏感在哪个假设(FX),听众的挑战会转向假设而不是你。"
+  },
+  {
+    "id": "presenting-11",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "汇报的成果里有一大块是组员做的,要当众归功",
+    "answer": "Credit where it's due — Priya did the heavy lifting on the automation piece, which is what bought us those two weeks back.",
+    "note": "credit where it's due 是英式归功的固定开场。heavy lifting 指最重的活。归功要具体到人和事,并说清它带来的结果(省回两周),泛泛的 thanks to the team 没有分量。当众归功的人在英国职场攒的信用比抢功的人多得多。"
+  },
+  {
+    "id": "presenting-12",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "数字部分讲完了,要过渡到它对客户意味着什么",
+    "answer": "So that's the numbers — what does it actually mean for the client? Three things change for them.",
+    "note": "用自问自答做过渡是英式汇报的高频技巧,一个问句就完成了换挡,比 next slide please 高级得多。actually 暗示接下来才是重点:数字是原料,含义才是产品。"
+  },
+  {
+    "id": "presenting-13",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "会议超时了,你还有三页没讲,要跳到最重要的部分",
+    "answer": "Conscious of time, so I'll skip ahead to the recommendation — the detail's all in the pack for afterwards.",
+    "note": "conscious of time 是英国会议里提醒时间的标准短语,比 we're running out of time 从容。当场砍内容直奔结论是能力的展示,照稿念完才是失败。the pack 指会前/会后发的材料,detail's in the pack 让砍掉的内容有处安放。"
+  },
+  {
+    "id": "presenting-14",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "开始前要说清这次汇报只覆盖英国部分,欧洲的下周再讲",
+    "answer": "Just to set expectations — today covers the UK book only. The European positions follow next week once the data's in.",
+    "note": "set expectations 是划定范围的标准开场,提前声明比被问到\"欧洲呢\"再解释主动得多。book 在金融语境指整个持仓组合。给出欧洲部分的时间点和原因,范围限制就不像是遗漏。"
+  },
+  {
+    "id": "presenting-15",
+    "type": "pick",
+    "scene": "presenting",
+    "prompt": "讲完一部分,要切换到时间线那一页",
+    "options": [
+      { "text": "Next, I will introduce the timeline of the project.", "correct": false },
+      { "text": "Moving on to the timeline.", "correct": true }
+    ],
+    "note": "I will introduce 是教科书汇报腔,英国会议里没人这么说。moving on to 三个词完成切换,汇报的过渡句越轻越好——它只是路标,不是内容。类似的还有 turning to、on to the numbers。"
+  },
+  {
+    "id": "presenting-16",
+    "type": "pick",
+    "scene": "presenting",
+    "prompt": "汇报讲完了,要开放提问",
+    "options": [
+      { "text": "That is all. Do you have any question?", "correct": false },
+      { "text": "That's everything from me — anything jumping out, or anything I've missed?", "correct": true }
+    ],
+    "note": "do you have any question 语法上还错了(questions),而且干巴巴地把压力抛给听众。anything jumping out 问的是\"有什么扎眼的\",比 any questions 更容易引出真实反馈;anything I've missed 示弱式收尾,英国听众吃这一套。"
+  },
+  {
+    "id": "presenting-17",
+    "type": "pick",
+    "scene": "presenting",
+    "prompt": "汇报里要给出你自己的判断",
+    "options": [
+      { "text": "In my personal opinion, I think that we should wait.", "correct": false },
+      { "text": "My read is we hold off a month — the risk profile changes completely once the review lands.", "correct": true }
+    ],
+    "note": "in my personal opinion I think 三重冗余,越铺垫越显得不确定。my read is 是给判断的利落说法,read 作名词指你对局面的解读。判断后面直接跟依据,一句话内完成观点加论证,这是英国会议里有分量的发言的基本形态。"
+  },
+  {
+    "id": "presenting-18",
+    "type": "register",
+    "scene": "presenting",
+    "situation": "向高层汇报项目要延期,严重程度取决于你怎么讲",
+    "soft": "We're seeing some pressure on the timeline — I want to flag it early, even though we may still claw it back.",
+    "neutral": "The timeline's moved: we're now landing mid-April rather than end of March. The driver is the vendor delay, and here's what we're doing about it.",
+    "firm": "March is off the table and I don't want anyone planning around it. Mid-April is the new date, and it holds only if the vendor delivers this week.",
+    "note": "soft 档用于趋势刚出现、还有救的阶段,claw back 是英式\"抢回来\"。neutral 档是延期已成事实时的标准报法:新日期、原因、对策一口气讲完。firm 档的 off the table 和 don't want anyone planning around it 是在阻止听众抱幻想,延期消息传达不够狠,下游就会继续按旧日期规划,那才是灾难。"
+  },
+  {
+    "id": "presenting-19",
+    "type": "register",
+    "scene": "presenting",
+    "situation": "汇报中有人质疑你的数据来源不可靠",
+    "soft": "That's a fair point on the source — it's the best feed we have today, and I'm happy to caveat the numbers accordingly.",
+    "neutral": "The source is the custodian's daily file, same as the audited reports use. If there's a concern with it, that's bigger than this deck.",
+    "firm": "This is the golden source — it's what we report to the regulator from. If we don't trust it here, we have a much larger problem than my slides.",
+    "note": "数据来源被质疑时先判断:质疑有理就用 soft 档接受并加注;来源过硬就用 neutral 或 firm 档反将——指出这个源头同时支撑着审计和监管报告,质疑它的代价远超这场会。golden source 是金融数据管理的行话,指唯一权威数据源。"
+  },
+  {
+    "id": "presenting-20",
+    "type": "register",
+    "scene": "presenting",
+    "situation": "汇报的结论是:要按时交付就必须加预算或加时间",
+    "soft": "I'd gently flag that the current budget assumes everything goes right — it might be worth building in some contingency.",
+    "neutral": "To deliver on time we need either two more contractor months or a four-week extension. I've costed both options in the appendix.",
+    "firm": "With the current budget this doesn't get delivered in Q2 — that's not a negotiating position, it's arithmetic. The two ways out are on this slide.",
+    "note": "要资源的汇报必须带着算好的选项来,neutral 档的 I've costed both options 是关键句——把审批的摩擦降到最低。firm 档的 it's arithmetic 是英式强硬的天花板:不是我在讨价还价,是数学在说话。这句只能在数字真的无懈可击时用。"
+  }
+]

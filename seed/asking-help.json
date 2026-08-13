@@ -1,0 +1,180 @@
+[
+  {
+    "id": "asking-help-01",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "你没独立跑过 rights issue 全流程,想请有经验的同事带你过一遍",
+    "answer": "I've not run a rights issue end-to-end before — could I grab half an hour with you to walk through how you'd normally do it?",
+    "note": "直接承认没做过在英国职场不减分,硬着头皮做错才减分。grab half an hour 是借用时间的标准说法,给出明确时长让对方好答应。how you'd normally do it 把对方摆在专家位置,这是请教的正确姿势。"
+  },
+  {
+    "id": "asking-help-02",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "想请技术好的同事帮你看看写的查询语句,但完全不急",
+    "answer": "No rush at all on this, but when you've got a spare few minutes could you sanity-check my query? Something's off in the join and I can't see it.",
+    "note": "把\"不急\"放在最前面是英式请求的礼貌结构,先声明占用的优先级。sanity-check 暗示只需要扫一眼,不是大工程。承认 I can't see it 是示弱但有效——说明你自己先试过了,不是伸手党。"
+  },
+  {
+    "id": "asking-help-03",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "周五你要休假,想请同事帮忙盯一天团队邮箱",
+    "answer": "Would you be able to keep an eye on the CA inbox on Friday? I'll leave a proper handover note, and I owe you one.",
+    "note": "keep an eye on 把 cover 一天的活说得很轻。承诺 handover note 是关键——请人 cover 却不留交接是英国职场大忌。owe you one 明确记下人情,cover 文化的本质是互相欠来欠去。"
+  },
+  {
+    "id": "asking-help-04",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "要把一个初级任务派给新来的同事,要说得像邀请不像命令",
+    "answer": "Could I ask you to take a first pass at the recs? Don't worry about getting it perfect — I'll review before anything goes out.",
+    "note": "could I ask you to 是英式派活的标准包装,权力关系再明确也要用请求句式。first pass 明确这是初稿不用完美,I'll review 兜底,新人接活的心理负担会小很多。这种措辞习惯直接决定团队里的人愿不愿意跟你干活。"
+  },
+  {
+    "id": "asking-help-05",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "向上级要资源:要么加人,要么砍掉一部分工作,否则赶不上三月的期限",
+    "answer": "To hit the March deadline we'd need either another pair of hands or to drop the parallel run — which would you rather?",
+    "note": "向上级求助的正确形态永远是选择题不是求助信。another pair of hands 是要人手的地道说法。which would you rather 把决策打包送到对方面前,显示你已经把问题拆解完了,只差拍板。"
+  },
+  {
+    "id": "asking-help-06",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "有个问题你怀疑很基础,怕问出来显得蠢,但确实需要答案",
+    "answer": "This might be a daft question, but where do the SRD II notifications actually originate? I've only ever seen them once they hit our queue.",
+    "note": "daft 是英式的\"傻\",this might be a daft question 是自带保护罩的提问开场,说了这句就没人会真觉得你蠢。补上你已知的部分(only ever seen them once they hit our queue)划出知识缺口的边界,提问立刻显得专业。"
+  },
+  {
+    "id": "asking-help-07",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "想约资深同事明天给你半小时,请教迁移项目的思路",
+    "answer": "Could I steal twenty minutes tomorrow to pick your brain on the migration? You've been through one of these before.",
+    "note": "steal 和 pick your brain 都是英式借用他人时间的固定说法,自带\"我知道你时间宝贵\"的姿态。最后一句给出找他而不是别人的理由,被指名请教在英国职场是恭维,对方大概率愿意。"
+  },
+  {
+    "id": "asking-help-08",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "文件明天要发给客户,想请同事今天帮你审一遍",
+    "answer": "Would you mind casting an eye over this before it goes to the client tomorrow? Fresh pair of eyes and all that.",
+    "note": "fresh pair of eyes 是请人审稿的万能理由:不是我不行,是任何人都看不出自己的错。and all that 是英式口语的\"你懂的\",让请求显得轻松。带上时限(tomorrow)但把它放在从句里,压力给得很含蓄。"
+  },
+  {
+    "id": "asking-help-09",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "对方讲解到按比例分配那一步你没跟上,要请他再讲一遍",
+    "answer": "Sorry, could you run that by me again? You lost me at the proration step.",
+    "note": "run that by me again 是请人重讲的标准句。you lost me at X 精确定位断点,对方只用重讲那一段,而且\"是讲解把我甩掉了\"这个措辞把尴尬分掉了一半。不懂装懂在运营岗位是事故的前奏,当场问清是专业行为。"
+  },
+  {
+    "id": "asking-help-10",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "你需要认识结算团队的人,想请同事帮你牵线",
+    "answer": "Do you know anyone in the settlements team up in Edinburgh? If so, could you do an intro? Trying to sort out the failing trades workflow.",
+    "note": "do an intro 是请人牵线的口语说法,通常就是一封三行的引荐邮件。英国职场跨团队协作高度依赖这种人际引荐,冷邮件的响应率远低于 warm intro。说明目的(sort out the workflow)让引荐人知道怎么写引荐语。"
+  },
+  {
+    "id": "asking-help-11",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "系统登录不上了,在团队群里问是不是别人也遇到了,顺便求助",
+    "answer": "Before I log a ticket — is anyone else locked out of the CA module this morning, or is it just me?",
+    "note": "or is it just me 是英式自嘲式求助的经典结尾,把技术问题问出了轻松感。before I log a ticket 说明你知道正规流程,现在只是抄近路问一嘴。先问同事再提工单是英国办公室的默认顺序,反过来会显得不合群。"
+  },
+  {
+    "id": "asking-help-12",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "要写一份你没写过的报告,想找同事要一份以前的做参考",
+    "answer": "Do you have a previous quarter's version you could share? Much easier to work from an example than start from scratch.",
+    "note": "要模板是英国职场完全正当的请求,没人期待你从零发明格式。work from an example 说明你要的是参照不是照抄。这个问题反而显得你懂行:知道这类文件一定有前例。"
+  },
+  {
+    "id": "asking-help-13",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "同事之前教你的方法奏效了,要回去跟他说一声",
+    "answer": "Just to say your fix worked a treat — the rec's clean now. Thanks again for taking the time.",
+    "note": "worked a treat 是英式的\"特别好使\"。求助之后回报结果是最被低估的职场习惯:对方最想知道的就是自己的建议有没有用。做到这一步,下次求助的门永远是开的。"
+  },
+  {
+    "id": "asking-help-14",
+    "type": "pick",
+    "scene": "asking-help",
+    "prompt": "权益计算对不上数,想请同事帮忙",
+    "options": [
+      { "text": "Can you help me? I have a problem with the calculation.", "correct": false },
+      { "text": "Could you help me untangle the entitlement calc? I can't get it to tie back to the custodian's figure.", "correct": true }
+    ],
+    "note": "can you help me 太泛,对方无法判断要花多少时间,本能反应是防御。第二句说清了对象(entitlement calc)和卡点(对不上托管行数字),对方几秒内就能决定帮不帮、怎么帮。tie back to 是对账场景的核心动词。"
+  },
+  {
+    "id": "asking-help-15",
+    "type": "pick",
+    "scene": "asking-help",
+    "prompt": "想让熟悉流程的同事演示一遍操作",
+    "options": [
+      { "text": "Please teach me how to do this.", "correct": false },
+      { "text": "Could you show me how you'd normally run this? I'll drive, you direct.", "correct": true }
+    ],
+    "note": "teach me 把关系变成了老师和学生,对方压力陡增。show me how you'd normally do it 只是请对方展示日常操作,轻得多。I'll drive, you direct 是屏幕共享时代的地道说法:我操作你指挥,学得快,对方也省力。"
+  },
+  {
+    "id": "asking-help-16",
+    "type": "pick",
+    "scene": "asking-help",
+    "prompt": "走到同事工位旁,想占用他几分钟",
+    "options": [
+      { "text": "Sorry to disturb you. Do you have time?", "correct": false },
+      { "text": "Sorry to bother you — have you got two minutes?", "correct": true }
+    ],
+    "note": "disturb 太重,像打扰了什么庄严仪式,英国办公室日常打断用 bother 或 interrupt。do you have time 是开放式的,对方不知道要交出多少时间;two minutes 给出封顶价,哪怕实际会聊十分钟,先报小数是通行惯例。"
+  },
+  {
+    "id": "asking-help-17",
+    "type": "pick",
+    "scene": "asking-help",
+    "prompt": "出了急事,需要同事在一小时内帮你拉一份持仓数据",
+    "options": [
+      { "text": "I need your help urgently. Send me the positions now.", "correct": false },
+      { "text": "Bit of a fire drill I'm afraid — any chance you could pull the positions for me in the next hour?", "correct": true }
+    ],
+    "note": "急事更要讲究措辞,因为你在要求对方放下手头的事。fire drill 是突发紧急任务的职场俚语,自带\"我也很无奈\"的意味。any chance you could 即使在急事里也保留请求句式——英国职场里丢掉礼貌结构的紧急,会被解读为慌乱而不是重要。"
+  },
+  {
+    "id": "asking-help-18",
+    "type": "register",
+    "scene": "asking-help",
+    "situation": "上级日程排满了,但你需要他帮你解决一个部门间的僵局",
+    "soft": "When things quieten down a bit, could I get your read on the situation with the data team? No panic this week.",
+    "neutral": "Could I get fifteen minutes with you this week? The data team discussion's stuck and I think it needs your weight behind it.",
+    "firm": "I need you to step in on the data team issue — we've exhausted what can be done at my level, and it's now costing us the timeline.",
+    "note": "get your read on 是请上级给判断的轻量说法。neutral 档的 needs your weight 明说需要借他的层级,这是合理请求不是无能。firm 档的关键句是 exhausted what can be done at my level——先证明你把自己层级的路走完了,升级求助才是专业而不是甩锅。"
+  },
+  {
+    "id": "asking-help-19",
+    "type": "register",
+    "scene": "asking-help",
+    "situation": "要请隔壁团队帮做一件严格说不属于他们职责的事",
+    "soft": "I know this is cheeky as it's not strictly yours, but you're the only team with access to the old system — any chance?",
+    "neutral": "This sits in a gap between our teams, but you've got the system access and we've got the deadline — could we sort it between us this once?",
+    "firm": "I appreciate it's not your remit, but it's a regulatory deadline and you're the only route. I'll square it with your manager if that helps.",
+    "note": "cheeky 是英式请求越界帮忙的润滑剂,承认自己在占便宜反而让人愿意帮。this once 承诺下不为例。firm 档主动提出 square it with your manager(跟你上级打好招呼),把对方\"帮了忙还担责\"的顾虑拆掉,这是跨团队求助的关键一步。"
+  },
+  {
+    "id": "asking-help-20",
+    "type": "register",
+    "scene": "asking-help",
+    "situation": "同一位同事这周已经帮过你一次,你又遇到问题要再开口",
+    "soft": "Me again, I'm afraid — feel free to tell me to go away, but does this error look familiar at all?",
+    "neutral": "Sorry to come back so soon — one more thing's cropped up on the same file. Could you take a quick look, and then I promise I'm done?",
+    "firm": "I know I'm over quota this week, but this one's blocking the release and you're the only person who knows this code. Can I buy you lunch and a look at it?",
+    "note": "重复求助的通行证是自嘲:me again、over quota 都是主动承认在麻烦对方。feel free to tell me to go away 给对方真实的拒绝出口,英式请求的最高礼貌就是让拒绝变得容易。买午饭不是玩笑,小额人情兑换在英国办公室是真实运转的货币。"
+  }
+]

@@ -1,0 +1,117 @@
+[
+  {
+    "id": "culture-01",
+    "type": "note",
+    "scene": "culture",
+    "title": "\"Interesting\" 通常不是夸奖",
+    "body": "英国职场里 that's interesting、that's one option、I hear what you're saying,大多数时候是委婉的否定。真的认可会说得更具体:that makes sense、I think that's the right call。听到含糊的正面词,要追问一句 do you have concerns,否则会误判形势。"
+  },
+  {
+    "id": "culture-02",
+    "type": "note",
+    "scene": "culture",
+    "title": "Understatement 解码表",
+    "body": "英式表达默认自带一层衰减,听的时候要手动放大:not bad 等于很好;quite good 反而可能是敷衍;a bit of an issue 是出了大问题;a slight concern 是严重担忧;not ideal 是相当糟糕;could be worse 是还行。反过来,你说话时如果按中文习惯直给,在英国人耳朵里会自动放大一档,显得过激。这套协议双向生效,收发都要校准。"
+  },
+  {
+    "id": "culture-03",
+    "type": "note",
+    "scene": "culture",
+    "title": "Sorry 不等于道歉",
+    "body": "英国人的 sorry 大多数时候不是认错:借过说 sorry,没听清说 sorry,打断别人说 sorry,别人踩了你的脚你也说 sorry。它是社交润滑剂,不是责任声明,所以不要按中文的\"对不起\"去理解使用频率。真正的道歉看结构不看词:承认具体错误加影响加补救(apologies — the figure was wrong, here's the correct one)才是认错。反过来注意:在涉及责任认定的书面场合(客户投诉、事故复盘),sorry 要谨慎使用,那时它会被当作认责的证据。"
+  },
+  {
+    "id": "culture-04",
+    "type": "note",
+    "scene": "culture",
+    "title": "邮件署名的温度计",
+    "body": "英式邮件的落款是一支温度计:Kind regards 是默认商务档;Best regards 略正式;Best 偏熟;Thanks 用于对方要帮你做事;Cheers 是熟人档;只签名字甚至不签,是最熟或者最冷两个极端。要留意的是变化而不是绝对值:平时签 Cheers 的人突然改签 Kind regards,通常是不满的信号。同理,称呼从 Hi 变成 Dear、从名字变成全名,都值得警觉。你自己的落款保持稳定,别让对方猜。"
+  },
+  {
+    "id": "culture-05",
+    "type": "note",
+    "scene": "culture",
+    "title": "会前闲聊是议程的一部分",
+    "body": "英国会议开场的三五分钟天气、周末、通勤闲聊不是浪费时间,是校准环节:确认关系正常、给晚到的人缓冲、让线上会议的破冰完成。直接跳过闲聊进正题的人会被感知为紧绷。你不需要贡献精彩内容,接住一句、笑一下、回问一句就完成了任务。主持人说 right, shall we make a start 才是议程真正开始的信号,这之前不要展示 PPT。"
+  },
+  {
+    "id": "culture-06",
+    "type": "note",
+    "scene": "culture",
+    "title": "委婉反馈的强度对照",
+    "body": "英国上级给修改意见时的措辞和实际强度是两套刻度:you might want to consider 等于请改;I would suggest 等于必须改;it might be worth thinking about 等于你漏了重要的东西;just a thought 后面跟的往往是他真正想要的方案;perhaps we could revisit 等于推翻重来。把这些当成可选建议而不改,是非母语者在英国职场最常见的踩雷方式之一。不确定强度时,直接问 is this a preference or a must,对方会给你直答。"
+  },
+  {
+    "id": "culture-07",
+    "type": "note",
+    "scene": "culture",
+    "title": "直呼其名不等于扁平",
+    "body": "英国公司从 CEO 到实习生互相叫 first name,邮件里对大老板也是 Hi James,但这只是表层协议,层级本身一点没少:谁能打断谁、谁的日历迁就谁、决策在哪一层拍板,都清清楚楚。危险在于把称呼的随意误读成关系的随意——对高层说话内容照样要过脑子,只是包装形式平等。反过来也一样:不要因为对方职级高就用 Dear Sir 或职称称呼,那会显得你不懂行情。"
+  },
+  {
+    "id": "culture-08",
+    "type": "note",
+    "scene": "culture",
+    "title": "自嘲是信任,不是示弱",
+    "body": "英国办公室的幽默大量建立在自嘲上:把自己的失误讲成段子(printer hates me、Monday brain)是拉近距离的标准动作,别人自嘲时也不要当真去安慰或反驳,笑一下或者轻轻接一句同款自嘲即可。同事之间互相调侃(banter)是关系好的标志,被调侃通常意味着被接纳。但有两条边界:不要过度自我贬低到让人尴尬,以及不要在严肃场合(绩效谈话、客户会议)启用自嘲模式——那里它会被字面理解。"
+  },
+  {
+    "id": "culture-09",
+    "type": "note",
+    "scene": "culture",
+    "title": "拒绝的三段式:接住、拒掉、留门",
+    "body": "英式拒绝几乎从不出现 no 这个词,标准结构是三段:先接住(I'd love to help / that sounds worthwhile),再拒掉且给出非个人化的理由(this quarter's committed / it doesn't fit our remit),最后留一扇门(happy to revisit in January / X might be better placed)。三段缺一不可:没有第一段显得冷,没有理由显得敷衍,没有第三段显得绝情。识别方向也一样:听到 I'd love to, but... 时,重点全在 but 后面,前半句只是包装纸。"
+  },
+  {
+    "id": "culture-10",
+    "type": "listen",
+    "scene": "culture",
+    "title": "多人商业访谈:听观点交锋",
+    "source": "The Bottom Line (BBC Radio 4)",
+    "url": "https://www.bbc.co.uk/programmes/b006sz6t",
+    "task": "任选一集,听前十分钟。三位嘉宾加主持人,语速自然、互相接话打断,是英国会议的高保真样本。",
+    "questions": [
+      "找一处嘉宾不同意另一位嘉宾的地方:他用了什么措辞开头?有没有出现 I might be missing something 或 I'd push back 这类缓冲?",
+      "主持人打断嘉宾时用的是什么句式?记下一句你下次开会可以直接用的打断用语。"
+    ]
+  },
+  {
+    "id": "culture-11",
+    "type": "listen",
+    "scene": "culture",
+    "title": "财经对谈:听轻松语域里的专业内容",
+    "source": "The Rest Is Money (YouTube / 各播客平台)",
+    "url": "https://www.youtube.com/@TheRestIsMoney",
+    "task": "任选一期,听开头十五分钟。两位主持人用闲聊的语气讨论严肃的金融话题,注意专业内容和玩笑之间的无缝切换。",
+    "questions": [
+      "找一处两人开玩笑或互相调侃的地方:玩笑结束后,是谁、用哪句话把对话拉回正题的?",
+      "记下两个他们用来表达\"大概、差不多\"的模糊限定词(比如 roughly、something like、in the region of),这类词是英式报数字时的标配。"
+    ]
+  },
+  {
+    "id": "culture-12",
+    "type": "listen",
+    "scene": "culture",
+    "title": "新闻深度报道:听单人叙事加采访",
+    "source": "Today in Focus (The Guardian)",
+    "url": "https://www.theguardian.com/news/series/todayinfocus",
+    "task": "任选一集,完整听完(约三十分钟)。主持人语速平缓,但采访对象口音多样,适合练不同口音的适应力。",
+    "questions": [
+      "采访对象里有没有非伦敦口音(苏格兰、北方、威尔士)?哪些词的发音和你熟悉的版本差别最大?",
+      "主持人追问敏感问题时怎么措辞?对比一下如果直译成中文的问法,英文版本软化在哪里。"
+    ]
+  },
+  {
+    "id": "culture-13",
+    "type": "listen",
+    "scene": "culture",
+    "title": "早间财经快讯:听高密度信息",
+    "source": "Wake Up to Money (BBC Radio 5 Live)",
+    "url": "https://www.bbc.co.uk/programmes/b0070lr5",
+    "task": "任选一集,听前十分钟。语速快、话题切换密集、常有电话连线音质,最接近真实晨会的听力条件。",
+    "questions": [
+      "记下节目里出现的三个金融术语,以及它们在句子里的搭配动词(比如 rates 是 hiked 还是 held?shares 是 slid 还是 rallied?)",
+      "电话连线的嘉宾和棚内主持人相比,哪个更难听懂?具体难在语速、口音还是音质?这决定你之后要专门补哪一块。"
+    ]
+  }
+]

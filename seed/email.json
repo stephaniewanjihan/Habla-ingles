@@ -1,0 +1,178 @@
+[
+  {
+    "id": "email-01",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "客户问的事你还没查完,要先回一封让对方知道你在处理",
+    "answer": "Thanks for flagging this. I'm looking into it now and will come back to you by Thursday.",
+    "note": "flag 是英国职场高频动词,比 mention 更承认对方提出问题有价值。给具体日期比 as soon as possible 可信得多,后者听起来像拖。"
+  },
+  {
+    "id": "email-02",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "你发现自己昨天发出去的对账数字有一处错了,要发更正邮件",
+    "answer": "Apologies — the figure I sent yesterday was incorrect. The reconciled balance should be 4,150, not 4,510. Nothing else in the breakdown is affected.",
+    "note": "英式认错的惯例是道歉一次、简短,然后立刻给正确值和影响范围。反复 so sorry 反而显得不专业。Nothing else is affected 这半句很关键,替对方省掉重查全部数据的恐慌。"
+  },
+  {
+    "id": "email-03",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "对方请你做一件事,这个季度你确实排不进,要拒绝但留余地",
+    "answer": "I don't think we can commit to that this quarter, I'm afraid. Happy to revisit in the new year if it's still on your list.",
+    "note": "I'm afraid 是英式拒绝的标准软化词,放在句尾比句首更轻。拒绝后给一个具体的替代时间点,比单纯说 no 显得是排期问题而不是态度问题。"
+  },
+  {
+    "id": "email-04",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "对方邮件里说了见附件,但其实忘了附,要提醒",
+    "answer": "I think the attachment may have slipped off — would you mind resending?",
+    "note": "把责任推给附件本身(slipped off),不说 you forgot。这是英式邮件的经典操作:明明是对方的错,措辞上让错误没有主人。"
+  },
+  {
+    "id": "email-05",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "上游数据晚了,周五的 deadline 你赶不上,要申请延到下周二",
+    "answer": "Is there any flex on the Friday deadline? A couple of upstream feeds have slipped, so realistically we're looking at Tuesday.",
+    "note": "flex 是问能不能松动的地道说法。用 we're looking at Tuesday 而不是 I need more time——前者是在陈述现实,后者是在求情。realistically 暗示周五本来就不现实,轻轻把锅分出去一点。"
+  },
+  {
+    "id": "email-06",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "这事不归你管,要把邮件转给负责的同事并让双方对接上",
+    "answer": "Looping in Priya, who looks after corporate actions on our side — she'll be best placed to pick this up.",
+    "note": "loop in 是拉人进邮件串的标准动词。look after 比 be responsible for 口语化,best placed 是英式常用的\"她最合适\",顺便把自己体面地摘出去。"
+  },
+  {
+    "id": "email-07",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "对方发来的持仓数和你系统里的对不上,你要指出来但不能显得在指责",
+    "answer": "Our records show a slightly different figure for the entitlement — could you double-check on your side? Happy to compare workings if useful.",
+    "note": "our records show 把分歧客观化成两套记录的差异,而不是你错了。slightly 即使差得不小也照用,这是英式缩小词。主动提出 compare workings 表明你要的是对上数,不是分锅。"
+  },
+  {
+    "id": "email-08",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "一个来回很多轮的邮件串终于解决了,要收尾",
+    "answer": "Thanks both — I think we're all set on this one. Shout if anything else comes up.",
+    "note": "all set 宣告闭环。shout 是英式口语\"随时喊我\",比 do not hesitate to contact me 自然得多——后者是教科书腔,真实邮件里几乎不出现。"
+  },
+  {
+    "id": "email-09",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "第一次给不认识的其他部门的人写邮件,是别人推荐你去找他的",
+    "answer": "Hope you don't mind me reaching out directly — Tom mentioned you'd be the right person to ask about the SRD II notifications.",
+    "note": "reach out 用于第一次联系陌生同事。报出推荐人的名字是英国职场的通行证,有这一句,对方回复的概率和速度都完全不同。"
+  },
+  {
+    "id": "email-10",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "周一给合作方写邮件,进入正题前需要一句开场",
+    "answer": "Hope you had a good weekend.",
+    "note": "英式邮件开场惯例:周一到周二说 hope you had a good weekend,周四五说 hope you're set for the weekend,其余时间 hope all's well。没有这句直接进正题,对熟人显得冷,但对方在等你紧急回复时可以省。"
+  },
+  {
+    "id": "email-11",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "对账进度比计划慢,要提前告诉对方交付日期从周一推到周三",
+    "answer": "Just to manage expectations — the reconciliation is taking longer than planned, so we're now looking at Wednesday rather than Monday.",
+    "note": "manage expectations 是主动报延误的标准开场,潜台词是\"我在控制局面\",和被动认错完全两个语域。坏消息趁早说是英国职场铁律,拖到 deadline 当天才说才是真正的失分点。"
+  },
+  {
+    "id": "email-12",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "你们出了差错,客户来信明显不满,要回一封稳住局面的邮件开头",
+    "answer": "Completely understand the frustration, and apologies for the confusion this has caused. Here's where we are and what happens next.",
+    "note": "先共情、再一次性道歉、立刻转向行动,三步不能乱。不要解释原因开脱(the system was down),客户不关心。here's where we are and what happens next 之后必须真的分点列出,这句话是承诺不是套话。"
+  },
+  {
+    "id": "email-13",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "休假回来,邮箱里有人催过你,要回复并给出时间",
+    "answer": "Just back from leave and working through the backlog — I'll get you an answer on this by end of tomorrow.",
+    "note": "back from leave 一句带过,不需要为休假道歉,英国职场休假是天赋人权。重点在马上给出具体时间,让对方知道排到了什么位置。"
+  },
+  {
+    "id": "email-14",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "发了一份重要的指令细节给对方,需要对方明确确认收到并无异议",
+    "answer": "Could you confirm the instruction details below are correct from your side? We'll place it once we have your go-ahead.",
+    "note": "对指令类邮件要的是明确确认,不能用 no news is good news。go-ahead 是英式口语的\"放行\"。把确认设为动作的前置条件(once we have),对方就没法已读不回。"
+  },
+  {
+    "id": "email-15",
+    "type": "pick",
+    "scene": "email",
+    "prompt": "请对方查看你发过去的文件",
+    "options": [
+      { "text": "Please kindly check the attached file.", "correct": false },
+      { "text": "Could you take a look at the attached when you get a chance?", "correct": true }
+    ],
+    "note": "please kindly 是典型的外贸邮件腔,英国同事之间从来不这么写,叠加两个礼貌词反而显得生硬。when you get a chance 才是真正的礼貌:给对方时间上的余地。"
+  },
+  {
+    "id": "email-16",
+    "type": "pick",
+    "scene": "email",
+    "prompt": "想问同事一个小问题:新的审批流程是不是这周就生效",
+    "options": [
+      { "text": "I am writing to inquire about the effective date of the new approval process.", "correct": false },
+      { "text": "Quick one — is the new approval process live this week?", "correct": true }
+    ],
+    "note": "I am writing to inquire 是教材经典句,真实内部邮件里出现会显得像投诉信。quick one 开场直接给对方降低预期:这是个小问题,几秒就能回。live 在这里指流程生效上线,比 effective 口语。"
+  },
+  {
+    "id": "email-17",
+    "type": "pick",
+    "scene": "email",
+    "prompt": "把更新后的数据表发给对方",
+    "options": [
+      { "text": "Attached please find the updated breakdown for your reference.", "correct": false },
+      { "text": "I've attached the updated breakdown — let me know if anything looks off.", "correct": true }
+    ],
+    "note": "attached please find 是老派公文腔,for your reference 也是凑字数的空话。第二句多做了一件事:邀请对方挑问题(anything looks off),既自信又给了对方开口的台阶。"
+  },
+  {
+    "id": "email-18",
+    "type": "pick",
+    "scene": "email",
+    "prompt": "事情确实紧急,今天下午三点前必须要到对方的回复",
+    "options": [
+      { "text": "This is very urgent, please reply ASAP!!", "correct": false },
+      { "text": "Sorry to push, but this one's time-sensitive — we need your confirmation by 3pm today to hit the market deadline.", "correct": true }
+    ],
+    "note": "感叹号加 ASAP 在英国邮件里是失态,紧急程度靠具体时间和理由传递,不靠标点。sorry to push 承认自己在施压,反而让施压变得可接受。给出 3pm 和 market deadline,紧迫感比 urgent 强得多。"
+  },
+  {
+    "id": "email-19",
+    "type": "register",
+    "scene": "email",
+    "situation": "需要高层给一个决策,邮件发了三天没动静,要再催一次",
+    "soft": "I appreciate you've a lot on — just flagging that this one's waiting on your steer before we can move.",
+    "neutral": "Bringing this back to the top of your inbox — we'll need a decision by Thursday to keep the timeline.",
+    "firm": "We're now at the point where no decision means we miss the deadline. If I don't hear by tomorrow noon, I'll assume we're going with option A.",
+    "note": "对高层默认 soft 或 neutral。firm 档的\"不回复就按 A 执行\"是很强的一招,只在你确实有权推进、且后果真实存在时用——它把不作为的成本转移给了对方,用错场合会被记住。"
+  },
+  {
+    "id": "email-20",
+    "type": "register",
+    "scene": "email",
+    "situation": "别的团队总把不属于你们范围的活儿丢过来,这次要顶回去",
+    "soft": "I may be wrong on this, but I think this one usually sits with the settlements team? Happy to point you to the right contact.",
+    "neutral": "This one's outside our remit I'm afraid — the settlements team own the process. Copying in their inbox.",
+    "firm": "As discussed before, this isn't something our team covers. Please route these to settlements going forward.",
+    "note": "remit 是英国职场划边界的核心词。soft 档留了台阶(可能我记错了),第一次顶回去用它。neutral 用于对方应该知道边界的情况。firm 档的 as discussed before 是书面留痕的信号,说明你已经不打算再私下解决了,用之前想清楚。"
+  }
+]

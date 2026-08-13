@@ -1,0 +1,178 @@
+[
+  {
+    "id": "slack-01",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "同事丢给你一个活,你手上排满了,要礼貌但清楚地说下周才能开始",
+    "answer": "Happy to pick this up, but realistically I won't get to it until next week. Does that still work?",
+    "note": "Happy to 先接住,realistically 是英国职场高频缓冲词,最后回一个问句把决定权交回去。直接说 I'm too busy 会显得推活。"
+  },
+  {
+    "id": "slack-02",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "有人发来一个需要仔细看的东西,你正在连轴开会,先回一句",
+    "answer": "Seen this — in back-to-backs till three, will take a proper look after.",
+    "note": "back-to-backs 指连续会议,英国办公室每天都在说。先确认 seen 再给时间点,对方就不会再追。a proper look 暗示这事值得认真看,不是敷衍。"
+  },
+  {
+    "id": "slack-03",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "群里有人问的问题不归你管,但你知道谁懂",
+    "answer": "Not my area I'm afraid — @Dan will know, he owns the proxy voting side.",
+    "note": "not my area 是干净利落的免责,加 I'm afraid 软化。关键动作是 @ 出正主并说明为什么是他,这样你既没接锅也帮上了忙。只说 I don't know 是最差的回复。"
+  },
+  {
+    "id": "slack-04",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "你想快速跟同事确认一个日期,自己其实九成确定",
+    "answer": "Sanity check — the ex-date on this one is the 14th, right?",
+    "note": "sanity check 是\"我基本确定,只求个二次确认\"的标准开场,它告诉对方这个问题很轻,一个 yep 就能打发。不带这个前缀直接问,对方可能以为你完全不懂。"
+  },
+  {
+    "id": "slack-05",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "你刚在群里发的数字是看错文件了,要马上收回更正",
+    "answer": "Scrap that — misread the file. Correct figure below.",
+    "note": "scrap that 是撤回刚说的话的口语标准件,类似的还有 ignore me。错了就快速利落地改,不用道歉铺垫,Slack 语境里速度就是态度。"
+  },
+  {
+    "id": "slack-06",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "上级在群里派了个急活给你,你要接下并让他放心",
+    "answer": "On it — will shout when it's done.",
+    "note": "on it 两个词就是完整回复,英国职场最高效的接活确认。will shout 承诺完成后主动汇报,上级就不用再来问。写一整句 I will start working on it immediately 反而显得反应慢。"
+  },
+  {
+    "id": "slack-07",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "有人把明显属于运营群的问题发到了你们的小群,要引导他去对的地方",
+    "answer": "Might be one for the ops channel? Most of the settlement folk live in there.",
+    "note": "might be one for... 用猜测语气做引导,不说 wrong channel。folk 是英式口语的\"那帮人\",live in there 形容常驻某个频道,都是地道 Slack 用语。"
+  },
+  {
+    "id": "slack-08",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "会议五分钟后开始,对接的同事还没上线,提醒一下",
+    "answer": "Gentle nudge — we're on in five.",
+    "note": "gentle nudge 是最轻的提醒档位,和催活的 nudge 同源。we're on 指会议或环节即将开始。整句六个词,Slack 提醒越短越礼貌,写长了反而像兴师问罪。"
+  },
+  {
+    "id": "slack-09",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "下班前在团队群里交接:对账做到六月了,剩下的明早继续",
+    "answer": "Heading off — recs are done up to end of June, will pick up the rest first thing.",
+    "note": "heading off 是英式下班宣言,不需要说 leave work。recs 是 reconciliations 的通用缩写。first thing 指明早一上班,比 tomorrow morning 更有承诺感。这种收工交接消息是英国团队的日常仪式。"
+  },
+  {
+    "id": "slack-10",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "想请同事有空时帮你看一眼一份东西,不急",
+    "answer": "When you've got a sec, could you cast an eye over this? No rush at all.",
+    "note": "cast an eye over 是\"扫一眼\"的英式惯用语,暗示不需要深度审查,降低了对方的心理成本。no rush at all 放句尾,是不急的事的标准收尾——但如果其实急,千万别说,英国人会当真。"
+  },
+  {
+    "id": "slack-11",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "同事赶在截止前帮你把数据拉出来了,要表达感谢",
+    "answer": "Lifesaver, thank you! Owe you one.",
+    "note": "lifesaver 和 legend 是英式口语里感谢救急的高频词,比 thank you very much for your help 有温度得多。owe you one 承认人情,在互相帮衬的团队文化里是重要的社交货币。"
+  },
+  {
+    "id": "slack-12",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "群里在定会议时间,提议的时段你可以",
+    "answer": "Works for me.",
+    "note": "三个词的标准同意。类似的还有 happy with that、fine by me、suits me。中式习惯想补一句 I have no problem with this time,信息量为零还拖节奏,Slack 里同意就是要短。"
+  },
+  {
+    "id": "slack-13",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "有人私聊问你的问题其实值得让全组知道,要把讨论转到群里",
+    "answer": "Popping this in the team channel so everyone's across it — good question.",
+    "note": "pop 是英式万能轻量动词,把移动说得毫不费力。across it 是\"知情、掌握情况\"的地道说法。补一句 good question 让对方不觉得私聊问错了。"
+  },
+  {
+    "id": "slack-14",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "有人找你处理一件事,你能做但流程的真正负责人是别人,要指路",
+    "answer": "I can take a look, but Priya owns this process day-to-day — probably quicker to go straight to her.",
+    "note": "先表态愿意帮(I can take a look)再指路,顺序不能反,否则就是踢皮球。own 表示流程归属,是职场分工的核心动词。probably quicker 把指路包装成为对方着想。"
+  },
+  {
+    "id": "slack-15",
+    "type": "pick",
+    "scene": "slack",
+    "prompt": "同事问你能不能今天下班前给他一份数据,你可以",
+    "options": [
+      { "text": "Yes, I will finish it before I get off work.", "correct": false },
+      { "text": "Yep, should have it with you by EOD.", "correct": true }
+    ],
+    "note": "get off work 是中式表达,英国职场基本不说。EOD 通用。should have it with you 比 I will finish it 更自然,主语从我转到东西,语气轻。"
+  },
+  {
+    "id": "slack-16",
+    "type": "pick",
+    "scene": "slack",
+    "prompt": "想问同事手上那份客户报告进展如何",
+    "options": [
+      { "text": "Have you finished the client report?", "correct": false },
+      { "text": "How's the client report looking?", "correct": true }
+    ],
+    "note": "have you finished 是二元审问,只有完成/没完成两种答案,没完成的人会感到被抓包。how's it looking 是开放句式,给对方空间说\"快了,还差附录\",这才是你真正想要的信息。"
+  },
+  {
+    "id": "slack-17",
+    "type": "pick",
+    "scene": "slack",
+    "prompt": "同事找你,你手头的事还要几分钟才能放下",
+    "options": [
+      { "text": "Wait a moment please.", "correct": false },
+      { "text": "Two secs — just wrapping something up.", "correct": true }
+    ],
+    "note": "wait a moment 是命令式,像柜台职员在打发人。two secs(或 two ticks、one min)是英式等待用语,自带轻快感。补上原因 wrapping something up,对方就知道你不是在晾他。"
+  },
+  {
+    "id": "slack-18",
+    "type": "pick",
+    "scene": "slack",
+    "prompt": "明天要休一天假,在群里知会大家",
+    "options": [
+      { "text": "I ask for leave tomorrow. Please contact Priya if you have questions.", "correct": false },
+      { "text": "Heads-up — I'm off tomorrow, back Thursday. Priya's covering the CA inbox.", "correct": true }
+    ],
+    "note": "ask for leave 像在向群里请求批准,休假知会不是申请。heads-up 是标准预告开场,I'm off 是英式\"我休假\"。cover 是职场交接的核心动词,说清楚谁 cover 什么,比 contact her if you have questions 具体。"
+  },
+  {
+    "id": "slack-19",
+    "type": "register",
+    "scene": "slack",
+    "situation": "有人在群里直接给你派了个活,但这事既没跟你商量过,优先级也存疑",
+    "soft": "Happy to help if needed — just conscious I've got the month-end run this week. Shall we compare priorities?",
+    "neutral": "Can do, but it'll bump the reporting work — which would you rather have first?",
+    "firm": "I can't take this on this week. If it's genuinely urgent it needs to go through Priya so she can re-prioritise the queue.",
+    "note": "soft 档的 conscious 是英式高频自我提醒词,表面在陈述自己的日程,实际在婉拒。neutral 档把取舍抛回给对方,是应对派活最健康的姿势。firm 档搬出流程和上级,用于对方越过排期规则硬塞的情况。"
+  },
+  {
+    "id": "slack-20",
+    "type": "register",
+    "scene": "slack",
+    "situation": "群里有人发了一个错误的说法,已经开始误导别人,你要纠正",
+    "soft": "Might be worth double-checking that — I think the cut-off moved to 2pm after the custodian change?",
+    "neutral": "Small correction — the cut-off is 2pm now, not 4. Changed when we switched custodian.",
+    "firm": "That's out of date and it matters: the cut-off is 2pm. Instructions after that will fail. Please use the new schedule pinned in the channel.",
+    "note": "公开纠错默认从 soft 起步,给对方自己改口的机会。neutral 的 small correction 即使纠正的是大错也照说,这是英式缩小词的典型用法。firm 档只在错误会造成实际损失(比如指令失败)时用,而且要马上给出正确来源。"
+  }
+]
