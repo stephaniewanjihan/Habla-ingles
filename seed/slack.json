@@ -160,7 +160,7 @@
     "type": "register",
     "scene": "slack",
     "situation": "有人在群里直接给你派了个活,但这事既没跟你商量过,优先级也存疑",
-    "soft": "Happy to help if needed — just conscious I've got the month-end run this week. Shall we compare priorities?",
+    "soft": "Happy to help if needed — just conscious I've got the month-end run this week. Worth a quick word on priorities?",
     "neutral": "Can do, but it'll bump the reporting work — which would you rather have first?",
     "firm": "I can't take this on this week. If it's genuinely urgent it needs to go through Priya so she can re-prioritise the queue.",
     "note": "soft 档的 conscious 是英式高频自我提醒词,表面在陈述自己的日程,实际在婉拒。neutral 档把取舍抛回给对方,是应对派活最健康的姿势。firm 档搬出流程和上级,用于对方越过排期规则硬塞的情况。"

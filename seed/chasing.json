@@ -44,8 +44,8 @@
     "type": "produce",
     "scene": "chasing",
     "prompt": "催一件事并且必须给对方一个明确的最后期限,因为明天要下指令",
-    "answer": "Could you come back to me by close today? We need to instruct by tomorrow's market deadline, so there's no slack left in this one.",
-    "note": "by close 即 by close of business,金融场景默认说法。no slack left 说明不是你在施压,是时间表在施压。给 deadline 一定要带理由,光说 by today 没有理由,在英国职场会被视为居高临下。"
+    "answer": "Could you come back to me by close of play today? We need to instruct by tomorrow's market deadline, so there's no slack left in this one.",
+    "note": "close of play(COP)是英式说法的\"今天收工前\",金融圈也说 by close 或 COB。no slack left 说明不是你在施压,是时间表在施压。给 deadline 一定要带理由,光说 by today 没有理由,在英国职场会被视为居高临下。"
   },
   {
     "id": "chasing-07",
