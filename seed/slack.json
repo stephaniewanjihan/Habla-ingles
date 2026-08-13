@@ -174,5 +174,15 @@
     "neutral": "Small correction — the cut-off is 2pm now, not 4. Changed when we switched custodian.",
     "firm": "That's out of date and it matters: the cut-off is 2pm. Instructions after that will fail. Please use the new schedule pinned in the channel.",
     "note": "公开纠错默认从 soft 起步,给对方自己改口的机会。neutral 的 small correction 即使纠正的是大错也照说,这是英式缩小词的典型用法。firm 档只在错误会造成实际损失(比如指令失败)时用,而且要马上给出正确来源。"
+  },
+  {
+    "id": "slack-21",
+    "type": "register",
+    "scene": "slack",
+    "situation": "有人临时拉你进一个五分钟后开始的会,你手头正忙",
+    "soft": "Might struggle to make this one — is there anything on the agenda that needs me specifically?",
+    "neutral": "Can't make it at such short notice I'm afraid — happy to catch up on the notes, or grab me after if anything needs my input.",
+    "firm": "I can't keep joining these at five minutes' notice — if you need me in the room, could it go in the diary a day ahead?",
+    "note": "临时拉会在英国职场是可以拒绝的,soft 档先问议程是不是真的需要你,很多时候答案是不需要。firm 档的关键是把矛头从这一次转向模式(can't keep joining),并给出规则(提前一天进日历)——对事立规矩比对人发脾气高效得多。"
   }
 ]

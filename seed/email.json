@@ -174,5 +174,26 @@
     "neutral": "This one's outside our remit I'm afraid — the settlements team own the process. Copying in their inbox.",
     "firm": "As discussed before, this isn't something our team covers. Please route these to settlements going forward.",
     "note": "remit 是英国职场划边界的核心词。soft 档留了台阶(可能我记错了),第一次顶回去用它。neutral 用于对方应该知道边界的情况。firm 档的 as discussed before 是书面留痕的信号,说明你已经不打算再私下解决了,用之前想清楚。"
+  },
+  {
+    "id": "email-21",
+    "type": "register",
+    "scene": "email",
+    "situation": "同事赶出来的文件质量不过关,要书面反馈让他返工",
+    "soft": "Thanks for turning this around so quickly. A few thoughts attached — mostly on the reconciliation section, which I think needs another pass.",
+    "neutral": "Thanks for this. The reconciliation section isn't quite there yet — the figures need to tie back to source before it can go out. Could you rework it and send back by Thursday?",
+    "firm": "This isn't at the standard we need for a client document — several figures don't tie back, and the commentary contradicts the table. Let's go through it together tomorrow before you redraft.",
+    "note": "英式书面批评几乎总以感谢开场,真实强度藏在名词里:a few thoughts 最轻,isn't quite there 已是明确的不合格,isn't at the standard 相当重。注意 firm 档配了一次当面辅导——批评越重越要配支持,只批不帮在英国管理文化里是失职。"
+  },
+  {
+    "id": "email-22",
+    "type": "pick",
+    "scene": "email",
+    "prompt": "跟对方约下周二下午的电话会",
+    "options": [
+      { "text": "I will mark this meeting on my calendar.", "correct": false },
+      { "text": "I'll pop it in the diary — does Tuesday 2pm work for you?", "correct": true }
+    ],
+    "note": "英国职场说 diary 不说 calendar:put it in the diary、check my diary、diary's looking full。pop 照例把动作说得轻巧。带上具体时间选项让约时间一步到位,来回确认最少。"
   }
 ]

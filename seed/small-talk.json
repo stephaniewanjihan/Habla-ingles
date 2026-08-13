@@ -173,5 +173,15 @@
       { "text": "Just a Diet Coke for me, cheers.", "correct": true }
     ],
     "note": "报上要喝的东西就是完整回答,pub 里没人需要你解释为什么不喝酒,health 理由反而带了说教味,像在评价正在喝酒的人。cheers 在这里是\"谢了\"。想给理由就给个轻的:driving tonight 或 big day tomorrow,一句带过。"
+  },
+  {
+    "id": "small-talk-21",
+    "type": "register",
+    "scene": "small-talk",
+    "situation": "周五下班同事约去酒吧,这次你不想去",
+    "soft": "I might give it a miss tonight — absolutely knackered after this week. Next time though!",
+    "neutral": "Not tonight for me I'm afraid — got a few things on. Have one for me!",
+    "firm": "The pub's not really my thing to be honest — but count me in for the team lunch next week.",
+    "note": "give it a miss 是英式婉拒活动的标准说法,knackered(累瘫)是口语高频词,have one for me 是缺席者的标准俏皮话。偶尔拒绝完全正常,但要知道很多信息和决策背景在 pub 里流通,长期全拒有隐性成本。firm 档用于彻底不参与酒吧文化的情况:划清界限的同时给出替代参与方式,关系就不会断。"
   }
 ]

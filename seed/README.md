@@ -6,16 +6,16 @@
 
 | 文件 | 场景标签 | 卡数 | 说明 |
 |---|---|---|---|
-| `email.json` | `email` | 20 | 写邮件 |
-| `slack.json` | `slack` | 20 | Slack / Teams 快回 |
+| `email.json` | `email` | 22 | 写邮件 |
+| `slack.json` | `slack` | 21 | Slack / Teams 快回 |
 | `meeting-disagree.json` | `meeting-disagree` | 20 | 会上表达不同意 |
 | `chasing.json` | `chasing` | 20 | 催进度 |
 | `asking-help.json` | `asking-help` | 20 | 请人帮忙 |
 | `presenting.json` | `presenting` | 20 | 做汇报 |
-| `small-talk.json` | `small-talk` | 20 | Small talk |
+| `small-talk.json` | `small-talk` | 21 | Small talk |
 | `culture.json` | `culture` | 13 | note(文化笔记)9 张 + listen(听力外链)4 张 |
 
-共 **153 张**:produce 96、pick 27、register 17、note 9、listen 4。
+共 **157 张**:produce 96、pick 28、register 20、note 9、listen 4。
 
 ## 卡片格式
 
