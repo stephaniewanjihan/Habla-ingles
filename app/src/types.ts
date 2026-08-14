@@ -50,7 +50,9 @@ export const FLAGS = ['不自然', '用不上', '太简单', '太难'] as const
 export type Flag = (typeof FLAGS)[number]
 
 export interface CardRecord extends CardContent {
-  state: 'new' | 'review'
+  state: 'new' | 'learning' | 'review'
+  /** 学习阶段的第几关(0 起),毕业后不再使用 */
+  step?: number
   /** 间隔天数,新卡为 0 */
   interval: number
   /** 到期时间戳,新卡为 null */

@@ -20,13 +20,10 @@ export default function Review() {
     const newThisWeek = reviewable
       .filter(c => c.masteredAt !== null && c.masteredAt >= weekStart)
       .sort((a, b) => (b.masteredAt ?? 0) - (a.masteredAt ?? 0))
-    const usedThisWeek = cards
-      .filter(c => c.usedAt != null && c.usedAt >= weekStart)
-      .sort((a, b) => (b.usedAt ?? 0) - (a.usedAt ?? 0))
     const checkins = await getMeta<string[]>('checkins', [])
     const weekCheckins = checkins.filter(d => new Date(d + 'T12:00:00').getTime() >= weekStart).length
     const { streak } = computeStreak(checkins)
-    return { masteredCount: mastered.length, newThisWeek, usedThisWeek, streak, weekCheckins }
+    return { masteredCount: mastered.length, newThisWeek, streak, weekCheckins }
   })
 
   if (!data) return <div className="pt-24 text-center text-label3">载入中…</div>
@@ -62,21 +59,6 @@ export default function Review() {
           </div>
         )}
       </div>
-      {data.usedThisWeek.length > 0 && (
-        <div className="mt-8">
-          <p className="text-[15px] leading-relaxed text-label2">
-            这周你在真实工作里用掉了 {data.usedThisWeek.length} 条——这才是这个 app 唯一真正的成绩单:
-          </p>
-          <ul className="mt-3 space-y-2">
-            {data.usedThisWeek.map(c => (
-              <li key={c.id} className="group-card p-3.5">
-                <p className="text-[15px] leading-relaxed text-label">{mainText(c)}</p>
-                <p className="mt-1 text-[12px] text-label3">{sceneLabel(c.scene)}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
       <div className="h-8" />
     </div>
   )

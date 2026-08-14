@@ -43,10 +43,26 @@ export function freshRecord(c: CardContent, now = Date.now()): CardRecord {
 /** 首次启动时把种子牌组灌进本地数据库 */
 export async function ensureSeeded(): Promise<void> {
   const count = await db.cards.count()
+  // 已经有卡片就绝不再动:种子只在全新设备上灌一次,
+  // 任何一次重新部署都不会碰到已有的复习进度。
   if (count > 0) return
   const now = Date.now()
   // bulkPut 保证并发调用时幂等(同一份种子重复灌入结果一致)
   await db.cards.bulkPut((seedDeck as CardContent[]).map(c => freshRecord(c, now)))
+}
+
+/**
+ * 申请持久化存储。不申请的话,iOS/Safari 会把长期不用的站点数据当缓存清掉,
+ * 学习进度就没了。装到主屏幕后这个申请通常直接通过。
+ */
+export async function requestPersistence(): Promise<boolean> {
+  if (!navigator.storage?.persist) return false
+  try {
+    if (await navigator.storage.persisted?.()) return true
+    return await navigator.storage.persist()
+  } catch {
+    return false
+  }
 }
 
 export async function getMeta<T>(key: string, fallback: T): Promise<T> {

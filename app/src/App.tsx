@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react'
-import { ensureSeeded } from './db'
+import { ensureSeeded, requestPersistence } from './db'
 import Home from './components/Home'
 import Deck from './components/Deck'
 import Review from './components/Review'
@@ -51,6 +51,7 @@ export default function App() {
 
   useEffect(() => {
     ensureSeeded().then(() => setReady(true))
+    void requestPersistence()
   }, [])
 
   if (!ready) {

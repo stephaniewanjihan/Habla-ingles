@@ -32,7 +32,7 @@ ok('jot modal closed', !(await page.locator('textarea').isVisible().catch(() => 
 
 // --- New motivation UI on home ---
 ok('week strip rendered', (await page.locator('div.h-\\[30px\\]').count()) === 7)
-ok('third stat tile adapts when nothing used yet', await page.getByText('本周练习天').isVisible().catch(() => false))
+ok('week-days tile shown', await page.getByText('本周练习天').isVisible().catch(() => false))
 ok('one-card shortcut offered', await page.getByText('今天只有一分钟?来一张就算数').isVisible().catch(() => false))
 
 // --- One-card mode counts as a check-in ---
@@ -44,21 +44,19 @@ ok('one-card round shows 1 / 1', await page.getByText('1 / 1').isVisible().catch
   if (await flip.isVisible().catch(() => false)) {
     await flip.click()
     await page.waitForTimeout(300)
-    ok('used button present', await page.getByText('这句我用上了(邮件 / 会上)').isVisible().catch(() => false))
-    await page.getByText('这句我用上了(邮件 / 会上)').click()
-    await page.waitForTimeout(250)
-    ok('used button toggles to checked', await page.getByText('✓ 这句我用上了').isVisible().catch(() => false))
   } else {
-    // pick 卡:选一个选项翻面后,同样要能标记"用上了"
     const opts = page.locator('button.w-full.p-4.text-left')
     await opts.first().click()
     await page.waitForTimeout(400)
-    ok('used button present', await page.getByText('这句我用上了(邮件 / 会上)').isVisible().catch(() => false))
-    await page.getByText('这句我用上了(邮件 / 会上)').click()
-    await page.waitForTimeout(250)
-    ok('used button toggles to checked', await page.getByText('✓ 这句我用上了').isVisible().catch(() => false))
   }
-  await page.getByRole('button', { name: '顺', exact: true }).click()
+  // 翻面后解释展开,评分按钮必须仍在首屏——她真实遇到过按钮被挤出屏幕
+  const btn = page.getByRole('button', { name: '顺', exact: true })
+  const box = await btn.boundingBox().catch(() => null)
+  const vh = page.viewportSize().height
+  ok('rating buttons stay on screen without scrolling',
+     !!box && box.y >= 0 && box.y + box.height <= vh + 1)
+  await page.screenshot({ path: `${shots}/14-sticky.png` })
+  await btn.click()
   await page.waitForTimeout(600)
 }
 ok('one-card round finished', await page.getByText('这组练完了').isVisible().catch(() => false))
@@ -67,11 +65,6 @@ await page.screenshot({ path: `${shots}/10-one-card-finish.png` })
 await page.getByRole('button', { name: '今天就到这' }).click()
 await page.waitForTimeout(600)
 ok('one card counted as today done', await page.getByText('今天已完成').isVisible().catch(() => false))
-{
-  const usedTile = page.locator('div.flex-1').filter({ hasText: '真实用过' }).first()
-  const usedVal = (await usedTile.locator('p').first().innerText().catch(() => '?')).trim()
-  ok(`used counter incremented (got ${usedVal})`, usedVal === '1')
-}
 await page.screenshot({ path: `${shots}/11-home-with-progress.png` })
 
 // --- Session: run one full round ---
@@ -183,6 +176,45 @@ await page.waitForTimeout(400)
 ok('imported card visible in deck', await page.getByText('测试用:临时通知对方今天无法回复').isVisible().catch(() => false))
 await page.getByRole('button', { name: /收集箱/ }).click()
 await page.waitForTimeout(400)
+
+// --- Learning phase: a brand-new card must come back inside the same round ---
+await page.evaluate(async () => {
+  const db = await new Promise(res => { const r = indexedDB.open('chunk'); r.onsuccess = () => res(r.result) })
+  const all = await new Promise(res => { const r = db.transaction('cards','readonly').objectStore('cards').getAll(); r.onsuccess = () => res(r.result) })
+  // 清掉到期卡,让这一组只可能抽到新卡,便于观察学习阶段
+  const tx = db.transaction('cards','readwrite')
+  for (const c of all) if (c.state !== 'new') tx.objectStore('cards').put({ ...c, due: Date.now() + 30 * 86400000 })
+  await new Promise(res => { tx.oncomplete = res })
+})
+await page.getByRole('button', { name: /今天/ }).first().click()
+await page.waitForTimeout(400)
+await page.getByText('再来一组', { exact: true }).click()
+await page.waitForTimeout(900)
+{
+  const seen = []
+  const firstProgress = await page.getByText(/^\d+ \/ \d+$/).first().innerText().catch(() => '1 / 5')
+  const plannedSize = parseInt(firstProgress.split('/')[1].trim(), 10)
+  for (let i = 0; i < 16; i++) {
+    if (await page.getByText('这组练完了').isVisible().catch(() => false)) break
+    const head = await page.locator('p.text-\\[20px\\]').first().innerText().catch(() => '')
+    if (head) seen.push(head.trim())
+    const flip = page.getByRole('button', { name: '翻面' })
+    const read = page.getByRole('button', { name: '读完了' })
+    const cont = page.getByRole('button', { name: '继续', exact: true })
+    if (await flip.isVisible().catch(() => false)) { await flip.click(); await page.waitForTimeout(200) }
+    else if (await read.isVisible().catch(() => false)) { await read.click(); await page.waitForTimeout(250); continue }
+    else if (await cont.isVisible().catch(() => false)) { await cont.click(); await page.waitForTimeout(250); continue }
+    else { await page.locator('button.w-full.p-4.text-left').first().click(); await page.waitForTimeout(300) }
+    await page.getByRole('button', { name: '顺', exact: true }).click()
+    await page.waitForTimeout(250)
+  }
+  // 学习阶段的卡会被塞回本组,所以实际出现的张数必然多于计划的张数。
+  // (重复出现时会换成变式场景,所以不能按文字比对)
+  ok(`round grows so new cards come back in the same session (planned ${plannedSize}, shown ${seen.length})`,
+     seen.length > plannedSize)
+}
+await page.getByRole('button', { name: '今天就到这' }).click()
+await page.waitForTimeout(500)
 
 // --- Variant review: seeing a card a second time must change the scenario ---
 const variantInfo = await page.evaluate(async () => {

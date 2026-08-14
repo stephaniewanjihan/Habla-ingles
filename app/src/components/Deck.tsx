@@ -68,7 +68,6 @@ export default function Deck() {
                       </p>
                     )}
                     <div className="mt-1 flex flex-wrap gap-x-3">
-                      {c.usedAt != null && <p className="text-[12px] text-green">✓ 工作里用过</p>}
                       {c.flags.length > 0 && (
                         <p className="text-[12px] text-orange">{c.flags.join(' · ')}</p>
                       )}

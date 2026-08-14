@@ -32,6 +32,11 @@ export async function buildRound(mode: 'full' | 'one' = 'full'): Promise<CardRec
       REVIEWABLE.includes(c.type),
     ),
   )
+  // 学习阶段的卡优先级最高:它们是刚见过、还没记牢的
+  const learning = (await db.cards.where('state').equals('learning').toArray())
+    .filter(c => REVIEWABLE.includes(c.type) && (c.due ?? 0) <= Date.now())
+    .sort((a, b) => (a.due ?? 0) - (b.due ?? 0))
+  due.unshift(...learning)
 
   if (mode === 'one') {
     const one = due[0] ?? news[0]
@@ -59,51 +64,28 @@ function cardMainText(c: CardRecord): string {
 
 function CardFooter({ card }: { card: CardRecord }) {
   const [flags, setFlags] = useState<Flag[]>(card.flags ?? [])
-  const [used, setUsed] = useState<boolean>(card.usedAt != null)
-  useEffect(() => {
-    setFlags(card.flags ?? [])
-    setUsed(card.usedAt != null)
-  }, [card.id])
+  useEffect(() => setFlags(card.flags ?? []), [card.id])
 
   const toggleFlag = async (f: Flag) => {
     const next = flags.includes(f) ? flags.filter(x => x !== f) : [...flags, f]
     setFlags(next)
     await db.cards.update(card.id, { flags: next })
   }
-  const toggleUsed = async () => {
-    const next = !used
-    setUsed(next)
-    await db.cards.update(card.id, { usedAt: next ? Date.now() : null })
-  }
 
   return (
-    <>
-      <button
-        onClick={toggleUsed}
-        className={`mt-4 w-full rounded-[10px] py-2.5 text-[14px] font-medium ${
-          used
-            ? 'bg-green-soft text-green'
-            : 'bg-fill text-label2'
-        }`}
-      >
-        {used ? '✓ 这句我用上了' : '这句我用上了(邮件 / 会上)'}
-      </button>
-      <div className="mt-3 flex flex-wrap gap-2">
-        {FLAGS.map(f => (
-          <button
-            key={f}
-            onClick={() => toggleFlag(f)}
-            className={`rounded-full px-3 py-1.5 text-[12px] ${
-              flags.includes(f)
-                ? 'bg-orange-soft text-orange'
-                : 'bg-fill text-label3'
-            }`}
-          >
-            {f}
-          </button>
-        ))}
-      </div>
-    </>
+    <div className="mt-4 flex flex-wrap gap-2">
+      {FLAGS.map(f => (
+        <button
+          key={f}
+          onClick={() => toggleFlag(f)}
+          className={`rounded-full px-3 py-1.5 text-[12px] ${
+            flags.includes(f) ? 'bg-orange-soft text-orange' : 'bg-fill text-label3'
+          }`}
+        >
+          {f}
+        </button>
+      ))}
+    </div>
   )
 }
 
@@ -129,7 +111,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   const [finished, setFinished] = useState(false)
   const [cutShort, setCutShort] = useState(false)
   const ratingsRef = useRef<Map<string, Rating>>(new Map())
-  const repeatedRef = useRef<Set<string>>(new Set())
+  const repeatedRef = useRef<Map<string, number>>(new Map())
   const startRef = useRef(Date.now())
 
   useEffect(() => {
@@ -177,12 +159,20 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   const onRate = async (r: Rating) => {
     if (!card) return
     const fresh = (await db.cards.get(card.id))!
-    await db.cards.put(rate(fresh, r))
+    const updated = rate(fresh, r)
+    await db.cards.put(updated)
     ratingsRef.current.set(card.id, r)
+
+    // 还在学习阶段、且马上就到期的卡,本组稍后必须再出一次——
+    // 全新的说法只见一面是记不住的。每张卡最多补两次,防止一组无限拉长。
     let nextQueue = queue!
-    if (r === 'again' && !repeatedRef.current.has(card.id)) {
-      repeatedRef.current.add(card.id)
-      nextQueue = [...queue!, card]
+    const seenAgain = repeatedRef.current.get(card.id) ?? 0
+    // 一分钟模式严格只出一张,不在组内重复(那张卡下一组自然会再出现)
+    const wantsRepeat =
+      mode === 'full' && updated.state === 'learning' && (updated.due ?? 0) <= Date.now() + 1000
+    if (wantsRepeat && seenAgain < 2) {
+      repeatedRef.current.set(card.id, seenAgain + 1)
+      nextQueue = [...queue!, updated]
       setQueue(nextQueue)
     }
     advance(nextQueue)
@@ -225,7 +215,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
               setFinished(false)
               setCutShort(false)
               ratingsRef.current = new Map()
-              repeatedRef.current = new Set()
+              repeatedRef.current = new Map()
               startRef.current = Date.now()
               buildRound(mode).then(q => {
                 if (q.length === 0) {
@@ -251,7 +241,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   const progress = `${Math.min(index + 1, queue.length)} / ${queue.length}`
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-12 pb-6">
+    <div className="mx-auto max-w-md px-4 pt-12 pb-44">
       <div className="flex items-center justify-between text-[15px] text-label2">
         <button onClick={onExit} className="text-blue">
           ✕ 退出
@@ -259,7 +249,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
         <span>{progress}</span>
       </div>
 
-      <div className="mt-6 flex-1">
+      <div className="mt-6">
         <div className="flex items-center gap-2">
           <SceneChip scene={card.scene} />
           {view!.variantIndex > 0 && (
@@ -378,7 +368,8 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
         )}
       </div>
 
-      <div className="pt-6">
+      <div className="fixed bottom-0 left-0 right-0 bg-bar px-4 pt-3 pb-[calc(1rem+env(safe-area-inset-bottom))] backdrop-blur-xl" style={{ borderTop: '0.5px solid var(--sep)' }}>
+        <div className="mx-auto max-w-md">
         {REVIEWABLE.includes(card.type) ? (
           !revealed && card.type !== 'pick' ? (
             <button
@@ -407,6 +398,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
             {card.type === 'note' ? '读完了' : '继续'}
           </button>
         )}
+        </div>
       </div>
     </div>
   )

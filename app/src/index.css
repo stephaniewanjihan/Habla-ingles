@@ -10,8 +10,8 @@
   --label3: rgba(60, 60, 67, 0.3);
   --sep: rgba(60, 60, 67, 0.12);
   --fill: rgba(120, 120, 128, 0.12);
-  --blue: #007aff;
-  --blue-soft: rgba(0, 122, 255, 0.1);
+  --blue: #e8558c;
+  --blue-soft: rgba(232, 85, 140, 0.12);
   --green: #34c759;
   --green-soft: rgba(52, 199, 89, 0.12);
   --orange: #ff9500;
@@ -31,8 +31,8 @@
     --label3: rgba(235, 235, 245, 0.3);
     --sep: rgba(84, 84, 88, 0.6);
     --fill: rgba(120, 120, 128, 0.24);
-    --blue: #0a84ff;
-    --blue-soft: rgba(10, 132, 255, 0.18);
+    --blue: #ff8ab5;
+    --blue-soft: rgba(255, 138, 181, 0.2);
     --green: #30d158;
     --green-soft: rgba(48, 209, 88, 0.18);
     --orange: #ff9f0a;

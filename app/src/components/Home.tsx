@@ -96,7 +96,6 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
     const dueCount = reviewable.filter(c => c.due !== null && c.due <= endOfToday.getTime()).length
     const newCount = reviewable.filter(c => c.state === 'new').length
     const mastered = reviewable.filter(isMastered).length
-    const used = cards.filter(c => c.usedAt != null).length
     const checkins = await getMeta<string[]>('checkins', [])
     const weekStart = startOfWeek()
     const weekDays = checkins.filter(d => new Date(d + 'T12:00:00').getTime() >= weekStart).length
@@ -105,7 +104,7 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
     const seenMilestones = await getMeta<number[]>('milestonesSeen', [])
     const milestone = latestMilestone(mastered)
     const showMilestone = milestone !== null && !seenMilestones.includes(milestone) ? milestone : null
-    return { dueCount, newCount, mastered, used, weekDays, streak, makeupUsedThisWeek, todayDone, checkins, showMilestone }
+    return { dueCount, newCount, mastered, weekDays, streak, makeupUsedThisWeek, todayDone, checkins, showMilestone }
   })
 
   if (!stats) return <div className="pt-24 text-center text-label3">载入中…</div>
@@ -138,11 +137,7 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
 
       <div className="group-card mt-5 flex divide-x" style={{ borderColor: 'var(--sep)' }}>
         <Stat value={stats.mastered} label="已掌握表达" tone="blue" />
-        {stats.used > 0 ? (
-          <Stat value={stats.used} label="真实用过" tone="green" />
-        ) : (
-          <Stat value={stats.weekDays} label="本周练习天" tone="green" />
-        )}
+        <Stat value={stats.weekDays} label="本周练习天" tone="green" />
         <Stat value={stats.streak} label="连续天数" />
       </div>
 

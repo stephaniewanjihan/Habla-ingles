@@ -4,27 +4,81 @@ export const DAY = 86400000
 /** 间隔达到该天数即算"已掌握" */
 export const MASTERY_DAYS = 21
 
-/** 简化版 SM-2:没想起来→重置 1 天;不确定→×1.3;顺→×2.4 */
+/**
+ * 学习阶段:新卡先在短间隔内连过几关,再进入按天计的间隔复习。
+ * 第 0 关 = 本次练习稍后再出一次;第 1 关 = 十分钟后(当天再见一次);
+ * 连过两关才毕业到 1 天,然后才走 SM-2 的乘数。
+ * 完全陌生的材料只见一次是记不住的,这几关就是为此存在。
+ */
+/** 每答对一次之后的等待时间:先"本组稍后再来一次",再"当天再来一次",第三次才毕业 */
+export const LEARNING_STEPS_MS = [0, 10 * 60 * 1000]
+const GRADUATING_INTERVAL = 1
+
+/** 答错(step 0)立刻重来;之后按 LEARNING_STEPS_MS 走 */
+function learningDelay(step: number): number {
+  return step === 0 ? 0 : LEARNING_STEPS_MS[step - 1]
+}
+
+/** 简化版 SM-2,前面加了学习阶段;没想起来则退回学习阶段重来 */
 export function rate(card: CardRecord, rating: Rating, now = Date.now()): CardRecord {
-  let interval: number
-  let lapses = card.lapses
-  if (rating === 'again') {
-    if (card.state === 'review') lapses += 1
-    interval = 1
-  } else if (rating === 'unsure') {
-    interval = Math.max(1, (card.interval || 1) * 1.3)
-  } else {
-    interval = Math.max(2, (card.interval || 1) * 2.4)
+  const inLearning = card.state === 'new' || card.state === 'learning'
+  const step = card.step ?? 0
+
+  if (inLearning) {
+    let nextStep: number
+    if (rating === 'again') nextStep = 0
+    else if (rating === 'unsure') nextStep = step
+    else nextStep = step + 1
+
+    if (nextStep > LEARNING_STEPS_MS.length) {
+      // 毕业:进入按天计的间隔复习
+      return {
+        ...card,
+        state: 'review',
+        step: undefined,
+        interval: GRADUATING_INTERVAL,
+        due: now + GRADUATING_INTERVAL * DAY,
+        reps: card.reps + 1,
+        lastSeen: now,
+      }
+    }
+    return {
+      ...card,
+      state: 'learning',
+      step: nextStep,
+      interval: 0,
+      due: now + learningDelay(nextStep),
+      reps: card.reps + 1,
+      lastSeen: now,
+    }
   }
-  const masteredAt = card.masteredAt ?? (interval >= MASTERY_DAYS ? now : null)
+
+  if (rating === 'again') {
+    // 复习中忘掉了:退回学习阶段,当次练习里就要再见一面
+    return {
+      ...card,
+      state: 'learning',
+      step: 0,
+      interval: 0,
+      due: now,
+      reps: card.reps + 1,
+      lapses: card.lapses + 1,
+      lastSeen: now,
+    }
+  }
+
+  const interval =
+    rating === 'unsure'
+      ? Math.max(1, (card.interval || 1) * 1.3)
+      : Math.max(2, (card.interval || 1) * 2.4)
   return {
     ...card,
     state: 'review',
+    step: undefined,
     interval,
     due: now + interval * DAY,
     reps: card.reps + 1,
-    lapses,
-    masteredAt,
+    masteredAt: card.masteredAt ?? (interval >= MASTERY_DAYS ? now : null),
     lastSeen: now,
   }
 }

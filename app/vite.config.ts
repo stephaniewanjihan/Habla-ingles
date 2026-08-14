@@ -17,8 +17,8 @@ export default defineConfig({
         description: '职场英语碎片训练:背块不背词',
         lang: 'zh-CN',
         display: 'standalone',
-        background_color: '#f2f2f7',
-        theme_color: '#007aff',
+        background_color: '#fff5f8',
+        theme_color: '#ffb0cd',
         icons: [
           { src: 'pwa-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'pwa-512.png', sizes: '512x512', type: 'image/png' },
