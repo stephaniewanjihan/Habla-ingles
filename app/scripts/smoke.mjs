@@ -8,6 +8,36 @@ const ok = (name, cond) => {
   if (!cond) fails.push(name)
 }
 
+
+// 处理当前这张卡:填空卡先看答案再评分,其余照旧
+async function answerCurrentCard(page) {
+  const clozeInput = page.getByPlaceholder('填上缺的那几个词')
+  const flip = page.getByRole('button', { name: '翻面' })
+  const read = page.getByRole('button', { name: '读完了' })
+  const cont = page.getByRole('button', { name: '继续', exact: true })
+  if (await clozeInput.isVisible().catch(() => false)) {
+    await page.getByRole('button', { name: '想不起来' }).click()
+    await page.waitForTimeout(300)
+  } else if (await flip.isVisible().catch(() => false)) {
+    await flip.click()
+    await page.waitForTimeout(250)
+  } else if (await read.isVisible().catch(() => false)) {
+    await read.click(); await page.waitForTimeout(250); return 'extra'
+  } else if (await cont.isVisible().catch(() => false)) {
+    await cont.click(); await page.waitForTimeout(250); return 'extra'
+  } else {
+    const opts = page.locator('button.w-full.p-4.text-left')
+    if (!(await opts.count())) return false
+    await opts.first().click()
+    await page.waitForTimeout(350)
+  }
+  const good = page.getByRole('button', { name: '顺', exact: true })
+  if (!(await good.isVisible().catch(() => false))) return false
+  await good.click()
+  await page.waitForTimeout(250)
+  return 'rated'
+}
+
 const browser = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' })
 const page = await browser.newPage({ viewport: { width: 390, height: 844 } })
 page.on('console', m => { if (m.type() === 'error') console.log('CONSOLE ERROR:', m.text()) })
@@ -40,15 +70,15 @@ await page.getByText('今天只有一分钟?来一张就算数').click()
 await page.waitForTimeout(800)
 ok('one-card round shows 1 / 1', await page.getByText('1 / 1').isVisible().catch(() => false))
 {
-  const flip = page.getByRole('button', { name: '翻面' })
-  if (await flip.isVisible().catch(() => false)) {
-    await flip.click()
-    await page.waitForTimeout(300)
+  const clozeInput = page.getByPlaceholder('填上缺的那几个词')
+  if (await clozeInput.isVisible().catch(() => false)) {
+    await page.getByRole('button', { name: '想不起来' }).click()
+  } else if (await page.getByRole('button', { name: '翻面' }).isVisible().catch(() => false)) {
+    await page.getByRole('button', { name: '翻面' }).click()
   } else {
-    const opts = page.locator('button.w-full.p-4.text-left')
-    await opts.first().click()
-    await page.waitForTimeout(400)
+    await page.locator('button.w-full.p-4.text-left').first().click()
   }
+  await page.waitForTimeout(400)
   // 翻面后解释展开,评分按钮必须仍在首屏——她真实遇到过按钮被挤出屏幕
   const btn = page.getByRole('button', { name: '顺', exact: true })
   const box = await btn.boundingBox().catch(() => null)
@@ -74,56 +104,27 @@ await page.screenshot({ path: `${shots}/2-session-first-card.png` })
 
 let steps = 0
 let ratedCards = 0
-let sawTypes = new Set()
+let flagged = false
 while (steps < 20) {
   steps++
   if (await page.getByText('这组练完了').isVisible().catch(() => false)) break
-  const flip = page.getByRole('button', { name: '翻面' })
-  const readDone = page.getByRole('button', { name: '读完了' })
-  const cont = page.getByRole('button', { name: '继续', exact: true })
-  const goodBtn = page.getByRole('button', { name: '顺', exact: true })
-
-  if (await flip.isVisible().catch(() => false)) {
-    await flip.click()
-    await page.waitForTimeout(300)
-    if (ratedCards === 0) await page.screenshot({ path: `${shots}/3-card-back.png` })
-    // toggle a feedback flag once to test persistence
-    if (ratedCards === 0) {
-      await page.getByRole('button', { name: '太简单' }).click()
-      await page.waitForTimeout(200)
-    }
-    await goodBtn.click()
-    ratedCards++
-    sawTypes.add('produce-or-register')
-  } else if (await goodBtn.isVisible().catch(() => false)) {
-    await goodBtn.click()
-    ratedCards++
-  } else if (await readDone.isVisible().catch(() => false)) {
-    sawTypes.add('note')
-    await readDone.click()
-  } else if (await cont.isVisible().catch(() => false)) {
-    sawTypes.add('listen')
-    await cont.click()
-  } else {
-    // pick card: click first option button in the option area
-    const opts = page.locator('button.w-full.p-4.text-left')
-    const n = await opts.count()
-    if (n > 0) {
-      sawTypes.add('pick')
-      await opts.first().click()
-      await page.waitForTimeout(400)
-      await page.screenshot({ path: `${shots}/4-pick-revealed.png` })
-      // after reveal, rating buttons appear
-      await page.getByRole('button', { name: '顺', exact: true }).click()
-      ratedCards++
-    } else {
-      console.log('STUCK: no known button found at step', steps)
-      await page.screenshot({ path: `${shots}/stuck-${steps}.png` })
-      fails.push('stuck in session')
-      break
-    }
+  // 顺手在第一张翻开的卡上打个标记,验证反馈标记会存下来
+  if (!flagged && (await page.getByRole('button', { name: '太简单' }).isVisible().catch(() => false))) {
+    await page.getByRole('button', { name: '太简单' }).click()
+    await page.waitForTimeout(150)
+    flagged = true
   }
-  await page.waitForTimeout(300)
+  const outcome = await answerCurrentCard(page)
+  if (outcome === 'rated') {
+    ratedCards++
+    if (ratedCards === 1) await page.screenshot({ path: `${shots}/3-card-back.png` })
+  } else if (outcome !== 'extra') {
+    console.log('STUCK: no known button found at step', steps)
+    await page.screenshot({ path: `${shots}/stuck-${steps}.png` })
+    fails.push('stuck in session')
+    break
+  }
+  await page.waitForTimeout(200)
 }
 ok('session reached finish page', await page.getByText('这组练完了').isVisible().catch(() => false))
 ok(`rated some cards (${ratedCards})`, ratedCards >= 3)
@@ -191,27 +192,24 @@ await page.waitForTimeout(400)
 await page.getByText('再来一组', { exact: true }).click()
 await page.waitForTimeout(900)
 {
-  const seen = []
-  const firstProgress = await page.getByText(/^\d+ \/ \d+$/).first().innerText().catch(() => '1 / 5')
-  const plannedSize = parseInt(firstProgress.split('/')[1].trim(), 10)
+  const readTotal = async () => {
+    const t = await page.getByText(/^\d+ \/ \d+$/).first().innerText().catch(() => '1 / 5')
+    return parseInt(t.split('/')[1].trim(), 10)
+  }
+  const plannedSize = await readTotal()
+  let maxSize = plannedSize
   for (let i = 0; i < 16; i++) {
     if (await page.getByText('这组练完了').isVisible().catch(() => false)) break
-    const head = await page.locator('p.text-\\[20px\\]').first().innerText().catch(() => '')
-    if (head) seen.push(head.trim())
-    const flip = page.getByRole('button', { name: '翻面' })
-    const read = page.getByRole('button', { name: '读完了' })
-    const cont = page.getByRole('button', { name: '继续', exact: true })
-    if (await flip.isVisible().catch(() => false)) { await flip.click(); await page.waitForTimeout(200) }
-    else if (await read.isVisible().catch(() => false)) { await read.click(); await page.waitForTimeout(250); continue }
-    else if (await cont.isVisible().catch(() => false)) { await cont.click(); await page.waitForTimeout(250); continue }
-    else { await page.locator('button.w-full.p-4.text-left').first().click(); await page.waitForTimeout(300) }
-    await page.getByRole('button', { name: '顺', exact: true }).click()
-    await page.waitForTimeout(250)
+    maxSize = Math.max(maxSize, await readTotal())
+    const outcome = await answerCurrentCard(page)
+    if (outcome === 'extra') continue
+    if (!outcome) break
   }
   // 学习阶段的卡会被塞回本组,所以实际出现的张数必然多于计划的张数。
   // (重复出现时会换成变式场景,所以不能按文字比对)
-  ok(`round grows so new cards come back in the same session (planned ${plannedSize}, shown ${seen.length})`,
-     seen.length > plannedSize)
+  // 学习阶段的卡会被塞回本组,所以这一组的总张数会在过程中变多
+  ok(`round grows so new cards come back in the same session (planned ${plannedSize}, grew to ${maxSize})`,
+     maxSize > plannedSize)
 }
 await page.getByRole('button', { name: '今天就到这' }).click()
 await page.waitForTimeout(500)
@@ -240,13 +238,61 @@ await page.getByRole('button', { name: /今天/ }).first().click()
 await page.waitForTimeout(400)
 await page.getByText('再来一组', { exact: true }).click()
 await page.waitForTimeout(900)
-const shownPrompt = await page.locator('p.text-\\[20px\\]').first().innerText().catch(() => '')
+const shownPrompt = await page
+  .locator('p.text-\\[20px\\], p.text-\\[17px\\]')
+  .first().innerText().catch(() => '')
 ok('second sighting shows the variant scenario, not the original',
    shownPrompt.trim() === variantInfo.variantPrompt.trim() && shownPrompt.trim() !== variantInfo.basePrompt.trim())
 ok('variant badge explains the switch', await page.getByText('换个场合').isVisible().catch(() => false))
 await page.screenshot({ path: `${shots}/13-variant.png` })
 await page.getByText('✕ 退出').click()
 await page.waitForTimeout(500)
+
+// --- Cloze grading: the whole point of the new format ---
+{
+  // 让一张有关键词组的 produce 卡成为下一组的第一张
+  const target = await page.evaluate(async () => {
+    const db = await new Promise(res => { const r = indexedDB.open('chunk'); r.onsuccess = () => res(r.result) })
+    const all = await new Promise(res => { const r = db.transaction('cards','readonly').objectStore('cards').getAll(); r.onsuccess = () => res(r.result) })
+    const c = all.find(x => x.type === 'produce' && x.chunk && x.answer && x.answer.includes(x.chunk))
+    const tx = db.transaction('cards','readwrite')
+    for (const x of all) if (x.id !== c.id) tx.objectStore('cards').put({ ...x, state: 'review', due: Date.now() + 30 * 86400000 })
+    tx.objectStore('cards').put({ ...c, state: 'review', reps: 0, interval: 1, due: 1 })
+    await new Promise(res => { tx.oncomplete = res })
+    return { chunk: c.chunk }
+  })
+
+  await page.getByRole('button', { name: /今天/ }).first().click()
+  await page.waitForTimeout(400)
+  await page.getByText('再来一组', { exact: true }).click()
+  await page.waitForTimeout(900)
+
+  const input = page.getByPlaceholder('填上缺的那几个词')
+  ok('cloze card is shown with a gap to fill', await input.isVisible().catch(() => false))
+
+  // 先故意答错
+  await input.fill('definitely not the answer')
+  await page.getByRole('button', { name: '对答案' }).click()
+  await page.waitForTimeout(400)
+  ok('wrong answer is rejected, card stays open',
+     (await input.isVisible().catch(() => false)) &&
+     !(await page.getByRole('button', { name: '顺', exact: true }).isVisible().catch(() => false)))
+  await page.screenshot({ path: `${shots}/15-cloze-wrong.png` })
+
+  // 再用大小写和标点都不同的正确答案,应该照样判对
+  await input.fill(target.chunk.toUpperCase() + '.')
+  await page.getByRole('button', { name: '对答案' }).click()
+  await page.waitForTimeout(900)
+  ok('correct answer accepted despite case and punctuation',
+     await page.getByRole('button', { name: '顺', exact: true }).isVisible().catch(() => false))
+  ok('explanation is revealed after answering',
+     await page.getByText('不自然').isVisible().catch(() => false))
+  await page.screenshot({ path: `${shots}/16-cloze-right.png` })
+  await page.getByRole('button', { name: '顺', exact: true }).click()
+  await page.waitForTimeout(400)
+  await page.getByText('✕ 退出').click()
+  await page.waitForTimeout(400)
+}
 
 // --- Reload: persistence check ---
 await page.reload()

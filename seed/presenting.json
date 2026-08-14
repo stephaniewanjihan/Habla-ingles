@@ -11,7 +11,8 @@
         "prompt": "月度经营会汇报轮到你,要用一句开场交代结构和目的",
         "answer": "Thanks everyone — I'll keep this short. Three things from me: where we are, what's changed, and what I need from this group."
       }
-    ]
+    ],
+    "chunk": "I'll keep this short"
   },
   {
     "id": "presenting-02",
@@ -24,7 +25,8 @@
       {
         "prompt": "整体成本控制住了,但有一项超支你不想藏着,开头就要预告"
       }
-    ]
+    ],
+    "chunk": "The headline is"
   },
   {
     "id": "presenting-03",
@@ -38,7 +40,8 @@
         "prompt": "系统上线推迟了三周,汇报时要直接认下来并转向恢复计划",
         "answer": "I'll be upfront: we've slipped three weeks. Here's what caused it, and more importantly, here's the recovery plan."
       }
-    ]
+    ],
+    "chunk": "I'll be upfront"
   },
   {
     "id": "presenting-04",
@@ -52,7 +55,8 @@
         "prompt": "屏幕上是一张密密麻麻的费用明细,要引导大家看关键那一行",
         "answer": "There's a lot on this slide — the line that matters is the third one, the unallocated spend. Everything else is context."
       }
-    ]
+    ],
+    "chunk": "Everything else is context"
   },
   {
     "id": "presenting-05",
@@ -65,7 +69,8 @@
       {
         "prompt": "被问到一个你手头没有答案的成本数字"
       }
-    ]
+    ],
+    "chunk": "to hand"
   },
   {
     "id": "presenting-06",
@@ -79,7 +84,8 @@
         "prompt": "你的选型被质疑为什么不用另一家供应商,而你们评估过",
         "answer": "Fair challenge. We did look at that option — the blocker was the data residency requirement, which we can't move. Happy to share the comparison after."
       }
-    ]
+    ],
+    "chunk": "fair challenge"
   },
   {
     "id": "presenting-07",
@@ -92,7 +98,8 @@
       {
         "prompt": "两位与会者开始争论一个技术细节,你要把会议拉回主线"
       }
-    ]
+    ],
+    "chunk": "take that one offline"
   },
   {
     "id": "presenting-08",
@@ -106,7 +113,8 @@
         "prompt": "汇报结尾,要明确说出你需要这个会议批准预算",
         "answer": "So the ask from today is sign-off on the additional headcount by Friday. Is there anything stopping us doing that now?"
       }
-    ]
+    ],
+    "chunk": "the ask"
   },
   {
     "id": "presenting-09",
@@ -119,7 +127,8 @@
       {
         "prompt": "周会上轮到你更新,要在三十秒内讲完"
       }
-    ]
+    ],
+    "chunk": "nothing I need from anyone today"
   },
   {
     "id": "presenting-10",
@@ -133,7 +142,8 @@
         "prompt": "展示明年的预算预测时,要提醒大家这个数不确定性很大",
         "answer": "Treat the 2027 number as directional rather than precise — it moves a lot with the headcount assumption."
       }
-    ]
+    ],
+    "chunk": "directional rather than precise"
   },
   {
     "id": "presenting-11",
@@ -146,7 +156,8 @@
       {
         "prompt": "汇报的成果里有一大块是外包团队做的,要当众归功"
       }
-    ]
+    ],
+    "chunk": "credit where it's due"
   },
   {
     "id": "presenting-12",
@@ -159,7 +170,8 @@
       {
         "prompt": "成本数据讲完了,要过渡到它对各部门意味着什么"
       }
-    ]
+    ],
+    "chunk": "what does it actually mean for"
   },
   {
     "id": "presenting-13",
@@ -172,7 +184,8 @@
       {
         "prompt": "会议超时,你还有两页没讲,要跳到结论"
       }
-    ]
+    ],
+    "chunk": "conscious of time"
   },
   {
     "id": "presenting-14",
@@ -185,7 +198,8 @@
       {
         "prompt": "开始前要说清这次只讲伦敦办公室的数,其他欧洲办公室下次再讲"
       }
-    ]
+    ],
+    "chunk": "set expectations"
   },
   {
     "id": "presenting-15",
@@ -207,7 +221,8 @@
       {
         "prompt": "讲完现状,要切到下一页的预算部分"
       }
-    ]
+    ],
+    "chunk": "moving on to"
   },
   {
     "id": "presenting-16",
@@ -229,7 +244,8 @@
       {
         "prompt": "汇报结束,要开放提问"
       }
-    ]
+    ],
+    "chunk": "anything jumping out"
   },
   {
     "id": "presenting-17",
@@ -252,7 +268,8 @@
         "prompt": "汇报里要给出你自己的判断:建议先不换系统",
         "answer": "My read is we hold off on the migration — the risk profile changes completely once the audit lands."
       }
-    ]
+    ],
+    "chunk": "my read is"
   },
   {
     "id": "presenting-18",

@@ -10,7 +10,8 @@
       {
         "prompt": "周一早上老板问你周末怎么样,你其实就在家收拾屋子"
       }
-    ]
+    ],
+    "chunk": "how about you"
   },
   {
     "id": "small-talk-02",
@@ -24,7 +25,8 @@
         "prompt": "刚下过冰雹,在茶水间遇到同事,用天气开场",
         "answer": "Wild out there earlier, wasn't it?"
       }
-    ]
+    ],
+    "chunk": "isn't it"
   },
   {
     "id": "small-talk-03",
@@ -38,7 +40,8 @@
         "prompt": "地铁信号故障害你迟到二十分钟,到公司跟同事吐槽",
         "answer": "Signal failure at Euston again — twenty minutes late and packed like sardines."
       }
-    ]
+    ],
+    "chunk": "was a shambles"
   },
   {
     "id": "small-talk-04",
@@ -51,7 +54,8 @@
       {
         "prompt": "周五下午,跟刚认识不久的同事聊两句周末打算"
       }
-    ]
+    ],
+    "chunk": "meant to be decent"
   },
   {
     "id": "small-talk-05",
@@ -64,7 +68,8 @@
       {
         "prompt": "走廊上碰到别的部门的人,对方说 how are you"
       }
-    ]
+    ],
+    "chunk": "not bad"
   },
   {
     "id": "small-talk-06",
@@ -78,7 +83,8 @@
         "prompt": "下午三点你去茶水间,按惯例问一圈要不要带咖啡",
         "answer": "I'm doing a coffee run — anyone want one?"
       }
-    ]
+    ],
+    "chunk": "tea run"
   },
   {
     "id": "small-talk-07",
@@ -91,7 +97,8 @@
       {
         "prompt": "出差一周回来第一天,同事问你这趟怎么样"
       }
-    ]
+    ],
+    "chunk": "too quickly"
   },
   {
     "id": "small-talk-08",
@@ -104,7 +111,8 @@
       {
         "prompt": "周一大家在聊昨晚的网球决赛,你没看但想参与"
       }
-    ]
+    ],
+    "chunk": "any good"
   },
   {
     "id": "small-talk-09",
@@ -118,7 +126,8 @@
         "prompt": "一月初回来上班,和同事寒暄圣诞假期",
         "answer": "How was your Christmas? Ours was very quiet — ate far too much, as usual."
       }
-    ]
+    ],
+    "chunk": "All set for Christmas"
   },
   {
     "id": "small-talk-10",
@@ -131,7 +140,8 @@
       {
         "prompt": "午饭时想找话题,问同事最近看了什么电影"
       }
-    ]
+    ],
+    "chunk": "everyone's on about"
   },
   {
     "id": "small-talk-11",
@@ -145,7 +155,8 @@
         "prompt": "同事产假结束回来上班,你要迎接一下",
         "answer": "Welcome back! How's it been? Don't worry, the inbox isn't as scary as it looks."
       }
-    ]
+    ],
+    "chunk": "the inbox isn't as scary as it looks"
   },
   {
     "id": "small-talk-12",
@@ -159,7 +170,8 @@
         "prompt": "团队圣诞聚餐,你今晚开车,轮到别人问你喝什么",
         "answer": "I'm alright with a sparkling water, cheers — driving tonight."
       }
-    ]
+    ],
+    "chunk": "lime and soda"
   },
   {
     "id": "small-talk-13",
@@ -172,7 +184,8 @@
       {
         "prompt": "在电梯里和同事聊了两层楼,到你的楼层要结束对话"
       }
-    ]
+    ],
+    "chunk": "better crack on"
   },
   {
     "id": "small-talk-14",
@@ -185,7 +198,8 @@
       {
         "prompt": "早上进办公室,和已经坐下的同事打招呼"
       }
-    ]
+    ],
+    "chunk": "How's it going"
   },
   {
     "id": "small-talk-15",
@@ -198,7 +212,8 @@
       {
         "prompt": "同事在看旅游网站,你顺势聊两句他的假期计划"
       }
-    ]
+    ],
+    "chunk": "got anything booked"
   },
   {
     "id": "small-talk-16",
@@ -221,7 +236,8 @@
         "prompt": "同事问你周末怎么样,你其实一直在加班",
         "answer": "Bit of a working weekend, sadly — but I did escape for a walk on Sunday. You?"
       }
-    ]
+    ],
+    "chunk": "Fairly low-key"
   },
   {
     "id": "small-talk-17",
@@ -243,7 +259,8 @@
       {
         "prompt": "连续下了一周雨终于放晴,想跟同事感叹一句"
       }
-    ]
+    ],
+    "chunk": "isn't it"
   },
   {
     "id": "small-talk-18",
@@ -266,7 +283,8 @@
         "prompt": "同事抱怨公司系统一早上崩了三次,你要回应",
         "answer": "Not again — it's been shocking all week, hasn't it?"
       }
-    ]
+    ],
+    "chunk": "it's been shocking all week"
   },
   {
     "id": "small-talk-19",
@@ -288,7 +306,8 @@
       {
         "prompt": "被问周末有什么安排,你还没想好"
       }
-    ]
+    ],
+    "chunk": "set in stone"
   },
   {
     "id": "small-talk-20",
@@ -311,7 +330,8 @@
         "prompt": "工作午餐时同事问你喝点什么,你想喝无酒精的",
         "answer": "Just a sparkling water for me, cheers."
       }
-    ]
+    ],
+    "chunk": "Just a Diet Coke for me"
   },
   {
     "id": "small-talk-21",

@@ -10,7 +10,8 @@
       {
         "prompt": "老板转来一个别的部门的疑问,你需要先回一句让他知道你接手了"
       }
-    ]
+    ],
+    "chunk": "Thanks for flagging this"
   },
   {
     "id": "email-02",
@@ -24,7 +25,8 @@
         "prompt": "你昨天发出去的会议纪要里把一个决定写反了,要发更正",
         "answer": "Apologies — the minutes I sent yesterday had one decision the wrong way round. We agreed to delay the migration, not to bring it forward. Everything else in the note stands."
       }
-    ]
+    ],
+    "chunk": "Nothing else in the breakdown is affected"
   },
   {
     "id": "email-03",
@@ -37,7 +39,8 @@
       {
         "prompt": "有人邀请你团队接一个新的月度报表,你们排不下"
       }
-    ]
+    ],
+    "chunk": "I'm afraid"
   },
   {
     "id": "email-04",
@@ -50,7 +53,8 @@
       {
         "prompt": "对方邮件里说了见下方链接,但链接是空的"
       }
-    ]
+    ],
+    "chunk": "slipped off"
   },
   {
     "id": "email-05",
@@ -63,7 +67,8 @@
       {
         "prompt": "审计要的材料因为系统升级晚了,想把提交日推后两天"
       }
-    ]
+    ],
+    "chunk": "any flex on"
   },
   {
     "id": "email-06",
@@ -76,7 +81,8 @@
       {
         "prompt": "客户问的问题属于税务口径,你要转给税务同事并让他们直接对接"
       }
-    ]
+    ],
+    "chunk": "Looping in"
   },
   {
     "id": "email-07",
@@ -89,7 +95,8 @@
       {
         "prompt": "券商发来的费用明细和你们算的差了几百镑,你要提出来对一下"
       }
-    ]
+    ],
+    "chunk": "our records show"
   },
   {
     "id": "email-08",
@@ -102,7 +109,8 @@
       {
         "prompt": "和外部律师来回确认了很多轮的条款终于敲定,要收尾"
       }
-    ]
+    ],
+    "chunk": "all set"
   },
   {
     "id": "email-09",
@@ -115,7 +123,8 @@
       {
         "prompt": "第一次写信给集团另一个国家的财务负责人,是你老板让你去找他的"
       }
-    ]
+    ],
+    "chunk": "Hope you don't mind me reaching out"
   },
   {
     "id": "email-10",
@@ -128,7 +137,8 @@
       {
         "prompt": "周四给合作方写邮件,进入正题前需要一句开场"
       }
-    ]
+    ],
+    "chunk": "had a good weekend"
   },
   {
     "id": "email-11",
@@ -141,7 +151,8 @@
       {
         "prompt": "季度报告的数据源出了问题,要提前告诉老板交付要晚两天"
       }
-    ]
+    ],
+    "chunk": "manage expectations"
   },
   {
     "id": "email-12",
@@ -154,7 +165,8 @@
       {
         "prompt": "内部同事因为你们的疏忽白做了一天的工作,发来抱怨,要回信"
       }
-    ]
+    ],
+    "chunk": "here's where we are and what happens next"
   },
   {
     "id": "email-13",
@@ -167,7 +179,8 @@
       {
         "prompt": "出差一周回来,有人在你不在时催过一件事,要回复"
       }
-    ]
+    ],
+    "chunk": "back from leave"
   },
   {
     "id": "email-14",
@@ -180,7 +193,8 @@
       {
         "prompt": "把一笔转账的收款信息发给对方,需要对方书面确认无误再执行"
       }
-    ]
+    ],
+    "chunk": "your go-ahead"
   },
   {
     "id": "email-15",
@@ -202,7 +216,8 @@
       {
         "prompt": "请对方帮你核对一份表格里的数字"
       }
-    ]
+    ],
+    "chunk": "when you get a chance"
   },
   {
     "id": "email-16",
@@ -224,7 +239,8 @@
       {
         "prompt": "想问同事一个小问题:新的费用报销上限是不是从下个月开始"
       }
-    ]
+    ],
+    "chunk": "quick one"
   },
   {
     "id": "email-17",
@@ -246,7 +262,8 @@
       {
         "prompt": "把修订后的流程文档发给团队"
       }
-    ]
+    ],
+    "chunk": "if anything looks off"
   },
   {
     "id": "email-18",
@@ -269,7 +286,8 @@
         "prompt": "客户的选择权指令必须在今天两点前提交,你还没收到对方确认",
         "answer": "Sorry to push, but this one's time-sensitive — we need your election by 2pm today or the default option applies."
       }
-    ]
+    ],
+    "chunk": "sorry to push"
   },
   {
     "id": "email-19",
@@ -336,6 +354,7 @@
       {
         "prompt": "跟对方约下周四上午的复盘会"
       }
-    ]
+    ],
+    "chunk": "pop it in the diary"
   }
 ]

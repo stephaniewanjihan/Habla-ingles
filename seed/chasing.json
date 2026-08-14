@@ -10,7 +10,8 @@
       {
         "prompt": "第二次催客户回你的确认,对方拖了五天"
       }
-    ]
+    ],
+    "chunk": "circling back"
   },
   {
     "id": "chasing-02",
@@ -23,7 +24,8 @@
       {
         "prompt": "发给 IT 的工单两天没人认领,第一次催"
       }
-    ]
+    ],
+    "chunk": "checking in"
   },
   {
     "id": "chasing-03",
@@ -37,7 +39,8 @@
         "prompt": "第三次催法务看合同,已经卡住签约,升级前最后催一次",
         "answer": "Flagging this one again as it's now holding up the signing on our side. If it's stuck somewhere, happy to jump on a quick call and sort it."
       }
-    ]
+    ],
+    "chunk": "blocking the client report"
   },
   {
     "id": "chasing-04",
@@ -51,7 +54,8 @@
         "prompt": "反复催供应商无果,要把对方客户经理抄进来,话要说得体面",
         "answer": "Looping in Sarah for visibility, as we're now up against the quarter-end close on this one."
       }
-    ]
+    ],
+    "chunk": "for visibility"
   },
   {
     "id": "chasing-05",
@@ -65,7 +69,8 @@
         "prompt": "券商那边一笔配股款迟迟没到账,要催他们去追",
         "answer": "Could you chase the broker on the outstanding rights proceeds? It's been sitting since the 9th and the client's starting to ask."
       }
-    ]
+    ],
+    "chunk": "the client's starting to ask"
   },
   {
     "id": "chasing-06",
@@ -78,7 +83,8 @@
       {
         "prompt": "催对方今天给答复,因为明早要提交监管报送"
       }
-    ]
+    ],
+    "chunk": "close of play"
   },
   {
     "id": "chasing-07",
@@ -91,7 +97,8 @@
       {
         "prompt": "预算审批卡在很忙的财务总监那里,要催但姿态要放低"
       }
-    ]
+    ],
+    "chunk": "any chance of"
   },
   {
     "id": "chasing-08",
@@ -104,7 +111,8 @@
       {
         "prompt": "六个部门里五个都交了数据,只差一个人,要点名催他"
       }
-    ]
+    ],
+    "chunk": "everyone else is in"
   },
   {
     "id": "chasing-09",
@@ -118,7 +126,8 @@
         "prompt": "客户催你,但你卡在托管行那边,要解释并给出你的行动",
         "answer": "This one's sitting with the custodian at the moment — I'm chasing them today and will revert as soon as I hear."
       }
-    ]
+    ],
+    "chunk": "sitting with"
   },
   {
     "id": "chasing-10",
@@ -132,7 +141,8 @@
         "prompt": "老板催结果,但你在等审计出具意见,要安抚并展示你在盯",
         "answer": "We're waiting on sign-off from the auditors — I'm chasing daily and will let you know the moment it lands."
       }
-    ]
+    ],
+    "chunk": "the moment it lands"
   },
   {
     "id": "chasing-11",
@@ -145,7 +155,8 @@
       {
         "prompt": "原本下周才要的材料,因为董事会提前,今天就得要"
       }
-    ]
+    ],
+    "chunk": "what wasn't urgent yesterday now is"
   },
   {
     "id": "chasing-12",
@@ -158,7 +169,8 @@
       {
         "prompt": "催过的同事连夜把数据补齐了,要表达感谢"
       }
-    ]
+    ],
+    "chunk": "turning that around"
   },
   {
     "id": "chasing-13",
@@ -171,7 +183,8 @@
       {
         "prompt": "两个月前讨论过的费用分摊没有结论,现在要重新捞起来"
       }
-    ]
+    ],
+    "chunk": "where did we land on"
   },
   {
     "id": "chasing-14",
@@ -193,7 +206,8 @@
       {
         "prompt": "上周发给合规的问询一直没回,再发一封"
       }
-    ]
+    ],
+    "chunk": "in case it got buried"
   },
   {
     "id": "chasing-15",
@@ -215,7 +229,8 @@
       {
         "prompt": "催对方回复,涉及一个真实的申报时限"
       }
-    ]
+    ],
+    "chunk": "come back to me by"
   },
   {
     "id": "chasing-16",
@@ -237,7 +252,8 @@
       {
         "prompt": "温和地提醒同事本周要交的时间表"
       }
-    ]
+    ],
+    "chunk": "Gentle reminder"
   },
   {
     "id": "chasing-17",
@@ -259,7 +275,8 @@
       {
         "prompt": "很急,需要对方立刻确认一笔付款指令"
       }
-    ]
+    ],
+    "chunk": "sorry to press"
   },
   {
     "id": "chasing-18",

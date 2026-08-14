@@ -28,6 +28,8 @@ export interface CardContent {
   questions?: string[]
   // 所有可复习卡型都有 note
   note?: string
+  /** 这张卡真正要练的词组,填空模式挖掉它 */
+  chunk?: string
   /**
    * 变式情境:同一个表达在别的场合同样成立。
    * 复习时按 reps 轮换,避免原样重复导致"认脸不认意思"。

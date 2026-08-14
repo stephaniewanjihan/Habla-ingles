@@ -101,3 +101,23 @@ body {
 button {
   font: inherit;
 }
+
+/* 即时反馈的动画:答对轻轻弹一下,答错左右晃一下 */
+@keyframes pop {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-7px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(3px); }
+}
+.anim-pop { animation: pop 0.34s ease-out; }
+.anim-shake { animation: shake 0.36s ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-pop, .anim-shake { animation: none; }
+}

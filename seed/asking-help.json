@@ -11,7 +11,8 @@
         "prompt": "你没独立做过季度合并报表,想请做过的同事带你走一遍",
         "answer": "I've not run a quarter-end consolidation end-to-end before — could I grab half an hour with you to walk through how you'd normally do it?"
       }
-    ]
+    ],
+    "chunk": "grab half an hour"
   },
   {
     "id": "asking-help-02",
@@ -25,7 +26,8 @@
         "prompt": "想请同事帮你看看一份复杂的 Excel 公式,不急",
         "answer": "No rush at all on this, but when you've got a spare few minutes could you sanity-check my formula? Something's off in the lookup and I can't see it."
       }
-    ]
+    ],
+    "chunk": "sanity-check"
   },
   {
     "id": "asking-help-03",
@@ -38,7 +40,8 @@
       {
         "prompt": "下周你要出差三天,想请同事帮忙盯团队的日常查询"
       }
-    ]
+    ],
+    "chunk": "keep an eye on"
   },
   {
     "id": "asking-help-04",
@@ -51,7 +54,8 @@
       {
         "prompt": "要把一份初步的数据整理工作交给刚来的实习生"
       }
-    ]
+    ],
+    "chunk": "could I ask you to"
   },
   {
     "id": "asking-help-05",
@@ -64,7 +68,8 @@
       {
         "prompt": "向老板要资源:要么加预算买工具,要么砍掉手工核对的范围"
       }
-    ]
+    ],
+    "chunk": "another pair of hands"
   },
   {
     "id": "asking-help-06",
@@ -77,7 +82,8 @@
       {
         "prompt": "有个关于内部记账流程的问题你怕问出来显得基础,但确实需要答案"
       }
-    ]
+    ],
+    "chunk": "a daft question"
   },
   {
     "id": "asking-help-07",
@@ -90,7 +96,8 @@
       {
         "prompt": "想约做过系统上线的同事聊二十分钟,请教怎么准备"
       }
-    ]
+    ],
+    "chunk": "pick your brain"
   },
   {
     "id": "asking-help-08",
@@ -103,7 +110,8 @@
       {
         "prompt": "季度汇报的材料明天要发给管理层,想请同事今天帮你审一遍"
       }
-    ]
+    ],
+    "chunk": "fresh pair of eyes"
   },
   {
     "id": "asking-help-09",
@@ -117,7 +125,8 @@
         "prompt": "对方讲解到费用分摊那一步你没跟上,要请他再讲一遍",
         "answer": "Sorry, could you run that by me again? You lost me at the allocation step."
       }
-    ]
+    ],
+    "chunk": "run that by me again"
   },
   {
     "id": "asking-help-10",
@@ -130,7 +139,8 @@
       {
         "prompt": "你需要认识合规团队的人,想请同事帮你牵线"
       }
-    ]
+    ],
+    "chunk": "do an intro"
   },
   {
     "id": "asking-help-11",
@@ -143,7 +153,8 @@
       {
         "prompt": "共享盘打不开了,在群里问是不是大家都这样,顺便求助"
       }
-    ]
+    ],
+    "chunk": "or is it just me"
   },
   {
     "id": "asking-help-12",
@@ -156,7 +167,8 @@
       {
         "prompt": "要写一份没写过的董事会材料,想找同事要一份以前的参考"
       }
-    ]
+    ],
+    "chunk": "work from an example"
   },
   {
     "id": "asking-help-13",
@@ -169,7 +181,8 @@
       {
         "prompt": "同事之前给你的模板帮你省了一整天,要回去说一声"
       }
-    ]
+    ],
+    "chunk": "worked a treat"
   },
   {
     "id": "asking-help-14",
@@ -191,7 +204,8 @@
       {
         "prompt": "费用分摊表怎么都对不平,想请同事帮忙"
       }
-    ]
+    ],
+    "chunk": "you help me"
   },
   {
     "id": "asking-help-15",
@@ -213,7 +227,8 @@
       {
         "prompt": "想让熟悉系统的同事演示一遍怎么跑那个报表"
       }
-    ]
+    ],
+    "chunk": "show me how you'd normally"
   },
   {
     "id": "asking-help-16",
@@ -235,7 +250,8 @@
       {
         "prompt": "同事正戴着耳机在专注工作,你想问个问题"
       }
-    ]
+    ],
+    "chunk": "have you got two minutes"
   },
   {
     "id": "asking-help-17",
@@ -257,7 +273,8 @@
       {
         "prompt": "客户临时要材料,需要同事一小时内帮你出一份费用明细"
       }
-    ]
+    ],
+    "chunk": "fire drill"
   },
   {
     "id": "asking-help-18",

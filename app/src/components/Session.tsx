@@ -2,6 +2,8 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { db, getMeta, setMeta } from '../db'
 import { rate, dayKey, viewFor } from '../srs'
 import { FLAGS, REVIEWABLE, sceneLabel } from '../types'
+import { buildCloze, isCorrect, isNearMiss } from '../cloze'
+import { playCorrect, playWrong, playRoundDone } from '../feedback'
 import type { CardRecord, Flag, Rating } from '../types'
 
 const ROUND_REVIEW_SLOTS = 4
@@ -89,6 +91,18 @@ function CardFooter({ card }: { card: CardRecord }) {
   )
 }
 
+function ProgressBar({ done, total }: { done: number; total: number }) {
+  const pct = total ? Math.min(100, (done / total) * 100) : 0
+  return (
+    <div className="h-2 flex-1 overflow-hidden rounded-full bg-fill">
+      <div
+        className="h-full rounded-full bg-green transition-[width] duration-300 ease-out"
+        style={{ width: `${pct}%` }}
+      />
+    </div>
+  )
+}
+
 function SceneChip({ scene }: { scene: string }) {
   return (
     <span className="rounded-full bg-blue-soft px-2.5 py-1 text-[12px] font-medium text-blue">
@@ -110,6 +124,9 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   const [pickChoice, setPickChoice] = useState<number | null>(null)
   const [finished, setFinished] = useState(false)
   const [cutShort, setCutShort] = useState(false)
+  const [typed, setTyped] = useState('')
+  const [verdict, setVerdict] = useState<'right' | 'wrong' | null>(null)
+  const [doneCount, setDoneCount] = useState(0)
   const ratingsRef = useRef<Map<string, Rating>>(new Map())
   const repeatedRef = useRef<Map<string, number>>(new Map())
   const startRef = useRef(Date.now())
@@ -127,6 +144,20 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
 
   const card = queue && index < queue.length ? queue[index] : null
   const view = card ? viewFor(card) : null
+  // 有关键词组就走填空(有唯一答案、能即时判对错);没有就退回原来的产出模式
+  const cloze = card?.type === 'produce' ? buildCloze(view?.answer, card.chunk) : null
+
+  const checkCloze = () => {
+    if (!cloze || !typed.trim()) return
+    if (isCorrect(typed, cloze.answer)) {
+      setVerdict('right')
+      playCorrect()
+      setTimeout(() => setRevealed(true), 520)
+    } else {
+      setVerdict('wrong')
+      playWrong()
+    }
+  }
 
   const pickOrder = useMemo(() => {
     if (!card || card.type !== 'pick' || !card.options) return []
@@ -137,6 +168,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
     const checkins = await getMeta<string[]>('checkins', [])
     const today = dayKey(Date.now())
     if (!checkins.includes(today)) await setMeta('checkins', [...checkins, today])
+    playRoundDone()
     setFinished(true)
   }
 
@@ -144,6 +176,9 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
     const q = nextQueue ?? queue!
     setRevealed(false)
     setPickChoice(null)
+    setTyped('')
+    setVerdict(null)
+    setDoneCount(n => n + 1)
     if (Date.now() - startRef.current > TIME_LIMIT_MS && index + 1 < q.length) {
       setCutShort(true)
       void finishRound()
@@ -242,11 +277,12 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
 
   return (
     <div className="mx-auto max-w-md px-4 pt-12 pb-44">
-      <div className="flex items-center justify-between text-[15px] text-label2">
+      <div className="flex items-center gap-3 text-[15px] text-label2">
         <button onClick={onExit} className="text-blue">
           ✕ 退出
         </button>
-        <span>{progress}</span>
+        <ProgressBar done={doneCount} total={queue.length} />
+        <span className="tabular-nums text-[13px]">{progress}</span>
       </div>
 
       <div className="mt-6">
@@ -259,13 +295,44 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
           )}
         </div>
 
-        {card.type === 'produce' && (
+        {card.type === 'produce' && cloze && !revealed && (
+          <div className="mt-4">
+            <p className="text-[17px] leading-relaxed text-label2">{view!.prompt}</p>
+            <div className={`group-card mt-4 p-4 ${verdict === 'wrong' ? 'anim-shake' : ''}`}>
+              <p className="text-[19px] leading-relaxed">
+                <span className="text-label2">{cloze.before}</span>
+                <span className="mx-0.5 inline-block min-w-[92px] rounded-[6px] border-b-2 border-blue bg-blue-soft px-2 text-center font-medium text-blue">
+                  {verdict === 'right' ? cloze.answer : '?'}
+                </span>
+                <span className="text-label2">{cloze.after}</span>
+              </p>
+            </div>
+            <input
+              value={typed}
+              onChange={e => setTyped(e.target.value)}
+              onKeyDown={e => { if (e.key === 'Enter') checkCloze() }}
+              autoComplete="off"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              placeholder="填上缺的那几个词"
+              className="mt-4 w-full rounded-[12px] bg-card p-3.5 text-[17px] text-label placeholder:text-label3 focus:outline-none"
+            />
+            {verdict === 'wrong' && (
+              <p className="mt-2 text-[14px] text-orange">
+                {isNearMiss(typed, cloze.answer) ? '很接近了,只差一个词——再试一次?' : '不对。再想想,或者直接看答案。'}
+              </p>
+            )}
+          </div>
+        )}
+
+        {card.type === 'produce' && (!cloze || revealed) && (
           <div className="mt-4">
             <p className="text-[20px] font-medium leading-relaxed">{view!.prompt}</p>
             {!revealed ? (
               <p className="mt-6 text-[15px] text-label2">心里(或小声)把英文说出来,再翻面对答案。</p>
             ) : (
-              <div className="group-card mt-6 p-4">
+              <div className={`group-card mt-6 p-4 ${verdict === 'right' ? 'anim-pop' : ''}`}>
                 <p className="text-[19px] font-medium leading-relaxed text-blue">{view!.answer}</p>
                 <p className="row-sep mt-3.5 pb-3.5 text-[14px] leading-relaxed text-label2" style={{ borderBottom: 'none', borderTop: '0.5px solid var(--sep)', paddingTop: '14px', paddingBottom: 0 }}>{view!.note}</p>
                 <CardFooter card={card} />
@@ -283,8 +350,8 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                 const chosen = pickChoice === i
                 let cls = 'bg-card'
                 if (revealed) {
-                  if (opt.correct) cls = 'bg-green-soft ring-[1.5px] ring-green'
-                  else if (chosen) cls = 'bg-red-soft ring-[1.5px] ring-red'
+                  if (opt.correct) cls = 'bg-green-soft ring-[1.5px] ring-green' + (chosen ? ' anim-pop' : '')
+                  else if (chosen) cls = 'bg-red-soft ring-[1.5px] ring-red anim-shake'
                   else cls = 'bg-card opacity-50'
                 }
                 return (
@@ -294,6 +361,8 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                     onClick={() => {
                       setPickChoice(i)
                       setRevealed(true)
+                      if (opt.correct) playCorrect()
+                      else playWrong()
                     }}
                     className={`w-full rounded-[14px] p-4 text-left text-[16px] leading-relaxed ${cls}`}
                   >
@@ -371,7 +440,23 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
       <div className="fixed bottom-0 left-0 right-0 bg-bar px-4 pt-3 pb-[calc(1rem+env(safe-area-inset-bottom))] backdrop-blur-xl" style={{ borderTop: '0.5px solid var(--sep)' }}>
         <div className="mx-auto max-w-md">
         {REVIEWABLE.includes(card.type) ? (
-          !revealed && card.type !== 'pick' ? (
+          cloze && !revealed ? (
+            <div className="flex gap-2.5">
+              <button
+                onClick={() => { setVerdict(null); setRevealed(true) }}
+                className="flex-1 rounded-[14px] bg-fill py-4 text-[15px] text-label active:opacity-70"
+              >
+                想不起来
+              </button>
+              <button
+                onClick={checkCloze}
+                disabled={!typed.trim()}
+                className="flex-[1.4] rounded-[14px] bg-blue py-4 text-[17px] font-semibold text-white active:opacity-80 disabled:opacity-40"
+              >
+                对答案
+              </button>
+            </div>
+          ) : !revealed && card.type !== 'pick' ? (
             <button
               onClick={() => setRevealed(true)}
               className="w-full rounded-[14px] bg-blue py-4 text-[17px] font-semibold text-white active:opacity-80"

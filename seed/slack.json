@@ -10,7 +10,8 @@
       {
         "prompt": "老板问你能不能顺手接一个新的对账任务,你这周已经排满"
       }
-    ]
+    ],
+    "chunk": "Happy to"
   },
   {
     "id": "slack-02",
@@ -23,7 +24,8 @@
       {
         "prompt": "有人发来一份需要仔细读的合同条款,你正在处理一笔急单"
       }
-    ]
+    ],
+    "chunk": "in back-to-backs"
   },
   {
     "id": "slack-03",
@@ -36,7 +38,8 @@
       {
         "prompt": "群里有人问税务口径的问题,不归你管,但你知道谁负责"
       }
-    ]
+    ],
+    "chunk": "not my area"
   },
   {
     "id": "slack-04",
@@ -50,7 +53,8 @@
         "prompt": "你想快速确认一个金额的币种,自己其实九成确定",
         "answer": "Sanity check — that 40k is euros, not sterling, right?"
       }
-    ]
+    ],
+    "chunk": "sanity check"
   },
   {
     "id": "slack-05",
@@ -64,7 +68,8 @@
         "prompt": "你刚在群里 @ 错了人,要马上撤回重发",
         "answer": "Scrap that — tagged the wrong Dan. Reposting below."
       }
-    ]
+    ],
+    "chunk": "scrap that"
   },
   {
     "id": "slack-06",
@@ -77,7 +82,8 @@
       {
         "prompt": "客户临时要一份数据,老板在群里点名让你出,你要接下"
       }
-    ]
+    ],
+    "chunk": "on it"
   },
   {
     "id": "slack-07",
@@ -91,7 +97,8 @@
         "prompt": "有人把 IT 权限的问题发到了你们业务群,要引导他去对的地方",
         "answer": "Might be one for the IT service desk? They pick things up much faster in there."
       }
-    ]
+    ],
+    "chunk": "might be one for"
   },
   {
     "id": "slack-08",
@@ -105,7 +112,8 @@
         "prompt": "指令提交截止还有十分钟,对方承诺的确认还没来,提醒一下",
         "answer": "Gentle nudge — cut-off's in ten."
       }
-    ]
+    ],
+    "chunk": "gentle nudge"
   },
   {
     "id": "slack-09",
@@ -119,7 +127,8 @@
         "prompt": "下班前交接:今天的指令都提交完了,还剩两笔明天跟",
         "answer": "Heading off — all instructions are in bar two, will chase those first thing."
       }
-    ]
+    ],
+    "chunk": "heading off"
   },
   {
     "id": "slack-10",
@@ -132,7 +141,8 @@
       {
         "prompt": "想请同事有空时帮你看一眼给客户的邮件草稿,不急"
       }
-    ]
+    ],
+    "chunk": "cast an eye over"
   },
   {
     "id": "slack-11",
@@ -145,7 +155,8 @@
       {
         "prompt": "同事临时替你顶了一个会,要表达感谢"
       }
-    ]
+    ],
+    "chunk": "Owe you one"
   },
   {
     "id": "slack-12",
@@ -158,7 +169,8 @@
       {
         "prompt": "群里在定谁来做下周的汇报,提议由你来,你同意"
       }
-    ]
+    ],
+    "chunk": "Works for me"
   },
   {
     "id": "slack-13",
@@ -171,7 +183,8 @@
       {
         "prompt": "有人私聊问你流程变更的事,这个变更全组都该知道"
       }
-    ]
+    ],
+    "chunk": "across it"
   },
   {
     "id": "slack-14",
@@ -184,7 +197,8 @@
       {
         "prompt": "有人找你查一笔旧交易,你能查但档案归另一个同事管"
       }
-    ]
+    ],
+    "chunk": "I can take a look"
   },
   {
     "id": "slack-15",
@@ -206,7 +220,8 @@
       {
         "prompt": "老板问你能不能今天下班前把纪要发出来,你可以"
       }
-    ]
+    ],
+    "chunk": "should have it with you"
   },
   {
     "id": "slack-16",
@@ -228,7 +243,8 @@
       {
         "prompt": "想问同事那份季度分析做得怎么样了"
       }
-    ]
+    ],
+    "chunk": "looking"
   },
   {
     "id": "slack-17",
@@ -250,7 +266,8 @@
       {
         "prompt": "同事在工位旁等你,你手上的邮件还差两句写完"
       }
-    ]
+    ],
+    "chunk": "two secs"
   },
   {
     "id": "slack-18",
@@ -273,7 +290,8 @@
         "prompt": "下周三下午要去看牙医,在群里知会大家",
         "answer": "Heads-up — I'm out from 2pm Wednesday, dentist. Back online by 4 if anything urgent."
       }
-    ]
+    ],
+    "chunk": "Heads-up"
   },
   {
     "id": "slack-19",
