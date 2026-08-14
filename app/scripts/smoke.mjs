@@ -162,6 +162,23 @@ ok('inbox has copy-for-claude button', await page.getByText('复制全部,拿去
 ok('inbox has export button', await page.getByText('导出全部数据').isVisible().catch(() => false))
 await page.screenshot({ path: `${shots}/9-inbox.png` })
 
+// --- Import path: the Claude round-trip she'll run every couple of weeks ---
+await page.locator('input[type=file]').setInputFiles('/tmp/claude-0/-home-user-Habla-ingles/3e754a22-9d07-56b8-b170-7b43c4a72bcc/scratchpad/test-import.json')
+await page.waitForTimeout(900)
+const importMsg = await page.locator('div.bg-indigo-50').first().innerText().catch(() => '')
+ok(`import added 2 and skipped 2 malformed (got: ${importMsg.trim()})`,
+   importMsg.includes('新增 2 张卡') && importMsg.includes('跳过 2 条'))
+await page.screenshot({ path: `${shots}/12-import.png` })
+
+// Imported cards must actually reach the deck
+await page.getByRole('button', { name: /牌组/ }).click()
+await page.waitForTimeout(500)
+await page.getByText('写邮件', { exact: true }).click()
+await page.waitForTimeout(400)
+ok('imported card visible in deck', await page.getByText('测试用:临时通知对方今天无法回复').isVisible().catch(() => false))
+await page.getByRole('button', { name: /收集箱/ }).click()
+await page.waitForTimeout(400)
+
 // --- Reload: persistence check ---
 await page.reload()
 await page.waitForTimeout(1200)

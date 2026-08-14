@@ -90,6 +90,16 @@ export async function restoreAll(bundle: ExportBundle): Promise<void> {
   })
 }
 
+const VALID_TYPES: CardContent['type'][] = ['produce', 'pick', 'register', 'note', 'listen']
+
+const REQUIRED_FIELDS: Record<CardContent['type'], (keyof CardContent)[]> = {
+  produce: ['prompt', 'answer', 'note'],
+  pick: ['prompt', 'options', 'note'],
+  register: ['situation', 'soft', 'neutral', 'firm', 'note'],
+  note: ['title', 'body'],
+  listen: ['title', 'task'],
+}
+
 /** 合并新卡片(Claude 生成的卡片数组):已有 id 跳过,新 id 作为新卡加入 */
 export async function mergeCards(cards: CardContent[]): Promise<{ added: number; skipped: number }> {
   let added = 0
@@ -97,7 +107,13 @@ export async function mergeCards(cards: CardContent[]): Promise<{ added: number;
   const now = Date.now()
   await db.transaction('rw', db.cards, async () => {
     for (const c of cards) {
-      if (!c.id || !c.type || !c.scene) {
+      if (!c.id || !c.scene || !VALID_TYPES.includes(c.type)) {
+        skipped++
+        continue
+      }
+      // 缺了本卡型的必填字段就跳过,否则会进来一张点开是空白的卡
+      const required = REQUIRED_FIELDS[c.type]
+      if (required.some(f => c[f] === undefined || c[f] === null)) {
         skipped++
         continue
       }
