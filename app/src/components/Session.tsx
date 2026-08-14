@@ -4,6 +4,7 @@ import { rate, dayKey, viewFor } from '../srs'
 import { FLAGS, REVIEWABLE, sceneLabel } from '../types'
 import { buildCloze, isCorrect, isNearMiss } from '../cloze'
 import { playCorrect, playWrong, playRoundDone } from '../feedback'
+import { canSpeak, speak } from '../speech'
 import type { CardRecord, Flag, Rating } from '../types'
 
 const ROUND_REVIEW_SLOTS = 4
@@ -88,6 +89,26 @@ function CardFooter({ card }: { card: CardRecord }) {
         </button>
       ))}
     </div>
+  )
+}
+
+function SpeakButton({ text }: { text?: string }) {
+  if (!text || !canSpeak) return null
+  return (
+    <button
+      onClick={e => {
+        e.stopPropagation()
+        speak(text)
+      }}
+      aria-label="朗读"
+      className="ml-2 inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-soft text-blue active:opacity-70"
+    >
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M4 9v6h4l5 4V5L8 9H4z" />
+        <path d="M16 8.5a4.5 4.5 0 010 7" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+        <path d="M18.2 6a8 8 0 010 12" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    </button>
   )
 }
 
@@ -198,13 +219,18 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
     await db.cards.put(updated)
     ratingsRef.current.set(card.id, r)
 
-    // 还在学习阶段、且马上就到期的卡,本组稍后必须再出一次——
-    // 全新的说法只见一面是记不住的。每张卡最多补两次,防止一组无限拉长。
+    // 学习阶段的卡回炉到本组末尾,但连着看同一张没有检索价值:
+    // 只在答"没想起来"时回炉,且中间至少要隔两张别的卡;
+    // 隔不开(组太短/已到末尾)就留给下一组——它仍然到期,跑不掉。
+    // 一分钟模式严格只出一张,永不组内重复。
     let nextQueue = queue!
     const seenAgain = repeatedRef.current.get(card.id) ?? 0
-    // 一分钟模式严格只出一张,不在组内重复(那张卡下一组自然会再出现)
+    const cardsAhead = queue!.length - (index + 1)
     const wantsRepeat =
-      mode === 'full' && updated.state === 'learning' && (updated.due ?? 0) <= Date.now() + 1000
+      mode === 'full' &&
+      updated.state === 'learning' &&
+      (updated.due ?? 0) <= Date.now() + 1000 &&
+      cardsAhead >= 2
     if (wantsRepeat && seenAgain < 2) {
       repeatedRef.current.set(card.id, seenAgain + 1)
       nextQueue = [...queue!, updated]
@@ -333,7 +359,10 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
               <p className="mt-6 text-[15px] text-label2">心里(或小声)把英文说出来,再翻面对答案。</p>
             ) : (
               <div className={`group-card mt-6 p-4 ${verdict === 'right' ? 'anim-pop' : ''}`}>
-                <p className="text-[19px] font-medium leading-relaxed text-blue">{view!.answer}</p>
+                <div className="flex items-start justify-between gap-1">
+                  <p className="text-[19px] font-medium leading-relaxed text-blue">{view!.answer}</p>
+                  <SpeakButton text={view!.answer} />
+                </div>
                 <p className="row-sep mt-3.5 pb-3.5 text-[14px] leading-relaxed text-label2" style={{ borderBottom: 'none', borderTop: '0.5px solid var(--sep)', paddingTop: '14px', paddingBottom: 0 }}>{view!.note}</p>
                 <CardFooter card={card} />
               </div>
@@ -375,6 +404,10 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
             </div>
             {revealed && (
               <div className="group-card mt-4 p-4">
+                <div className="mb-2 flex items-center gap-1 text-[14px] text-blue">
+                  <SpeakButton text={card.options?.find(o => o.correct)?.text} />
+                  <span>听正确说法</span>
+                </div>
                 <p className="text-[14px] leading-relaxed text-label2">{view!.note}</p>
                 <CardFooter card={card} />
               </div>
@@ -396,7 +429,10 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                 ] as const).map(([key, label, cls]) => (
                   <div key={key} className={`rounded-[14px] p-4 ${cls}`}>
                     <span className="text-[12px] font-semibold">{label}</span>
-                    <p className="mt-1.5 text-[16px] leading-relaxed text-label">{card[key]}</p>
+                    <div className="flex items-start justify-between gap-1">
+                      <p className="mt-1.5 text-[16px] leading-relaxed text-label">{card[key]}</p>
+                      <SpeakButton text={card[key]} />
+                    </div>
                   </div>
                 ))}
                 <div className="group-card p-4">

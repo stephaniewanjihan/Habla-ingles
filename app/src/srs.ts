@@ -26,9 +26,13 @@ export function rate(card: CardRecord, rating: Rating, now = Date.now()): CardRe
 
   if (inLearning) {
     let nextStep: number
+    let unsureDelay = 0
     if (rating === 'again') nextStep = 0
-    else if (rating === 'unsure') nextStep = step
-    else nextStep = step + 1
+    else if (rating === 'unsure') {
+      // 原地踏步但不立刻重看——同一张卡连着看没有检索价值,十分钟后再见
+      nextStep = step
+      unsureDelay = 10 * 60 * 1000
+    } else nextStep = step + 1
 
     if (nextStep > LEARNING_STEPS_MS.length) {
       // 毕业:进入按天计的间隔复习
@@ -47,7 +51,7 @@ export function rate(card: CardRecord, rating: Rating, now = Date.now()): CardRe
       state: 'learning',
       step: nextStep,
       interval: 0,
-      due: now + learningDelay(nextStep),
+      due: now + Math.max(learningDelay(nextStep), unsureDelay),
       reps: card.reps + 1,
       lastSeen: now,
     }
