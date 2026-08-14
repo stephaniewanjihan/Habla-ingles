@@ -3,3 +3,4 @@ dist/
 dev-dist/
 # 由 scripts/bundle-seed.mjs 从 /seed 生成
 src/data/seed-deck.json
+tsconfig.tsbuildinfo
