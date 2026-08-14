@@ -49,9 +49,14 @@ ok('one-card round shows 1 / 1', await page.getByText('1 / 1').isVisible().catch
     await page.waitForTimeout(250)
     ok('used button toggles to checked', await page.getByText('✓ 这句我用上了').isVisible().catch(() => false))
   } else {
+    // pick 卡:选一个选项翻面后,同样要能标记"用上了"
     const opts = page.locator('button.w-full.p-4.text-left')
     await opts.first().click()
     await page.waitForTimeout(400)
+    ok('used button present', await page.getByText('这句我用上了(邮件 / 会上)').isVisible().catch(() => false))
+    await page.getByText('这句我用上了(邮件 / 会上)').click()
+    await page.waitForTimeout(250)
+    ok('used button toggles to checked', await page.getByText('✓ 这句我用上了').isVisible().catch(() => false))
   }
   await page.getByRole('button', { name: '顺', exact: true }).click()
   await page.waitForTimeout(600)
