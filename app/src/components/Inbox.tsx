@@ -65,29 +65,29 @@ export default function Inbox() {
     }
   }
 
-  if (!items) return <div className="p-8 text-center text-slate-300">载入中…</div>
+  if (!items) return <div className="pt-24 text-center text-label3">载入中…</div>
 
   return (
-    <div className="mx-auto max-w-md px-5 pt-10">
-      <h1 className="text-2xl font-bold">收集箱</h1>
-      <p className="mt-1 text-sm text-slate-400">记下的卡壳时刻,攒几条后拿去 Claude 转成卡片</p>
+    <div className="mx-auto max-w-md px-4 pt-12">
+      <h1 className="title-lg">收集箱</h1>
+      <p className="mt-1 text-[15px] text-label2">记下的卡壳时刻,攒几条后拿去 Claude 转成卡片</p>
 
-      {msg && <div className="mt-4 rounded-xl bg-indigo-50 p-3 text-sm text-indigo-700">{msg}</div>}
+      {msg && <div className="mt-4 rounded-[12px] bg-blue-soft p-3.5 text-[14px] leading-relaxed text-blue">{msg}</div>}
 
-      <div className="mt-6 space-y-3">
+      <div className="mt-5 space-y-2.5">
         {items.length === 0 && (
-          <div className="rounded-2xl border border-dashed border-slate-300 p-6 text-center text-sm text-slate-400">
+          <div className="group-card p-6 text-center text-[14px] leading-relaxed text-label2">
             还没有记录。在"今天"页点"记一笔",卡壳的瞬间就存在这里。
           </div>
         )}
         {items.map(it => (
-          <div key={it.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-            <p className="text-sm leading-relaxed text-slate-700">{it.text}</p>
+          <div key={it.id} className="group-card p-4">
+            <p className="text-[15px] leading-relaxed text-label">{it.text}</p>
             <div className="mt-2 flex items-center justify-between">
-              <span className="text-xs text-slate-300">
+              <span className="text-[12px] text-label3">
                 {new Date(it.createdAt).toLocaleDateString('zh-CN', { month: 'numeric', day: 'numeric' })}
               </span>
-              <button onClick={() => db.inbox.delete(it.id!)} className="text-xs text-slate-400">
+              <button onClick={() => db.inbox.delete(it.id!)} className="text-[13px] text-red">
                 删除
               </button>
             </div>
@@ -98,24 +98,24 @@ export default function Inbox() {
       {items.length > 0 && (
         <button
           onClick={copyForClaude}
-          className="mt-4 w-full rounded-xl bg-indigo-600 py-3 font-medium text-white"
+          className="mt-4 w-full rounded-[14px] bg-blue py-3.5 text-[17px] font-semibold text-white active:opacity-80"
         >
           复制全部,拿去 Claude 转卡片
         </button>
       )}
 
-      <div className="mt-10 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-        <h2 className="font-bold">数据</h2>
-        <p className="mt-1 text-xs text-slate-400">
+      <div className="group-card mt-9 p-4">
+        <h2 className="text-[17px] font-semibold">数据</h2>
+        <p className="mt-1 text-[13px] leading-relaxed text-label2">
           所有数据只存在这台手机上。换手机、给 Claude 反馈,都靠导出文件。
         </p>
         <div className="mt-3 flex gap-2">
-          <button onClick={doExport} className="flex-1 rounded-xl border border-slate-200 py-2.5 text-sm font-medium text-slate-600">
+          <button onClick={doExport} className="flex-1 rounded-[12px] bg-fill py-2.5 text-[15px] text-blue active:opacity-70">
             导出全部数据
           </button>
           <button
             onClick={() => fileRef.current?.click()}
-            className="flex-1 rounded-xl border border-slate-200 py-2.5 text-sm font-medium text-slate-600"
+            className="flex-1 rounded-[12px] bg-fill py-2.5 text-[15px] text-blue active:opacity-70"
           >
             导入
           </button>

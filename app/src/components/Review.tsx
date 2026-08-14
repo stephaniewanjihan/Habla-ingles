@@ -29,34 +29,34 @@ export default function Review() {
     return { masteredCount: mastered.length, newThisWeek, usedThisWeek, streak, weekCheckins }
   })
 
-  if (!data) return <div className="p-8 text-center text-slate-300">载入中…</div>
+  if (!data) return <div className="pt-24 text-center text-label3">载入中…</div>
 
   return (
-    <div className="mx-auto max-w-md px-5 pt-10">
-      <h1 className="text-2xl font-bold">每周回顾</h1>
-      <p className="mt-1 text-sm text-slate-400">
+    <div className="mx-auto max-w-md px-4 pt-12">
+      <h1 className="title-lg">每周回顾</h1>
+      <p className="mt-1 text-[15px] text-label2">
         本周练了 {data.weekCheckins} 天 · 连续 {data.streak} 天 · 共掌握 {data.masteredCount} 条
       </p>
 
       <div className="mt-6">
         {data.newThisWeek.length > 0 ? (
           <>
-            <p className="text-sm text-slate-500">
+            <p className="text-[15px] leading-relaxed text-label2">
               这周新掌握 {data.newThisWeek.length} 条。两周前,这些你可能还得查翻译——现在能张口就来:
             </p>
             <ul className="mt-3 space-y-3">
               {data.newThisWeek.map(c => (
-                <li key={c.id} className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-                  <p className="whitespace-pre-line font-medium leading-relaxed text-emerald-900">{mainText(c)}</p>
-                  <p className="mt-1 text-xs text-emerald-600">{sceneLabel(c.scene)}</p>
+                <li key={c.id} className="group-card p-4">
+                  <p className="whitespace-pre-line text-[16px] font-medium leading-relaxed text-label">{mainText(c)}</p>
+                  <p className="mt-1.5 text-[12px] text-green">{sceneLabel(c.scene)}</p>
                 </li>
               ))}
             </ul>
           </>
         ) : (
-          <div className="rounded-2xl border border-slate-200 bg-white p-6 text-center shadow-sm">
-            <p className="text-slate-500">这周还没有新掌握的表达。</p>
-            <p className="mt-2 text-sm text-slate-400">
+          <div className="group-card p-6 text-center">
+            <p className="text-[16px] text-label">这周还没有新掌握的表达。</p>
+            <p className="mt-2 text-[14px] leading-relaxed text-label2">
               一张卡的复习间隔拉到 21 天以上才算"掌握"——刚开始的两三周这里空着是正常的,先把每天一组坚持住。
             </p>
           </div>
@@ -64,14 +64,14 @@ export default function Review() {
       </div>
       {data.usedThisWeek.length > 0 && (
         <div className="mt-8">
-          <p className="text-sm text-slate-500">
+          <p className="text-[15px] leading-relaxed text-label2">
             这周你在真实工作里用掉了 {data.usedThisWeek.length} 条——这才是这个 app 唯一真正的成绩单:
           </p>
           <ul className="mt-3 space-y-2">
             {data.usedThisWeek.map(c => (
-              <li key={c.id} className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
-                <p className="text-sm leading-relaxed text-slate-700">{mainText(c)}</p>
-                <p className="mt-1 text-xs text-slate-400">{sceneLabel(c.scene)}</p>
+              <li key={c.id} className="group-card p-3.5">
+                <p className="text-[15px] leading-relaxed text-label">{mainText(c)}</p>
+                <p className="mt-1 text-[12px] text-label3">{sceneLabel(c.scene)}</p>
               </li>
             ))}
           </ul>

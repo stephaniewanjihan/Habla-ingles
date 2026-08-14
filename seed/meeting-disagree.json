@@ -5,7 +5,13 @@
     "scene": "meeting-disagree",
     "prompt": "讨论快要跳到下一项了,但你觉得时间线的问题还没说透,要插话拉回来",
     "answer": "Sorry to jump in — before we move on, can we come back to the timeline? I don't think we've closed on it.",
-    "note": "sorry to jump in 是英式插话的标准通行证,说了这句,打断本身就被原谅了。closed on 指议题达成结论,比 finished discussing 更职场。会上不插话、会后再提意见,在英国职场会被视为没有贡献。"
+    "note": "sorry to jump in 是英式插话的标准通行证,说了这句,打断本身就被原谅了。closed on 指议题达成结论,比 finished discussing 更职场。会上不插话、会后再提意见,在英国职场会被视为没有贡献。",
+    "variants": [
+      {
+        "prompt": "会议要跳到下一项,但预算那块你觉得还没说透",
+        "answer": "Sorry to jump in — before we move on, can we come back to the budget? I don't think we've closed on it."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-02",
@@ -13,7 +19,13 @@
     "scene": "meeting-disagree",
     "prompt": "你汇报的数字被当场质疑,但数据你反复核过,要守住立场",
     "answer": "I hear the concern, but these numbers have been through two rounds of checks. Happy to walk through the workings after the meeting.",
-    "note": "先 I hear the concern 接住质疑,再用事实(两轮核对)顶住,最后开一扇门(会后对细节)。当场逐条对数字会让会议失控,把战场转移到会后是守住立场又不失风度的标准打法。"
+    "note": "先 I hear the concern 接住质疑,再用事实(两轮核对)顶住,最后开一扇门(会后对细节)。当场逐条对数字会让会议失控,把战场转移到会后是守住立场又不失风度的标准打法。",
+    "variants": [
+      {
+        "prompt": "你做的成本测算被当场质疑,但你反复核过,要守住立场",
+        "answer": "I hear the concern, but these figures have been through two rounds of checks. Happy to walk through the workings after the meeting."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-03",
@@ -21,7 +33,13 @@
     "scene": "meeting-disagree",
     "prompt": "对方的方案你一半同意一半不同意,要说清楚分歧在哪",
     "answer": "I'm with you on the approach — where I'd differ is the sequencing. I'd do the client migration first.",
-    "note": "I'm with you on X, where I'd differ is Y 是英式表达部分异议的黄金句式,先划出共识再定位分歧,对方不会觉得被全盘否定。差异要立刻跟上自己的替代方案,只反对不给方案在会上很减分。"
+    "note": "I'm with you on X, where I'd differ is Y 是英式表达部分异议的黄金句式,先划出共识再定位分歧,对方不会觉得被全盘否定。差异要立刻跟上自己的替代方案,只反对不给方案在会上很减分。",
+    "variants": [
+      {
+        "prompt": "同事提的新流程你认同方向,但不同意上线顺序",
+        "answer": "I'm with you on the approach — where I'd differ is the sequencing. I'd pilot with one team first."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-04",
@@ -29,7 +47,13 @@
     "scene": "meeting-disagree",
     "prompt": "会上要拍板了,但你认为应该等下个月的数据出来再定",
     "answer": "Could we park this until the June figures land? I'd rather we commit once, with the full picture.",
-    "note": "park 是英国会议的核心动词:暂缓但不否决。commit once 暗示现在定了之后还得改,成本更高。用问句提出,让主持人来做\"暂缓\"的决定,你只是提供理由。"
+    "note": "park 是英国会议的核心动词:暂缓但不否决。commit once 暗示现在定了之后还得改,成本更高。用问句提出,让主持人来做\"暂缓\"的决定,你只是提供理由。",
+    "variants": [
+      {
+        "prompt": "会上要定供应商了,但你认为该等比价结果出来再决定",
+        "answer": "Could we park this until the tender results land? I'd rather we commit once, with the full picture."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-05",
@@ -37,7 +61,13 @@
     "scene": "meeting-disagree",
     "prompt": "有人把关键日期说错了,这会影响计算,要当场纠正",
     "answer": "Just to be precise on one thing — the record date is the 21st, not the 24th. It changes the maths slightly.",
-    "note": "just to be precise 把纠错包装成补充细节,不是打脸。指出影响(changes the maths)说明你纠正是因为有实际后果,不是抬杠。slightly 照例缩小,即使影响不小。"
+    "note": "just to be precise 把纠错包装成补充细节,不是打脸。指出影响(changes the maths)说明你纠正是因为有实际后果,不是抬杠。slightly 照例缩小,即使影响不小。",
+    "variants": [
+      {
+        "prompt": "有人把生效日期说错了,这会影响费用计算,要当场纠正",
+        "answer": "Just to be precise on one thing — the effective date is the 1st, not the 15th. It changes the maths slightly."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-06",
@@ -45,7 +75,13 @@
     "scene": "meeting-disagree",
     "prompt": "方案本身没问题,但你担心客户那边不接受,要把风险摆到桌面上",
     "answer": "My worry is the client side — if they push back on the election deadline, do we have a fallback?",
-    "note": "my worry is 是英式提风险的标准开场,比 the problem is 温和,因为它把判断标记为个人担忧而不是客观缺陷。用问句收尾(do we have a fallback)迫使会议正面处理这个风险,而不是记录在案就翻篇。"
+    "note": "my worry is 是英式提风险的标准开场,比 the problem is 温和,因为它把判断标记为个人担忧而不是客观缺陷。用问句收尾(do we have a fallback)迫使会议正面处理这个风险,而不是记录在案就翻篇。",
+    "variants": [
+      {
+        "prompt": "方案本身没问题,但你担心监管口径不认,要把风险摆上桌",
+        "answer": "My worry is the regulatory side — if they push back on the classification, do we have a fallback?"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-07",
@@ -53,7 +89,12 @@
     "scene": "meeting-disagree",
     "prompt": "表决你输了,但要有风度地接受,同时留下记录",
     "answer": "I'd have gone the other way, but happy to go with the room — let's just make sure the rationale's documented.",
-    "note": "go with the room 是接受集体决定的地道说法。前半句留下你的立场,后半句要求记录决策依据——这不是小动作,是英国职场的正当自保,将来出问题时 who decided what and why 会被翻出来。"
+    "note": "go with the room 是接受集体决定的地道说法。前半句留下你的立场,后半句要求记录决策依据——这不是小动作,是英国职场的正当自保,将来出问题时 who decided what and why 会被翻出来。",
+    "variants": [
+      {
+        "prompt": "投票你输了,要有风度地接受但留下记录"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-08",
@@ -61,7 +102,12 @@
     "scene": "meeting-disagree",
     "prompt": "会上没说,会后想找方案负责人私下聊聊你的顾虑",
     "answer": "I didn't want to derail the meeting, but I've got a couple of reservations about the approach — have you got ten minutes this week?",
-    "note": "derail 承认公开提出会打乱节奏,给足对方面子。reservations 是英式\"保留意见\",比 concerns 更正式一点、比 problems 轻得多。私下聊是给对方修正的机会,英国职场对这种做法评价很高。"
+    "note": "derail 承认公开提出会打乱节奏,给足对方面子。reservations 是英式\"保留意见\",比 concerns 更正式一点、比 problems 轻得多。私下聊是给对方修正的机会,英国职场对这种做法评价很高。",
+    "variants": [
+      {
+        "prompt": "会上没说,会后想找项目负责人私下聊你的顾虑"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-09",
@@ -69,7 +115,12 @@
     "scene": "meeting-disagree",
     "prompt": "你说到一半被人接过话头,要把话语权拿回来",
     "answer": "Just to finish the thought — the second half matters here.",
-    "note": "just to finish the thought 是英式抢回话语权的标准句,语气平静但不容拒绝。说完这句必须马上把观点讲完,不要停顿等许可。被打断后沉默,在快节奏会议里等于放弃观点。"
+    "note": "just to finish the thought 是英式抢回话语权的标准句,语气平静但不容拒绝。说完这句必须马上把观点讲完,不要停顿等许可。被打断后沉默,在快节奏会议里等于放弃观点。",
+    "variants": [
+      {
+        "prompt": "你正在解释数据口径时被人接过话头,要把话语权拿回来"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-10",
@@ -77,7 +128,13 @@
     "scene": "meeting-disagree",
     "prompt": "你不同意对方的预测,但想先攻假设而不是直接说结论错了",
     "answer": "Help me understand the volume assumption — is that based on last year's book? Because this year's mix looks quite different.",
-    "note": "help me understand 表面是求教,实际是英式质询的经典开场,在场的人都懂。攻假设比攻结论安全:假设错了结论自然倒,而且对方是\"被数据修正\"而不是\"被你驳倒\"。"
+    "note": "help me understand 表面是求教,实际是英式质询的经典开场,在场的人都懂。攻假设比攻结论安全:假设错了结论自然倒,而且对方是\"被数据修正\"而不是\"被你驳倒\"。",
+    "variants": [
+      {
+        "prompt": "你不同意对方的成本假设,想先攻假设而不是直接说结论错",
+        "answer": "Help me understand the headcount assumption — is that based on this year's plan? Because the hiring freeze changes it quite a bit."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-11",
@@ -85,7 +142,13 @@
     "scene": "meeting-disagree",
     "prompt": "大家默认时间线可行,但你知道它没留任何容错空间,要提出来",
     "answer": "One thing I'd flag — this timeline assumes zero exceptions. One failed trade and we miss the payment date.",
-    "note": "one thing I'd flag 是把风险登记在案的标准句式。用具体场景(one failed trade)代替抽象的 it's too tight,画面感会让风险变得真实。说了这句,将来真出事时你是提醒过的人。"
+    "note": "one thing I'd flag 是把风险登记在案的标准句式。用具体场景(one failed trade)代替抽象的 it's too tight,画面感会让风险变得真实。说了这句,将来真出事时你是提醒过的人。",
+    "variants": [
+      {
+        "prompt": "大家默认新流程能按时上线,但你知道它没留测试时间",
+        "answer": "One thing I'd flag — this plan assumes zero rework. One failed test cycle and we miss the go-live."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-12",
@@ -93,7 +156,12 @@
     "scene": "meeting-disagree",
     "prompt": "讨论绕了二十分钟又回到原点,你要推动会议做出决定",
     "answer": "I'm conscious we're going round in circles — shall we just pick between the two options on the table?",
-    "note": "going round in circles 点破会议空转,用 I'm conscious 包装成自我观察而不是指责全场。shall we 发起行动但把决定权留给会议。敢于收敛讨论的人在英国会议文化里被视为有 seniority 的表现。"
+    "note": "going round in circles 点破会议空转,用 I'm conscious 包装成自我观察而不是指责全场。shall we 发起行动但把决定权留给会议。敢于收敛讨论的人在英国会议文化里被视为有 seniority 的表现。",
+    "variants": [
+      {
+        "prompt": "关于用哪个供应商讨论了半小时还在原地,你要推动做决定"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-13",
@@ -101,7 +169,12 @@
     "scene": "meeting-disagree",
     "prompt": "上级在会上提了个想法征求意见,你觉得行不通,但需要先接住再反对",
     "answer": "There's something in that — my hesitation is the operational side. We'd be running two processes in parallel for a quarter.",
-    "note": "there's something in that 是英式\"这想法不是全无道理\"的标准接法,既不虚伪吹捧也不直接否定。hesitation 比 objection 软一个档位。跟上具体代价(两套流程并行一个季度),反对就有了重量。"
+    "note": "there's something in that 是英式\"这想法不是全无道理\"的标准接法,既不虚伪吹捧也不直接否定。hesitation 比 objection 软一个档位。跟上具体代价(两套流程并行一个季度),反对就有了重量。",
+    "variants": [
+      {
+        "prompt": "老板在会上提了个自动化的想法,你觉得落地成本太高"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-14",
@@ -109,10 +182,21 @@
     "scene": "meeting-disagree",
     "prompt": "会上你不同意刚才那位同事的说法",
     "options": [
-      { "text": "I disagree with you.", "correct": false },
-      { "text": "I see it slightly differently.", "correct": true }
+      {
+        "text": "I disagree with you.",
+        "correct": false
+      },
+      {
+        "text": "I see it slightly differently.",
+        "correct": true
+      }
     ],
-    "note": "I disagree with you 语法完美但在英国会议里像宣战,尤其 with you 把矛头对准了人。I see it slightly differently 是标准替代,slightly 哪怕分歧巨大也照说——听者自会解码,这就是英式会议的通用协议。"
+    "note": "I disagree with you 语法完美但在英国会议里像宣战,尤其 with you 把矛头对准了人。I see it slightly differently 是标准替代,slightly 哪怕分歧巨大也照说——听者自会解码,这就是英式会议的通用协议。",
+    "variants": [
+      {
+        "prompt": "会上你不同意刚才那位外部顾问的判断"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-15",
@@ -120,10 +204,22 @@
     "scene": "meeting-disagree",
     "prompt": "对方的计算漏了一步,结论因此不成立,你要指出",
     "options": [
-      { "text": "That's wrong. You forgot the fee.", "correct": false },
-      { "text": "I'm not sure that holds — I think the fee comes out before the split, which changes the number.", "correct": true }
+      {
+        "text": "That's wrong. You forgot the fee.",
+        "correct": false
+      },
+      {
+        "text": "I'm not sure that holds — I think the fee comes out before the split, which changes the number.",
+        "correct": true
+      }
     ],
-    "note": "you forgot 把错误钉在人身上,英国会议的大忌。I'm not sure that holds 攻击的是论证本身。hold 是\"站得住脚\"的地道用词。后半句给出具体机制,证明你不是感觉不对,是看出了哪里不对。"
+    "note": "you forgot 把错误钉在人身上,英国会议的大忌。I'm not sure that holds 攻击的是论证本身。hold 是\"站得住脚\"的地道用词。后半句给出具体机制,证明你不是感觉不对,是看出了哪里不对。",
+    "variants": [
+      {
+        "prompt": "对方的测算漏算了税,结论因此不成立,你要指出",
+        "answer": "I'm not sure that holds — I think tax comes out before the margin, which changes the number."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-16",
@@ -131,10 +227,22 @@
     "scene": "meeting-disagree",
     "prompt": "你上次会议提过的问题这次又出现了,要再提一次",
     "options": [
-      { "text": "As I already said last time, this will cause settlement failures.", "correct": false },
-      { "text": "Coming back to a point from last time — I still think the settlement risk is live.", "correct": true }
+      {
+        "text": "As I already said last time, this will cause settlement failures.",
+        "correct": false
+      },
+      {
+        "text": "Coming back to a point from last time — I still think the settlement risk is live.",
+        "correct": true
+      }
     ],
-    "note": "as I already said 的潜台词是\"你们没听\",是英国职场公认的被动攻击句式。coming back to a point 中性地重启话题,still think 表明立场未变但不带怨气。live 形容风险仍然存在,是风控场合的地道用词。"
+    "note": "as I already said 的潜台词是\"你们没听\",是英国职场公认的被动攻击句式。coming back to a point 中性地重启话题,still think 表明立场未变但不带怨气。live 形容风险仍然存在,是风控场合的地道用词。",
+    "variants": [
+      {
+        "prompt": "你上个季度提过的系统风险这次又出现了,要再提一次",
+        "answer": "Coming back to a point from last quarter — I still think the reconciliation risk is live."
+      }
+    ]
   },
   {
     "id": "meeting-disagree-17",
@@ -144,7 +252,12 @@
     "soft": "I might be missing something here, but have we considered the impact on the client reporting cycle?",
     "neutral": "I'd push back slightly on that. My concern is the reporting cycle — we'd be cutting it very fine.",
     "firm": "I don't think that works. The reporting cycle can't absorb it, and here's why.",
-    "note": "英国职场默认用 soft 档。firm 档在跨级场合几乎不用,除非有数据撑腰。I might be missing something 不是真的谦虚,是标准缓冲,所有人都知道你接下来要反对。"
+    "note": "英国职场默认用 soft 档。firm 档在跨级场合几乎不用,除非有数据撑腰。I might be missing something 不是真的谦虚,是标准缓冲,所有人都知道你接下来要反对。",
+    "variants": [
+      {
+        "situation": "老板的预算分配方案你不同意,会上当着别的部门的面"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-18",
@@ -154,7 +267,12 @@
     "soft": "That could work. My only hesitation is around the timing, but I might be reading it wrong.",
     "neutral": "I'd want to stress-test the timing on that before we commit.",
     "firm": "The timing doesn't work. We'd miss the record date.",
-    "note": "有对方上级在场时用 soft 或 neutral。firm 档只在事实清楚且后果严重时用,比如错过 record date 这种硬约束,那时候直接说反而是专业。"
+    "note": "有对方上级在场时用 soft 或 neutral。firm 档只在事实清楚且后果严重时用,比如错过 record date 这种硬约束,那时候直接说反而是专业。",
+    "variants": [
+      {
+        "situation": "有人提了一个你认为会踩合规红线的做法,在场有对方上级"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-19",
@@ -164,7 +282,12 @@
     "soft": "That's interesting — I wonder how it'd interact with our custodian setup, which is slightly unusual.",
     "neutral": "I can see the logic, but our custodian arrangement doesn't quite fit that model. Can we walk through a concrete example?",
     "firm": "That won't work with our setup — instructions go through the sub-custodian, so that step simply isn't available to us.",
-    "note": "对外部顾问可以比对内部同事直接一档,因为他们是收费来接受挑战的。soft 档的 that's interesting 本身已是警示信号。neutral 档要求过具体例子是拆穿纸上谈兵的标准手法。firm 档陈述硬事实时无需缓冲。"
+    "note": "对外部顾问可以比对内部同事直接一档,因为他们是收费来接受挑战的。soft 档的 that's interesting 本身已是警示信号。neutral 档要求过具体例子是拆穿纸上谈兵的标准手法。firm 档陈述硬事实时无需缓冲。",
+    "variants": [
+      {
+        "situation": "外部系统供应商在会上给的方案明显没搞懂你们的实际流程"
+      }
+    ]
   },
   {
     "id": "meeting-disagree-20",
@@ -174,6 +297,11 @@
     "soft": "I'm slightly nervous about committing to March — could we sense-check the dependencies before we lock it in?",
     "neutral": "I can't commit to March with the current scope. Either the scope comes down or the date moves — happy to work through which.",
     "firm": "March isn't achievable and I don't want to sign the team up to fail. The earliest credible date is mid-April.",
-    "note": "接下做不到的 deadline 再延期,比当场挡住伤害大得多,英国职场对后者的容忍度远高于前者。neutral 档给出 scope 或 date 二选一,把问题变成取舍而不是能力。firm 档 sign the team up to fail 是为团队挡刀的表达,说出来反而加分。"
+    "note": "接下做不到的 deadline 再延期,比当场挡住伤害大得多,英国职场对后者的容忍度远高于前者。neutral 档给出 scope 或 date 二选一,把问题变成取舍而不是能力。firm 档 sign the team up to fail 是为团队挡刀的表达,说出来反而加分。",
+    "variants": [
+      {
+        "situation": "会上大家要把一个不现实的上线日期拍给你的团队"
+      }
+    ]
   }
 ]

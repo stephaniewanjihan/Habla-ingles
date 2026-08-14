@@ -28,6 +28,22 @@ export interface CardContent {
   questions?: string[]
   // 所有可复习卡型都有 note
   note?: string
+  /**
+   * 变式情境:同一个表达在别的场合同样成立。
+   * 复习时按 reps 轮换,避免原样重复导致"认脸不认意思"。
+   */
+  variants?: CardVariant[]
+}
+
+export interface CardVariant {
+  /** produce / pick:换一个中文情境 */
+  prompt?: string
+  /** register:换一个中文情境 */
+  situation?: string
+  /** 该情境下措辞需要微调时才给,否则复用主答案 */
+  answer?: string
+  /** 该情境特有的提示,可选 */
+  note?: string
 }
 
 export const FLAGS = ['不自然', '用不上', '太简单', '太难'] as const

@@ -5,7 +5,12 @@
     "scene": "small-talk",
     "prompt": "周一早上同事问你周末过得怎么样,你其实就在家躺了两天",
     "answer": "Pretty quiet one, to be honest — much needed though. How about you?",
-    "note": "周末问答是仪式不是采访,答案内容不重要,重要的是接住并回抛(how about you)。much needed 把\"躺了两天\"说成了主动选择的休整。真的详细汇报周末行程反而会让对方措手不及。"
+    "note": "周末问答是仪式不是采访,答案内容不重要,重要的是接住并回抛(how about you)。much needed 把\"躺了两天\"说成了主动选择的休整。真的详细汇报周末行程反而会让对方措手不及。",
+    "variants": [
+      {
+        "prompt": "周一早上老板问你周末怎么样,你其实就在家收拾屋子"
+      }
+    ]
   },
   {
     "id": "small-talk-02",
@@ -13,7 +18,13 @@
     "scene": "small-talk",
     "prompt": "电梯里遇到同事,外面下了一整天雨,要用天气开场",
     "answer": "Miserable out there today, isn't it?",
-    "note": "天气是英国 small talk 的默认协议,抱怨天气不是负能量,是共同体验的确认。isn't it 这个附加问句是关键零件,它把陈述变成邀请,对方接一句 awful 对话就成立了。晴天的版本是 lovely out there, isn't it,规则相同。"
+    "note": "天气是英国 small talk 的默认协议,抱怨天气不是负能量,是共同体验的确认。isn't it 这个附加问句是关键零件,它把陈述变成邀请,对方接一句 awful 对话就成立了。晴天的版本是 lovely out there, isn't it,规则相同。",
+    "variants": [
+      {
+        "prompt": "刚下过冰雹,在茶水间遇到同事,用天气开场",
+        "answer": "Wild out there earlier, wasn't it?"
+      }
+    ]
   },
   {
     "id": "small-talk-03",
@@ -21,7 +32,13 @@
     "scene": "small-talk",
     "prompt": "你坐的线路今早又延误了,到公司跟同事吐槽",
     "answer": "Northern line was a shambles again this morning — twenty minutes stuck outside Bank.",
-    "note": "吐槽通勤是伦敦职场的标准社交货币,shambles(一团糟)是英式吐槽高频词。带具体细节(卡在 Bank 站外二十分钟)才有吐槽的质感。对方的正确回应是比惨,你听到别人吐槽时也照此办理,千万不要给出行建议。"
+    "note": "吐槽通勤是伦敦职场的标准社交货币,shambles(一团糟)是英式吐槽高频词。带具体细节(卡在 Bank 站外二十分钟)才有吐槽的质感。对方的正确回应是比惨,你听到别人吐槽时也照此办理,千万不要给出行建议。",
+    "variants": [
+      {
+        "prompt": "地铁信号故障害你迟到二十分钟,到公司跟同事吐槽",
+        "answer": "Signal failure at Euston again — twenty minutes late and packed like sardines."
+      }
+    ]
   },
   {
     "id": "small-talk-04",
@@ -29,7 +46,12 @@
     "scene": "small-talk",
     "prompt": "周五下午,想跟同事聊两句周末打算",
     "answer": "Any plans for the weekend? Weather's meant to be decent for once.",
-    "note": "周五问 weekend plans 是英国办公室的固定节目,配一句天气预报是地道的组合拳。meant to be 是英式的\"据说会\",for once 自嘲天气难得好一次。对方问回来时,答案可以很小(见朋友、遛弯),重在参与。"
+    "note": "周五问 weekend plans 是英国办公室的固定节目,配一句天气预报是地道的组合拳。meant to be 是英式的\"据说会\",for once 自嘲天气难得好一次。对方问回来时,答案可以很小(见朋友、遛弯),重在参与。",
+    "variants": [
+      {
+        "prompt": "周五下午,跟刚认识不久的同事聊两句周末打算"
+      }
+    ]
   },
   {
     "id": "small-talk-05",
@@ -37,7 +59,12 @@
     "scene": "small-talk",
     "prompt": "茶水间遇到不熟的同事,对方说 how are you,要接住",
     "answer": "Not bad at all, thanks — yourself?",
-    "note": "how are you 是问候不是提问,标准答案是 not bad / good thanks / can't complain,加一个 yourself 回抛。认真回答身体或心情状况会造成尴尬。中文的\"吃了吗\"是同类协议,没人真的想知道你吃了什么。"
+    "note": "how are you 是问候不是提问,标准答案是 not bad / good thanks / can't complain,加一个 yourself 回抛。认真回答身体或心情状况会造成尴尬。中文的\"吃了吗\"是同类协议,没人真的想知道你吃了什么。",
+    "variants": [
+      {
+        "prompt": "走廊上碰到别的部门的人,对方说 how are you"
+      }
+    ]
   },
   {
     "id": "small-talk-06",
@@ -45,7 +72,13 @@
     "scene": "small-talk",
     "prompt": "你起身去泡茶,按办公室惯例问一圈要不要带",
     "answer": "I'm doing a tea run — anyone want one?",
-    "note": "tea run 是英国办公室的核心仪式,轮流给周围人带茶是融入团队的最快通道。只给自己泡茶在老派办公室甚至会被记住。接受别人的茶时记下 milk and sugar 偏好,下次主动带对,这是无声的好感积累。"
+    "note": "tea run 是英国办公室的核心仪式,轮流给周围人带茶是融入团队的最快通道。只给自己泡茶在老派办公室甚至会被记住。接受别人的茶时记下 milk and sugar 偏好,下次主动带对,这是无声的好感积累。",
+    "variants": [
+      {
+        "prompt": "下午三点你去茶水间,按惯例问一圈要不要带咖啡",
+        "answer": "I'm doing a coffee run — anyone want one?"
+      }
+    ]
   },
   {
     "id": "small-talk-07",
@@ -53,7 +86,12 @@
     "scene": "small-talk",
     "prompt": "休假回来第一天,同事问假期怎么样",
     "answer": "Really good thanks — went far too quickly, obviously. What have I missed here?",
-    "note": "went too quickly 是假期归来的标准感叹,自带幽默的认命感。what have I missed 把话题从假期转回工作,给对方递八卦或正事的入口。晒假期细节要等对方追问才展开,主动长篇描述是社交误判。"
+    "note": "went too quickly 是假期归来的标准感叹,自带幽默的认命感。what have I missed 把话题从假期转回工作,给对方递八卦或正事的入口。晒假期细节要等对方追问才展开,主动长篇描述是社交误判。",
+    "variants": [
+      {
+        "prompt": "出差一周回来第一天,同事问你这趟怎么样"
+      }
+    ]
   },
   {
     "id": "small-talk-08",
@@ -61,7 +99,12 @@
     "scene": "small-talk",
     "prompt": "周一大家在聊昨晚的球赛,你没看,但想参与话题",
     "answer": "I missed it — any good? Worth catching the highlights?",
-    "note": "不懂球不用装懂,用提问入场是完全合法的参与方式,英国人乐于给你讲。足球是英国办公室第一大话题,记住同事支持的球队,输球的周一别哪壶不开提哪壶——问一句 rough weekend? 反而是高情商。"
+    "note": "不懂球不用装懂,用提问入场是完全合法的参与方式,英国人乐于给你讲。足球是英国办公室第一大话题,记住同事支持的球队,输球的周一别哪壶不开提哪壶——问一句 rough weekend? 反而是高情商。",
+    "variants": [
+      {
+        "prompt": "周一大家在聊昨晚的网球决赛,你没看但想参与"
+      }
+    ]
   },
   {
     "id": "small-talk-09",
@@ -69,7 +112,13 @@
     "scene": "small-talk",
     "prompt": "十二月初,和同事寒暄圣诞安排",
     "answer": "All set for Christmas, or still got the shopping to do? We're off to my partner's family this year.",
-    "note": "十二月起 Christmas plans 取代 weekend plans 成为默认话题,all set 问的是准备进度,吐槽购物没买完是标准接法。主动交换一条自己的安排(去谁家过节)让对话对等。一月上旬的对应话题是 how was your Christmas。"
+    "note": "十二月起 Christmas plans 取代 weekend plans 成为默认话题,all set 问的是准备进度,吐槽购物没买完是标准接法。主动交换一条自己的安排(去谁家过节)让对话对等。一月上旬的对应话题是 how was your Christmas。",
+    "variants": [
+      {
+        "prompt": "一月初回来上班,和同事寒暄圣诞假期",
+        "answer": "How was your Christmas? Ours was very quiet — ate far too much, as usual."
+      }
+    ]
   },
   {
     "id": "small-talk-10",
@@ -77,7 +126,12 @@
     "scene": "small-talk",
     "prompt": "午饭时想起个话头,问同事最近在看什么剧",
     "answer": "Been watching anything good lately? We've just started that new drama everyone's on about.",
-    "note": "电视剧是仅次于天气和足球的安全话题,everyone's on about(大家都在谈的)是英式说法。Bake Off、体育纪录片、犯罪剧是最大公约数。记住对方在追的剧,下周问一句 how's that series going,small talk 就升级成了真实关系。"
+    "note": "电视剧是仅次于天气和足球的安全话题,everyone's on about(大家都在谈的)是英式说法。Bake Off、体育纪录片、犯罪剧是最大公约数。记住对方在追的剧,下周问一句 how's that series going,small talk 就升级成了真实关系。",
+    "variants": [
+      {
+        "prompt": "午饭时想找话题,问同事最近看了什么电影"
+      }
+    ]
   },
   {
     "id": "small-talk-11",
@@ -85,7 +139,13 @@
     "scene": "small-talk",
     "prompt": "同事休假两周回来,你要迎接一下",
     "answer": "Welcome back! How was it? Don't worry, the inbox isn't as scary as it looks.",
-    "note": "迎接归来的同事是办公室基本礼仪,三件套:欢迎、问假期、拿邮箱开个玩笑。inbox 玩笑是英式关怀的典型形态——用幽默包装体贴。直接汇报工作上堆了什么事,是最煞风景的迎接方式。"
+    "note": "迎接归来的同事是办公室基本礼仪,三件套:欢迎、问假期、拿邮箱开个玩笑。inbox 玩笑是英式关怀的典型形态——用幽默包装体贴。直接汇报工作上堆了什么事,是最煞风景的迎接方式。",
+    "variants": [
+      {
+        "prompt": "同事产假结束回来上班,你要迎接一下",
+        "answer": "Welcome back! How's it been? Don't worry, the inbox isn't as scary as it looks."
+      }
+    ]
   },
   {
     "id": "small-talk-12",
@@ -93,7 +153,13 @@
     "scene": "small-talk",
     "prompt": "团队去酒吧,你不喝酒,轮到别人问你要什么",
     "answer": "I'm alright with a lime and soda, cheers — early start tomorrow.",
-    "note": "英国酒吧文化里不喝酒完全被接受,lime and soda 是不喝酒者的经典选择。理由给一个轻的(明早要早起)或者不给都行,长篇解释反而奇怪。重点是人在场:pub 的意义是社交,不是酒精。rounds(轮流请)轮到你时照样要请。"
+    "note": "英国酒吧文化里不喝酒完全被接受,lime and soda 是不喝酒者的经典选择。理由给一个轻的(明早要早起)或者不给都行,长篇解释反而奇怪。重点是人在场:pub 的意义是社交,不是酒精。rounds(轮流请)轮到你时照样要请。",
+    "variants": [
+      {
+        "prompt": "团队圣诞聚餐,你今晚开车,轮到别人问你喝什么",
+        "answer": "I'm alright with a sparkling water, cheers — driving tonight."
+      }
+    ]
   },
   {
     "id": "small-talk-13",
@@ -101,7 +167,12 @@
     "scene": "small-talk",
     "prompt": "和同事闲聊了几分钟,要礼貌地结束回去干活",
     "answer": "Right, better crack on — good catching up though.",
-    "note": "right 是英式结束对话的官方信号词,一个词就能让双方体面收场。crack on 是\"继续干活\"的口语。good catching up 给对话盖一个正面的章。不会结束闲聊的人只能被动等对方收场,这个句式值得练到条件反射。"
+    "note": "right 是英式结束对话的官方信号词,一个词就能让双方体面收场。crack on 是\"继续干活\"的口语。good catching up 给对话盖一个正面的章。不会结束闲聊的人只能被动等对方收场,这个句式值得练到条件反射。",
+    "variants": [
+      {
+        "prompt": "在电梯里和同事聊了两层楼,到你的楼层要结束对话"
+      }
+    ]
   },
   {
     "id": "small-talk-14",
@@ -109,7 +180,12 @@
     "scene": "small-talk",
     "prompt": "走廊里迎面遇到点头之交的同事,擦肩而过的问候",
     "answer": "Alright? How's it going?",
-    "note": "alright 在这里是问候语不是提问,相当于\"嗨\",标准回应是 yeah good, you? 甚至只是同样一句 alright。这种擦肩问候不需要停下脚步,边走边说完成即可。停下来认真回答的话,双方都会不知所措。"
+    "note": "alright 在这里是问候语不是提问,相当于\"嗨\",标准回应是 yeah good, you? 甚至只是同样一句 alright。这种擦肩问候不需要停下脚步,边走边说完成即可。停下来认真回答的话,双方都会不知所措。",
+    "variants": [
+      {
+        "prompt": "早上进办公室,和已经坐下的同事打招呼"
+      }
+    ]
   },
   {
     "id": "small-talk-15",
@@ -117,7 +193,12 @@
     "scene": "small-talk",
     "prompt": "想跟同事闲聊假期计划,夏天还早但你想找话题",
     "answer": "Got anything booked for the summer, or still deciding? We're umming and ahhing about Portugal.",
-    "note": "英国人全年都在用 holiday 规划做话题,got anything booked 是标准问法。umming and ahhing(犹豫不决)是地道的英式口语。假期话题的安全在于人人有话说,聊目的地、比机票价格、吐槽机场,都是标准展开。"
+    "note": "英国人全年都在用 holiday 规划做话题,got anything booked 是标准问法。umming and ahhing(犹豫不决)是地道的英式口语。假期话题的安全在于人人有话说,聊目的地、比机票价格、吐槽机场,都是标准展开。",
+    "variants": [
+      {
+        "prompt": "同事在看旅游网站,你顺势聊两句他的假期计划"
+      }
+    ]
   },
   {
     "id": "small-talk-16",
@@ -125,10 +206,22 @@
     "scene": "small-talk",
     "prompt": "同事问你周末怎么样,你周末确实没干什么",
     "options": [
-      { "text": "I just stayed at home and did nothing.", "correct": false },
-      { "text": "Fairly low-key — caught up on sleep and watched the football. You?", "correct": true }
+      {
+        "text": "I just stayed at home and did nothing.",
+        "correct": false
+      },
+      {
+        "text": "Fairly low-key — caught up on sleep and watched the football. You?",
+        "correct": true
+      }
     ],
-    "note": "did nothing 是对话终结者,对方无从接话。low-key 把\"没干什么\"说成一种风格,补两个小细节(补觉、看球)给对方接话的钩子,最后回抛。small talk 的义务不是过得精彩,是给对方可接的球。"
+    "note": "did nothing 是对话终结者,对方无从接话。low-key 把\"没干什么\"说成一种风格,补两个小细节(补觉、看球)给对方接话的钩子,最后回抛。small talk 的义务不是过得精彩,是给对方可接的球。",
+    "variants": [
+      {
+        "prompt": "同事问你周末怎么样,你其实一直在加班",
+        "answer": "Bit of a working weekend, sadly — but I did escape for a walk on Sunday. You?"
+      }
+    ]
   },
   {
     "id": "small-talk-17",
@@ -136,10 +229,21 @@
     "scene": "small-talk",
     "prompt": "难得的大晴天,想跟同事感叹一句天气",
     "options": [
-      { "text": "Today's weather is very good.", "correct": false },
-      { "text": "Gorgeous out there, isn't it? Typical that we're stuck in here.", "correct": true }
+      {
+        "text": "Today's weather is very good.",
+        "correct": false
+      },
+      {
+        "text": "Gorgeous out there, isn't it? Typical that we're stuck in here.",
+        "correct": true
+      }
     ],
-    "note": "today's weather is very good 语法正确但像天气播报,没有附加问句就没有邀请对话的功能。地道版本带 isn't it 和一句自嘲(这么好的天却困在办公室),后者是英式天气聊法的灵魂:天气永远要配一点戏剧化的抱怨。"
+    "note": "today's weather is very good 语法正确但像天气播报,没有附加问句就没有邀请对话的功能。地道版本带 isn't it 和一句自嘲(这么好的天却困在办公室),后者是英式天气聊法的灵魂:天气永远要配一点戏剧化的抱怨。",
+    "variants": [
+      {
+        "prompt": "连续下了一周雨终于放晴,想跟同事感叹一句"
+      }
+    ]
   },
   {
     "id": "small-talk-18",
@@ -147,10 +251,22 @@
     "scene": "small-talk",
     "prompt": "同事抱怨今早火车又延误了,你要回应",
     "options": [
-      { "text": "Maybe you should leave home earlier.", "correct": false },
-      { "text": "Not again — it's been shocking all week, hasn't it?", "correct": true }
+      {
+        "text": "Maybe you should leave home earlier.",
+        "correct": false
+      },
+      {
+        "text": "Not again — it's been shocking all week, hasn't it?",
+        "correct": true
+      }
     ],
-    "note": "对吐槽给建议是最典型的社交误判,对方要的是共鸣不是解决方案,leave home earlier 听起来还在暗示是他的错。正确姿势是加入抱怨:shocking 是英式吐槽形容词,hasn't it 把球传回去让吐槽继续。"
+    "note": "对吐槽给建议是最典型的社交误判,对方要的是共鸣不是解决方案,leave home earlier 听起来还在暗示是他的错。正确姿势是加入抱怨:shocking 是英式吐槽形容词,hasn't it 把球传回去让吐槽继续。",
+    "variants": [
+      {
+        "prompt": "同事抱怨公司系统一早上崩了三次,你要回应",
+        "answer": "Not again — it's been shocking all week, hasn't it?"
+      }
+    ]
   },
   {
     "id": "small-talk-19",
@@ -158,10 +274,21 @@
     "scene": "small-talk",
     "prompt": "被问周五晚上有什么安排,你还没想好",
     "options": [
-      { "text": "I have no plans.", "correct": false },
-      { "text": "Nothing set in stone yet — might just see where the evening takes us. You up to much?", "correct": true }
+      {
+        "text": "I have no plans.",
+        "correct": false
+      },
+      {
+        "text": "Nothing set in stone yet — might just see where the evening takes us. You up to much?",
+        "correct": true
+      }
     ],
-    "note": "I have no plans 句法无误但把话聊死了。set in stone(板上钉钉)和 see where the evening takes us 把没计划讲出了从容感。you up to much 是英式口语问\"你有什么安排\"的标准省略形态,比完整句更地道。"
+    "note": "I have no plans 句法无误但把话聊死了。set in stone(板上钉钉)和 see where the evening takes us 把没计划讲出了从容感。you up to much 是英式口语问\"你有什么安排\"的标准省略形态,比完整句更地道。",
+    "variants": [
+      {
+        "prompt": "被问周末有什么安排,你还没想好"
+      }
+    ]
   },
   {
     "id": "small-talk-20",
@@ -169,10 +296,22 @@
     "scene": "small-talk",
     "prompt": "酒吧里同事问你喝什么,你今天不想喝酒",
     "options": [
-      { "text": "I don't drink alcohol because it is bad for my health.", "correct": false },
-      { "text": "Just a Diet Coke for me, cheers.", "correct": true }
+      {
+        "text": "I don't drink alcohol because it is bad for my health.",
+        "correct": false
+      },
+      {
+        "text": "Just a Diet Coke for me, cheers.",
+        "correct": true
+      }
     ],
-    "note": "报上要喝的东西就是完整回答,pub 里没人需要你解释为什么不喝酒,health 理由反而带了说教味,像在评价正在喝酒的人。cheers 在这里是\"谢了\"。想给理由就给个轻的:driving tonight 或 big day tomorrow,一句带过。"
+    "note": "报上要喝的东西就是完整回答,pub 里没人需要你解释为什么不喝酒,health 理由反而带了说教味,像在评价正在喝酒的人。cheers 在这里是\"谢了\"。想给理由就给个轻的:driving tonight 或 big day tomorrow,一句带过。",
+    "variants": [
+      {
+        "prompt": "工作午餐时同事问你喝点什么,你想喝无酒精的",
+        "answer": "Just a sparkling water for me, cheers."
+      }
+    ]
   },
   {
     "id": "small-talk-21",
@@ -182,6 +321,11 @@
     "soft": "I might give it a miss tonight — absolutely knackered after this week. Next time though!",
     "neutral": "Not tonight for me I'm afraid — got a few things on. Have one for me!",
     "firm": "The pub's not really my thing to be honest — but count me in for the team lunch next week.",
-    "note": "give it a miss 是英式婉拒活动的标准说法,knackered(累瘫)是口语高频词,have one for me 是缺席者的标准俏皮话。偶尔拒绝完全正常,但要知道很多信息和决策背景在 pub 里流通,长期全拒有隐性成本。firm 档用于彻底不参与酒吧文化的情况:划清界限的同时给出替代参与方式,关系就不会断。"
+    "note": "give it a miss 是英式婉拒活动的标准说法,knackered(累瘫)是口语高频词,have one for me 是缺席者的标准俏皮话。偶尔拒绝完全正常,但要知道很多信息和决策背景在 pub 里流通,长期全拒有隐性成本。firm 档用于彻底不参与酒吧文化的情况:划清界限的同时给出替代参与方式,关系就不会断。",
+    "variants": [
+      {
+        "situation": "同事约周四下班后去看球,这次你不想去"
+      }
+    ]
   }
 ]

@@ -29,6 +29,42 @@ export function rate(card: CardRecord, rating: Rating, now = Date.now()): CardRe
   }
 }
 
+/**
+ * 按复习次数轮换情境:第 1 次见原始情境,之后依次走 variants,循环。
+ * 同一句话在不同场合反复出现,更接近真实工作里被触发的样子。
+ */
+export function viewFor(card: CardRecord): {
+  prompt?: string
+  situation?: string
+  answer?: string
+  note?: string
+  variantIndex: number
+  variantCount: number
+} {
+  const variants = card.variants ?? []
+  const total = variants.length + 1
+  const i = total > 1 ? card.reps % total : 0
+  if (i === 0) {
+    return {
+      prompt: card.prompt,
+      situation: card.situation,
+      answer: card.answer,
+      note: card.note,
+      variantIndex: 0,
+      variantCount: total,
+    }
+  }
+  const v = variants[i - 1]
+  return {
+    prompt: v.prompt ?? card.prompt,
+    situation: v.situation ?? card.situation,
+    answer: v.answer ?? card.answer,
+    note: v.note ?? card.note,
+    variantIndex: i,
+    variantCount: total,
+  }
+}
+
 export function isMastered(card: CardRecord): boolean {
   return card.interval >= MASTERY_DAYS
 }

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { db, getMeta, setMeta } from '../db'
-import { rate, dayKey } from '../srs'
+import { rate, dayKey, viewFor } from '../srs'
 import { FLAGS, REVIEWABLE, sceneLabel } from '../types'
 import type { CardRecord, Flag, Rating } from '../types'
 
@@ -80,23 +80,23 @@ function CardFooter({ card }: { card: CardRecord }) {
     <>
       <button
         onClick={toggleUsed}
-        className={`mt-4 w-full rounded-lg border py-2 text-sm font-medium ${
+        className={`mt-4 w-full rounded-[10px] py-2.5 text-[14px] font-medium ${
           used
-            ? 'border-emerald-300 bg-emerald-50 text-emerald-700'
-            : 'border-slate-200 bg-white text-slate-400'
+            ? 'bg-green-soft text-green'
+            : 'bg-fill text-label2'
         }`}
       >
-        {used ? '✓ 这句我在工作里用过了' : '这句我在工作里用过了'}
+        {used ? '✓ 这句我用上了' : '这句我用上了(邮件 / 会上)'}
       </button>
       <div className="mt-3 flex flex-wrap gap-2">
         {FLAGS.map(f => (
           <button
             key={f}
             onClick={() => toggleFlag(f)}
-            className={`rounded-full border px-3 py-1 text-xs ${
+            className={`rounded-full px-3 py-1.5 text-[12px] ${
               flags.includes(f)
-                ? 'border-amber-400 bg-amber-100 text-amber-800'
-                : 'border-slate-200 bg-white text-slate-400'
+                ? 'bg-orange-soft text-orange'
+                : 'bg-fill text-label3'
             }`}
           >
             {f}
@@ -109,16 +109,16 @@ function CardFooter({ card }: { card: CardRecord }) {
 
 function SceneChip({ scene }: { scene: string }) {
   return (
-    <span className="rounded-full bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-600">
+    <span className="rounded-full bg-blue-soft px-2.5 py-1 text-[12px] font-medium text-blue">
       {sceneLabel(scene)}
     </span>
   )
 }
 
 const RATING_BUTTONS: { rating: Rating; label: string; cls: string }[] = [
-  { rating: 'again', label: '没想起来', cls: 'bg-rose-50 text-rose-700 border-rose-200' },
-  { rating: 'unsure', label: '想起来了但不确定', cls: 'bg-amber-50 text-amber-700 border-amber-200' },
-  { rating: 'good', label: '顺', cls: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+  { rating: 'again', label: '没想起来', cls: 'bg-red-soft text-red' },
+  { rating: 'unsure', label: '不太确定', cls: 'bg-orange-soft text-orange' },
+  { rating: 'good', label: '顺', cls: 'bg-green-soft text-green' },
 ]
 
 export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit: () => void }) {
@@ -144,6 +144,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   }, [])
 
   const card = queue && index < queue.length ? queue[index] : null
+  const view = card ? viewFor(card) : null
 
   const pickOrder = useMemo(() => {
     if (!card || card.type !== 'pick' || !card.options) return []
@@ -194,7 +195,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   }
 
   if (!queue) {
-    return <div className="flex min-h-screen items-center justify-center text-slate-400">载入中…</div>
+    return <div className="flex min-h-screen items-center justify-center text-label3">载入中…</div>
   }
 
   if (finished) {
@@ -202,17 +203,17 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
     const uniq = [...new Map(seen.map(c => [c.id, c])).values()]
     const good = uniq.filter(c => ratingsRef.current.get(c.id) === 'good')
     return (
-      <div className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-8">
-        <h2 className="text-xl font-bold">这组练完了</h2>
-        {cutShort && <p className="mt-1 text-sm text-slate-400">五分钟到了,先收尾——剩下的卡还在队列里。</p>}
-        <p className="mt-4 text-sm text-slate-500">
+      <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-14 pb-8">
+        <h2 className="title-lg">这组练完了</h2>
+        {cutShort && <p className="mt-1.5 text-[13px] text-label2">五分钟到了,先收尾——剩下的卡还在队列里。</p>}
+        <p className="mt-4 text-[15px] text-label2">
           {good.length > 0 ? '这几条,你现在能直接说出口:' : '这组还没有"顺"的卡——正常,多见几次就有了。'}
         </p>
         <ul className="mt-3 space-y-3">
           {good.map(c => (
-            <li key={c.id} className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-              <p className="font-medium text-emerald-900">{cardMainText(c)}</p>
-              <p className="mt-1 text-xs text-emerald-600">{sceneLabel(c.scene)}</p>
+            <li key={c.id} className="group-card p-4">
+              <p className="text-[16px] font-medium leading-relaxed text-label">{cardMainText(c)}</p>
+              <p className="mt-1.5 text-[12px] text-green">{sceneLabel(c.scene)}</p>
             </li>
           ))}
         </ul>
@@ -233,11 +234,11 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                 } else setQueue(q)
               })
             }}
-            className="w-full rounded-xl border border-indigo-200 bg-indigo-50 py-3 font-medium text-indigo-700"
+            className="w-full rounded-[14px] bg-fill py-3.5 text-[17px] text-label active:opacity-70"
           >
             {mode === 'one' ? '再来一张?' : '再来一组?'}
           </button>
-          <button onClick={onExit} className="w-full rounded-xl bg-indigo-600 py-3 font-medium text-white">
+          <button onClick={onExit} className="w-full rounded-[14px] bg-blue py-3.5 text-[17px] font-semibold text-white active:opacity-80">
             今天就到这
           </button>
         </div>
@@ -250,26 +251,33 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
   const progress = `${Math.min(index + 1, queue.length)} / ${queue.length}`
 
   return (
-    <div className="mx-auto flex min-h-screen max-w-md flex-col px-5 py-6">
-      <div className="flex items-center justify-between text-sm text-slate-400">
-        <button onClick={onExit} className="text-slate-400">
+    <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-12 pb-6">
+      <div className="flex items-center justify-between text-[15px] text-label2">
+        <button onClick={onExit} className="text-blue">
           ✕ 退出
         </button>
         <span>{progress}</span>
       </div>
 
       <div className="mt-6 flex-1">
-        <SceneChip scene={card.scene} />
+        <div className="flex items-center gap-2">
+          <SceneChip scene={card.scene} />
+          {view!.variantIndex > 0 && (
+            <span className="rounded-full bg-fill px-2.5 py-1 text-[12px] text-label2">
+              换个场合 · 第 {view!.variantIndex + 1} 种
+            </span>
+          )}
+        </div>
 
         {card.type === 'produce' && (
           <div className="mt-4">
-            <p className="text-lg leading-relaxed">{card.prompt}</p>
+            <p className="text-[20px] font-medium leading-relaxed">{view!.prompt}</p>
             {!revealed ? (
-              <p className="mt-6 text-sm text-slate-400">心里(或小声)把英文说出来,再翻面对答案。</p>
+              <p className="mt-6 text-[15px] text-label2">心里(或小声)把英文说出来,再翻面对答案。</p>
             ) : (
-              <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-lg font-medium leading-relaxed text-indigo-900">{card.answer}</p>
-                <p className="mt-3 border-t border-slate-100 pt-3 text-sm leading-relaxed text-slate-500">{card.note}</p>
+              <div className="group-card mt-6 p-4">
+                <p className="text-[19px] font-medium leading-relaxed text-blue">{view!.answer}</p>
+                <p className="row-sep mt-3.5 pb-3.5 text-[14px] leading-relaxed text-label2" style={{ borderBottom: 'none', borderTop: '0.5px solid var(--sep)', paddingTop: '14px', paddingBottom: 0 }}>{view!.note}</p>
                 <CardFooter card={card} />
               </div>
             )}
@@ -278,16 +286,16 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
 
         {card.type === 'pick' && (
           <div className="mt-4">
-            <p className="text-lg leading-relaxed">{card.prompt}</p>
+            <p className="text-[20px] font-medium leading-relaxed">{view!.prompt}</p>
             <div className="mt-5 space-y-3">
               {pickOrder.map(i => {
                 const opt = card.options![i]
                 const chosen = pickChoice === i
-                let cls = 'border-slate-200 bg-white'
+                let cls = 'bg-card'
                 if (revealed) {
-                  if (opt.correct) cls = 'border-emerald-300 bg-emerald-50'
-                  else if (chosen) cls = 'border-rose-300 bg-rose-50'
-                  else cls = 'border-slate-200 bg-white opacity-60'
+                  if (opt.correct) cls = 'bg-green-soft ring-[1.5px] ring-green'
+                  else if (chosen) cls = 'bg-red-soft ring-[1.5px] ring-red'
+                  else cls = 'bg-card opacity-50'
                 }
                 return (
                   <button
@@ -297,7 +305,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                       setPickChoice(i)
                       setRevealed(true)
                     }}
-                    className={`w-full rounded-xl border p-4 text-left leading-relaxed shadow-sm ${cls}`}
+                    className={`w-full rounded-[14px] p-4 text-left text-[16px] leading-relaxed ${cls}`}
                   >
                     {opt.text}
                     {revealed && opt.correct && <span className="ml-2">✅</span>}
@@ -307,8 +315,8 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
               })}
             </div>
             {revealed && (
-              <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                <p className="text-sm leading-relaxed text-slate-500">{card.note}</p>
+              <div className="group-card mt-4 p-4">
+                <p className="text-[14px] leading-relaxed text-label2">{view!.note}</p>
                 <CardFooter card={card} />
               </div>
             )}
@@ -317,23 +325,23 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
 
         {card.type === 'register' && (
           <div className="mt-4">
-            <p className="text-lg leading-relaxed">{card.situation}</p>
+            <p className="text-[20px] font-medium leading-relaxed">{view!.situation}</p>
             {!revealed ? (
-              <p className="mt-6 text-sm text-slate-400">先想:这个场合你会用哪一档?那句话怎么说?</p>
+              <p className="mt-6 text-[15px] text-label2">先想:这个场合你会用哪一档?那句话怎么说?</p>
             ) : (
               <div className="mt-6 space-y-3">
                 {([
-                  ['soft', '软', 'text-sky-700 bg-sky-50 border-sky-200'],
-                  ['neutral', '中性', 'text-indigo-700 bg-indigo-50 border-indigo-200'],
-                  ['firm', '硬', 'text-rose-700 bg-rose-50 border-rose-200'],
+                  ['soft', '软', 'text-blue bg-blue-soft'],
+                  ['neutral', '中性', 'text-orange bg-orange-soft'],
+                  ['firm', '硬', 'text-red bg-red-soft'],
                 ] as const).map(([key, label, cls]) => (
-                  <div key={key} className={`rounded-xl border p-4 ${cls}`}>
-                    <span className="text-xs font-bold">{label}</span>
-                    <p className="mt-1 leading-relaxed">{card[key]}</p>
+                  <div key={key} className={`rounded-[14px] p-4 ${cls}`}>
+                    <span className="text-[12px] font-semibold">{label}</span>
+                    <p className="mt-1.5 text-[16px] leading-relaxed text-label">{card[key]}</p>
                   </div>
                 ))}
-                <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <p className="text-sm leading-relaxed text-slate-500">{card.note}</p>
+                <div className="group-card p-4">
+                  <p className="text-[14px] leading-relaxed text-label2">{view!.note}</p>
                   <CardFooter card={card} />
                 </div>
               </div>
@@ -342,18 +350,18 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
         )}
 
         {card.type === 'note' && (
-          <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h3 className="text-lg font-bold">{card.title}</h3>
-            <p className="mt-3 leading-relaxed text-slate-600">{card.body}</p>
+          <div className="group-card mt-4 p-5">
+            <h3 className="title-md">{card.title}</h3>
+            <p className="mt-3 text-[16px] leading-relaxed text-label2">{card.body}</p>
           </div>
         )}
 
         {card.type === 'listen' && (
           <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
-            <h3 className="text-lg font-bold">{card.title}</h3>
-            <p className="mt-1 text-sm text-slate-400">{card.source}</p>
-            <p className="mt-3 leading-relaxed text-slate-600">{card.task}</p>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-500">
+            <h3 className="title-md">{card.title}</h3>
+            <p className="mt-1 text-[13px] text-label3">{card.source}</p>
+            <p className="mt-3 text-[16px] leading-relaxed text-label2">{card.task}</p>
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-[14px] leading-relaxed text-label2">
               {card.questions?.map((q, i) => <li key={i}>{q}</li>)}
             </ul>
             {card.url && (
@@ -361,7 +369,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                 href={card.url}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-4 inline-block rounded-lg bg-indigo-600 px-4 py-2 text-sm font-medium text-white"
+                className="mt-4 inline-block rounded-[10px] bg-blue px-4 py-2.5 text-[15px] font-medium text-white"
               >
                 打开节目 ↗
               </a>
@@ -375,7 +383,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
           !revealed && card.type !== 'pick' ? (
             <button
               onClick={() => setRevealed(true)}
-              className="w-full rounded-xl bg-indigo-600 py-3.5 font-medium text-white"
+              className="w-full rounded-[14px] bg-blue py-4 text-[17px] font-semibold text-white active:opacity-80"
             >
               翻面
             </button>
@@ -385,17 +393,17 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
                 <button
                   key={rating}
                   onClick={() => onRate(rating)}
-                  className={`rounded-xl border py-3 text-sm font-medium leading-tight ${cls}`}
+                  className={`rounded-[14px] py-3.5 text-[15px] font-medium ${cls}`}
                 >
                   {label}
                 </button>
               ))}
             </div>
           ) : (
-            <p className="text-center text-sm text-slate-300">选一个你觉得自然的说法</p>
+            <p className="text-center text-[14px] text-label3">选一个你觉得自然的说法</p>
           )
         ) : (
-          <button onClick={onExtraDone} className="w-full rounded-xl bg-indigo-600 py-3.5 font-medium text-white">
+          <button onClick={onExtraDone} className="w-full rounded-[14px] bg-blue py-4 text-[17px] font-semibold text-white active:opacity-80">
             {card.type === 'note' ? '读完了' : '继续'}
           </button>
         )}

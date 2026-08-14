@@ -1,11 +1,103 @@
 @import "tailwindcss";
 
+/* iOS 系统色板(浅色) */
+:root {
+  --bg: #f2f2f7;
+  --card: #ffffff;
+  --card2: #ffffff;
+  --label: #000000;
+  --label2: rgba(60, 60, 67, 0.6);
+  --label3: rgba(60, 60, 67, 0.3);
+  --sep: rgba(60, 60, 67, 0.12);
+  --fill: rgba(120, 120, 128, 0.12);
+  --blue: #007aff;
+  --blue-soft: rgba(0, 122, 255, 0.1);
+  --green: #34c759;
+  --green-soft: rgba(52, 199, 89, 0.12);
+  --orange: #ff9500;
+  --orange-soft: rgba(255, 149, 0, 0.14);
+  --red: #ff3b30;
+  --red-soft: rgba(255, 59, 48, 0.12);
+  --bar: rgba(249, 249, 249, 0.82);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --card: #1c1c1e;
+    --card2: #2c2c2e;
+    --label: #ffffff;
+    --label2: rgba(235, 235, 245, 0.6);
+    --label3: rgba(235, 235, 245, 0.3);
+    --sep: rgba(84, 84, 88, 0.6);
+    --fill: rgba(120, 120, 128, 0.24);
+    --blue: #0a84ff;
+    --blue-soft: rgba(10, 132, 255, 0.18);
+    --green: #30d158;
+    --green-soft: rgba(48, 209, 88, 0.18);
+    --orange: #ff9f0a;
+    --orange-soft: rgba(255, 159, 10, 0.18);
+    --red: #ff453a;
+    --red-soft: rgba(255, 69, 58, 0.18);
+    --bar: rgba(28, 28, 30, 0.82);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-card: var(--card);
+  --color-card2: var(--card2);
+  --color-label: var(--label);
+  --color-label2: var(--label2);
+  --color-label3: var(--label3);
+  --color-sep: var(--sep);
+  --color-fill: var(--fill);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-green: var(--green);
+  --color-green-soft: var(--green-soft);
+  --color-orange: var(--orange);
+  --color-orange-soft: var(--orange-soft);
+  --color-red: var(--red);
+  --color-red-soft: var(--red-soft);
+  --color-bar: var(--bar);
+}
+
 html {
   -webkit-tap-highlight-color: transparent;
+  background: var(--bg);
 }
 
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  @apply bg-bg text-label antialiased;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display",
+    "Helvetica Neue", "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB",
+    "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", sans-serif;
+  text-rendering: optimizeLegibility;
   padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iOS 大标题 */
+.title-lg {
+  @apply text-[34px] font-bold leading-tight;
+  letter-spacing: -0.2px;
+}
+
+.title-md {
+  @apply text-[22px] font-semibold;
+  letter-spacing: -0.1px;
+}
+
+/* 分组卡:无边框、无阴影,靠底色分层 */
+.group-card {
+  @apply overflow-hidden rounded-[14px] bg-card;
+}
+
+/* 列表行之间的发丝线,最后一行不画 */
+.row-sep {
+  border-bottom: 0.5px solid var(--sep);
+}
+
+button {
+  font: inherit;
 }

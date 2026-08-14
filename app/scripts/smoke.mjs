@@ -19,20 +19,20 @@ await page.waitForTimeout(1500)
 // --- Home ---
 ok('home shows start button', await page.getByText('开始今天的一组').isVisible().catch(() => false))
 ok('home shows mastered counter', await page.getByText('已掌握表达').isVisible().catch(() => false))
-ok('home shows jot button', await page.getByText('记一笔(刚才卡住了?)').isVisible().catch(() => false))
+ok('home shows jot button', await page.getByText('三秒记下来').isVisible().catch(() => false))
 await page.screenshot({ path: `${shots}/1-home.png` })
 
 // --- Jot a note ---
-await page.getByText('记一笔(刚才卡住了?)').click()
+await page.getByText('三秒记下来').click()
 await page.waitForTimeout(300)
 await page.locator('textarea').fill('想跟同事说数据对不上但不想显得在指责')
-await page.getByRole('button', { name: '存下' }).click()
+await page.getByRole('button', { name: '存下', exact: true }).click()
 await page.waitForTimeout(900)
 ok('jot modal closed', !(await page.locator('textarea').isVisible().catch(() => false)))
 
 // --- New motivation UI on home ---
-ok('week dots rendered', (await page.locator('div.flex.h-8.w-8').count()) === 7)
-ok('used counter tile', await page.getByText('真实用过').isVisible().catch(() => false))
+ok('week strip rendered', (await page.locator('div.h-\\[30px\\]').count()) === 7)
+ok('third stat tile adapts when nothing used yet', await page.getByText('本周练习天').isVisible().catch(() => false))
 ok('one-card shortcut offered', await page.getByText('今天只有一分钟?来一张就算数').isVisible().catch(() => false))
 
 // --- One-card mode counts as a check-in ---
@@ -44,12 +44,12 @@ ok('one-card round shows 1 / 1', await page.getByText('1 / 1').isVisible().catch
   if (await flip.isVisible().catch(() => false)) {
     await flip.click()
     await page.waitForTimeout(300)
-    ok('used button present', await page.getByText('这句我在工作里用过了').isVisible().catch(() => false))
-    await page.getByText('这句我在工作里用过了').click()
+    ok('used button present', await page.getByText('这句我用上了(邮件 / 会上)').isVisible().catch(() => false))
+    await page.getByText('这句我用上了(邮件 / 会上)').click()
     await page.waitForTimeout(250)
-    ok('used button toggles to checked', await page.getByText('✓ 这句我在工作里用过了').isVisible().catch(() => false))
+    ok('used button toggles to checked', await page.getByText('✓ 这句我用上了').isVisible().catch(() => false))
   } else {
-    const opts = page.locator('button.w-full.rounded-xl.border.p-4')
+    const opts = page.locator('button.w-full.p-4.text-left')
     await opts.first().click()
     await page.waitForTimeout(400)
   }
@@ -61,9 +61,9 @@ ok('repeat label says 再来一张', await page.getByText('再来一张?').isVis
 await page.screenshot({ path: `${shots}/10-one-card-finish.png` })
 await page.getByRole('button', { name: '今天就到这' }).click()
 await page.waitForTimeout(600)
-ok('one card counted as today done', await page.getByText('今天已完成 ✓').isVisible().catch(() => false))
+ok('one card counted as today done', await page.getByText('今天已完成').isVisible().catch(() => false))
 {
-  const usedTile = page.locator('div.rounded-2xl', { hasText: '真实用过' }).first()
+  const usedTile = page.locator('div.flex-1').filter({ hasText: '真实用过' }).first()
   const usedVal = (await usedTile.locator('p').first().innerText().catch(() => '?')).trim()
   ok(`used counter incremented (got ${usedVal})`, usedVal === '1')
 }
@@ -108,7 +108,7 @@ while (steps < 20) {
     await cont.click()
   } else {
     // pick card: click first option button in the option area
-    const opts = page.locator('button.w-full.rounded-xl.border.p-4')
+    const opts = page.locator('button.w-full.p-4.text-left')
     const n = await opts.count()
     if (n > 0) {
       sawTypes.add('pick')
@@ -136,7 +136,7 @@ ok('finish has another-round button', await page.getByText('再来一组?').isVi
 // --- Exit, check home updated ---
 await page.getByRole('button', { name: '今天就到这' }).click()
 await page.waitForTimeout(600)
-ok('home shows today done', await page.getByText('今天已完成 ✓').isVisible().catch(() => false))
+ok('home shows today done', await page.getByText('今天已完成').isVisible().catch(() => false))
 ok('streak label visible', await page.getByText(/连续/).first().isVisible().catch(() => false))
 await page.screenshot({ path: `${shots}/6-home-after.png` })
 
@@ -165,7 +165,7 @@ await page.screenshot({ path: `${shots}/9-inbox.png` })
 // --- Import path: the Claude round-trip she'll run every couple of weeks ---
 await page.locator('input[type=file]').setInputFiles('/tmp/claude-0/-home-user-Habla-ingles/3e754a22-9d07-56b8-b170-7b43c4a72bcc/scratchpad/test-import.json')
 await page.waitForTimeout(900)
-const importMsg = await page.locator('div.bg-indigo-50').first().innerText().catch(() => '')
+const importMsg = await page.locator('div.bg-blue-soft').first().innerText().catch(() => '')
 ok(`import added 2 and skipped 2 malformed (got: ${importMsg.trim()})`,
    importMsg.includes('新增 2 张卡') && importMsg.includes('跳过 2 条'))
 await page.screenshot({ path: `${shots}/12-import.png` })
@@ -179,10 +179,42 @@ ok('imported card visible in deck', await page.getByText('测试用:临时通知
 await page.getByRole('button', { name: /收集箱/ }).click()
 await page.waitForTimeout(400)
 
+// --- Variant review: seeing a card a second time must change the scenario ---
+const variantInfo = await page.evaluate(async () => {
+  const db = await new Promise((res, rej) => {
+    const r = indexedDB.open('chunk')
+    r.onsuccess = () => res(r.result)
+    r.onerror = () => rej(r.error)
+  })
+  const read = db.transaction('cards', 'readonly').objectStore('cards')
+  const all = await new Promise(res => {
+    const r = read.getAll()
+    r.onsuccess = () => res(r.result)
+  })
+  const target = all.find(c => c.type === 'produce' && c.variants && c.variants.length)
+  // 假装这张卡已经复习过一次并且今天到期,下一轮必定先出它
+  const tx = db.transaction('cards', 'readwrite')
+  tx.objectStore('cards').put({ ...target, state: 'review', reps: 1, interval: 1, due: 1 })
+  await new Promise(res => { tx.oncomplete = res })
+  return { basePrompt: target.prompt, variantPrompt: target.variants[0].prompt }
+})
+
+await page.getByRole('button', { name: /今天/ }).first().click()
+await page.waitForTimeout(400)
+await page.getByText('再来一组', { exact: true }).click()
+await page.waitForTimeout(900)
+const shownPrompt = await page.locator('p.text-\\[20px\\]').first().innerText().catch(() => '')
+ok('second sighting shows the variant scenario, not the original',
+   shownPrompt.trim() === variantInfo.variantPrompt.trim() && shownPrompt.trim() !== variantInfo.basePrompt.trim())
+ok('variant badge explains the switch', await page.getByText('换个场合').isVisible().catch(() => false))
+await page.screenshot({ path: `${shots}/13-variant.png` })
+await page.getByText('✕ 退出').click()
+await page.waitForTimeout(500)
+
 // --- Reload: persistence check ---
 await page.reload()
 await page.waitForTimeout(1200)
-ok('after reload still today-done (IndexedDB persisted)', await page.getByText('今天已完成 ✓').isVisible().catch(() => false))
+ok('after reload still today-done (IndexedDB persisted)', await page.getByText('今天已完成').isVisible().catch(() => false))
 
 console.log(fails.length ? `\n${fails.length} FAILURES: ${fails.join('; ')}` : '\nALL CHECKS PASSED')
 await browser.close()

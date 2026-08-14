@@ -12,7 +12,7 @@ def png(w, h, rows):
             + chunk(b'IDAT', zlib.compress(raw, 9))
             + chunk(b'IEND', b''))
 
-BG = (79, 70, 229, 255)      # indigo-600
+BG = (0, 122, 255, 255)      # iOS systemBlue
 FG = (255, 255, 255, 255)
 TRANS = (0, 0, 0, 0)
 

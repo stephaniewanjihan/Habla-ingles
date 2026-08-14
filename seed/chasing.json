@@ -5,7 +5,12 @@
     "scene": "chasing",
     "prompt": "第二次催同一件事,对方已经拖了一周,你要加压但不能翻脸",
     "answer": "Just circling back on this. Is there anything holding it up I can help with?",
-    "note": "circling back 是第二次催的标准开场。后半句把催促包装成帮忙,这是英国职场典型手法,实际压力一点没少。"
+    "note": "circling back 是第二次催的标准开场。后半句把催促包装成帮忙,这是英国职场典型手法,实际压力一点没少。",
+    "variants": [
+      {
+        "prompt": "第二次催客户回你的确认,对方拖了五天"
+      }
+    ]
   },
   {
     "id": "chasing-02",
@@ -13,7 +18,12 @@
     "scene": "chasing",
     "prompt": "发出去的请求过了两天没动静,第一次催",
     "answer": "Just checking in on the below — any update your end?",
-    "note": "第一次催用最轻的档位:checking in 几乎没有压力,your end 是英式口语的\"你那边\"。第一催的目的只是确认对方看到了,措辞重了会透支后面升级的空间。"
+    "note": "第一次催用最轻的档位:checking in 几乎没有压力,your end 是英式口语的\"你那边\"。第一催的目的只是确认对方看到了,措辞重了会透支后面升级的空间。",
+    "variants": [
+      {
+        "prompt": "发给 IT 的工单两天没人认领,第一次催"
+      }
+    ]
   },
   {
     "id": "chasing-03",
@@ -21,7 +31,13 @@
     "scene": "chasing",
     "prompt": "第三次催,这件事已经开始卡住你的交付,升级之前最后催一次",
     "answer": "Flagging this one again as it's now blocking the client report on our side. If it's stuck somewhere, happy to jump on a quick call and sort it.",
-    "note": "第三催的关键是引入后果(blocking the client report),让拖延的成本可见。提议打电话是英式催促的升档信号:文字解决不了就上语音,对方通常在这一步就会动起来,因为都明白下一步就是抄送上级。"
+    "note": "第三催的关键是引入后果(blocking the client report),让拖延的成本可见。提议打电话是英式催促的升档信号:文字解决不了就上语音,对方通常在这一步就会动起来,因为都明白下一步就是抄送上级。",
+    "variants": [
+      {
+        "prompt": "第三次催法务看合同,已经卡住签约,升级前最后催一次",
+        "answer": "Flagging this one again as it's now holding up the signing on our side. If it's stuck somewhere, happy to jump on a quick call and sort it."
+      }
+    ]
   },
   {
     "id": "chasing-04",
@@ -29,7 +45,13 @@
     "scene": "chasing",
     "prompt": "多次催促无果,要把对方的上级抄送进来施压,但话要说得体面",
     "answer": "Looping in Mark for visibility, as we're now up against the payment date on this one.",
-    "note": "for visibility 是抄送上级的标准遮羞布,人人都知道这是升级,但话不能说破。up against 表达贴着 deadline 的压迫感。抄送升级是核武器,一个合作关系里用一次就够,用多了自己先失去信用。"
+    "note": "for visibility 是抄送上级的标准遮羞布,人人都知道这是升级,但话不能说破。up against 表达贴着 deadline 的压迫感。抄送升级是核武器,一个合作关系里用一次就够,用多了自己先失去信用。",
+    "variants": [
+      {
+        "prompt": "反复催供应商无果,要把对方客户经理抄进来,话要说得体面",
+        "answer": "Looping in Sarah for visibility, as we're now up against the quarter-end close on this one."
+      }
+    ]
   },
   {
     "id": "chasing-05",
@@ -37,7 +59,13 @@
     "scene": "chasing",
     "prompt": "托管行那边有一笔权益款项一直没到账,要催他们去追",
     "answer": "Could you chase the sub-custodian on the pending entitlement? It's been outstanding since the 12th and the client's starting to ask.",
-    "note": "chase 是英国运营岗最高频的催促动词,对外机构直接用,没有贬义。outstanding 指款项未到账。the client's starting to ask 是运营催托管行的万能加压句——把压力来源指向客户,谁也没法反驳。"
+    "note": "chase 是英国运营岗最高频的催促动词,对外机构直接用,没有贬义。outstanding 指款项未到账。the client's starting to ask 是运营催托管行的万能加压句——把压力来源指向客户,谁也没法反驳。",
+    "variants": [
+      {
+        "prompt": "券商那边一笔配股款迟迟没到账,要催他们去追",
+        "answer": "Could you chase the broker on the outstanding rights proceeds? It's been sitting since the 9th and the client's starting to ask."
+      }
+    ]
   },
   {
     "id": "chasing-06",
@@ -45,7 +73,12 @@
     "scene": "chasing",
     "prompt": "催一件事并且必须给对方一个明确的最后期限,因为明天要下指令",
     "answer": "Could you come back to me by close of play today? We need to instruct by tomorrow's market deadline, so there's no slack left in this one.",
-    "note": "close of play(COP)是英式说法的\"今天收工前\",金融圈也说 by close 或 COB。no slack left 说明不是你在施压,是时间表在施压。给 deadline 一定要带理由,光说 by today 没有理由,在英国职场会被视为居高临下。"
+    "note": "close of play(COP)是英式说法的\"今天收工前\",金融圈也说 by close 或 COB。no slack left 说明不是你在施压,是时间表在施压。给 deadline 一定要带理由,光说 by today 没有理由,在英国职场会被视为居高临下。",
+    "variants": [
+      {
+        "prompt": "催对方今天给答复,因为明早要提交监管报送"
+      }
+    ]
   },
   {
     "id": "chasing-07",
@@ -53,7 +86,12 @@
     "scene": "chasing",
     "prompt": "审批卡在很忙的上级那里,要催但姿态要放低",
     "answer": "I appreciate you've got a lot on — any chance of a steer on the approval this week? Happy to grab five minutes if easier.",
-    "note": "催上级的公式:先承认对方忙,再用 any chance of 这种低压问法,最后给一个省力选项(五分钟口头聊)。steer 是英式的\"给个方向\",比 decision 轻,暗示不需要正式批复,先给个倾向就行。"
+    "note": "催上级的公式:先承认对方忙,再用 any chance of 这种低压问法,最后给一个省力选项(五分钟口头聊)。steer 是英式的\"给个方向\",比 decision 轻,暗示不需要正式批复,先给个倾向就行。",
+    "variants": [
+      {
+        "prompt": "预算审批卡在很忙的财务总监那里,要催但姿态要放低"
+      }
+    ]
   },
   {
     "id": "chasing-08",
@@ -61,7 +99,12 @@
     "scene": "chasing",
     "prompt": "五个团队里四个都确认了,只差一个人的签核,要点名催他",
     "answer": "Still waiting on sign-off from your side, Raj — everyone else is in, so you're the last piece of the puzzle.",
-    "note": "everyone else is in 是温和但极其有效的同侪压力,没人愿意当那个拖住所有人的人。last piece of the puzzle 把点名包装得轻快。公开点名催促在英国职场是允许的,前提是语气像这样带着笑意。"
+    "note": "everyone else is in 是温和但极其有效的同侪压力,没人愿意当那个拖住所有人的人。last piece of the puzzle 把点名包装得轻快。公开点名催促在英国职场是允许的,前提是语气像这样带着笑意。",
+    "variants": [
+      {
+        "prompt": "六个部门里五个都交了数据,只差一个人,要点名催他"
+      }
+    ]
   },
   {
     "id": "chasing-09",
@@ -69,7 +112,13 @@
     "scene": "chasing",
     "prompt": "别人催你,但你卡在法务那边,要解释并给出你的行动",
     "answer": "This one's sitting with legal at the moment — I'm chasing them today and will revert as soon as I hear.",
-    "note": "sitting with 是\"卡在谁那里\"的标准说法,把状态说清但不甩锅。revert 在英国金融邮件里就是\"回复你\",不是恢复原状。被催时最重要的是展示你也在推(I'm chasing them today),让链条上的压力继续传导。"
+    "note": "sitting with 是\"卡在谁那里\"的标准说法,把状态说清但不甩锅。revert 在英国金融邮件里就是\"回复你\",不是恢复原状。被催时最重要的是展示你也在推(I'm chasing them today),让链条上的压力继续传导。",
+    "variants": [
+      {
+        "prompt": "客户催你,但你卡在托管行那边,要解释并给出你的行动",
+        "answer": "This one's sitting with the custodian at the moment — I'm chasing them today and will revert as soon as I hear."
+      }
+    ]
   },
   {
     "id": "chasing-10",
@@ -77,7 +126,13 @@
     "scene": "chasing",
     "prompt": "客户在催结果,但你在等注册处的确认,要安抚客户并展示你在盯",
     "answer": "We're waiting on confirmation from the registrar — I'm chasing daily and will let you know the moment it lands.",
-    "note": "对客户不能只说 still waiting,要说明卡点在第三方、你的追踪频率(daily)和触发式承诺(the moment it lands)。lands 形容东西到位,英式高频。这三件套能把\"没进展\"讲出\"尽在掌握\"的效果。"
+    "note": "对客户不能只说 still waiting,要说明卡点在第三方、你的追踪频率(daily)和触发式承诺(the moment it lands)。lands 形容东西到位,英式高频。这三件套能把\"没进展\"讲出\"尽在掌握\"的效果。",
+    "variants": [
+      {
+        "prompt": "老板催结果,但你在等审计出具意见,要安抚并展示你在盯",
+        "answer": "We're waiting on sign-off from the auditors — I'm chasing daily and will let you know the moment it lands."
+      }
+    ]
   },
   {
     "id": "chasing-11",
@@ -85,7 +140,12 @@
     "scene": "chasing",
     "prompt": "原本不急的事因为市场截止时间提前突然变急了,要重新催",
     "answer": "Quick escalation on this — the market deadline's moved to 10am tomorrow, so what wasn't urgent yesterday now is. Could you prioritise it this afternoon?",
-    "note": "情况变了就明说变了(what wasn't urgent yesterday now is),这句自带歉意又不用道歉,因为变的是外部条件不是你反复无常。escalation 用在自己身上是预警语气,比等着别人发现要好。"
+    "note": "情况变了就明说变了(what wasn't urgent yesterday now is),这句自带歉意又不用道歉,因为变的是外部条件不是你反复无常。escalation 用在自己身上是预警语气,比等着别人发现要好。",
+    "variants": [
+      {
+        "prompt": "原本下周才要的材料,因为董事会提前,今天就得要"
+      }
+    ]
   },
   {
     "id": "chasing-12",
@@ -93,7 +153,12 @@
     "scene": "chasing",
     "prompt": "对方被你催过之后很快办完了,要表达感谢把关系拉回来",
     "answer": "Thanks for turning that around so quickly — much appreciated.",
-    "note": "turn around 指快速处理完,是英国职场夸执行力的标准动词。催完之后必须谢,这是催促循环的闭环:这次谢得漂亮,下次催得动。much appreciated 比 thank you so much 克制,更像同事而不是乙方。"
+    "note": "turn around 指快速处理完,是英国职场夸执行力的标准动词。催完之后必须谢,这是催促循环的闭环:这次谢得漂亮,下次催得动。much appreciated 比 thank you so much 克制,更像同事而不是乙方。",
+    "variants": [
+      {
+        "prompt": "催过的同事连夜把数据补齐了,要表达感谢"
+      }
+    ]
   },
   {
     "id": "chasing-13",
@@ -101,7 +166,12 @@
     "scene": "chasing",
     "prompt": "一个讨论串沉了三周,当时没结论,现在要重新捞起来",
     "answer": "Reviving this thread — where did we land on the fee split? I need to close it out for the quarter-end pack.",
-    "note": "revive 是捞旧邮件串的标准动词,自带一点自嘲的幽默感。where did we land on 是问\"当时结论是什么\"的地道说法,land 表示落定。带上你为什么现在需要(quarter-end pack),旧事重提就有了正当性。"
+    "note": "revive 是捞旧邮件串的标准动词,自带一点自嘲的幽默感。where did we land on 是问\"当时结论是什么\"的地道说法,land 表示落定。带上你为什么现在需要(quarter-end pack),旧事重提就有了正当性。",
+    "variants": [
+      {
+        "prompt": "两个月前讨论过的费用分摊没有结论,现在要重新捞起来"
+      }
+    ]
   },
   {
     "id": "chasing-14",
@@ -109,10 +179,21 @@
     "scene": "chasing",
     "prompt": "上周发的邮件对方一直没回,再发一封",
     "options": [
-      { "text": "Why haven't you replied to my email?", "correct": false },
-      { "text": "Just bumping this in case it got buried.", "correct": true }
+      {
+        "text": "Why haven't you replied to my email?",
+        "correct": false
+      },
+      {
+        "text": "Just bumping this in case it got buried.",
+        "correct": true
+      }
     ],
-    "note": "why haven't you 是质问,英国职场几乎不存在这种句式。bump 是把邮件顶回收件箱顶部的动词,in case it got buried 主动给对方递台阶——大家默认邮件太多被淹没是常态,不是罪过。台阶给得越体面,回复来得越快。"
+    "note": "why haven't you 是质问,英国职场几乎不存在这种句式。bump 是把邮件顶回收件箱顶部的动词,in case it got buried 主动给对方递台阶——大家默认邮件太多被淹没是常态,不是罪过。台阶给得越体面,回复来得越快。",
+    "variants": [
+      {
+        "prompt": "上周发给合规的问询一直没回,再发一封"
+      }
+    ]
   },
   {
     "id": "chasing-15",
@@ -120,10 +201,21 @@
     "scene": "chasing",
     "prompt": "催对方回复,事情确实有时限",
     "options": [
-      { "text": "Please reply as soon as possible.", "correct": false },
-      { "text": "Could you come back to me by Thursday? The instruction deadline is Friday noon.", "correct": true }
+      {
+        "text": "Please reply as soon as possible.",
+        "correct": false
+      },
+      {
+        "text": "Could you come back to me by Thursday? The instruction deadline is Friday noon.",
+        "correct": true
+      }
     ],
-    "note": "as soon as possible 看似紧急实则空洞,对方无法排期,还显得居高临下。给具体日期加真实理由,既好执行又不冒犯。英国职场的规律:压力越具体越可接受,越模糊越招反感。"
+    "note": "as soon as possible 看似紧急实则空洞,对方无法排期,还显得居高临下。给具体日期加真实理由,既好执行又不冒犯。英国职场的规律:压力越具体越可接受,越模糊越招反感。",
+    "variants": [
+      {
+        "prompt": "催对方回复,涉及一个真实的申报时限"
+      }
+    ]
   },
   {
     "id": "chasing-16",
@@ -131,10 +223,21 @@
     "scene": "chasing",
     "prompt": "温和地提醒对方一件到期的事",
     "options": [
-      { "text": "I remind you again that the report is due.", "correct": false },
-      { "text": "Gentle reminder — the report's due Friday.", "correct": true }
+      {
+        "text": "I remind you again that the report is due.",
+        "correct": false
+      },
+      {
+        "text": "Gentle reminder — the report's due Friday.",
+        "correct": true
+      }
     ],
-    "note": "I remind you 语法没错但像官府文书,again 更是火上浇油。gentle reminder 是英国办公室的固定搭配,轻到几乎不构成催促,但意思人人都懂。第二次催可以升级成 friendly nudge,幽默感本身就是缓冲。"
+    "note": "I remind you 语法没错但像官府文书,again 更是火上浇油。gentle reminder 是英国办公室的固定搭配,轻到几乎不构成催促,但意思人人都懂。第二次催可以升级成 friendly nudge,幽默感本身就是缓冲。",
+    "variants": [
+      {
+        "prompt": "温和地提醒同事本周要交的时间表"
+      }
+    ]
   },
   {
     "id": "chasing-17",
@@ -142,10 +245,21 @@
     "scene": "chasing",
     "prompt": "事情很急,需要对方现在就处理",
     "options": [
-      { "text": "Hurry up please, it is very urgent!", "correct": false },
-      { "text": "Sorry to press, but this one can't slip — we need it by 3pm or we miss the cut-off.", "correct": true }
+      {
+        "text": "Hurry up please, it is very urgent!",
+        "correct": false
+      },
+      {
+        "text": "Sorry to press, but this one can't slip — we need it by 3pm or we miss the cut-off.",
+        "correct": true
+      }
     ],
-    "note": "hurry up 是对小孩和出租车司机说的话,职场里说出来关系就伤了。sorry to press 承认自己在施压,这种自知之明让施压变得professional。can't slip 和 cut-off 给出硬约束,紧迫感全部来自事实而不是语气词。"
+    "note": "hurry up 是对小孩和出租车司机说的话,职场里说出来关系就伤了。sorry to press 承认自己在施压,这种自知之明让施压变得professional。can't slip 和 cut-off 给出硬约束,紧迫感全部来自事实而不是语气词。",
+    "variants": [
+      {
+        "prompt": "很急,需要对方立刻确认一笔付款指令"
+      }
+    ]
   },
   {
     "id": "chasing-18",
@@ -155,7 +269,12 @@
     "soft": "Me again, sorry! Just wondering if there's any movement on this one.",
     "neutral": "This is the third time of asking now — can you give me a realistic date, and I'll stop chasing until then?",
     "firm": "I've chased this three times over two weeks with nothing back. If I don't have it by Thursday I'll need to escalate, which I'd rather not do.",
-    "note": "soft 档的自嘲(me again)适合关系好的同事,但催到第四次还用它等于告诉对方拖着没有成本。neutral 档点明次数并用\"给我个日期我就不烦你\"做交换,是最实用的一档。firm 档预告升级必须真的会执行,虚晃一枪以后就没人信了。"
+    "note": "soft 档的自嘲(me again)适合关系好的同事,但催到第四次还用它等于告诉对方拖着没有成本。neutral 档点明次数并用\"给我个日期我就不烦你\"做交换,是最实用的一档。firm 档预告升级必须真的会执行,虚晃一枪以后就没人信了。",
+    "variants": [
+      {
+        "situation": "同一份数据你已经催了三次,对方还是没给,第四次开口"
+      }
+    ]
   },
   {
     "id": "chasing-19",
@@ -165,7 +284,12 @@
     "soft": "No pressure at all, but whenever you've had a chance to look at the proposal, the team's ready to move.",
     "neutral": "Just flagging that the proposal's still with you — we'll need a call by Friday to keep the vendor slot.",
     "firm": "I need a decision on this today, even a provisional one. If we miss the vendor slot the next window is September.",
-    "note": "催上级的杠杆不是你的时间表,是他在乎的东西:团队空转、vendor 档期、九月才有下一个窗口。firm 档提出 even a provisional one 是聪明的让步——把\"做决定\"的门槛降到最低,让对方无法再拖。"
+    "note": "催上级的杠杆不是你的时间表,是他在乎的东西:团队空转、vendor 档期、九月才有下一个窗口。firm 档提出 even a provisional one 是聪明的让步——把\"做决定\"的门槛降到最低,让对方无法再拖。",
+    "variants": [
+      {
+        "situation": "预算审批卡在你自己的老板那里,团队在等,你要催他"
+      }
+    ]
   },
   {
     "id": "chasing-20",
@@ -175,6 +299,11 @@
     "soft": "Just checking where we are with the dividend correction — our client's month-end reporting is starting to loom.",
     "neutral": "Following up on the dividend correction promised last Tuesday — can you confirm it'll post by Thursday? We report to the client Friday.",
     "firm": "The correction is now a week overdue and the client's reporting deadline is Friday. If it isn't posted by Thursday morning we'll have to raise it formally with your relationship manager.",
-    "note": "对外机构的催促可以每档都比对内直接一些,因为这是服务关系。neutral 档要求 confirm 一个具体日期,把口头承诺变成书面记录。firm 档搬出 relationship manager 是正式升级路径,说了就要做,这类机构对书面升级的反应通常立竿见影。"
+    "note": "对外机构的催促可以每档都比对内直接一些,因为这是服务关系。neutral 档要求 confirm 一个具体日期,把口头承诺变成书面记录。firm 档搬出 relationship manager 是正式升级路径,说了就要做,这类机构对书面升级的反应通常立竿见影。",
+    "variants": [
+      {
+        "situation": "外部托管行把一笔企业行动的入账日期做错了,承诺修正但一直没动"
+      }
+    ]
   }
 ]
