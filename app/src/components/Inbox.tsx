@@ -132,6 +132,7 @@ export default function Inbox() {
             }}
           />
         </div>
+        <p className="mt-3 text-center text-[11px] text-label3">版本 {__BUILD_STAMP__} (UTC)</p>
       </div>
       <div className="h-8" />
     </div>

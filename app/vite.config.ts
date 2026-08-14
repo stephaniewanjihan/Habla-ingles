@@ -3,8 +3,13 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
+const buildStamp = new Date().toISOString().slice(0, 16).replace('T', ' ')
+
 export default defineConfig({
   base: process.env.BASE_PATH || '/Habla-ingles/',
+  define: {
+    __BUILD_STAMP__: JSON.stringify(buildStamp),
+  },
   plugins: [
     react(),
     tailwindcss(),
