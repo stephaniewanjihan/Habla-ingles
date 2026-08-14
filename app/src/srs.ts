@@ -50,6 +50,15 @@ export function isoWeekKey(ts: number): string {
   return `${d.getUTCFullYear()}-W${String(week).padStart(2, '0')}`
 }
 
+/** 掌握数里程碑:只挂在真实能力增长上,不奖励打开次数 */
+export const MASTERY_MILESTONES = [10, 25, 50, 100, 150]
+
+export function latestMilestone(masteredCount: number): number | null {
+  let hit: number | null = null
+  for (const m of MASTERY_MILESTONES) if (masteredCount >= m) hit = m
+  return hit
+}
+
 /** 本周一 00:00 的时间戳 */
 export function startOfWeek(now = Date.now()): number {
   const d = new Date(now)

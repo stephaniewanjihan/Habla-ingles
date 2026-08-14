@@ -33,6 +33,7 @@ export function freshRecord(c: CardContent, now = Date.now()): CardRecord {
     reps: 0,
     lapses: 0,
     masteredAt: null,
+    usedAt: null,
     addedAt: now,
     lastSeen: null,
     flags: [],

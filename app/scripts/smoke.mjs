@@ -30,8 +30,47 @@ await page.getByRole('button', { name: '存下' }).click()
 await page.waitForTimeout(900)
 ok('jot modal closed', !(await page.locator('textarea').isVisible().catch(() => false)))
 
+// --- New motivation UI on home ---
+ok('week dots rendered', (await page.locator('div.flex.h-8.w-8').count()) === 7)
+ok('used counter tile', await page.getByText('真实用过').isVisible().catch(() => false))
+ok('one-card shortcut offered', await page.getByText('今天只有一分钟?来一张就算数').isVisible().catch(() => false))
+
+// --- One-card mode counts as a check-in ---
+await page.getByText('今天只有一分钟?来一张就算数').click()
+await page.waitForTimeout(800)
+ok('one-card round shows 1 / 1', await page.getByText('1 / 1').isVisible().catch(() => false))
+{
+  const flip = page.getByRole('button', { name: '翻面' })
+  if (await flip.isVisible().catch(() => false)) {
+    await flip.click()
+    await page.waitForTimeout(300)
+    ok('used button present', await page.getByText('这句我在工作里用过了').isVisible().catch(() => false))
+    await page.getByText('这句我在工作里用过了').click()
+    await page.waitForTimeout(250)
+    ok('used button toggles to checked', await page.getByText('✓ 这句我在工作里用过了').isVisible().catch(() => false))
+  } else {
+    const opts = page.locator('button.w-full.rounded-xl.border.p-4')
+    await opts.first().click()
+    await page.waitForTimeout(400)
+  }
+  await page.getByRole('button', { name: '顺', exact: true }).click()
+  await page.waitForTimeout(600)
+}
+ok('one-card round finished', await page.getByText('这组练完了').isVisible().catch(() => false))
+ok('repeat label says 再来一张', await page.getByText('再来一张?').isVisible().catch(() => false))
+await page.screenshot({ path: `${shots}/10-one-card-finish.png` })
+await page.getByRole('button', { name: '今天就到这' }).click()
+await page.waitForTimeout(600)
+ok('one card counted as today done', await page.getByText('今天已完成 ✓').isVisible().catch(() => false))
+{
+  const usedTile = page.locator('div.rounded-2xl', { hasText: '真实用过' }).first()
+  const usedVal = (await usedTile.locator('p').first().innerText().catch(() => '?')).trim()
+  ok(`used counter incremented (got ${usedVal})`, usedVal === '1')
+}
+await page.screenshot({ path: `${shots}/11-home-with-progress.png` })
+
 // --- Session: run one full round ---
-await page.getByText('开始今天的一组').click()
+await page.getByText('再来一组', { exact: true }).click()
 await page.waitForTimeout(800)
 await page.screenshot({ path: `${shots}/2-session-first-card.png` })
 

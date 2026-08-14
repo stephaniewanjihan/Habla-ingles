@@ -43,6 +43,8 @@ export interface CardRecord extends CardContent {
   lapses: number
   /** 首次达到掌握线(间隔≥21天)的时间 */
   masteredAt: number | null
+  /** 首次被标记"在真实工作里用过"的时间 */
+  usedAt: number | null
   addedAt: number
   lastSeen: number | null
   flags: Flag[]

@@ -18,7 +18,7 @@ const TABS: { key: Tab; label: string; icon: string }[] = [
 export default function App() {
   const [ready, setReady] = useState(false)
   const [tab, setTab] = useState<Tab>('home')
-  const [inSession, setInSession] = useState(false)
+  const [session, setSession] = useState<'full' | 'one' | null>(null)
 
   useEffect(() => {
     ensureSeeded().then(() => setReady(true))
@@ -28,13 +28,13 @@ export default function App() {
     return <div className="flex min-h-screen items-center justify-center text-slate-300">载入中…</div>
   }
 
-  if (inSession) {
-    return <Session onExit={() => setInSession(false)} />
+  if (session) {
+    return <Session mode={session} onExit={() => setSession(null)} />
   }
 
   return (
     <div className="min-h-screen pb-24">
-      {tab === 'home' && <Home onStartSession={() => setInSession(true)} />}
+      {tab === 'home' && <Home onStartSession={m => setSession(m)} />}
       {tab === 'deck' && <Deck />}
       {tab === 'review' && <Review />}
       {tab === 'inbox' && <Inbox />}

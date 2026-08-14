@@ -16,8 +16,12 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-/** 一组 5 张:到期复习 3 + 新卡 1 + note/listen 1,不足互补 */
-export async function buildRound(): Promise<CardRecord[]> {
+/**
+ * 一组 5 张:到期复习 3 + 新卡 1 + note/listen 1,不足互补。
+ * mode='one' 时只出 1 张(最急的到期卡,没有就出新卡)——
+ * 给"只有一分钟"的日子用,照样算打卡。
+ */
+export async function buildRound(mode: 'full' | 'one' = 'full'): Promise<CardRecord[]> {
   const endOfToday = new Date()
   endOfToday.setHours(23, 59, 59, 999)
   const due = (await db.cards.where('due').belowOrEqual(endOfToday.getTime()).toArray())
@@ -28,6 +32,12 @@ export async function buildRound(): Promise<CardRecord[]> {
       REVIEWABLE.includes(c.type),
     ),
   )
+
+  if (mode === 'one') {
+    const one = due[0] ?? news[0]
+    return one ? [one] : []
+  }
+
   const extras = (await db.cards.toArray())
     .filter(c => c.type === 'note' || c.type === 'listen')
     .sort((a, b) => (a.lastSeen ?? 0) - (b.lastSeen ?? 0))
@@ -47,30 +57,53 @@ function cardMainText(c: CardRecord): string {
   return c.title ?? ''
 }
 
-function FlagChips({ card }: { card: CardRecord }) {
+function CardFooter({ card }: { card: CardRecord }) {
   const [flags, setFlags] = useState<Flag[]>(card.flags ?? [])
-  useEffect(() => setFlags(card.flags ?? []), [card.id])
-  const toggle = async (f: Flag) => {
+  const [used, setUsed] = useState<boolean>(card.usedAt != null)
+  useEffect(() => {
+    setFlags(card.flags ?? [])
+    setUsed(card.usedAt != null)
+  }, [card.id])
+
+  const toggleFlag = async (f: Flag) => {
     const next = flags.includes(f) ? flags.filter(x => x !== f) : [...flags, f]
     setFlags(next)
     await db.cards.update(card.id, { flags: next })
   }
+  const toggleUsed = async () => {
+    const next = !used
+    setUsed(next)
+    await db.cards.update(card.id, { usedAt: next ? Date.now() : null })
+  }
+
   return (
-    <div className="mt-4 flex flex-wrap gap-2">
-      {FLAGS.map(f => (
-        <button
-          key={f}
-          onClick={() => toggle(f)}
-          className={`rounded-full border px-3 py-1 text-xs ${
-            flags.includes(f)
-              ? 'border-amber-400 bg-amber-100 text-amber-800'
-              : 'border-slate-200 bg-white text-slate-400'
-          }`}
-        >
-          {f}
-        </button>
-      ))}
-    </div>
+    <>
+      <button
+        onClick={toggleUsed}
+        className={`mt-4 w-full rounded-lg border py-2 text-sm font-medium ${
+          used
+            ? 'border-emerald-300 bg-emerald-50 text-emerald-700'
+            : 'border-slate-200 bg-white text-slate-400'
+        }`}
+      >
+        {used ? '✓ 这句我在工作里用过了' : '这句我在工作里用过了'}
+      </button>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {FLAGS.map(f => (
+          <button
+            key={f}
+            onClick={() => toggleFlag(f)}
+            className={`rounded-full border px-3 py-1 text-xs ${
+              flags.includes(f)
+                ? 'border-amber-400 bg-amber-100 text-amber-800'
+                : 'border-slate-200 bg-white text-slate-400'
+            }`}
+          >
+            {f}
+          </button>
+        ))}
+      </div>
+    </>
   )
 }
 
@@ -88,7 +121,7 @@ const RATING_BUTTONS: { rating: Rating; label: string; cls: string }[] = [
   { rating: 'good', label: '顺', cls: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
 ]
 
-export default function Session({ onExit }: { onExit: () => void }) {
+export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit: () => void }) {
   const [queue, setQueue] = useState<CardRecord[] | null>(null)
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -100,7 +133,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
   const startRef = useRef(Date.now())
 
   useEffect(() => {
-    buildRound().then(q => {
+    buildRound(mode).then(q => {
       if (q.length === 0) {
         setFinished(true)
         setQueue([])
@@ -193,7 +226,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
               ratingsRef.current = new Map()
               repeatedRef.current = new Set()
               startRef.current = Date.now()
-              buildRound().then(q => {
+              buildRound(mode).then(q => {
                 if (q.length === 0) {
                   setFinished(true)
                   setQueue([])
@@ -202,7 +235,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
             }}
             className="w-full rounded-xl border border-indigo-200 bg-indigo-50 py-3 font-medium text-indigo-700"
           >
-            再来一组?
+            {mode === 'one' ? '再来一张?' : '再来一组?'}
           </button>
           <button onClick={onExit} className="w-full rounded-xl bg-indigo-600 py-3 font-medium text-white">
             今天就到这
@@ -237,7 +270,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
               <div className="mt-6 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
                 <p className="text-lg font-medium leading-relaxed text-indigo-900">{card.answer}</p>
                 <p className="mt-3 border-t border-slate-100 pt-3 text-sm leading-relaxed text-slate-500">{card.note}</p>
-                <FlagChips card={card} />
+                <CardFooter card={card} />
               </div>
             )}
           </div>
@@ -276,7 +309,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
             {revealed && (
               <div className="mt-4 rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
                 <p className="text-sm leading-relaxed text-slate-500">{card.note}</p>
-                <FlagChips card={card} />
+                <CardFooter card={card} />
               </div>
             )}
           </div>
@@ -301,7 +334,7 @@ export default function Session({ onExit }: { onExit: () => void }) {
                 ))}
                 <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
                   <p className="text-sm leading-relaxed text-slate-500">{card.note}</p>
-                  <FlagChips card={card} />
+                  <CardFooter card={card} />
                 </div>
               </div>
             )}

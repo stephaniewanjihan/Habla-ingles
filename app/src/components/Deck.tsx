@@ -67,9 +67,12 @@ export default function Deck() {
                         {cardBack(c)}
                       </p>
                     )}
-                    {c.flags.length > 0 && (
-                      <p className="mt-1 text-xs text-amber-500">🏷 {c.flags.join(' · ')}</p>
-                    )}
+                    <div className="mt-1 flex flex-wrap gap-x-3">
+                      {c.usedAt != null && <p className="text-xs text-emerald-600">✓ 工作里用过</p>}
+                      {c.flags.length > 0 && (
+                        <p className="text-xs text-amber-500">🏷 {c.flags.join(' · ')}</p>
+                      )}
+                    </div>
                   </li>
                 ))}
               </ul>
