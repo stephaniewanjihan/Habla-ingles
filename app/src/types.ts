@@ -26,6 +26,10 @@ export interface CardContent {
   url?: string
   task?: string
   questions?: string[]
+  /** 听力对话:多轮脚本,分角色用系统语音朗读 */
+  dialogue?: DialogueLine[]
+  /** 听力理解题,重点考言外之意 */
+  quiz?: QuizQuestion[]
   // 所有可复习卡型都有 note
   note?: string
   /** 这张卡真正要练的词组,填空模式挖掉它 */
@@ -35,6 +39,17 @@ export interface CardContent {
    * 复习时按 reps 轮换,避免原样重复导致"认脸不认意思"。
    */
   variants?: CardVariant[]
+}
+
+export interface DialogueLine {
+  speaker: string
+  text: string
+}
+
+export interface QuizQuestion {
+  q: string
+  options: { text: string; correct: boolean }[]
+  why?: string
 }
 
 export interface CardVariant {

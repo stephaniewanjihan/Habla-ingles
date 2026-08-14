@@ -47,7 +47,7 @@ const TABS: { key: Tab; label: string }[] = [
 export default function App() {
   const [ready, setReady] = useState(false)
   const [tab, setTab] = useState<Tab>('home')
-  const [session, setSession] = useState<'full' | 'one' | null>(null)
+  const [session, setSession] = useState<'full' | 'one' | 'listen' | null>(null)
 
   useEffect(() => {
     ensureSeeded().then(() => setReady(true))

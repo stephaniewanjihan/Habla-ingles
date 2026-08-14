@@ -1,0 +1,254 @@
+[
+  {
+    "id": "dialogue-01",
+    "type": "listen",
+    "scene": "chasing",
+    "title": "电话催托管行:一笔没到账的股息",
+    "task": "先别看文字,听两遍再做题。注意 Priya 怎么在客气的措辞里持续加压。",
+    "dialogue": [
+      { "speaker": "Priya", "text": "Hi Tom, it's Priya from the corporate actions team. Have you got two minutes?" },
+      { "speaker": "Tom", "text": "Course. What can I do for you?" },
+      { "speaker": "Priya", "text": "It's the dividend on the BP holding — we're still showing it as outstanding. Pay date was the ninth." },
+      { "speaker": "Tom", "text": "Right, let me have a look. Hmm. It's showing as processed our end, funnily enough." },
+      { "speaker": "Priya", "text": "That's interesting, because nothing's landed in the client account. Could there be a break somewhere in the chain?" },
+      { "speaker": "Tom", "text": "Possibly at the sub-custodian. They've been a bit slow this week, to be fair." },
+      { "speaker": "Priya", "text": "OK. The thing is, the client's month-end reporting runs on Friday, so I'm a bit up against it." },
+      { "speaker": "Tom", "text": "Understood. I'll chase them this afternoon and come back to you." },
+      { "speaker": "Priya", "text": "Could you copy me in on that chase? Just so I've got something to show if the client asks." },
+      { "speaker": "Tom", "text": "Will do. If you've heard nothing by ten tomorrow, give me a shout and I'll escalate it properly." },
+      { "speaker": "Priya", "text": "Perfect. Thanks Tom, much appreciated." }
+    ],
+    "quiz": [
+      {
+        "q": "Priya 说 \"That's interesting, because nothing's landed...\" 的真实意思是?",
+        "options": [
+          { "text": "她真的觉得这个情况很有趣", "correct": false },
+          { "text": "礼貌版的\"你说处理完了,但钱没到,你们有问题\"", "correct": true },
+          { "text": "她在承认可能是自己看错了", "correct": false }
+        ],
+        "why": "that's interesting 在这里是标准的英式反驳开场:表面中性,实际是把矛盾摆到对方面前。配上后面的 could there be a break,她已经在暗示问题出在托管行那条链上。"
+      },
+      {
+        "q": "Priya 要求 \"copy me in on that chase\" 的用意是?",
+        "options": [
+          { "text": "她想学习 Tom 怎么写催办邮件", "correct": false },
+          { "text": "拿到书面证据:既能答复客户,也让 Tom 的承诺留痕", "correct": true },
+          { "text": "她不信任 Tom,想自己直接联系 sub-custodian", "correct": false }
+        ],
+        "why": "抄送 = 承诺变成书面记录。她给出的理由(something to show if the client asks)让这个要求听起来完全无害,但效果是 Tom 今天下午不追就会被看见——这是英式加压的漂亮手法。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-02",
+    "type": "listen",
+    "scene": "meeting-disagree",
+    "title": "周会上的分歧:要不要赶三月上线",
+    "task": "先听两遍。注意 James 的反对由弱到强分了几档,以及主持人怎么收场。",
+    "dialogue": [
+      { "speaker": "Sarah", "text": "So the proposal is we bring the migration forward to March. Thoughts?" },
+      { "speaker": "James", "text": "Can I just check what that does to the testing window?" },
+      { "speaker": "Sarah", "text": "It compresses it, obviously, but the vendor reckons three weeks is doable." },
+      { "speaker": "James", "text": "Hmm. I might be missing something, but three weeks feels tight for a full parallel run." },
+      { "speaker": "Sarah", "text": "It's tight, I'll give you that. But the client's pushing hard for Q1." },
+      { "speaker": "James", "text": "I hear that. My worry is if we hit one bad reconciliation cycle, there's no slack to recover — and then we're explaining a failed go-live instead of a late one." },
+      { "speaker": "Sarah", "text": "That's a fair challenge. What would make March workable for you?" },
+      { "speaker": "James", "text": "Honestly? Either we drop the parallel run to two products instead of five, or we keep the April date. I'd rather trim scope than trim testing." },
+      { "speaker": "Sarah", "text": "OK. Let's take the scope option away and cost it properly. Can you and I grab half an hour tomorrow?" },
+      { "speaker": "James", "text": "Works for me." }
+    ],
+    "quiz": [
+      {
+        "q": "James 第一句 \"Can I just check what that does to the testing window?\" 在做什么?",
+        "options": [
+          { "text": "他真的只是不了解测试安排,在请教", "correct": false },
+          { "text": "用提问的形式打开反对——先攻假设,不直接说\"我反对\"", "correct": true },
+          { "text": "他在支持提案,想帮 Sarah 补充细节", "correct": false }
+        ],
+        "why": "英式会议里,反对几乎从不以\"我反对\"开场。用一个针对薄弱环节的问题起手,让事实自己暴露问题——这是最安全也最常见的第一步,后面他才逐步升级到 my worry is。"
+      },
+      {
+        "q": "\"I'd rather trim scope than trim testing\" 这句话强在哪里?",
+        "options": [
+          { "text": "它把反对变成了二选一的方案,让会议有路可走", "correct": true },
+          { "text": "它语气最软,是在让步", "correct": false },
+          { "text": "它是在威胁如果不改期就辞职", "correct": false }
+        ],
+        "why": "光反对不给选项,在英国会议里会被视为抱怨。James 给出\"砍范围或保日期\"的取舍,把球打回给了会议——注意 Sarah 立刻接住了这个选项。这就是有分量的反对的完整形态。"
+      },
+      {
+        "q": "Sarah 说 \"That's a fair challenge\" 意味着什么?",
+        "options": [
+          { "text": "她被说服了,会放弃三月的计划", "correct": false },
+          { "text": "她承认这个质疑合理,愿意认真对待——但还没做任何让步", "correct": true },
+          { "text": "这是讽刺,她其实很生气", "correct": false }
+        ],
+        "why": "fair challenge / fair point 是给对方质疑发的\"通行证\":承认它值得讨论,但不等于同意。她接下来做的是把方案拿去核算,不是拍板改期——听懂这个差别,才不会误判会议结果。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-03",
+    "type": "listen",
+    "scene": "small-talk",
+    "title": "周一早上的茶水间",
+    "task": "先听两遍。注意两人怎么接球和回抛,以及怎么体面地结束闲聊回去干活。",
+    "dialogue": [
+      { "speaker": "Dan", "text": "Morning! Good weekend?" },
+      { "speaker": "Amy", "text": "Yeah, not bad actually. Bit of a lazy one — you?" },
+      { "speaker": "Dan", "text": "Went up to see my parents in Leeds. Train back was carnage, mind. Two hours sat outside Peterborough." },
+      { "speaker": "Amy", "text": "Oh no, not again. It was the same story when I went up last month." },
+      { "speaker": "Dan", "text": "Honestly, you'd have more luck walking. Anyway — you watching anything good at the moment?" },
+      { "speaker": "Amy", "text": "We just started that new detective thing everyone's on about. Two episodes in, quite promising." },
+      { "speaker": "Dan", "text": "Don't tell me anything, it's on my list. Right, better crack on — month-end waits for no one." },
+      { "speaker": "Amy", "text": "Don't remind me. Good catching up!" }
+    ],
+    "quiz": [
+      {
+        "q": "Dan 抱怨火车时,Amy 的回应方式说明了什么?",
+        "options": [
+          { "text": "她给出了共同的糟糕经历来共情,而不是给建议", "correct": true },
+          { "text": "她在暗示 Dan 应该换条路线", "correct": false },
+          { "text": "她对这个话题不感兴趣,想换话题", "correct": false }
+        ],
+        "why": "\"It was the same story when I went up\" 是标准的比惨式共情。英国人吐槽通勤要的是同盟,不是解决方案——如果她说 you should book an earlier train,对话就死了。"
+      },
+      {
+        "q": "\"Right, better crack on\" 的作用是?",
+        "options": [
+          { "text": "Dan 觉得对话很无聊,想尽快脱身", "correct": false },
+          { "text": "标准的结束闲聊信号:一个 right 让双方都体面收场", "correct": true },
+          { "text": "他在提醒 Amy 她工作太慢了", "correct": false }
+        ],
+        "why": "right 是英式对话的官方刹车,后面接 better crack on / better get back 都是固定搭配。没人觉得被冒犯——反而是不会踩刹车、让闲聊拖到尴尬的人更让人头疼。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-04",
+    "type": "listen",
+    "scene": "presenting",
+    "title": "向管理层汇报:预算要超了",
+    "task": "先听两遍。注意 Wei 怎么先给结论、被追问数字时怎么守住,以及怎么把会议推向决定。",
+    "dialogue": [
+      { "speaker": "Wei", "text": "Thanks everyone. I'll keep this short — three things: where the project is, what's changed on cost, and the decision I need today." },
+      { "speaker": "Wei", "text": "The headline: delivery is on track for June, but the vendor's revised quote puts us forty thousand over the approved budget." },
+      { "speaker": "Mark", "text": "Forty? Where's that come from? We signed off the scope in January." },
+      { "speaker": "Wei", "text": "Fair question. Two-thirds of it is the extra data migration work we uncovered in testing — that's genuinely new. The rest is their day-rate increase, which I've already pushed back on once." },
+      { "speaker": "Mark", "text": "Can we absorb it by trimming somewhere else?" },
+      { "speaker": "Wei", "text": "We looked at that. The honest answer is anything we trim now is testing, and I don't want to sign us up to fail. I've set out two options in the pack — extend by four weeks, or approve the overspend." },
+      { "speaker": "Mark", "text": "And your recommendation?" },
+      { "speaker": "Wei", "text": "Approve the overspend. A four-week slip costs us more in contract penalties than the forty grand — the maths is on slide six." },
+      { "speaker": "Mark", "text": "Fine. Let's take it to the committee with your recommendation. Send me the pack after this." },
+      { "speaker": "Wei", "text": "Will do. That's everything from me — anything I've missed?" }
+    ],
+    "quiz": [
+      {
+        "q": "Wei 开场先说 \"the decision I need today\",这个做法的意义是?",
+        "options": [
+          { "text": "提前声明这不是纯汇报,是要会议给结果的", "correct": true },
+          { "text": "显得自己很忙,给会议施压", "correct": false },
+          { "text": "这是客套话,没有实际作用", "correct": false }
+        ],
+        "why": "英式汇报的黄金开场:先报结构,并明确今天要什么。听众从第一句就知道自己的角色是决策者不是听众——没有这句,汇报讲完常常得到一句 thanks for the update 就散会了。"
+      },
+      {
+        "q": "被 Mark 追问 \"Where's that come from?\" 时,Wei 的回应策略是?",
+        "options": [
+          { "text": "先接住质疑(fair question),再把数字拆开、区分新增和涨价,证明自己已经推过一次", "correct": true },
+          { "text": "把责任全部推给供应商", "correct": false },
+          { "text": "承认自己预算做错了并道歉", "correct": false }
+        ],
+        "why": "fair question 先给质疑发通行证;然后把 40k 拆成\"真正的新工作\"和\"已经顶回过一次的涨价\",既诚实又展示了他在管控。英式汇报里,被挑战时的表现比数字本身更决定信任。"
+      },
+      {
+        "q": "\"I don't want to sign us up to fail\" 传递的信息是?",
+        "options": [
+          { "text": "他对项目没信心了", "correct": false },
+          { "text": "砍测试省钱是假节省,他在为团队挡一个坏决定", "correct": true },
+          { "text": "他拒绝执行管理层的指示", "correct": false }
+        ],
+        "why": "这是英式管理层沟通里的重量级句式:不说 no,而是把后果讲成\"我们一起失败\"。它把拒绝包装成职业判断,配上已经算好的两个选项,反而赢得信任——注意 Mark 立刻就接受了。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-05",
+    "type": "listen",
+    "scene": "asking-help",
+    "title": "请隔壁团队帮个不属于他们的忙",
+    "task": "先听两遍。注意 Lena 怎么承认自己在越界、怎么把拒绝的门留给对方,以及人情是怎么记账的。",
+    "dialogue": [
+      { "speaker": "Lena", "text": "Rob, have you got a sec? I've got a slightly cheeky ask." },
+      { "speaker": "Rob", "text": "Go on then." },
+      { "speaker": "Lena", "text": "You know the legacy system you lot still have access to? We need three years of fee history off it for an audit request, and you're the only team with a login." },
+      { "speaker": "Rob", "text": "Ah. Strictly speaking that's not really ours to run any more." },
+      { "speaker": "Lena", "text": "I know, and feel free to tell me to go away. But the audit deadline's Thursday and going through IT would take two weeks." },
+      { "speaker": "Rob", "text": "Two weeks is optimistic, knowing them. How big a pull are we talking?" },
+      { "speaker": "Lena", "text": "One report, maybe twenty minutes of your time. I'll write up exactly what we need so you're not guessing." },
+      { "speaker": "Rob", "text": "Go on then. Send me the spec and I'll run it tomorrow morning." },
+      { "speaker": "Lena", "text": "You're a lifesaver. Lunch is on me next week — I owe you one." },
+      { "speaker": "Rob", "text": "I'll hold you to that." }
+    ],
+    "quiz": [
+      {
+        "q": "Lena 开口就说这是 \"a slightly cheeky ask\",为什么?",
+        "options": [
+          { "text": "自嘲显得可爱,纯粹是性格", "correct": false },
+          { "text": "主动承认请求越界,把姿态放低——这是英式跨界求助的通行证", "correct": true },
+          { "text": "她在暗示这个请求其实很小,不值一提", "correct": false }
+        ],
+        "why": "cheeky 是自首式开场:我知道这超出你的职责。先承认越界,对方的戒备反而放下一半。配上后面的 feel free to tell me to go away(把拒绝的门开着),这套组合让 Rob 帮忙成了顺水人情而不是被压榨。"
+      },
+      {
+        "q": "Rob 最后说 \"I'll hold you to that\",他的意思是?",
+        "options": [
+          { "text": "半开玩笑地确认这笔人情记账了——关系良好的信号", "correct": true },
+          { "text": "他不相信 Lena 会请客,在讽刺她", "correct": false },
+          { "text": "他要求签一份正式协议", "correct": false }
+        ],
+        "why": "英国办公室的人情是真实流通的货币,I owe you one → I'll hold you to that 是标准的记账对话,带着玩笑的口吻但双方都当真。下次 Rob 找 Lena 帮忙时,这笔账就是开场白。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-06",
+    "type": "listen",
+    "scene": "email",
+    "title": "客户来电:一笔选择权指令出了岔子",
+    "task": "先听两遍。这是最难的一段:客户带着情绪,注意 Nadia 怎么道歉、怎么不越界承诺、怎么把通话变成书面记录。",
+    "dialogue": [
+      { "speaker": "Client", "text": "Nadia, I've just seen the confirmation — we've been put into the cash option on the rights issue. We elected for shares. What's happened?" },
+      { "speaker": "Nadia", "text": "Let me pull it up right now. You're right, the confirmation shows cash. I completely understand the concern — give me one moment." },
+      { "speaker": "Client", "text": "This isn't a small position for us." },
+      { "speaker": "Nadia", "text": "Understood. OK — I can see your election came in on the second, ahead of the deadline, so on the face of it this shouldn't have happened. I'm not going to guess at what went wrong until I've traced it properly." },
+      { "speaker": "Client", "text": "So what happens now?" },
+      { "speaker": "Nadia", "text": "Two things this afternoon. I'll trace the instruction through to the registrar and find where it broke. And I'll speak to our ops manager about what can be corrected, and by when." },
+      { "speaker": "Client", "text": "And if it can't be corrected?" },
+      { "speaker": "Nadia", "text": "Then we'll be having a different conversation, and I won't hide from it. But I'd rather not speculate before I've got the facts." },
+      { "speaker": "Client", "text": "Fine. When do I hear from you?" },
+      { "speaker": "Nadia", "text": "I'll email you a written summary by five today, whatever I've found — even if it's incomplete. And I'll call you first thing tomorrow with the full picture." },
+      { "speaker": "Client", "text": "All right. Five o'clock. Thank you, Nadia." }
+    ],
+    "quiz": [
+      {
+        "q": "Nadia 说 \"I'm not going to guess at what went wrong until I've traced it properly\",这句话专业在哪里?",
+        "options": [
+          { "text": "她在拖延时间,避免承认错误", "correct": false },
+          { "text": "拒绝当场猜测原因——错误的口头解释以后会变成把柄,查清前不定性", "correct": true },
+          { "text": "她暗示错在客户自己", "correct": false }
+        ],
+        "why": "出事故时最危险的是当场给一个错误的解释。她确认了事实(指令按时到了)、共情了客户,但对\"为什么\"守住不猜——这在合规敏感的金融场景是教科书级的操作。注意她道歉的对象是 concern,不是还没查清的过错。"
+      },
+      {
+        "q": "为什么 Nadia 主动承诺 \"a written summary by five today, whatever I've found — even if it's incomplete\"?",
+        "options": [
+          { "text": "把不确定的局面变成确定的沟通节奏:客户拿到的是时间表,不是空等", "correct": true },
+          { "text": "她已经知道答案了,只是想拖到五点", "correct": false },
+          { "text": "公司规定所有电话都要书面确认", "correct": false }
+        ],
+        "why": "even if it's incomplete 是关键:她承诺的不是结果,是节奏。客户的焦虑主要来自失控感,一个确定的时间表(五点邮件+明早电话)比任何安抚的话都有效。书面总结同时也保护了她自己——电话内容落了字。"
+      }
+    ]
+  }
+]

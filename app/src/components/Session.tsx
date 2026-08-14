@@ -4,7 +4,7 @@ import { rate, dayKey, viewFor } from '../srs'
 import { FLAGS, REVIEWABLE, sceneLabel } from '../types'
 import { buildCloze, isCorrect, isNearMiss } from '../cloze'
 import { playCorrect, playWrong, playRoundDone } from '../feedback'
-import { canSpeak, speak } from '../speech'
+import { canSpeak, speak, playDialogue, type DialoguePlayer } from '../speech'
 import type { CardRecord, Flag, Rating } from '../types'
 
 const ROUND_REVIEW_SLOTS = 4
@@ -24,7 +24,7 @@ function shuffle<T>(arr: T[]): T[] {
  * mode='one' 时只出 1 张(最急的到期卡,没有就出新卡)——
  * 给"只有一分钟"的日子用,照样算打卡。
  */
-export async function buildRound(mode: 'full' | 'one' = 'full'): Promise<CardRecord[]> {
+export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Promise<CardRecord[]> {
   const endOfToday = new Date()
   endOfToday.setHours(23, 59, 59, 999)
   const due = (await db.cards.where('due').belowOrEqual(endOfToday.getTime()).toArray())
@@ -44,6 +44,14 @@ export async function buildRound(mode: 'full' | 'one' = 'full'): Promise<CardRec
   if (mode === 'one') {
     const one = due[0] ?? news[0]
     return one ? [one] : []
+  }
+
+  if (mode === 'listen') {
+    // 磨耳朵:取最久没听的一段对话
+    const dialogues = (await db.cards.toArray())
+      .filter(c => c.type === 'listen' && c.dialogue?.length)
+      .sort((a, b) => (a.lastSeen ?? 0) - (b.lastSeen ?? 0))
+    return dialogues.length ? [dialogues[0]] : []
   }
 
   const extras = (await db.cards.toArray())
@@ -112,6 +120,115 @@ function SpeakButton({ text }: { text?: string }) {
   )
 }
 
+function DialogueCard({ card }: { card: CardRecord }) {
+  const [playing, setPlaying] = useState(false)
+  const [line, setLine] = useState(-1)
+  const [showText, setShowText] = useState(false)
+  const [answers, setAnswers] = useState<Record<number, number>>({})
+  const playerRef = useRef<DialoguePlayer | null>(null)
+
+  useEffect(() => () => playerRef.current?.stop(), [])
+
+  const togglePlay = () => {
+    if (playing) {
+      playerRef.current?.stop()
+      setPlaying(false)
+      setLine(-1)
+    } else {
+      setPlaying(true)
+      playerRef.current = playDialogue(
+        card.dialogue!,
+        i => setLine(i),
+        () => {
+          setPlaying(false)
+          setLine(-1)
+        },
+      )
+    }
+  }
+
+  const pickAnswer = (qi: number, oi: number, correct: boolean) => {
+    if (answers[qi] !== undefined) return
+    setAnswers(a => ({ ...a, [qi]: oi }))
+    if (correct) playCorrect()
+    else playWrong()
+  }
+
+  return (
+    <div className="mt-4">
+      <div className="group-card p-5">
+        <h3 className="title-md">{card.title}</h3>
+        <p className="mt-2 text-[14px] leading-relaxed text-label2">{card.task}</p>
+        <div className="mt-4 flex items-center gap-2.5">
+          <button
+            onClick={togglePlay}
+            className={`flex-1 rounded-[12px] py-3 text-[16px] font-medium ${
+              playing ? 'bg-fill text-label' : 'bg-blue text-white'
+            } active:opacity-80`}
+          >
+            {playing ? '■ 停止' : '▶ 播放对话'}
+          </button>
+          <button
+            onClick={() => setShowText(t => !t)}
+            className="rounded-[12px] bg-fill px-4 py-3 text-[15px] text-blue active:opacity-70"
+          >
+            {showText ? '隐藏文字' : '显示文字'}
+          </button>
+        </div>
+        {!canSpeak && (
+          <p className="mt-2 text-[13px] text-orange">这台设备不支持语音朗读,只能看文字。</p>
+        )}
+        {showText && (
+          <div className="mt-4 space-y-2.5">
+            {card.dialogue!.map((l, i) => (
+              <p
+                key={i}
+                className={`rounded-[10px] px-3 py-2 text-[15px] leading-relaxed ${
+                  i === line ? 'bg-blue-soft text-label' : 'text-label2'
+                }`}
+              >
+                <span className="font-semibold text-label">{l.speaker}:</span> {l.text}
+              </p>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {card.quiz?.map((q, qi) => {
+        const answered = answers[qi] !== undefined
+        return (
+          <div key={qi} className="group-card mt-3 p-4">
+            <p className="text-[15px] font-medium leading-relaxed">{q.q}</p>
+            <div className="mt-3 space-y-2">
+              {q.options.map((o, oi) => {
+                let cls = 'bg-fill/60'
+                if (answered) {
+                  if (o.correct) cls = 'bg-green-soft ring-[1.5px] ring-green'
+                  else if (answers[qi] === oi) cls = 'bg-red-soft ring-[1.5px] ring-red anim-shake'
+                  else cls = 'bg-fill/60 opacity-50'
+                }
+                return (
+                  <button
+                    key={oi}
+                    disabled={answered}
+                    onClick={() => pickAnswer(qi, oi, o.correct)}
+                    className={`w-full rounded-[12px] p-3 text-left text-[14px] leading-relaxed ${cls}`}
+                  >
+                    {o.text}
+                  </button>
+                )
+              })}
+            </div>
+            {answered && q.why && (
+              <p className="mt-3 text-[13px] leading-relaxed text-label2">{q.why}</p>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 function ProgressBar({ done, total }: { done: number; total: number }) {
   const pct = total ? Math.min(100, (done / total) * 100) : 0
   return (
@@ -138,7 +255,7 @@ const RATING_BUTTONS: { rating: Rating; label: string; cls: string }[] = [
   { rating: 'good', label: '顺', cls: 'bg-green-soft text-green' },
 ]
 
-export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit: () => void }) {
+export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'listen'; onExit: () => void }) {
   const [queue, setQueue] = useState<CardRecord[] | null>(null)
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -287,7 +404,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
             }}
             className="w-full rounded-[14px] bg-fill py-3.5 text-[17px] text-label active:opacity-70"
           >
-            {mode === 'one' ? '再来一张?' : '再来一组?'}
+            {mode === 'one' ? '再来一张?' : mode === 'listen' ? '再听一段?' : '再来一组?'}
           </button>
           <button onClick={onExit} className="w-full rounded-[14px] bg-blue py-3.5 text-[17px] font-semibold text-white active:opacity-80">
             今天就到这
@@ -451,7 +568,9 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one'; onExit
           </div>
         )}
 
-        {card.type === 'listen' && (
+        {card.type === 'listen' && card.dialogue && <DialogueCard key={card.id} card={card} />}
+
+        {card.type === 'listen' && !card.dialogue && (
           <div className="mt-4 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
             <h3 className="title-md">{card.title}</h3>
             <p className="mt-1 text-[13px] text-label3">{card.source}</p>

@@ -330,6 +330,36 @@ await page.waitForTimeout(500)
      after.reps === before.reps && after.interval === before.interval)
 }
 
+// --- 磨耳朵: dialogue listening round ---
+{
+  await page.getByRole('button', { name: /今天/ }).first().click()
+  await page.waitForTimeout(400)
+  await page.getByText('磨耳朵:听一段办公室对话').click()
+  await page.waitForTimeout(900)
+  ok('dialogue card opens with play button', await page.getByText('▶ 播放对话').isVisible().catch(() => false))
+  ok('transcript hidden by default (ear training first)',
+     !(await page.getByText('Have you got two minutes?').isVisible().catch(() => false)))
+  await page.getByText('显示文字').click()
+  await page.waitForTimeout(300)
+  const anyLine = await page.locator('span.font-semibold').first().isVisible().catch(() => false)
+  ok('transcript toggles on with speaker names', anyLine)
+  // 点第一题的一个选项,验证判定与解析出现
+  const quizBtns = page.locator('button.w-full.rounded-\\[12px\\].p-3')
+  if (await quizBtns.count()) {
+    await quizBtns.first().click()
+    await page.waitForTimeout(400)
+    ok('quiz grades the tap (ring appears)', (await page.locator('.ring-green').count()) > 0)
+  } else {
+    fails.push('quiz options not found')
+  }
+  await page.screenshot({ path: `${shots}/17-dialogue.png` })
+  await page.getByRole('button', { name: '继续', exact: true }).click()
+  await page.waitForTimeout(500)
+  ok('listen round finishes with 再听一段', await page.getByText('再听一段?').isVisible().catch(() => false))
+  await page.getByRole('button', { name: '今天就到这' }).click()
+  await page.waitForTimeout(400)
+}
+
 // --- Reload: persistence check ---
 await page.reload()
 await page.waitForTimeout(1200)
