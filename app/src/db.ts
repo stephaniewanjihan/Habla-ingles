@@ -40,15 +40,42 @@ export function freshRecord(c: CardContent, now = Date.now()): CardRecord {
   }
 }
 
-/** 首次启动时把种子牌组灌进本地数据库 */
+function seedHash(): string {
+  const str = JSON.stringify(seedDeck)
+  let h = 5381
+  for (let i = 0; i < str.length; i++) h = ((h << 5) + h + str.charCodeAt(i)) | 0
+  return String(h)
+}
+
+/**
+ * 首次启动灌入种子牌组;之后每当种子内容变了(新增字段、修正文案),
+ * 把内容字段同步到已有卡片上——复习进度(间隔、到期、次数、标记)原样保留。
+ * 没有这一步,老设备永远拿不到新内容,只有全新安装才看得到。
+ */
 export async function ensureSeeded(): Promise<void> {
-  const count = await db.cards.count()
-  // 已经有卡片就绝不再动:种子只在全新设备上灌一次,
-  // 任何一次重新部署都不会碰到已有的复习进度。
-  if (count > 0) return
+  const hash = seedHash()
   const now = Date.now()
-  // bulkPut 保证并发调用时幂等(同一份种子重复灌入结果一致)
-  await db.cards.bulkPut((seedDeck as CardContent[]).map(c => freshRecord(c, now)))
+  const count = await db.cards.count()
+  if (count === 0) {
+    // bulkPut 保证并发调用时幂等(同一份种子重复灌入结果一致)
+    await db.cards.bulkPut((seedDeck as CardContent[]).map(c => freshRecord(c, now)))
+    await setMeta('seedHash', hash)
+    return
+  }
+  const prev = await getMeta<string | null>('seedHash', null)
+  if (prev === hash) return
+  await db.transaction('rw', db.cards, db.meta, async () => {
+    for (const sc of seedDeck as CardContent[]) {
+      const existing = await db.cards.get(sc.id)
+      if (!existing) {
+        await db.cards.add(freshRecord(sc, now))
+      } else {
+        const { state, step, interval, due, reps, lapses, masteredAt, usedAt, addedAt, lastSeen, flags } = existing
+        await db.cards.put({ ...sc, state, step, interval, due, reps, lapses, masteredAt, usedAt, addedAt, lastSeen, flags })
+      }
+    }
+    await db.meta.put({ key: 'seedHash', value: hash })
+  })
 }
 
 /**

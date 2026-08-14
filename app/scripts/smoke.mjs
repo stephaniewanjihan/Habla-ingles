@@ -294,6 +294,42 @@ await page.waitForTimeout(500)
   await page.waitForTimeout(400)
 }
 
+// --- Content migration: her phone's exact situation ---
+// 老设备:卡片是旧内容(没有 chunk/variants),但带着复习进度
+{
+  const before = await page.evaluate(async () => {
+    const db = await new Promise(res => { const r = indexedDB.open('chunk'); r.onsuccess = () => res(r.result) })
+    const all = await new Promise(res => { const r = db.transaction('cards','readonly').objectStore('cards').getAll(); r.onsuccess = () => res(r.result) })
+    const tx = db.transaction(['cards','meta'],'readwrite')
+    for (const c of all) {
+      delete c.chunk
+      delete c.variants
+      tx.objectStore('cards').put(c)
+    }
+    tx.objectStore('meta').put({ key: 'seedHash', value: 'stale-install' })
+    await new Promise(res => { tx.oncomplete = res })
+    const sample = all.find(c => c.reps > 0) ?? all[0]
+    return { id: sample.id, reps: sample.reps, interval: sample.interval, total: all.length }
+  })
+
+  await page.reload({ waitUntil: 'networkidle' })
+  await page.waitForTimeout(2500)
+
+  const after = await page.evaluate(async (id) => {
+    const db = await new Promise(res => { const r = indexedDB.open('chunk'); r.onsuccess = () => res(r.result) })
+    const all = await new Promise(res => { const r = db.transaction('cards','readonly').objectStore('cards').getAll(); r.onsuccess = () => res(r.result) })
+    const withChunk = all.filter(c => c.chunk).length
+    const withVariants = all.filter(c => c.variants && c.variants.length).length
+    const sample = all.find(c => c.id === id)
+    return { withChunk, withVariants, reps: sample.reps, interval: sample.interval }
+  }, before.id)
+
+  ok(`stale install picks up new content (chunk on ${after.withChunk}, variants on ${after.withVariants} cards)`,
+     after.withChunk >= 100 && after.withVariants >= 100)
+  ok('review progress survives the content refresh',
+     after.reps === before.reps && after.interval === before.interval)
+}
+
 // --- Reload: persistence check ---
 await page.reload()
 await page.waitForTimeout(1200)
