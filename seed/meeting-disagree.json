@@ -319,5 +319,89 @@
         "situation": "会上大家要把一个不现实的上线日期拍给你的团队"
       }
     ]
+  },
+  {
+    "id": "meeting-disagree-21",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "方案大家都同意,你想故意唱个反调压一压测试它",
+    "answer": "Playing devil's advocate for a second — what happens if the client just says no?",
+    "note": "playing devil's advocate(扮演魔鬼代言人)是英国会议的正式许可证:声明接下来的反对不代表立场,只为检验方案。说了这句,你可以问最尖锐的问题而不树敌。全场一致同意时,说这句的人反而最有价值。",
+    "chunk": "Playing devil's advocate",
+    "variants": [
+      {
+        "prompt": "定价方案顺利通过在即,你想测试一下它扛不扛得住极端情况"
+      }
+    ]
+  },
+  {
+    "id": "meeting-disagree-22",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "对方说的对但没说到点子上,你要承认再转向真正的问题",
+    "answer": "That's true as far as it goes — but it doesn't touch the capacity problem, which is what's actually biting us.",
+    "note": "as far as it goes 是英式限定:在它的范围内成立(言下之意:范围太小)。这是\"对但不解决问题\"的标准句式。biting us 形容问题正在咬人,比 affecting us 生动,运营场景高频。",
+    "chunk": "as far as it goes",
+    "variants": [
+      {
+        "prompt": "同事说加班能赶上进度,你承认可行但指出真正瓶颈是审批流程"
+      }
+    ]
+  },
+  {
+    "id": "meeting-disagree-23",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "对方甩出一个结论,你要先问依据再决定信不信",
+    "answer": "What's that based on? If it's the Q1 sample, I'd be careful — that was a strange quarter.",
+    "note": "what's that based on 是对数据的标准质询,针对依据而不是人。英国会议文化允许甚至期待这种追问——不问依据就接受结论,反而显得没参与。后半句给出为什么怀疑(Q1 异常),质询就有了建设性。",
+    "chunk": "What's that based on",
+    "variants": [
+      {
+        "prompt": "顾问说市场平均成本是某个数,你想知道数据来源再判断"
+      }
+    ]
+  },
+  {
+    "id": "meeting-disagree-24",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "同事的数据被质疑,你验证过同样的数,要出声支援",
+    "answer": "For what it's worth, I ran the same numbers independently and got to the same place as Priya.",
+    "note": "for what it's worth 是英式的谦虚开场:仅供参考。但内容是重炮——独立验证得到同样结果。会上给被围攻的同事这样一句,比十句安慰都有用,而且对方会记很久。团队里的信用就是这样攒的。",
+    "chunk": "For what it's worth",
+    "variants": [
+      {
+        "prompt": "会上有人怀疑同事的测算,你复核过是对的,要帮腔"
+      }
+    ]
+  },
+  {
+    "id": "meeting-disagree-25",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "这个细节对方比你懂,你要体面地把判断权交给他",
+    "answer": "You're closer to this than I am — I'll defer to you on the detail.",
+    "note": "defer to you 是正式的\"听你的\":承认对方在此事上更有发言权。这不是认输,是专业分工的表达——知道什么时候让,和知道什么时候顶,同样重要。closer to this = 更贴近这块业务。",
+    "chunk": "defer to you",
+    "variants": [
+      {
+        "prompt": "关于系统底层逻辑的争论,IT 同事显然更懂,你选择尊重他的判断"
+      }
+    ]
+  },
+  {
+    "id": "meeting-disagree-26",
+    "type": "produce",
+    "scene": "meeting-disagree",
+    "prompt": "讨论足够充分了,你想推动当场拍板,或者明确还缺什么",
+    "answer": "Are we in a position to call it today, or do we genuinely need another week's data?",
+    "note": "call it 是\"拍板\"的口语(源自裁判判定)。这个问句的锋利之处在 genuinely:委婉地暗示\"再等一周\"可能只是拖延。会议快结束时问这句的人,是在替所有人拿回时间。",
+    "chunk": "call it",
+    "variants": [
+      {
+        "prompt": "供应商选型讨论了三周,你想推动今天定下来"
+      }
+    ]
   }
 ]

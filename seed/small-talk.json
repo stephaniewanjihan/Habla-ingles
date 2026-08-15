@@ -347,5 +347,90 @@
         "situation": "同事约周四下班后去看球,这次你不想去"
       }
     ]
+  },
+  {
+    "id": "small-talk-22",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "周五下午办公室气氛松了,你跟同事搭一句",
+    "answer": "That Friday feeling — got anything nice lined up tonight?",
+    "note": "that Friday feeling 是全英通用的周五仪式感短语(超市广告都在用)。lined up = 安排好了。周五下午的办公室闲聊几乎必然从这句或它的变体开始,接住它,聊什么都顺。",
+    "chunk": "That Friday feeling",
+    "variants": [
+      {
+        "prompt": "周五快下班,电梯里遇到同事,你开个轻松的话头"
+      }
+    ]
+  },
+  {
+    "id": "small-talk-23",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "天气预报说下周 26 度,你要用英式方式聊这场\"热浪\"",
+    "answer": "They're calling it a heatwave — twenty-six degrees and the whole country grinds to a halt.",
+    "note": "英国 25 度以上就算 heatwave,全国瘫痪(没有空调、铁轨变形、超市风扇售罄)是官方级自嘲,本地人自己吐槽得最凶。grinds to a halt = 陷入停摆。你作为见过真正夏天的人,加入这个吐槽有天然的幽默优势。",
+    "chunk": "grinds to a halt",
+    "variants": [
+      {
+        "prompt": "夏天办公室没空调热得离谱,你和同事互相吐槽"
+      }
+    ]
+  },
+  {
+    "id": "small-talk-24",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "外面下瓢泼大雨,你淋着进办公室,要吐槽一句",
+    "answer": "It's absolutely chucking it down out there — I'm soaked through.",
+    "note": "chucking it down 是英式\"倾盆大雨\"的口语(还有 bucketing down、tipping it down)。soaked through = 湿透。雨天进门这句几乎是固定台词,对方会回 you poor thing 或分享自己的淋雨史。",
+    "chunk": "chucking it down",
+    "variants": [
+      {
+        "prompt": "你没带伞被堵在楼下咖啡店,给同事发消息说明晚到几分钟"
+      }
+    ]
+  },
+  {
+    "id": "small-talk-25",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "周一早上,你想用\"周末过得太快\"开个话头",
+    "answer": "Monday's come round quick again, hasn't it?",
+    "note": "come round = (时间)又转回来了,专用于周期性到来的事(周一、圣诞、生日)。这句是周一早晨的万能开场,本质是全民互相确认\"我们都不想上班\",回应就是 always does 或 tell me about it。",
+    "chunk": "come round quick",
+    "variants": [
+      {
+        "prompt": "十二月初,你感叹圣诞怎么又要到了",
+        "answer": "Christmas has come round quick this year, hasn't it?"
+      }
+    ]
+  },
+  {
+    "id": "small-talk-26",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "同事休假回来晒黑了,你要夸一句顺便问假期",
+    "answer": "You've caught the sun — good week off, I take it?",
+    "note": "caught the sun 是英式\"晒黑了\"的得体说法(sunburnt 是晒伤,tanned 略直白)。I take it = 我猜。晒痕在英国是度假成功的勋章,这句夸法给了对方展开讲假期的完美入口。",
+    "chunk": "caught the sun",
+    "variants": [
+      {
+        "prompt": "同事从西班牙回来气色很好,你开个话头让他讲讲假期"
+      }
+    ]
+  },
+  {
+    "id": "small-talk-27",
+    "type": "produce",
+    "scene": "small-talk",
+    "prompt": "周四有同事的离职酒,你确认另一个同事去不去",
+    "answer": "You going along to Tom's leaving drinks on Thursday?",
+    "note": "leaving drinks(离职酒)是英国职场的固定仪式:下班后酒吧,凑钱买卡和礼物,经理讲几句。这是少数\"默认应该出现\"的社交场合,长期缺席会被注意到。不喝酒也去,露面半小时就够。",
+    "chunk": "leaving drinks",
+    "variants": [
+      {
+        "prompt": "你要在群里帮忙统计周四离职酒有多少人参加"
+      }
+    ]
   }
 ]

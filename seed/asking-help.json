@@ -320,5 +320,89 @@
         "situation": "同一位同事这周已经帮过你两次,你又遇到问题要再开口"
       }
     ]
+  },
+  {
+    "id": "asking-help-21",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "动手做整个方案之前,想请同事先帮你把思路把把关",
+    "answer": "Before I build the whole thing out — could I sense-check the approach with you first?",
+    "note": "sense-check 是英式\"合理性检查\":不查细节,只确认方向没错。在投入大量工时前 sense-check 一次,是英国职场公认的聪明做法,没人会觉得你不自信——闷头做完才发现方向错了,那才是事故。",
+    "chunk": "sense-check",
+    "variants": [
+      {
+        "prompt": "写大报告之前,你想先和老板对一下框架再动笔"
+      }
+    ]
+  },
+  {
+    "id": "asking-help-22",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "会开完你想拉住一位同事单聊十分钟",
+    "answer": "Could I borrow you for ten minutes after this call?",
+    "note": "borrow you 是借人的地道说法,自带\"用完就还\"的轻快感,比 can we talk 少一分严肃(后者会让对方心里一紧:出什么事了?)。给出时长(ten minutes)是英式请求的固定礼仪。",
+    "chunk": "borrow you",
+    "variants": [
+      {
+        "prompt": "站会结束后你想留下数据组的同事快速对个数"
+      }
+    ]
+  },
+  {
+    "id": "asking-help-23",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "你想旁听同事的下一个客户电话,学学他怎么应对",
+    "answer": "Any chance I could shadow you on the next client call? Best way to learn the ropes.",
+    "note": "shadow 是英国职场的正式学习方式:跟着资深同事看真实操作,入职培训常有 shadowing week。learn the ropes = 摸清门道(航海时代学缆绳)。这样的请求是恭维:你值得学。",
+    "chunk": "shadow you",
+    "variants": [
+      {
+        "prompt": "你想旁听一次月度定价会议,熟悉流程"
+      }
+    ]
+  },
+  {
+    "id": "asking-help-24",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "这周已经麻烦过对方一次了,现在又要请他帮忙盯一次晨检",
+    "answer": "I hate to ask twice in one week, but could you cover the morning check tomorrow? Dentist, unavoidably.",
+    "note": "I hate to ask 是英式二次求助的标准起手:先自我谴责,对方就不用为难。给一个具体到无法拒绝的理由(牙医)加 unavoidably,请求就有了正当性。英国人对\"预约类\"理由(牙医、水管工)接受度极高,因为改约的代价人人都懂。",
+    "chunk": "I hate to ask",
+    "variants": [
+      {
+        "prompt": "上周刚请同事顶过班,这周又有事想请他再顶半天"
+      }
+    ]
+  },
+  {
+    "id": "asking-help-25",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "你想知道现在报表工具出了问题该找谁",
+    "answer": "Who's the go-to person for the reporting tool these days?",
+    "note": "the go-to person = 某个领域大家默认去找的那个人,组织里真实的知识地图。these days 暗示你知道负责人可能换过,问得很在行。找对 go-to person 是新人融入的核心技能——组织架构图上永远查不到这个信息。",
+    "chunk": "the go-to person",
+    "variants": [
+      {
+        "prompt": "你想知道合规问题现在该问谁最快"
+      }
+    ]
+  },
+  {
+    "id": "asking-help-26",
+    "type": "produce",
+    "scene": "asking-help",
+    "prompt": "同事教的办法直接解决了问题,你要回去报个喜",
+    "answer": "That did the trick — client signed off first time. Coffee's on me next week.",
+    "note": "did the trick = 一招见效,是回报求助结果的轻快说法。coffee's on me 是最小面额的人情偿还,重点不在咖啡在表态。求助-见效-回报这个闭环走完,你在对方那里的信用余额是上升的——下次开口更容易。",
+    "chunk": "did the trick",
+    "variants": [
+      {
+        "prompt": "同事建议的措辞让客户一次通过,你回去感谢他"
+      }
+    ]
   }
 ]

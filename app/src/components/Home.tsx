@@ -101,10 +101,11 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
     const weekDays = checkins.filter(d => new Date(d + 'T12:00:00').getTime() >= weekStart).length
     const { streak, makeupUsedThisWeek } = computeStreak(checkins)
     const todayDone = checkins.includes(dayKey(Date.now()))
+    const roundsToday = await getMeta<number>('rounds:' + dayKey(Date.now()), 0)
     const seenMilestones = await getMeta<number[]>('milestonesSeen', [])
     const milestone = latestMilestone(mastered)
     const showMilestone = milestone !== null && !seenMilestones.includes(milestone) ? milestone : null
-    return { dueCount, newCount, mastered, weekDays, streak, makeupUsedThisWeek, todayDone, checkins, showMilestone }
+    return { dueCount, newCount, mastered, weekDays, streak, makeupUsedThisWeek, todayDone, roundsToday, checkins, showMilestone }
   })
 
   if (!stats) return <div className="pt-24 text-center text-label3">载入中…</div>
@@ -119,7 +120,9 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
       <p className="text-[13px] font-medium text-label2">
         {new Date().toLocaleDateString('zh-CN', { month: 'long', day: 'numeric', weekday: 'long' })}
       </p>
-      <h1 className="title-lg mt-0.5">{stats.todayDone ? '今天已完成' : '来一组'}</h1>
+      <h1 className="title-lg mt-0.5">
+        {stats.todayDone ? `今天已完成 · ${stats.roundsToday} 组` : '来一组'}
+      </h1>
 
       {stats.showMilestone !== null && (
         <div className="group-card mt-4 flex items-start gap-3 p-4">

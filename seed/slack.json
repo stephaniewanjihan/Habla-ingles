@@ -337,5 +337,89 @@
         "situation": "有人临时把你拉进一个正在进行的电话会,你手头正忙"
       }
     ]
+  },
+  {
+    "id": "slack-22",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "群里的讨论越来越细,只和你俩有关,你要转到私聊",
+    "answer": "Taking this offline — will DM you the detail so we stop spamming the channel.",
+    "note": "taking this offline 在 Slack 语境=转私聊或转小会,不占用大家的注意力。主动这么做是高情商行为:群里每条消息都在消耗所有人的时间。DM = 私信。",
+    "chunk": "Taking this offline",
+    "variants": [
+      {
+        "prompt": "会议群里你和一个同事开始对细节,你提议你俩单聊"
+      }
+    ]
+  },
+  {
+    "id": "slack-23",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "想轻量地问一下客户签核有没有动静",
+    "answer": "Any movement on the client sign-off?",
+    "note": "any movement on 是最轻的进度询问:四个词,不带任何指责,像是顺口一问。比 what's the status 软,比 just checking in 短。对方只需要回 not yet 或 came through this morning。",
+    "chunk": "Any movement",
+    "variants": [
+      {
+        "prompt": "想问一句法务审批那边有没有新进展"
+      }
+    ]
+  },
+  {
+    "id": "slack-24",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "数据源今天迟了,月末数字可能晚一小时,要提前在群里预警",
+    "answer": "Early flag: the overnight feed's running late, so month-end numbers may slip an hour.",
+    "note": "early flag 是主动预警的标准开场——问题还没发生就说,和出事后解释是完全不同的两个语域。英国运营团队对 early flag 的人评价极高:你给了所有人调整的时间。",
+    "chunk": "Early flag",
+    "variants": [
+      {
+        "prompt": "系统下午要维护两小时,你提前在群里知会大家安排好工作"
+      }
+    ]
+  },
+  {
+    "id": "slack-25",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "同事写了个脚本把手工对账自动化了,你要夸一句",
+    "answer": "Nice one — that saves us a load of manual grind every month.",
+    "note": "nice one 是英式口头点赞,比 great job 随意、比 thanks 有温度。a load of = 一大堆(口语)。grind 指重复性苦活。夸要夸到具体好处(每月省下的活),泛泛的 awesome 在英国办公室反而显得美式浮夸。",
+    "chunk": "Nice one",
+    "variants": [
+      {
+        "prompt": "同事把周报模板改得清爽多了,你在群里夸一下"
+      }
+    ]
+  },
+  {
+    "id": "slack-26",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "文件正要发出去,法务突然回了一处修改,你要叫停",
+    "answer": "Hold fire on sending that — legal's just come back with one tweak.",
+    "note": "hold fire 是英式\"先别动\"(军事借喻),急停场景的标准动词,比 stop/wait 更有\"暂停待命\"的意味。tweak = 小改动。叫停要立刻给原因,不然对方不知道停多久、为什么停。",
+    "chunk": "Hold fire",
+    "variants": [
+      {
+        "prompt": "同事准备提交指令,你刚发现金额有疑问,让他先等等"
+      }
+    ]
+  },
+  {
+    "id": "slack-27",
+    "type": "produce",
+    "scene": "slack",
+    "prompt": "周五收工,在团队群里道别",
+    "answer": "That's me done for the week — have a good one, all.",
+    "note": "that's me done 是英式收工宣言(注意不是 I'm done,后者情绪色彩太重像\"我受够了\")。have a good one = 周末愉快的万金油。周五下午群里此起彼伏的这类消息是英国团队的固定仪式,你也该有自己的一句。",
+    "chunk": "That's me done",
+    "variants": [
+      {
+        "prompt": "今天提前下班,在群里说一声先走了"
+      }
+    ]
   }
 ]

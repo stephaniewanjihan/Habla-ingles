@@ -322,5 +322,89 @@
         "situation": "外部托管行把一笔企业行动的入账日期做错了,承诺修正但一直没动"
       }
     ]
+  },
+  {
+    "id": "chasing-21",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "你想确认一件事没被遗漏,但不想显得在催",
+    "answer": "Not chasing — just making sure this hasn't slipped through the net.",
+    "note": "开头声明 not chasing 本身就是最轻的催法(此地无银,但礼数到位)。slipped through the net 是英式\"漏网\":事情被无意遗漏。给了对方完美台阶:不是你拖延,是事情会自己溜走。",
+    "chunk": "slipped through the net",
+    "variants": [
+      {
+        "prompt": "两周前请对方改的权限还没动静,你想确认这事还在他清单上"
+      }
+    ]
+  },
+  {
+    "id": "chasing-22",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "问一句确认函有消息没有,顺带点出时间越来越紧",
+    "answer": "Any joy on the confirmation? We're getting close to the wire on this one.",
+    "note": "any joy 是英式高频问法:\"有结果了吗\"(joy = 好消息)。close to the wire = 贴着截止线(赛马术语)。两个短语都极其口语化,用出来立刻像本地人。",
+    "chunk": "Any joy",
+    "variants": [
+      {
+        "prompt": "问同事那边审批有没有下来,截止时间快到了"
+      }
+    ]
+  },
+  {
+    "id": "chasing-23",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "你自己催券商催不动了,想请同事用他的人脉试试",
+    "answer": "I've hit a wall with the broker — could you try through your contact over there?",
+    "note": "hit a wall = 撞墙,所有常规办法用尽。承认催不动不丢人,英国职场解决问题的正规套路之一就是换人换渠道。through your contact 点明借的是他的关系,事成之后这笔人情要认。",
+    "chunk": "hit a wall",
+    "variants": [
+      {
+        "prompt": "IT 工单三次都被打回,你想请经理出面推一下"
+      }
+    ]
+  },
+  {
+    "id": "chasing-24",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "被人催了,你刚好做完了,要回得漂亮",
+    "answer": "Thanks for the nudge — it's done and on its way to you now.",
+    "note": "被催的最佳回应:感谢提醒(哪怕心里不爽),外加即时交付。thanks for the nudge 把\"被催\"重新定义成\"被提醒\",双方都有面子。on its way to you = 已经在路上,比 I just sent it 更有画面感。",
+    "chunk": "Thanks for the nudge",
+    "variants": [
+      {
+        "prompt": "对方催周报,你正好写完,要回复并附上"
+      }
+    ]
+  },
+  {
+    "id": "chasing-25",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "征集意见到今天五点截止,你要发最后通牒但不失风度",
+    "answer": "Last call for comments — anything not in by five goes out as-is.",
+    "note": "last call(酒吧打烊前最后点单)是英式最后期限的标准借喻。goes out as-is = 按现状发出,把\"不等了\"说成既定流程。这句话的高明在于把压力变成了规则:不回复 = 默认同意,合理合法。",
+    "chunk": "Last call",
+    "variants": [
+      {
+        "prompt": "文件定稿前最后征求意见,过时不候,你要在群里说明"
+      }
+    ]
+  },
+  {
+    "id": "chasing-26",
+    "type": "produce",
+    "scene": "chasing",
+    "prompt": "再催不动你就只能找他上级了,你想给对方最后一次机会",
+    "answer": "I'd rather not go over your head on this — can we get it sorted today, just between us?",
+    "note": "go over your head = 越级找你上级。把升级的可能性说破、但姿态是\"我不想这么做\",是催办的最后一档:给对方保住体面的最后窗口。说了这句还没动静,升级就是他自己选的。慎用,一段关系里最多用一次。",
+    "chunk": "go over your head",
+    "variants": [
+      {
+        "prompt": "对方拖了三周,你暗示再不解决就只能正式升级,但先给他台阶"
+      }
+    ]
   }
 ]

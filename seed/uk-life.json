@@ -1,0 +1,135 @@
+[
+  {
+    "id": "uk-life-01",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "你想约 GP 看病,跟同事吐槽预约多难抢",
+    "answer": "I'm trying to get a GP appointment — you have to ring at eight on the dot or you've got no chance.",
+    "note": "GP(全科医生)是 NHS 的入口,看专科必须先经 GP 转诊(referral)。早上八点整打电话抢号是全民共同经历,吐槽它是最安全的英国话题之一。on the dot = 整点分秒不差。",
+    "chunk": "on the dot",
+    "variants": [{ "prompt": "同事问你腰疼看了没有,你说在等 GP 的号" }]
+  },
+  {
+    "id": "uk-life-02",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "小毛病没必要等 GP,你想说去药房解决了",
+    "answer": "The pharmacist sorted me out in five minutes — saved me a two-week wait for the GP.",
+    "note": "chemist/pharmacy(Boots 之类)的药剂师能处理小毛病、开非处方药,是 NHS 官方推荐的第一站。sort someone out 是英式万能动词短语:把人的问题解决掉。这句同时是对 NHS 等待时间的标准调侃。",
+    "chunk": "sorted me out",
+    "variants": [{ "prompt": "同事感冒了纠结要不要约医生,你建议先去药房问问" }]
+  },
+  {
+    "id": "uk-life-03",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "下周一是法定假日,你要提醒项目组交付日都要顺延一天",
+    "answer": "Don't forget Monday's a bank holiday, so everything shifts back a day.",
+    "note": "英国法定假日叫 bank holiday(银行休市故得名),几乎都落在周一,凑成 bank holiday weekend(长周末)。五月有两个、八月底一个。项目排期、结算日、快递全会受影响——金融行业对它尤其敏感。",
+    "chunk": "a bank holiday",
+    "variants": [{ "prompt": "客户问为什么这周结算晚一天,你解释因为周一是法定假日" }]
+  },
+  {
+    "id": "uk-life-04",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "和同事吐槽今年市政税又涨了",
+    "answer": "Has your council tax gone up as well? Band D is daylight robbery these days.",
+    "note": "council tax 是按房产估值分档(Band A-H)交给地方政府的税,每年四月涨价,是全民吐槽项目。daylight robbery 是英式\"明抢\"。作为租客通常也要交,你完全有资格加入这个吐槽。",
+    "chunk": "daylight robbery",
+    "variants": [{ "prompt": "同事说他家水电气全涨了,你接一句自己的账单也离谱" }]
+  },
+  {
+    "id": "uk-life-05",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "聊租房,你想说自己现在转成了按月滚动的合同,反而更灵活",
+    "answer": "We're on a rolling contract now — I'd rather that than be tied into another twelve months.",
+    "note": "英国租房:fixed term(固定期,通常 12 个月)到期后自动转 rolling/periodic(按月滚动),搬家只需一个月通知。be tied into 是\"被合同绑住\"。相关词:deposit scheme(押金托管)、notice period、letting agent。",
+    "chunk": "a rolling contract",
+    "variants": [{ "prompt": "同事问你租约什么时候到期,你说已经转成月租滚动了" }]
+  },
+  {
+    "id": "uk-life-06",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "聊到火车票太贵,你想说自己办了打折卡、错峰买票还行",
+    "answer": "I've got a railcard, so the off-peak fares aren't too brutal.",
+    "note": "railcard(26-30、Two Together 等)一年 30 镑打七折。票价体系:peak(早晚高峰,天价)/off-peak/advance(提前特价,绑定车次)。吐槽火车票价是英国国民运动,这套词汇是入场券。",
+    "chunk": "off-peak",
+    "variants": [{ "prompt": "同事惊讶你去曼城的票这么便宜,你解释是提前买的特价票", "answer": "It was an advance ticket — book two weeks out and it's half the price." }]
+  },
+  {
+    "id": "uk-life-07",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "周五下午,你想约同事周日去酒吧吃烤肉",
+    "answer": "Fancy a Sunday roast this weekend? There's a decent pub round the corner from mine.",
+    "note": "Sunday roast(烤肉+约克郡布丁+肉汁)是周日的制度性午餐,好酒吧要订位。fancy = 想不想要,英式邀约的标准开头。round the corner from mine 的 mine = my place。接受度极高的社交邀请,也适合你主动发起。",
+    "chunk": "Fancy a Sunday roast",
+    "variants": [{ "prompt": "外地朋友周末来伦敦,你提议带他去体验一顿正经的周日烤肉" }]
+  },
+  {
+    "id": "uk-life-08",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "同事组队参加周四的酒吧竞猜,还缺一个人,你想报名",
+    "answer": "Count me in for the pub quiz — fair warning though, my specialist subject is Chinese pop from the noughties.",
+    "note": "pub quiz 是英国酒吧的每周固定节目:组队答题,分 rounds(general knowledge、music、sport)。count me in = 算我一个。后半句的自嘲式免责是入队礼仪——先声明自己的冷门强项,反而是加分的幽默。noughties = 2000-2009 年代。",
+    "chunk": "Count me in",
+    "variants": [{ "prompt": "团队组织周五去打保龄球,你表示参加,顺带自嘲水平很差" }]
+  },
+  {
+    "id": "uk-life-09",
+    "type": "pick",
+    "scene": "uk-life",
+    "prompt": "有人在咖啡店插到了你前面,你要指出来,哪句是英式的?",
+    "options": [
+      { "text": "Hey, don't jump the queue!", "correct": false },
+      { "text": "Sorry — I think the queue starts back there.", "correct": true }
+    ],
+    "note": "排队是英国的国民宗教,但指出插队也要用抱歉开头、把矛头对准队伍而不是人(the queue starts back there,好像对方只是没看见)。直接指责会让全场尴尬——包括排队的其他人。对方九成会连声道歉退回去。",
+    "variants": [{ "prompt": "地铁站有人挤到检票队伍前面,你要提醒他队尾在后面" }]
+  },
+  {
+    "id": "uk-life-10",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "十月底,你要提醒同事这周末要调钟了",
+    "answer": "Don't forget the clocks go back this weekend — one extra hour in bed, at least.",
+    "note": "英国夏令时:三月底 clocks go forward(少睡一小时),十月底 go back(多睡一小时)。记法是 spring forward, fall back。换钟前后一周是固定闲聊话题,十月这次的标准安慰就是\"多睡一小时\",然后开始抱怨四点天黑。",
+    "chunk": "the clocks go back",
+    "variants": [{ "prompt": "三月底,同事抱怨周一起不来,你点出因为刚调了夏令时少睡一小时", "answer": "The clocks went forward, didn't they — that lost hour always hurts on the Monday." }]
+  },
+  {
+    "id": "uk-life-11",
+    "type": "produce",
+    "scene": "uk-life",
+    "prompt": "你又错过了快递,跟同事抱怨包裹被拉回站点了",
+    "answer": "Missed the delivery again — the parcel's gone back to the depot, so that's my Saturday morning sorted.",
+    "note": "错过快递会收到 while-you-were-out 卡,包裹被拉回 depot(站点)自取或重约。that's my Saturday morning sorted 是英式反讽:周六上午\"有安排了\"(去取快递)。抱怨快递是稳定的共鸣话题,Evri 是全民吐槽对象。",
+    "chunk": "gone back to the depot",
+    "variants": [{ "prompt": "同事说等了一天的快递没来,你分享自己上周跑站点取件的惨痛经历" }]
+  },
+  {
+    "id": "uk-life-12",
+    "type": "note",
+    "scene": "uk-life",
+    "title": "NHS 使用地图:什么情况找谁",
+    "body": "小毛病 → 药房(pharmacist),immediately 可解决;一般问题 → GP(全科),电话抢号,等一两周正常;专科 → 必须 GP 转诊(referral),等更久;不确定严重程度 → 打 111(NHS 咨询热线);急症 → A&E(急诊,accident and emergency,等四小时是常态梗);生命危险 → 999。处方药在英格兰固定价约十镑一项,和药本身无关。看病免费但等待漫长,所以公司常配 private healthcare(Bupa 之类)作为福利——入职材料里看到这个词就是这么回事。"
+  },
+  {
+    "id": "uk-life-13",
+    "type": "note",
+    "scene": "uk-life",
+    "title": "生活缩写速查:办公室闲聊高频出现",
+    "body": "MOT:汽车年检(my car's in for its MOT = 车去年检了,常用作迟到理由);DIY:自己动手装修,英国人的周末宗教,B&Q 是圣地;ISA:免税储蓄账户,每年两万镑额度,理财闲聊必出现;HMRC:税务局(收到 HMRC 的信人人紧张);P60/P45:年度工资税单/离职单(get your P45 = 被解雇的委婉说法!);DVLA:车管所;BYOB:自带酒水;RSVP:请回复。特别记 P45:同事开玩笑说 careful, or you'll get your P45,意思是\"再这样要被炒了\"。"
+  },
+  {
+    "id": "uk-life-14",
+    "type": "note",
+    "scene": "uk-life",
+    "title": "TV licence:为什么人人都在骂一张看电视的执照",
+    "body": "在英国看任何直播电视或 BBC iPlayer,法律要求买 TV licence(一年约 170 镑),这笔钱养活了没有广告的 BBC。催缴信措辞吓人、执法员上门的都市传说、\"我根本不看 BBC 为什么要交\"的争论,是常青吐槽话题。你只看 Netflix/YouTube 的话依法可以不买——这句话本身(I don't watch live telly, so I don't need one)就是标准参与方式。telly = 电视的英式昵称。顺带:英国人说 watch telly 不说 watch TV shows。"
+  }
+]

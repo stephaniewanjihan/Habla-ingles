@@ -315,5 +315,89 @@
         "situation": "汇报的结论是:要按时上线就必须加人或砍范围"
       }
     ]
+  },
+  {
+    "id": "presenting-21",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "展示的这页数据还是暂定版,你要先打好预防针",
+    "answer": "Health warning on this slide: the June data's still provisional, so treat it as directional.",
+    "note": "health warning(香烟盒警示语的借喻)是金融汇报的高频行话:这页有坑,先声明。配 provisional(暂定)和 directional(看趋势别抠数),三个词把免责做满。先说有坑和被人发现坑,是天壤之别。",
+    "chunk": "Health warning",
+    "variants": [
+      {
+        "prompt": "你要展示一版还没经复核的测算,先声明数字可能会调"
+      }
+    ]
+  },
+  {
+    "id": "presenting-22",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "讨论了半小时,你要把结论复述一遍确认大家理解一致",
+    "answer": "So to play that back: we hold the June date, trim the scope, and review again in May. Have I got that right?",
+    "note": "play back(回放)是会议主持的核心技能:把散乱讨论压缩成三个短句复述确认。这一步能暴露所有\"以为达成了共识其实没有\"的地方。会后纪要就从这句来——会上没人反对,纪要就是铁的。",
+    "chunk": "play that back",
+    "variants": [
+      {
+        "prompt": "电话会结束前,你把三条行动项复述确认一遍"
+      }
+    ]
+  },
+  {
+    "id": "presenting-23",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "问了一圈没人说话,你要把沉默变成正式通过",
+    "answer": "I'll take the silence as agreement — last chance to object before we lock it in.",
+    "note": "英国会议的沉默经常是\"没意见\"而不是\"没听\",但直接翻篇有风险。这句把沉默显式转换成同意,并给最后一次反对窗口(last chance to object)——之后再有人翻案,你有话说。lock it in = 敲定。",
+    "chunk": "lock it in",
+    "variants": [
+      {
+        "prompt": "新流程宣讲完没人提问,你要确认大家都接受再定稿"
+      }
+    ]
+  },
+  {
+    "id": "presenting-24",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "细节太多不适合会上讲,你要跳过并告知去哪里看",
+    "answer": "I'll spare you the detail — the full workings are in the appendix if anyone wants to dig in.",
+    "note": "spare you the detail(饶了你们,不讲细节)是体贴听众的标准句,自带一点幽默。dig in = 深挖。敢跳过细节的人显得掌控力强;把每个数字都念一遍的汇报,在英国会议室里是灾难。",
+    "chunk": "spare you the detail",
+    "variants": [
+      {
+        "prompt": "方法论部分太技术,你决定跳过,请感兴趣的人会后看附录"
+      }
+    ]
+  },
+  {
+    "id": "presenting-25",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "会上有新人,你要用半分钟交代背景再进正题",
+    "answer": "For anyone new to this one: thirty seconds of background before we get into the numbers.",
+    "note": "照顾会议室里的新人是英式主持的必修礼仪,但要声明时长(thirty seconds)让老人知道不会被拖堂。get into the numbers = 进入数字部分。这半分钟的存在,决定了新人这一小时是参与还是旁听。",
+    "chunk": "thirty seconds of background",
+    "variants": [
+      {
+        "prompt": "新加入项目的同事第一次参会,你开场先快速补背景"
+      }
+    ]
+  },
+  {
+    "id": "presenting-26",
+    "type": "produce",
+    "scene": "presenting",
+    "prompt": "深入做下去之前,你想先探一下管理层有没有意愿投入",
+    "answer": "Before I take this any further, I'd welcome a steer on appetite — is this worth pursuing at all?",
+    "note": "appetite 在金融语境=意愿/胃口(risk appetite 风险偏好同源)。这个问法把\"要不要做\"的决定权明确交回管理层,同时保护自己不做无用功。I'd welcome a steer = 请给个方向,比 please decide 得体得多。",
+    "chunk": "a steer on appetite",
+    "variants": [
+      {
+        "prompt": "你有个自动化的想法,想先问老板值不值得花时间细化"
+      }
+    ]
   }
 ]

@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { db, getMeta, setMeta } from '../db'
 import { rate, dayKey, viewFor } from '../srs'
-import { FLAGS, REVIEWABLE, sceneLabel } from '../types'
+import { FLAGS, REVIEWABLE, LIFE_SCENES, sceneLabel } from '../types'
 import { buildCloze, isCorrect, isNearMiss } from '../cloze'
 import { playCorrect, playWrong, playRoundDone } from '../feedback'
 import { canSpeak, speak, playDialogue, type DialoguePlayer } from '../speech'
@@ -30,11 +30,19 @@ export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Prom
   const due = (await db.cards.where('due').belowOrEqual(endOfToday.getTime()).toArray())
     .filter(c => REVIEWABLE.includes(c.type))
     .sort((a, b) => (a.due ?? 0) - (b.due ?? 0))
-  const news = shuffle(
+  const allNew = shuffle(
     (await db.cards.where('state').equals('new').toArray()).filter(c =>
       REVIEWABLE.includes(c.type),
     ),
   )
+  // 商务 70% / 英国生活 30%:配比只作用在新卡引入上,
+  // 到期复习永远照单全收(间隔重复的完整性优先)
+  const newWork = allNew.filter(c => !LIFE_SCENES.has(c.scene))
+  const newLife = allNew.filter(c => LIFE_SCENES.has(c.scene))
+  const takeNew = (): CardRecord | undefined => {
+    if (newLife.length && (Math.random() < 0.3 || !newWork.length)) return newLife.shift()
+    return newWork.shift() ?? newLife.shift()
+  }
   // 学习阶段的卡优先级最高:它们是刚见过、还没记牢的
   const learning = (await db.cards.where('state').equals('learning').toArray())
     .filter(c => REVIEWABLE.includes(c.type) && (c.due ?? 0) <= Date.now())
@@ -42,7 +50,7 @@ export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Prom
   due.unshift(...learning)
 
   if (mode === 'one') {
-    const one = due[0] ?? news[0]
+    const one = due[0] ?? takeNew()
     return one ? [one] : []
   }
 
@@ -59,7 +67,11 @@ export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Prom
     .sort((a, b) => (a.lastSeen ?? 0) - (b.lastSeen ?? 0))
 
   const queue: CardRecord[] = due.slice(0, 3)
-  while (queue.length < ROUND_REVIEW_SLOTS && news.length) queue.push(news.shift()!)
+  while (queue.length < ROUND_REVIEW_SLOTS && (newWork.length || newLife.length)) {
+    const n = takeNew()
+    if (!n) break
+    queue.push(n)
+  }
   let di = 3
   while (queue.length < ROUND_REVIEW_SLOTS && di < due.length) queue.push(due[di++])
   if (extras.length) queue.splice(Math.min(2, queue.length), 0, extras[0])
@@ -265,6 +277,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'list
   const [typed, setTyped] = useState('')
   const [verdict, setVerdict] = useState<'right' | 'wrong' | null>(null)
   const [doneCount, setDoneCount] = useState(0)
+  const [roundsToday, setRoundsToday] = useState(0)
   const ratingsRef = useRef<Map<string, Rating>>(new Map())
   const repeatedRef = useRef<Map<string, number>>(new Map())
   const startRef = useRef(Date.now())
@@ -306,6 +319,9 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'list
     const checkins = await getMeta<string[]>('checkins', [])
     const today = dayKey(Date.now())
     if (!checkins.includes(today)) await setMeta('checkins', [...checkins, today])
+    const rounds = (await getMeta<number>('rounds:' + today, 0)) + 1
+    await setMeta('rounds:' + today, rounds)
+    setRoundsToday(rounds)
     playRoundDone()
     setFinished(true)
   }
@@ -373,6 +389,9 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'list
     return (
       <div className="mx-auto flex min-h-screen max-w-md flex-col px-4 pt-14 pb-8">
         <h2 className="title-lg">这组练完了</h2>
+        {roundsToday > 0 && (
+          <p className="mt-1 text-[15px] font-medium text-green">今天第 {roundsToday} 组 ✓</p>
+        )}
         {cutShort && <p className="mt-1.5 text-[13px] text-label2">五分钟到了,先收尾——剩下的卡还在队列里。</p>}
         <p className="mt-4 text-[15px] text-label2">
           {good.length > 0 ? '这几条,你现在能直接说出口:' : '这组还没有"顺"的卡——正常,多见几次就有了。'}

@@ -356,5 +356,89 @@
       }
     ],
     "chunk": "pop it in the diary"
+  },
+  {
+    "id": "email-23",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "你休假前发通知:凡是对客户的事,休假期间由 Priya 负责",
+    "answer": "While I'm off, Priya has the pen on anything client-facing.",
+    "note": "has the pen 是金融机构高频行话:临时负责、有决定权和签发权。比 is in charge of 轻,专指\"这段时间归她拍板\"。client-facing 指一切对客户的工作。",
+    "chunk": "has the pen",
+    "variants": [
+      {
+        "prompt": "你出差一周,要说明报表相关的事这周由 Tom 主笔"
+      }
+    ]
+  },
+  {
+    "id": "email-24",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "提交窗口明天中午关闭,你要最后确认对方那边一切就绪",
+    "answer": "Just conscious the submission window closes at noon tomorrow — are we all set your end?",
+    "note": "just conscious 是英式软性提醒的高级形态:把催促说成\"我只是意识到\"。all set your end 问的是对方侧的就绪状态。这种句式全程没有一个催促动词,压力却完整送达。",
+    "chunk": "all set your end",
+    "variants": [
+      {
+        "prompt": "监管报送后天截止,你向数据团队确认他们那边没有阻碍"
+      }
+    ]
+  },
+  {
+    "id": "email-25",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "收到一个跟你关系不大的会议邀请,要礼貌地不参加",
+    "answer": "I'll sit this one out if that's OK — nothing on the agenda needs me, but happy to read the notes after.",
+    "note": "sit this one out 是退出单次活动的地道说法(来自舞会:这支舞我坐一下)。给出理由(议程和我无关)加一个补偿动作(会后看纪要),拒绝就完整了。盲目接受所有会议在英国职场不是勤奋,是没有优先级。",
+    "chunk": "sit this one out",
+    "variants": [
+      {
+        "prompt": "团队问你要不要加入一个新的周会,你觉得没必要每周都参加"
+      }
+    ]
+  },
+  {
+    "id": "email-26",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "对方问你要不要完整报告,你只需要几句话的要点版",
+    "answer": "Could you give me the headline version? A couple of lines is plenty.",
+    "note": "the headline version = 只要结论要点。明确说 a couple of lines is plenty 是替对方省工夫,也是高效协作的信号——英国职场欣赏知道自己要什么的人。反义场景用 the full picture / the long version。",
+    "chunk": "the headline version",
+    "variants": [
+      {
+        "prompt": "同事问你需要多详细的说明,你说两三句概要就够"
+      }
+    ]
+  },
+  {
+    "id": "email-27",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "别人指出你表格里一个错,你要大方认下并感谢",
+    "answer": "Good spot — you're quite right, the total's out by two hundred. Corrected version attached.",
+    "note": "good spot 是被抓到错误时的最佳反应:夸对方眼尖,一秒终结尴尬。the total's out by X 是英式\"差了多少\"(out = 不准)。立刻附上改正版,整件事三句话闭环——处理错误的速度和风度比不犯错更被记住。",
+    "chunk": "Good spot",
+    "variants": [
+      {
+        "prompt": "同事发现你邮件里日期写错了,你回复认错并感谢"
+      }
+    ]
+  },
+  {
+    "id": "email-28",
+    "type": "produce",
+    "scene": "email",
+    "prompt": "周五下午发的邮件,你要说明不急、下周再处理完全可以",
+    "answer": "No need to look at this before Monday — it can absolutely wait till next week.",
+    "note": "周五下午发邮件配这句是英国职场的重要礼仪:明确解除对方周末查看的压力。不写这句,有人真的会周末回你。反过来,收到没写这句的周五邮件,默认也是下周一处理,不用愧疚。",
+    "chunk": "it can absolutely wait",
+    "variants": [
+      {
+        "prompt": "晚上八点你想到一件事发了邮件,要注明明天处理就行"
+      }
+    ]
   }
 ]
