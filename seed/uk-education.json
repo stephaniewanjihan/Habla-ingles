@@ -7,7 +7,11 @@
     "answer": "How's she getting on with her GCSEs? Which subjects is she taking?",
     "note": "getting on with 是英式问进展的万能句式。GCSE 是 16 岁(Year 11)的全国统考,一般考八到十门,按 9-1 打分,9 最高——9/8/7 大致相当于老制度的 A*/A。同事的孩子到这个年纪,这就是他们全年的头号话题。",
     "chunk": "getting on with",
-    "variants": [{ "prompt": "同事说儿子在准备 A Level,你想问问他学得怎么样、选了什么科" }]
+    "variants": [
+      {
+        "prompt": "同事说儿子在准备 A Level,你想问问他学得怎么样、选了什么科"
+      }
+    ]
   },
   {
     "id": "uk-education-02",
@@ -17,7 +21,11 @@
     "answer": "So is he off to sixth form in September, or thinking about an apprenticeship?",
     "note": "sixth form 指 Year 12-13(16-18 岁读 A Level 的两年),可以在原校也可以去 sixth form college。apprenticeship(学徒制)是英国完全体面的另一条路,不带贬义。be off to 是英式的\"要去\"。",
     "chunk": "off to sixth form",
-    "variants": [{ "prompt": "邻居的孩子刚考完 A Level,你想问她九月去哪所大学" }]
+    "variants": [
+      {
+        "prompt": "邻居的孩子刚考完 A Level,你想问她九月去哪所大学"
+      }
+    ]
   },
   {
     "id": "uk-education-03",
@@ -27,7 +35,11 @@
     "answer": "Fingers crossed for results day — has she got her heart set on anywhere?",
     "note": "results day(八月中旬的 A Level 放榜日)是全国性话题,新闻会拍学生开信封。fingers crossed 是标准祝好运。got her heart set on 问的是心仪学校——比直接问分数得体,英国人不当面问预估成绩。",
     "chunk": "Fingers crossed",
-    "variants": [{ "prompt": "同事儿子这周出 GCSE 成绩,你想表达一下\"祝顺利\"" }]
+    "variants": [
+      {
+        "prompt": "同事儿子这周出 GCSE 成绩,你想表达一下\"祝顺利\""
+      }
+    ]
   },
   {
     "id": "uk-education-04",
@@ -37,7 +49,11 @@
     "answer": "Anything planned for half term, or is it just about surviving the week?",
     "note": "half term 是每学期中间的一周假(十月、二月、五月底),对家长是排班噩梦——办公室里这几周总有人休假或居家。surviving 的说法是标准打趣:大家默认带娃一周是折磨。记住这个日历,能接住一大类闲聊。",
     "chunk": "half term",
-    "variants": [{ "prompt": "二月中,同事要请两天假带孩子,你接一句表示理解" }]
+    "variants": [
+      {
+        "prompt": "二月中,同事要请两天假带孩子,你接一句表示理解"
+      }
+    ]
   },
   {
     "id": "uk-education-05",
@@ -47,7 +63,11 @@
     "answer": "Is he deep in revision? I don't envy him — I remember mocks being grim.",
     "note": "revise/revision 是英式\"复习备考\"(美式说 study/review,英国人听着别扭)。mocks 是模拟考,一般在圣诞前后。grim 是英式高频形容词\"苦不堪言\"。I don't envy him 是标准共情句:幸好不是我。",
     "chunk": "deep in revision",
-    "variants": [{ "prompt": "同事女儿圣诞假期都在备考模拟考,你表达一下同情" }]
+    "variants": [
+      {
+        "prompt": "同事女儿圣诞假期都在备考模拟考,你表达一下同情"
+      }
+    ]
   },
   {
     "id": "uk-education-06",
@@ -57,7 +77,11 @@
     "answer": "I'm on the school run this week, so I'll be online from half nine.",
     "note": "the school run 特指接送孩子上下学,是英国职场完全正当的晚到/早走理由,不需要解释更多。half nine = 9:30(英式省略 past)。哪怕你没孩子,同事说这句你要立刻听懂。",
     "chunk": "the school run",
-    "variants": [{ "prompt": "同事说他这周要接送孩子,下午四点后不在线,你复述确认一下" }]
+    "variants": [
+      {
+        "prompt": "同事说他这周要接送孩子,下午四点后不在线,你复述确认一下"
+      }
+    ]
   },
   {
     "id": "uk-education-07",
@@ -67,7 +91,11 @@
     "answer": "Ah, parents' evening — good luck, hope it's all glowing reports.",
     "note": "parents' evening 是英式家长会:一对一预约制,每科老师五分钟。glowing report 是\"全是表扬\"的固定搭配。回一句 good luck 带点玩笑,是因为大家默认家长会可能听到坏消息。",
     "chunk": "glowing reports",
-    "variants": [{ "prompt": "同事明晚要去孩子学校见各科老师,你祝他顺利" }]
+    "variants": [
+      {
+        "prompt": "同事明晚要去孩子学校见各科老师,你祝他顺利"
+      }
+    ]
   },
   {
     "id": "uk-education-08",
@@ -77,7 +105,11 @@
     "answer": "They moved house just to get into the catchment area — classic.",
     "note": "catchment area 就是学区,英国中产为好学校学区搬家的执念和国内完全一样,这个词一出,话题瞬间共通。classic 在这里是\"太典型了\"的轻嘲。相关词:league tables(学校排名表)、Ofsted(督学评级,Outstanding/Good)。",
     "chunk": "catchment area",
-    "variants": [{ "prompt": "同事说他们买房主要看学校,你接一句表示这太常见了" }]
+    "variants": [
+      {
+        "prompt": "同事说他们买房主要看学校,你接一句表示这太常见了"
+      }
+    ]
   },
   {
     "id": "uk-education-09",
@@ -87,7 +119,11 @@
     "answer": "She's done her UCAS form then? Five choices and the dreaded personal statement — where's she applied?",
     "note": "UCAS 是全国统一的大学申请系统:最多五个志愿加一篇 personal statement(个人陈述,全民公认的折磨,所以说 dreaded)。牛剑只能二选一申一所,十月截止。这套流程是英国家长的共同语言。",
     "chunk": "the dreaded personal statement",
-    "variants": [{ "prompt": "同事儿子在写大学申请文书写到崩溃,你表达共情" }]
+    "variants": [
+      {
+        "prompt": "同事儿子在写大学申请文书写到崩溃,你表达共情"
+      }
+    ]
   },
   {
     "id": "uk-education-10",
@@ -97,7 +133,11 @@
     "answer": "Most grad schemes still ask for a two-one, don't they?",
     "note": "英国本科学位分级:first(一等)、2:1(读作 two-one,二等上)、2:2(two-two)、third。2:1 是招聘的默认门槛线。grad scheme 是英国的管培生项目。这套词在招聘和自我介绍场合躲不开。",
     "chunk": "a two-one",
-    "variants": [{ "prompt": "同事说他儿子毕业拿了一等学位,你想确认自己听懂了:是 first 吗" }]
+    "variants": [
+      {
+        "prompt": "同事说他儿子毕业拿了一等学位,你想确认自己听懂了:是 first 吗"
+      }
+    ]
   },
   {
     "id": "uk-education-11",
@@ -107,7 +147,11 @@
     "answer": "Taking a gap year, is she? Let me guess — Southeast Asia?",
     "note": "gap year(间隔年)在英国是成熟传统,大学前打工加旅行,东南亚是刻板印象级的目的地——所以 let me guess 这个玩笑人人会笑。对间隔年表示大惊小怪反而显得外行。",
     "chunk": "a gap year",
-    "variants": [{ "prompt": "同事说儿子想工作一年再上大学,你表示这在英国很正常" }]
+    "variants": [
+      {
+        "prompt": "同事说儿子想工作一年再上大学,你表示这在英国很正常"
+      }
+    ]
   },
   {
     "id": "uk-education-12",
@@ -117,7 +161,11 @@
     "answer": "I was forever in detention at school — hard to believe, I know.",
     "note": "detention 是放学留堂,英国学校至今在用。自嘲学生时代(成绩差、被留堂、体育课垫底)是英式 banter 的安全牌,把自己讲得越惨越受欢迎。hard to believe, I know 是自嘲的标准收尾:先替对方说出吐槽。",
     "chunk": "forever in detention",
-    "variants": [{ "prompt": "同事们在聊学生时代多不省心,你自嘲一句自己也不是好学生" }]
+    "variants": [
+      {
+        "prompt": "同事们在聊学生时代多不省心,你自嘲一句自己也不是好学生"
+      }
+    ]
   },
   {
     "id": "uk-education-13",
@@ -127,7 +175,11 @@
     "answer": "Where did you go to uni, then?",
     "note": "英国说 uni 不说 college——college 在英国指 sixth form college 或牛剑内部的学院,美式的 school/college 指大学会造成误解。then 放句尾让反问显得随口。牛剑毕业的人往往只说 I was at Oxford,越淡越真。",
     "chunk": "go to uni",
-    "variants": [{ "prompt": "新同事入职闲聊,你想自然地问一句他大学在哪儿读的" }]
+    "variants": [
+      {
+        "prompt": "新同事入职闲聊,你想自然地问一句他大学在哪儿读的"
+      }
+    ]
   },
   {
     "id": "uk-education-14",
@@ -137,7 +189,13 @@
     "answer": "That's roughly two thirds of last year's figure.",
     "note": "分数口语:1/2 = a half,1/3 = a third,2/3 = two thirds,3/4 = three quarters。小数:0.5 = point five,2.5 = two point five。这套是英国人小学背下来的,金融会议里天天用——说错分数比说错单词显眼得多。",
     "chunk": "two thirds",
-    "variants": [{ "prompt": "汇报时要说\"费用大约是预算的四分之三\"", "answer": "The costs come to roughly three quarters of the budget." }]
+    "variants": [
+      {
+        "prompt": "汇报时要说\"费用大约是预算的四分之三\"",
+        "answer": "The costs come to roughly three quarters of the budget.",
+        "note": "come to = 合计达到(the total comes to £400);three quarters = 3/4(quarters 用复数)。roughly 打头的约数在汇报里比假装精确安全。分数全家:a half、a third、two thirds、three quarters——金融会议天天用,说错分数比说错单词显眼。"
+      }
+    ]
   },
   {
     "id": "uk-education-15",
@@ -147,7 +205,11 @@
     "answer": "Is he sitting the eleven-plus this year? That's a lot of pressure at ten.",
     "note": "sit an exam 是英式\"参加考试\"(美式 take)。eleven-plus(11+)是 grammar school(公立重点中学)的入学考,十岁考,竞争惨烈,补习产业和国内小升初一模一样——这个共鸣点你可以大方使用。",
     "chunk": "sitting the eleven-plus",
-    "variants": [{ "prompt": "同事在给女儿找 11+ 补习老师,你表示这个卷法你很熟悉" }]
+    "variants": [
+      {
+        "prompt": "同事在给女儿找 11+ 补习老师,你表示这个卷法你很熟悉"
+      }
+    ]
   },
   {
     "id": "uk-education-16",
@@ -155,12 +217,22 @@
     "scene": "uk-education",
     "prompt": "想说\"我当年考试前要复习\",哪个说法是英式的?",
     "options": [
-      { "text": "I had to review for my exams.", "correct": false },
-      { "text": "I had to revise for my exams.", "correct": true }
+      {
+        "text": "I had to review for my exams.",
+        "correct": false
+      },
+      {
+        "text": "I had to revise for my exams.",
+        "correct": true
+      }
     ],
     "note": "revise 在英式英语里就是\"复习备考\",review 是美式用法(英国人听到 review for exams 会愣一下,因为 review 在英式里更多是\"审阅\")。名词是 revision:do some revision、revision timetable。这是英美差异里最高频的坑之一。",
     "chunk": "revise",
-    "variants": [{ "prompt": "想问同事的孩子\"开始复习了吗\",哪个说法地道?" }]
+    "variants": [
+      {
+        "prompt": "想问同事的孩子\"开始复习了吗\",哪个说法地道?"
+      }
+    ]
   },
   {
     "id": "uk-education-17",
@@ -168,11 +240,21 @@
     "scene": "uk-education",
     "prompt": "同事说孩子在 public school 上学,他的意思是?",
     "options": [
-      { "text": "公立学校,不收学费", "correct": false },
-      { "text": "老牌私立学校,学费很贵", "correct": true }
+      {
+        "text": "公立学校,不收学费",
+        "correct": false
+      },
+      {
+        "text": "老牌私立学校,学费很贵",
+        "correct": true
+      }
     ],
     "note": "英国最著名的反直觉词:public school 指伊顿、哈罗这类老牌私立(历史上\"对公众开放\"故得名)。公立叫 state school,私立统称 private/independent school。听错这个词会把对话理解反——对方多半在说学费压力或人脉圈子。",
-    "variants": [{ "prompt": "新闻里说某大臣是 public school 出身,这是在说什么背景?" }]
+    "variants": [
+      {
+        "prompt": "新闻里说某大臣是 public school 出身,这是在说什么背景?"
+      }
+    ]
   },
   {
     "id": "uk-education-18",

@@ -23,7 +23,8 @@
     "variants": [
       {
         "prompt": "刚下过冰雹,在茶水间遇到同事,用天气开场",
-        "answer": "Wild out there earlier, wasn't it?"
+        "answer": "Wild out there earlier, wasn't it?",
+        "note": "wild 形容天气狂野(冰雹、大风、暴雨通吃),比 bad 生动得多;earlier 指刚才那阵。wasn't it 附加问句照旧把陈述变邀请。天气协议的规则不变:内容不重要,确认共同体验才重要。"
       }
     ],
     "chunk": "isn't it"
@@ -38,7 +39,8 @@
     "variants": [
       {
         "prompt": "地铁信号故障害你迟到二十分钟,到公司跟同事吐槽",
-        "answer": "Signal failure at Euston again — twenty minutes late and packed like sardines."
+        "answer": "Signal failure at Euston again — twenty minutes late and packed like sardines.",
+        "note": "signal failure = 信号故障,伦敦通勤吐槽第一大词(车站广播天天播);Euston 是主干车站。packed like sardines = 挤得像沙丁鱼罐头,英式吐槽的标准比喻。again 一个词自带「老毛病了」的疲惫感。对方的正确回应依旧是比惨。"
       }
     ],
     "chunk": "was a shambles"
@@ -81,7 +83,8 @@
     "variants": [
       {
         "prompt": "下午三点你去茶水间,按惯例问一圈要不要带咖啡",
-        "answer": "I'm doing a coffee run — anyone want one?"
+        "answer": "I'm doing a coffee run — anyone want one?",
+        "note": "coffee run 和 tea run 规则完全一致:起身带一圈是团队仪式。anyone want one? 是标准问法,不用逐个问。记住各人的 order(flat white、oat milk 之类),下次主动带对,是无声的好感积累。"
       }
     ],
     "chunk": "tea run"
@@ -124,7 +127,8 @@
     "variants": [
       {
         "prompt": "一月初回来上班,和同事寒暄圣诞假期",
-        "answer": "How was your Christmas? Ours was very quiet — ate far too much, as usual."
+        "answer": "How was your Christmas? Ours was very quiet — ate far too much, as usual.",
+        "note": "一月上旬的默认寒暄就是 how was your Christmas。ours was very quiet 是最常见的自答模板——英国人习惯把假期说得平淡;ate far too much, as usual 是标准自嘲收尾,幽默又给对方接话空间。不需要真的汇报假期行程。"
       }
     ],
     "chunk": "All set for Christmas"
@@ -153,7 +157,8 @@
     "variants": [
       {
         "prompt": "同事产假结束回来上班,你要迎接一下",
-        "answer": "Welcome back! How's it been? Don't worry, the inbox isn't as scary as it looks."
+        "answer": "Welcome back! How's it been? Don't worry, the inbox isn't as scary as it looks.",
+        "note": "对休长假(产假、病假)回来的同事,用 how's it been? 比 how was it? 更稳——问的是这段日子过得如何,开放而不打探,聊多深让对方决定。inbox 玩笑照旧是英式关怀的形态:用幽默包装体贴。"
       }
     ],
     "chunk": "the inbox isn't as scary as it looks"
@@ -168,7 +173,8 @@
     "variants": [
       {
         "prompt": "团队圣诞聚餐,你今晚开车,轮到别人问你喝什么",
-        "answer": "I'm alright with a sparkling water, cheers — driving tonight."
+        "answer": "I'm alright with a sparkling water, cheers — driving tonight.",
+        "note": "driving tonight 是英国酒局最硬的免酒牌,没人会再劝——劝开车的人喝酒在英国是失礼。sparkling water 和 lime and soda 同为不喝酒者的标准选择。理由一句带过,重点依旧是人在场,轮到你照样请 round。"
       }
     ],
     "chunk": "lime and soda"
@@ -234,7 +240,8 @@
     "variants": [
       {
         "prompt": "同事问你周末怎么样,你其实一直在加班",
-        "answer": "Bit of a working weekend, sadly — but I did escape for a walk on Sunday. You?"
+        "answer": "Bit of a working weekend, sadly — but I did escape for a walk on Sunday. You?",
+        "note": "bit of a working weekend 把「周末都在加班」说得轻描淡写,sadly 一个词自嘲到位。but I did escape for a walk:escape 逃出去透气,自带幽默;did 强调好歹干了件正常事。最后 You? 把球抛回——small talk 的义务是给对方可接的球。"
       }
     ],
     "chunk": "Fairly low-key"
@@ -281,7 +288,8 @@
     "variants": [
       {
         "prompt": "同事抱怨公司系统一早上崩了三次,你要回应",
-        "answer": "Not again — it's been shocking all week, hasn't it?"
+        "answer": "Not again — it's been shocking all week, hasn't it?",
+        "note": "not again 是加入吐槽的万能第一拍,哪儿都能用(系统崩、打印机坏、下雨)。shocking 在英式口语里 = 糟透了,和「震惊」无关;hasn't it 把球传回去让吐槽继续。规则不变:对吐槽给共鸣,不给解决方案。"
       }
     ],
     "chunk": "it's been shocking all week"
@@ -328,7 +336,8 @@
     "variants": [
       {
         "prompt": "工作午餐时同事问你喝点什么,你想喝无酒精的",
-        "answer": "Just a sparkling water for me, cheers."
+        "answer": "Just a sparkling water for me, cheers.",
+        "note": "just a X for me, cheers 是点单的完整句式:just 表示「我这份简单」,cheers = 谢了。工作午餐不喝酒是完全默认的选项,报饮料名就是全部答案——补一段理由反而显得郑重其事。"
       }
     ],
     "chunk": "Just a Diet Coke for me"
@@ -401,7 +410,8 @@
     "variants": [
       {
         "prompt": "十二月初,你感叹圣诞怎么又要到了",
-        "answer": "Christmas has come round quick this year, hasn't it?"
+        "answer": "Christmas has come round quick this year, hasn't it?",
+        "note": "come round 专用于周期性到来的事,圣诞是它的最高频宿主:has come round quick = 怎么又要到了。十一月底到十二月的万能开场,回应通常是 don't remind me! 或 scary, isn't it——全民互相确认「今年又没干成什么」。"
       }
     ]
   },

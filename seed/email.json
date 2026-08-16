@@ -23,7 +23,8 @@
     "variants": [
       {
         "prompt": "你昨天发出去的会议纪要里把一个决定写反了,要发更正",
-        "answer": "Apologies — the minutes I sent yesterday had one decision the wrong way round. We agreed to delay the migration, not to bring it forward. Everything else in the note stands."
+        "answer": "Apologies — the minutes I sent yesterday had one decision the wrong way round. We agreed to delay the migration, not to bring it forward. Everything else in the note stands.",
+        "note": "minutes = 会议纪要(固定用复数);the wrong way round = 写反了、弄颠倒了,英式高频。更正邮件的骨架不变:道歉一次、立刻给正确版本(是 delay 不是 bring forward)、说明影响范围——everything else stands,stand = 依然有效,替对方省掉重读全文的恐慌。"
       }
     ],
     "chunk": "Nothing else in the breakdown is affected"
@@ -284,7 +285,8 @@
     "variants": [
       {
         "prompt": "客户的选择权指令必须在今天两点前提交,你还没收到对方确认",
-        "answer": "Sorry to push, but this one's time-sensitive — we need your election by 2pm today or the default option applies."
+        "answer": "Sorry to push, but this one's time-sensitive — we need your election by 2pm today or the default option applies.",
+        "note": "sorry to push 承认自己在施压,反而让施压可接受;time-sensitive = 时间敏感,比 urgent 克制而具体。election = 公司行动里客户的选择权指令(不是选举);or the default option applies 点明不回复的后果——用后果代替感叹号,是英式催紧急件的正确姿势。"
       }
     ],
     "chunk": "sorry to push"

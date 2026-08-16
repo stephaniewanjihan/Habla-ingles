@@ -9,7 +9,8 @@
     "variants": [
       {
         "prompt": "你没独立做过季度合并报表,想请做过的同事带你走一遍",
-        "answer": "I've not run a quarter-end consolidation end-to-end before — could I grab half an hour with you to walk through how you'd normally do it?"
+        "answer": "I've not run a quarter-end consolidation end-to-end before — could I grab half an hour with you to walk through how you'd normally do it?",
+        "note": "结构与原句完全相同,换了任务:quarter-end consolidation = 季度末合并报表。grab half an hour 借时间、how you'd normally do it 把对方摆在专家位,这套请教框架不随任务变——记住框架,名词随便换。"
       }
     ],
     "chunk": "grab half an hour"
@@ -24,7 +25,8 @@
     "variants": [
       {
         "prompt": "想请同事帮你看看一份复杂的 Excel 公式,不急",
-        "answer": "No rush at all on this, but when you've got a spare few minutes could you sanity-check my formula? Something's off in the lookup and I can't see it."
+        "answer": "No rush at all on this, but when you've got a spare few minutes could you sanity-check my formula? Something's off in the lookup and I can't see it.",
+        "note": "sanity-check my formula:sanity-check 依旧表示只求扫一眼。something's off = 有点不对劲但说不清哪里;承认卡点在 the lookup(查找函数那步)说明你自己先试过了,不是伸手党。Excel 词汇:formula(公式)、lookup(VLOOKUP 之类的查找)。"
       }
     ],
     "chunk": "sanity-check"
@@ -123,7 +125,8 @@
     "variants": [
       {
         "prompt": "对方讲解到费用分摊那一步你没跟上,要请他再讲一遍",
-        "answer": "Sorry, could you run that by me again? You lost me at the allocation step."
+        "answer": "Sorry, could you run that by me again? You lost me at the allocation step.",
+        "note": "you lost me at the allocation step:allocation = 分摊/分配(费用分摊、资源分配都用它),运营和财务的高频词。句式不变:run that by me again 请人重讲,you lost me at X 精确定位断点,对方只用重讲那一段。"
       }
     ],
     "chunk": "run that by me again"

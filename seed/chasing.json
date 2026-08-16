@@ -37,7 +37,8 @@
     "variants": [
       {
         "prompt": "第三次催法务看合同,已经卡住签约,升级前最后催一次",
-        "answer": "Flagging this one again as it's now holding up the signing on our side. If it's stuck somewhere, happy to jump on a quick call and sort it."
+        "answer": "Flagging this one again as it's now holding up the signing on our side. If it's stuck somewhere, happy to jump on a quick call and sort it.",
+        "note": "hold up = 耽搁、卡住进度(holding up the signing 卡住签约),和 block 同义但更口语——what's holding it up? = 卡在哪了。第三催的要点不变:把后果摆出来 + 提议上语音,大家都明白下一步就是抄送上级。"
       }
     ],
     "chunk": "blocking the client report"
@@ -52,7 +53,8 @@
     "variants": [
       {
         "prompt": "反复催供应商无果,要把对方客户经理抄进来,话要说得体面",
-        "answer": "Looping in Sarah for visibility, as we're now up against the quarter-end close on this one."
+        "answer": "Looping in Sarah for visibility, as we're now up against the quarter-end close on this one.",
+        "note": "quarter-end close = 季度结账,财务日历上的硬 deadline,和 payment date 一样没得商量。for visibility 依旧是抄送的标准遮羞布,up against 贴着死线。对供应商抄客户经理和对内抄上级是同一招:动作体面,信号明确。"
       }
     ],
     "chunk": "for visibility"
@@ -67,7 +69,8 @@
     "variants": [
       {
         "prompt": "券商那边一笔配股款迟迟没到账,要催他们去追",
-        "answer": "Could you chase the broker on the outstanding rights proceeds? It's been sitting since the 9th and the client's starting to ask."
+        "answer": "Could you chase the broker on the outstanding rights proceeds? It's been sitting since the 9th and the client's starting to ask.",
+        "note": "rights proceeds = 配股所得款项。it's been sitting since the 9th:sit 形容一笔钱躺着不动,和 outstanding(未到账)可互换。the client's starting to ask 仍是万能加压句——压力来源指向客户,谁也没法反驳。"
       }
     ],
     "chunk": "the client's starting to ask"
@@ -124,7 +127,8 @@
     "variants": [
       {
         "prompt": "客户催你,但你卡在托管行那边,要解释并给出你的行动",
-        "answer": "This one's sitting with the custodian at the moment — I'm chasing them today and will revert as soon as I hear."
+        "answer": "This one's sitting with the custodian at the moment — I'm chasing them today and will revert as soon as I hear.",
+        "note": "同一句式换了卡点:sitting with the custodian = 卡在托管行。sitting with 说清状态不甩锅,revert = 回复你(英国金融邮件惯用),I'm chasing them today 展示你也在推——对客户解释链条卡点,这三件套原样可用。"
       }
     ],
     "chunk": "sitting with"
@@ -139,7 +143,8 @@
     "variants": [
       {
         "prompt": "老板催结果,但你在等审计出具意见,要安抚并展示你在盯",
-        "answer": "We're waiting on sign-off from the auditors — I'm chasing daily and will let you know the moment it lands."
+        "answer": "We're waiting on sign-off from the auditors — I'm chasing daily and will let you know the moment it lands.",
+        "note": "sign-off from the auditors = 审计的签核意见。对老板和对客户话术相同:卡点在第三方 + 追踪频率(daily)+ 触发式承诺(the moment it lands)。lands 形容东西到位,英式高频。"
       }
     ],
     "chunk": "the moment it lands"

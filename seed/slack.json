@@ -51,7 +51,8 @@
     "variants": [
       {
         "prompt": "你想快速确认一个金额的币种,自己其实九成确定",
-        "answer": "Sanity check — that 40k is euros, not sterling, right?"
+        "answer": "Sanity check — that 40k is euros, not sterling, right?",
+        "note": "sanity check 依旧是「九成确定,只求个 yep」的轻量确认。X, not Y, right? 这个结构把你的预设摆出来,对方只需确认或纠正。sterling = 英镑(正式说法);跨境运营里币种确认是保命习惯,错一次就够上新闻。"
       }
     ],
     "chunk": "sanity check"
@@ -66,7 +67,8 @@
     "variants": [
       {
         "prompt": "你刚在群里 @ 错了人,要马上撤回重发",
-        "answer": "Scrap that — tagged the wrong Dan. Reposting below."
+        "answer": "Scrap that — tagged the wrong Dan. Reposting below.",
+        "note": "scrap that 依旧是撤回口误的标准件。tag = 在消息里 @ 某人;the wrong Dan——大公司同名的人太多,@ 错人是日常事故,一句自嘲带过即可。reposting below = 下面重发,Slack 高频词。"
       }
     ],
     "chunk": "scrap that"
@@ -95,7 +97,8 @@
     "variants": [
       {
         "prompt": "有人把 IT 权限的问题发到了你们业务群,要引导他去对的地方",
-        "answer": "Might be one for the IT service desk? They pick things up much faster in there."
+        "answer": "Might be one for the IT service desk? They pick things up much faster in there.",
+        "note": "might be one for... 的引导句式不变:IT service desk = IT 工单台(英国公司的标配叫法)。they pick things up much faster in there 给了对方去对地方的理由——不是「你发错了」,是「那边处理更快」,同一个意思,两种体感。"
       }
     ],
     "chunk": "might be one for"
@@ -110,7 +113,8 @@
     "variants": [
       {
         "prompt": "指令提交截止还有十分钟,对方承诺的确认还没来,提醒一下",
-        "answer": "Gentle nudge — cut-off's in ten."
+        "answer": "Gentle nudge — cut-off's in ten.",
+        "note": "cut-off = 截止时点(指令提交、付款的硬截止),运营岗天天挂嘴边。cut-off's in ten = 还有十分钟截止,数字后省略 minutes 是 Slack 语感。gentle nudge 依旧是最轻的提醒档位,越短越礼貌。"
       }
     ],
     "chunk": "gentle nudge"
@@ -125,7 +129,8 @@
     "variants": [
       {
         "prompt": "下班前交接:今天的指令都提交完了,还剩两笔明天跟",
-        "answer": "Heading off — all instructions are in bar two, will chase those first thing."
+        "answer": "Heading off — all instructions are in bar two, will chase those first thing.",
+        "note": "all instructions are in:in = 已提交进系统;bar two = 除了两笔(bar = except,英式高频,如 all done bar the shouting 大局已定)。first thing = 明早一上班。收工交接的骨架不变:进度 + 剩余 + 承诺。"
       }
     ],
     "chunk": "heading off"
@@ -288,7 +293,8 @@
     "variants": [
       {
         "prompt": "下周三下午要去看牙医,在群里知会大家",
-        "answer": "Heads-up — I'm out from 2pm Wednesday, dentist. Back online by 4 if anything urgent."
+        "answer": "Heads-up — I'm out from 2pm Wednesday, dentist. Back online by 4 if anything urgent.",
+        "note": "heads-up 预告开场;I'm out = 我人不在(比 absent 自然);dentist 一个词就是全部理由——英式知会不过度解释。back online by 4 给出恢复时间,if anything urgent 把口子留好。半天离开用这个格式,整天休假才说 I'm off tomorrow。"
       }
     ],
     "chunk": "Heads-up"

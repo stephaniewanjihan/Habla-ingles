@@ -10,7 +10,8 @@
     "variants": [
       {
         "prompt": "到餐厅报姓氏确认订位",
-        "answer": "Evening — table for two under Chen, booked for half seven."
+        "answer": "Evening — table for two under Chen, booked for half seven.",
+        "note": "under + 姓氏从剧院平移到餐厅:table for two under Chen。half seven = 七点半(half past seven 的英式口语缩短版,注意不是六点半)。Evening 单独用作问候是 good evening 的松弛版,进店第一句非常自然。"
       }
     ]
   },
@@ -25,7 +26,8 @@
     "variants": [
       {
         "prompt": "朋友问你买的什么位置,你说二楼第一排,能看清全场调度",
-        "answer": "Front row of the dress circle — you get the whole stage picture from up there."
+        "answer": "Front row of the dress circle — you get the whole stage picture from up there.",
+        "note": "dress circle(二楼)第一排是老观众的心头好:比 stalls 贵不了多少,却能看全舞台调度(the whole stage picture)——Hadestown 的旋转舞台从上往下看最完整。from up there = 从那个高度。报完座位补一句为什么选它,就是懂行的聊法。"
       }
     ]
   },
@@ -40,7 +42,8 @@
     "variants": [
       {
         "prompt": "中场你要出去,再次从邻座面前挤过",
-        "answer": "Sorry, me again — just nipping out. Thank you."
+        "answer": "Sorry, me again — just nipping out. Thank you.",
+        "note": "me again 自带幽默的道歉(又是我);nip out = 英式「出去一下就回」,nip 泛指快速的小动作(nip to the loo、nip to the shops)。中场挤出去这句够用,回来时换 sorry, coming back through。"
       }
     ]
   },
@@ -55,7 +58,8 @@
     "variants": [
       {
         "prompt": "中场你去取预定的酒水,报名字",
-        "answer": "These two on the end should be ours — under Chen."
+        "answer": "These two on the end should be ours — under Chen.",
+        "note": "中场取预定酒水的场景:吧台或指定桌上一排杯子压着名条,认领时说 these two on the end should be ours(边上那两杯应该是我们的)+ under Chen 报名核对。should be 留了三分余地,万一认错杯子也不尴尬。"
       }
     ]
   },
@@ -98,7 +102,8 @@
     "variants": [
       {
         "prompt": "夸这部剧的灯光设计好到起鸡皮疙瘩",
-        "answer": "The lighting design gave me goosebumps — especially that final blackout."
+        "answer": "The lighting design gave me goosebumps — especially that final blackout.",
+        "note": "gave me goosebumps = 起鸡皮疙瘩,夸演出效果的高频身体反应词(同类:spine-tingling)。blackout = 全场瞬间黑灯,是灯光设计的标点符号,Hadestown 结尾就有教科书级的一个。夸具体部门 + 点一个具体瞬间,比笼统的 amazing 有分量得多。"
       }
     ]
   },
@@ -113,7 +118,8 @@
     "variants": [
       {
         "prompt": "同事问你上周那部剧怎么样,你说好看但篇幅偏长",
-        "answer": "Well worth it — though at three hours it doesn't half test your bladder."
+        "answer": "Well worth it — though at three hours it doesn't half test your bladder.",
+        "note": "well worth it = 值回票价(worth it 的加强版,回答「值得看吗」的标准句)。doesn't half + 动词是英式反话强调:字面「不止一半」,实际 =「可不是一般地」——doesn't half test your bladder = 对膀胱是极大考验。拿如厕自嘲吐槽剧长,是很英式的幽默:夸了剧,又不显得在吹捧。"
       }
     ]
   },
@@ -156,7 +162,8 @@
     "variants": [
       {
         "prompt": "周五同事问你周末干什么,你说周六要去看 Operation Mincemeat",
-        "answer": "Saturday night I'm seeing Operation Mincemeat at last — everyone bangs on about how funny it is."
+        "answer": "Saturday night I'm seeing Operation Mincemeat at last — everyone bangs on about how funny it is.",
+        "note": "at last = 终于(被种草很久才去看);bang on about = 英式口语「反复念叨、安利个不停」,带一点亲昵的埋怨:everyone bangs on about how funny it is = 人人都在吹它好笑。用「大家都说」代替自己下判断,给看完之后的观后感留了悬念。"
       }
     ]
   },
@@ -223,7 +230,7 @@
     "type": "note",
     "scene": "theatre",
     "title": "Hadestown 观剧准备:故事、听点、词汇",
-    "body": "故事:希腊神话双线——穷小子 Orpheus(俄耳甫斯)用歌声追回死去的爱人 Eurydice(欧律狄刻),冥王 Hades 与春神 Persephone 的婚姻同时在冰冻期。叙事人是信使神 Hermes,开场那句 it's an old song 会反复回来。Hadestown 即冥界,被写成一座血汗工厂。结局是悲的,而且开头就告诉你是悲的——it's a sad song, but we sing it anyway 是全剧题眼。听点:新奥尔良爵士风,乐队就在台上;Why We Build the Wall(冥王的洗脑颂歌,墙内有多讽刺你懂的)、Wait for Me(火车灯摇摆的名场面)、Epic III。词汇:the Underworld(冥界)、six feet under(入土)、hellhound(地狱犬)、shroud(裹尸布)、doubt comes in(怀疑袭来——结局的关键)。演出为 sung-through(几乎全程唱),歌词听不全完全正常,抓住 Hermes 的旁白就不会迷路。"
+    "body": "故事:希腊神话双线——穷小子 Orpheus(读 OR-fee-us,重音在头;俄耳甫斯)用歌声追回死去的爱人 Eurydice(读 yoo-RID-uh-see,重音在 RID,别读成 dice 结尾;欧律狄刻),冥王 Hades(读 HAY-deez) 与春神 Persephone(读 per-SEF-uh-nee,重音在 SEF,不是 purse-phone) 的婚姻同时在冰冻期。叙事人是信使神 Hermes(读 HER-meez——爱马仕那个法语读法 air-MEZ 在这儿不通用),开场那句 it's an old song 会反复回来。Hadestown 即冥界,被写成一座血汗工厂。结局是悲的,而且开头就告诉你是悲的——it's a sad song, but we sing it anyway 是全剧题眼。听点:新奥尔良爵士风,乐队就在台上;Why We Build the Wall(冥王的洗脑颂歌,墙内有多讽刺你懂的)、Wait for Me(火车灯摇摆的名场面)、Epic III。词汇:the Underworld(冥界)、six feet under(入土)、hellhound(地狱犬)、shroud(裹尸布)、doubt comes in(怀疑袭来——结局的关键)。演出为 sung-through(几乎全程唱),歌词听不全完全正常,抓住 Hermes 的旁白就不会迷路。"
   },
   {
     "id": "theatre-16",
@@ -243,7 +250,8 @@
     "variants": [
       {
         "prompt": "朋友没听说过 Hadestown,你一句话介绍它",
-        "answer": "It's the one that retells the Orpheus myth in a New Orleans jazz bar — folk opera, gorgeous and heartbreaking."
+        "answer": "It's the one that retells the Orpheus myth in a New Orleans jazz bar — folk opera, gorgeous and heartbreaking.",
+        "note": "retell = 重新讲述(retells the Orpheus myth 把老神话翻新);folk opera = 民谣歌剧,Hadestown 的官方体裁标签。gorgeous and heartbreaking 两个形容词收尾:一个夸美、一个预警虐,一句话介绍就完整了。It's the one that... 句式照旧。"
       }
     ]
   },
@@ -279,7 +287,8 @@
     "variants": [
       {
         "prompt": "向没看过的朋友解释 Hadestown 这个剧名指什么",
-        "answer": "Hadestown is the underworld itself — Hades' town, way down under the ground."
+        "answer": "Hadestown is the underworld itself — Hades' town, way down under the ground.",
+        "note": "剧名拆解:Hades' town = 冥王的城,所有格连读就成了 Hadestown。way down under the ground:way 是程度强化词(way down = 深得很),这个 way down 正是全剧唱词最高频的方位意象(Way Down Hadestown 就是曲名)。"
       }
     ]
   },
@@ -400,7 +409,8 @@
     "variants": [
       {
         "prompt": "开会时提议给失败的项目做一次复盘,用上这个词",
-        "answer": "Shall we run a quick post-mortem on the launch — what actually went wrong?"
+        "answer": "Shall we run a quick post-mortem on the launch — what actually went wrong?",
+        "note": "post-mortem 的职场用法:run a post-mortem on X = 给 X 做复盘(动词配 run 或 do)。quick 降低仪式感;what actually went wrong 里的 actually 暗示「别停在表面原因」。从验尸官那里借来的词,办公室里毫无血腥味。"
       }
     ]
   },
@@ -415,7 +425,8 @@
     "variants": [
       {
         "prompt": "跟同事吐槽方案还在等高层们签字",
-        "answer": "It's all drafted — we're just waiting on the top brass to sign it off."
+        "answer": "It's all drafted — we're just waiting on the top brass to sign it off.",
+        "note": "top brass 的职场版:the top brass = 高层大佬们(集合名词,带点无奈的距离感)。it's all drafted = 稿子全备好了;waiting on someone to sign it off = 卡在某人签核。吐槽审批慢的标准句式:活是好的,章还没盖。"
       }
     ]
   },
@@ -444,7 +455,8 @@
     "variants": [
       {
         "prompt": "开会说最近加班太多影响团队士气,用上这个词",
-        "answer": "Fair warning — three weekends of overtime is starting to dent team morale."
+        "answer": "Fair warning — three weekends of overtime is starting to dent team morale.",
+        "note": "fair warning = 把丑话说在前面(是预警,不是抱怨);dent = 撞出凹痕,dent morale = 挫伤士气——比 hurt 生动,量级又不到 destroy。用具体事实(连续三个周末加班)托住判断,这句在会上是提醒,不是发牢骚。"
       }
     ]
   },
@@ -473,6 +485,505 @@
     "variants": [
       {
         "prompt": "解释英剧里 old boy network(老同学关系网)指什么"
+      }
+    ]
+  },
+  {
+    "id": "theatre-34",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 开场曲叫 Road to Hell——这个短语背后的英语谚语是?",
+    "answer": "The road to hell is paved with good intentions — though in this show it's a literal railroad.",
+    "note": "英语谚语「通往地狱的路由善意铺成」:好心也能办坏事。开场曲 Road to Hell 玩的就是这个典故,而剧里通往冥界的真是一条铁路。paved with = 由……铺成。听到开场曲名,你已经比一半观众多懂一层。",
+    "chunk": "paved with good intentions",
+    "variants": [
+      {
+        "prompt": "同事的好心帮忙反而把事情搞砸了,你想引用那句「善意铺路」的谚语"
+      }
+    ]
+  },
+  {
+    "id": "theatre-35",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 词汇:Orpheus 被反复叫作 poor boy——这个 poor 有几层意思?",
+    "answer": "He's a poor boy in both senses — skint, and 'you poor thing', someone you pity.",
+    "note": "poor 双义:穷(=skint,英式口语「身无分文」)和可怜(you poor thing 是英式安慰/怜悯的固定说法,日常高频)。剧里 poor boy 每次出现都两层都占。in both senses = 两个意义上都成立,这个表达本身也值得偷。",
+    "chunk": "in both senses",
+    "variants": [
+      {
+        "prompt": "同事重感冒还来上班,你安慰一句「你也太惨了」",
+        "answer": "Oh, you poor thing — go home, honestly.",
+        "note": "you poor thing 是英式怜惜的固定说法,对同事、朋友、小孩都可用,亲切而不居高临下。honestly 放句尾 =「真的,听我的」,加重劝说。同事带病上班,这句加一杯热茶,就是英国办公室关怀的标准配置。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-36",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 意象:把 Eurydice 逼向地下的不是坏人,是什么?",
+    "answer": "The cold wind and the storms — in this world the weather itself has gone wrong.",
+    "note": "Hadestown 的世界设定:气候失序(the seasons are broken),寒风和风暴是贫穷与饥饿的化身,Eurydice 是被天气逼下去的。听点:wind 和 storm 在她的唱段里反复出现。顺带的好表达:weather the storm(挺过难关)——职场高频。",
+    "chunk": "The cold wind",
+    "variants": [
+      {
+        "prompt": "用 weather the storm 说「这个季度很难,但我们挺得过去」",
+        "answer": "It'll be a rough quarter, but we'll weather the storm.",
+        "note": "weather 作动词 = 经受住、挺过(从「经受风雨」引申),weather the storm 是职场谈困难时期的第一惯用语。rough quarter = 难熬的季度。承认困难又给信心——Hadestown 里逼人下矿的 storm,到了办公室就成了你的修辞。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-37",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 词汇:Eurydice 做选择时的状态——她不是贪心,她是?",
+    "answer": "She's not greedy, she's starving — hunger is the real villain of act one.",
+    "note": "starve/starving(挨饿)是理解 Eurydice 的钥匙:她卖掉的不是爱情,是换一口饭。日常口语里 I'm starving = 我饿死了(夸张),完全无贬义。同场词:an empty stomach、to go hungry。",
+    "chunk": "starving",
+    "variants": [
+      {
+        "prompt": "中午一点还没吃上饭,你跟同事说饿坏了",
+        "answer": "Right, lunch — I'm absolutely starving.",
+        "note": "Right 开头是英式「好了,行动」的发令枪(Right, let's go);absolutely starving = 饿坏了——starving 本身已是夸张,absolutely 再加一档,日常完全自然。午饭点儿这句喊出来,就是最地道的散会信号。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-38",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 意象:去冥界的方式不是死亡之门,而是?",
+    "answer": "A train — you need a ticket to ride, and Hades decides who gets one.",
+    "note": "Hadestown 把冥界之旅写成一趟货运火车(freight train),Way Down Hadestown 整首歌就是这趟车。a ticket to ride 顺手致敬了披头士。听点:火车汽笛声在配乐里就是「命运来了」的信号。相关词:the railroad line(铁路线)、all aboard(上车啦)。",
+    "chunk": "a ticket to ride",
+    "variants": [
+      {
+        "prompt": "向朋友描述剧里那趟开往地下的火车意象"
+      }
+    ]
+  },
+  {
+    "id": "theatre-39",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 意象:冥界不是火焰地狱,而是一座?",
+    "answer": "A factory town — all furnaces, foundries and endless shift work.",
+    "note": "Hadestown 的地狱是重工业小镇:furnace(熔炉)、foundry(铸造厂)、production line(流水线)、shift(轮班)。工人合唱队的机械动作就是这个意象。shift work 顺带是职场词:night shift 夜班、shift pattern 排班。",
+    "chunk": "furnaces",
+    "variants": [
+      {
+        "prompt": "跟同事聊起这部剧把地狱设定成血汗工厂的巧思"
+      }
+    ]
+  },
+  {
+    "id": "theatre-40",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 金句句式:Wedding Song 里那句「世道如此」怎么说?",
+    "answer": "Times being what they are — hard, and getting harder all the time.",
+    "note": "times being what they are(世道如此)是 Wedding Song 的起手式,也是英语里通用的「大环境不好」句式,职场完全可用:Times being what they are, we're holding off on hiring。它的现代亲戚是 in the current climate。听到这句,整段对唱的逻辑(现实 vs 诗人)就清楚了。",
+    "chunk": "Times being what they are",
+    "variants": [
+      {
+        "prompt": "会上解释为什么今年预算收紧,用「大环境如此」开头",
+        "answer": "Times being what they are, every line of spend is getting a second look.",
+        "note": "times being what they are 的职场实战:放句首做免责状语 =「大环境如此」。every line of spend = 每一笔支出(line 指预算表上的行项);get a second look = 被重新审视——不是「砍你预算」,是「再看一眼」,委婉但人人听得懂。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-41",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 结构:全剧的季节承诺——冬天再长,也要等到什么?",
+    "answer": "Spring will come again — the whole show runs on that promise and that doubt.",
+    "note": "季节循环是全剧的骨架:Persephone 回人间=春天,被带走=冬天;Wait for Me 的等待、结尾的重新开唱,全都挂在 spring will come again 这个承诺上。听点:最后一幕回到开场的酒馆,同一首歌再起——这不是重复,是「明知悲剧仍再唱一次」的仪式。",
+    "chunk": "Spring will come again",
+    "variants": [
+      {
+        "prompt": "用季节比喻安慰经历低谷的朋友:冬天会过去的"
+      }
+    ]
+  },
+  {
+    "id": "theatre-42",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Hadestown 词汇:等他终于回头,她已经——用那个带 long 的说法",
+    "answer": "She's long gone — by the time he turns, there's nothing but the dark.",
+    "note": "long gone = 早就不在了/走了很久了,long 是强化词。日常高频:He left ages ago — he's long gone。剧里这个瞬间就是全剧的心碎点。同族表达:ages ago(很久以前)、gone for good(一去不返)。",
+    "chunk": "long gone",
+    "variants": [
+      {
+        "prompt": "同事来找刚离开的人,你说他早走了",
+        "answer": "You've just missed him — he's long gone, try his mobile.",
+        "note": "you've just missed him = 你刚好错过他(just = 就差一步);long gone 的日常版:走了有一会儿了。try his mobile = 打他手机试试(英式说 mobile 不说 cell)。三段式:错过了 → 早走了 → 给出路,接待访客的完整应对。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-43",
+    "type": "note",
+    "scene": "theatre",
+    "title": "Hadestown 分幕剧情地图(进场前读一遍,全程不迷路)",
+    "body": "名字先读顺(大写 = 重音):Orpheus = OR-fee-us、Eurydice = yoo-RID-uh-see、Hades = HAY-deez、Persephone = per-SEF-uh-nee、Hermes = HER-meez、命运三女神 the Fates 与 gates 押韵。读不准就点「名字发音课」那段对话,每个名字都能单独朗读。\n\n上半场:①Road to Hell——Hermes 报幕介绍所有人,他每次开口讲故事都爱用 See...(「你看」)起头,听到就知道是旁白;②Orpheus 一见钟情求婚(Come Home With Me),Eurydice 用 Wedding Song 泼冷水:婚床婚宴戒指哪里来?③Persephone 回人间,夏天狂欢(Livin' it Up on Top);④她被 Hades 提前接走,冬天骤至,Eurydice 挨饿,而 Orpheus 埋头写歌;⑤Hades 亲自递票(Hey, Little Songbird),Eurydice 在 When the Chips Are Down(命运三女神唱的「走投无路时」)里做出选择,下去了;⑥Orpheus 徒步追下去——Wait for Me,摇摆矿灯名场面;⑦Why We Build the Wall 收上半场。下半场:①Our Lady of the Underground——Persephone 在冥界开地下酒吧(中场后的暖场,气氛最松);②Eurydice 后悔(Flowers);③Orpheus 闯进来,If It's True 唤醒工人;④Epic III——他唱完 Hades 与 Persephone 年轻时的爱情,冥王动摇;⑤Hades 开出条件:他走前面,她跟在后,到地面前不许回头;⑥Doubt Comes In——路越走越黑,怀疑进来了;⑦他回头了。她说的最后一句是 it's you、他说 it's me,然后消失;⑧回到开场酒馆,Road to Hell 重唱:明知是悲歌,我们还是再唱一次——因为也许这一次结局会不同。这就是全剧最后留给你的那句话。"
+  },
+  {
+    "id": "theatre-44",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 词汇:每个行动都要起一个……?顺带这个行动名本身是个什么黑色幽默",
+    "answer": "A codename — and calling it Mincemeat, for a plan built on a corpse, is the grimmest joke in the room.",
+    "note": "codename = 行动代号。mincemeat 本意是做馅的碎肉/果料馅,而习语 make mincemeat of someone = 把人打得落花流水。给一具遗体的行动起名「肉馅」,是英国人黑色幽默的巅峰体现。grim = 冷峻黑暗(grim humour 黑色幽默)。",
+    "chunk": "A codename",
+    "variants": [
+      {
+        "prompt": "向朋友解释为什么这个行动代号本身就是个黑色笑话"
+      }
+    ]
+  },
+  {
+    "id": "theatre-45",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 情节:整个计划成败悬于遗体在对的地点……?",
+    "answer": "Washing ashore — the whole plan hinges on the body washing ashore exactly where they want it.",
+    "note": "wash ashore = (被海水)冲上岸,新闻里漂浮物、遇难者报道的标准动词。hinge on = 成败系于(门轴的比喻),职场高频:The deal hinges on the pricing。一句话双份收获。",
+    "chunk": "washing ashore",
+    "variants": [
+      {
+        "prompt": "说「整个项目成败就系在这次审批上」,用 hinge on",
+        "answer": "The whole project hinges on getting that approval next week.",
+        "note": "hinge on 的职场版:the whole project hinges on X = 整个项目成败系于 X,后面接动名词(hinges on getting that approval)。同义梯度:depends on(中性)< hinges on(命悬一线)。汇报里用它,听众立刻知道关键路径在哪。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-46",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 词汇:给假身份编的那套经得起盘问的说辞叫?",
+    "answer": "A cover story — one that has to hold up under questioning.",
+    "note": "cover story = 掩护身份的说辞;hold up under questioning = 经得起盘问(hold up = 站得住)。剧里给 Major Martin 编织的情书、票根、账单全是 cover story 的血肉。职场里 cover story 引申为对外口径——和你学过的 holding line 是亲戚。",
+    "chunk": "hold up under questioning",
+    "variants": [
+      {
+        "prompt": "讨论对客户的解释口径是否经得起追问",
+        "answer": "Before we send it — does this explanation hold up under questioning?",
+        "note": "hold up under questioning 的职场版:发出去之前先自问「这套解释经得起追问吗」。hold up = 站得住(the argument doesn't hold up = 论证站不住);questioning 泛指客户、审计、监管的连环追问。发敏感邮件前的标准自检句。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-47",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 词汇:保密原则「不该知道的就别知道」怎么说?",
+    "answer": "It's strictly need-to-know — and apparently we don't need to know.",
+    "note": "need-to-know 是情报界的保密原则,on a need-to-know basis = 只向必要的人透露。后半句的自嘲(显然我们不在名单上)是英式办公室的常用抱怨——公司重组的小道消息场景照搬可用。strictly = 严格地,加强版。",
+    "chunk": "need-to-know",
+    "variants": [
+      {
+        "prompt": "同事问你新组织架构的内幕,你自嘲级别不够不知道",
+        "answer": "All very need-to-know at the moment — and clearly I don't need to know.",
+        "note": "all very + 形容词是英式含蓄吐槽的句式(all very hush-hush 同款);need-to-know 从情报术语平移到办公室:重组、并购的小道消息期人人都说这句。后半句自嘲 clearly I don't need to know,把「我也没内幕」说得体面又好笑。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-48",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 讽刺点:剧里一半的敌人不是纳粹,而是?",
+    "answer": "Paperwork and red tape — the British war machine runs on forms in triplicate.",
+    "note": "red tape = 官僚繁文缛节(旧时公文用红带子捆扎),英国人吐槽自家官僚主义的第一词。in triplicate = 一式三份(官僚梗)。这条讽刺线英国观众笑得最响,因为 NHS、签证、市政厅——人人都有 red tape 创伤。你办 visa 的经历就是入场券。",
+    "chunk": "red tape",
+    "variants": [
+      {
+        "prompt": "吐槽一个内部流程审批层级太多",
+        "answer": "Three sign-offs for a stationery order — the red tape here is something else.",
+        "note": "用具体的荒诞事实开场(买文具要三道签核),再下结论,吐槽才有质感。stationery order = 文具采购单(stationery 文具,别拼成 stationary 静止);the red tape is something else:something else 夸张到没法归类——夸人吐槽两头通吃。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-49",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 人物线:Jean 和 Hester 来自哪个部门——40 年代办公室真正的运转核心",
+    "answer": "The typing pool — the women who actually keep the whole operation running.",
+    "note": "typing pool = 打字员室,40 年代办公室的女性集中地,也是本剧最动人的暗线:真正把行动跑通的是被忽视的女性。Dear Bill(Hester 唱)就从这里长出来。相关词:shorthand(速记)、clerical work(文书工作)。这条线是全剧从爆笑转深情的枢纽,提前知道会看得更完整。",
+    "chunk": "The typing pool",
+    "variants": [
+      {
+        "prompt": "向朋友介绍这部剧里女性角色为什么是灵魂"
+      }
+    ]
+  },
+  {
+    "id": "theatre-50",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 背景词:英国观众从小听到大的战时三件套——空袭、配给、灯火管制",
+    "answer": "The Blitz, rationing and the blackout — the home-front trinity every British audience grew up on.",
+    "note": "the Blitz = 1940-41 德军对伦敦大轰炸(闪电战 Blitzkrieg 的缩写);rationing = 食物配给(战后持续到 1954!);blackout = 灯火管制。这三个词是英国集体记忆的底色,剧里不解释直接用。home front = 大后方。祖辈的 Blitz spirit(轰炸精神=苦中作乐硬扛)至今是英国人自我认同的一部分。",
+    "chunk": "The Blitz",
+    "variants": [
+      {
+        "prompt": "同事说地铁站台是当年的防空洞,你接上这段历史",
+        "answer": "Half the Tube doubled as air-raid shelters during the Blitz, didn't it?",
+        "note": "double as = 兼作、一物两用(the sofa doubles as a bed);air-raid shelter = 防空洞。didn't it 把历史知识变成搭话而不是上课。伦敦地铁站台在 Blitz 期间做防空洞是本地人熟知的谈资,这句接得上,融入感立涨。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-51",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 情节:遗体是怎么被送到西班牙海岸的?那个动词",
+    "answer": "A submarine surfaces off the Spanish coast and slips the body into the water.",
+    "note": "surface 作动词 = (潜艇)上浮;真实历史里执行的是皇家海军潜艇 HMS Seraph。slip = 悄悄放入。off the coast = 在近海(不是「离开海岸」)。surface 引申义职场也用:the issue resurfaced = 问题又冒出来了。",
+    "chunk": "surfaces",
+    "variants": [
+      {
+        "prompt": "说「这个老问题这周又冒出来了」,用 resurface",
+        "answer": "That data issue has resurfaced this week, I'm afraid.",
+        "note": "resurface = (问题)再次冒头,从潜艇上浮借来的职场高频词:老 bug、旧数据问题都用它。I'm afraid 放句尾是英式报坏消息的软垫(恐怕是这样)。比 the problem happened again 高一个档位。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-52",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 词汇:搞到一具遗体,意味着要和太平间与殡葬人打交道",
+    "answer": "It means dealing with mortuaries and undertakers — awkwardly, and after hours.",
+    "note": "mortuary = 太平间;undertaker = 殡葬从业者(也叫 funeral director);coroner = 验尸官(此前学过)。真实历史中提供遗体的是伦敦验尸官 Bentley Purchase。after hours = 下班后/非工作时间(职场通用)。这条词汇线是上半场笑点最密的一段。",
+    "chunk": "undertakers",
+    "variants": [
+      {
+        "prompt": "用 after hours 说「这事只能下班后偷偷办」",
+        "answer": "That sort of favour gets sorted after hours, not in office time.",
+        "note": "after hours = 下班后、非办公时间;get sorted = 被搞定(英式万能动词 sort 的被动形态);that sort of favour = 那一类人情。整句自带心照不宣的语气——剧里太平间的交易,正是这么办成的。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-53",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 人物动机:办公室里一半人图的是什么——奖章、晋升、青史留名",
+    "answer": "Glory — medals, promotion, a mention in the history books.",
+    "note": "glory(荣耀)是 Montagu 一线的驱动力,Born to Lead 唱的就是它。相关词:medal(奖章)、decorated(受勋的)、legacy(身后名)。剧的后劲在于:最后被铭记的反而是无名的 Glyndwr Michael——glory 的讽刺闭环。职场版 glory:take the credit(抢功)。",
+    "chunk": "Glory",
+    "variants": [
+      {
+        "prompt": "评价某位同事做事更在意名头而不是结果",
+        "answer": "He's chasing the glory more than the outcome, if we're honest.",
+        "note": "chase the glory = 追逐名头(chase 从催款平移到追名利);more than the outcome 点出对比:图的是荣誉不是结果。if we're honest 句尾 =「说句实在话」,给尖锐评价包一层布。评价同事动机,这句分寸刚好:批评了,但没上升到人品。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-54",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 背景:西班牙名义上是……,所以才成了递假情报的完美信箱",
+    "answer": "Officially neutral — which made it the perfect letterbox for planted secrets.",
+    "note": "neutral = 中立;officially(名义上)一词自带讽刺:佛朗哥的西班牙明面中立、实际亲德,情报会「恰好」流向柏林——整个计划赌的就是这个。planted = 故意放置的(plant evidence 栽赃/布饵)。letterbox 信箱的比喻很英式。",
+    "chunk": "Officially neutral",
+    "variants": [
+      {
+        "prompt": "形容某位同事在两个部门的争端里「名义上中立」",
+        "answer": "He's officially neutral on this — though we all know which way he leans.",
+        "note": "officially neutral 从战时西班牙平移到办公室政治:名义上中立。which way he leans:lean = 倾向(站队、政治立场都用 lean);though we all know... 是心照不宣的后半句。形容不表态的同事,英国人听了会心一笑。"
+      }
+    ]
+  },
+  {
+    "id": "theatre-55",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "Mincemeat 语域:军官阶层满嘴的老派感叹词——「好极了」那一挂",
+    "answer": "Jolly good, splendid, first-rate — the officer class practically speaks in exclamation marks.",
+    "note": "jolly good / splendid / first-rate / marvellous 是老派上流感叹词,剧里密集出现,给人物盖阶级戳。现代英国人用它们多半带自嘲或反讽(说 jolly good 配面无表情)。听懂这个语域,Mincemeat 一半的阶级笑点就通了。",
+    "chunk": "Jolly good",
+    "variants": [
+      {
+        "prompt": "朋友问为什么英剧里贵族总说 splendid,你解释这套感叹词的阶级色彩"
+      }
+    ]
+  },
+  {
+    "id": "theatre-56",
+    "type": "note",
+    "scene": "theatre",
+    "title": "Operation Mincemeat 分幕剧情地图 + 人物表(五人演全员)",
+    "body": "人物(记住五个名字,反串和多角是常态):Ewen Montagu(读 YOO-en MON-tuh-gyoo)——主导行动的贵族军官,自信到自恋,Born to Lead 是他的歌;Charles Cholmondeley——发音是本剧头号梗,念 CHUM-lee,昆虫学书呆子,行动点子的真正来源;Hester Leggatt(读 HES-tuh LEG-it)——资深秘书,情书是她执笔,Dear Bill 是她的(也是全剧泪点);Jean Leslie——年轻打字员,她的照片成了遗体口袋里的「未婚妻 Pam」;还有各色配角(验尸官、司机、纳粹间谍、丘吉尔)全由同样五人闪电换装完成——换装本身就是笑点。剧情 beats:①MI5 办公室日常,Cholmondeley 提出「用一具尸体骗过希特勒」;②说服上级、搞到遗体(太平间线);③造人:军官证、情书、票根、当票,Major William Martin 诞生;④潜艇投放,遗体上岸;⑤西班牙拉锯:文件会不会被打开?会不会做 post-mortem?⑥情报进柏林,希特勒调兵希腊;⑦西西里登陆,伤亡远低于预期;⑧尾声:揭开遗体真名 Glyndwr Michael(威尔士名,读近似 GLIN-duh MY-kul)——一个无名流浪汉成了「从未存在过的人」,全场安静下来的时刻。节奏提示:上半场是爆笑机器,下半场笑着笑着就哭了;Dear Bill 响起时,放下理解歌词的执念,情绪全在旋律里。"
+  },
+  {
+    "id": "theatre-57",
+    "type": "pick",
+    "scene": "theatre",
+    "prompt": "英语习语 make mincemeat of someone 是什么意思?",
+    "options": [
+      {
+        "text": "把某人剁成肉馅做菜(字面)",
+        "correct": false
+      },
+      {
+        "text": "把对手打得落花流水、彻底碾压",
+        "correct": true
+      }
+    ],
+    "note": "make mincemeat of = 彻底击溃(辩论、比赛、军事都能用):Their lawyer made mincemeat of our argument。行动代号 Mincemeat 的弦外之音正在于此——这一次被做成肉馅的是希特勒的判断。看完剧,这个习语你就永远记住了。",
+    "variants": [
+      {
+        "prompt": "形容对方律师把我们的论点驳得体无完肤,用这个习语"
+      }
+    ]
+  },
+  {
+    "id": "theatre-58",
+    "type": "listen",
+    "scene": "theatre",
+    "title": "名字发音课:希腊众神与一个英国怪姓",
+    "task": "别看文字先听一遍,专门听人名。听完点开文稿,每个名字都有单独的朗读按钮,跟读到顺口为止——周四晚上这些名字会被唱几十遍。",
+    "cast": {
+      "Maya": "f",
+      "Dan": "m"
+    },
+    "dialogue": [
+      {
+        "speaker": "Maya",
+        "text": "Help me out before Thursday — I've just realised I can't say half the Greek names in this musical out loud.",
+        "zh": "周四之前帮帮我——我刚发现这部音乐剧里一半的希腊名字我都读不出口。"
+      },
+      {
+        "speaker": "Dan",
+        "text": "Easily fixed. The hero is Orpheus. Stress the first bit — it sounds like 'or', then 'fee', then 'us'.",
+        "zh": "好办。男主是 Orpheus,重音在第一截——听起来就是 or、fee、us 三段连起来。"
+      },
+      {
+        "speaker": "Maya",
+        "text": "Orpheus, Orpheus. And the girl he loses? I keep wanting to end it like 'dice'.",
+        "zh": "Orpheus,Orpheus。那他失去的那个女孩呢?我总想把结尾读成 dice。"
+      },
+      {
+        "speaker": "Dan",
+        "text": "Everyone does at first. It's Eurydice — four beats: 'you', 'rid', 'uh', 'see', with the push on 'rid'.",
+        "zh": "一开始人人都这样。其实是 Eurydice——四拍:you、rid、uh、see,重音砸在 rid 上。"
+      },
+      {
+        "speaker": "Maya",
+        "text": "Eurydice. Lovely. Hades and Persephone I've only ever seen written down.",
+        "zh": "Eurydice,真好听。Hades 和 Persephone 我只见过字,从没听人读过。"
+      },
+      {
+        "speaker": "Dan",
+        "text": "Hades is just 'hay' plus 'deez'. Persephone is the sneaky one — per-SEF-uh-nee, four beats again. Not 'purse-phone'.",
+        "zh": "Hades 就是 hay 加 deez。Persephone 最容易踩坑——per-SEF-uh-nee,也是四拍。不是 purse-phone。"
+      },
+      {
+        "speaker": "Maya",
+        "text": "Not a phone, noted. And the narrator — Hermes, like the scarf people?",
+        "zh": "不是电话,记住了。那位叙事人呢——Hermes,跟卖丝巾那家读法一样吗?"
+      },
+      {
+        "speaker": "Dan",
+        "text": "Different thing entirely: the Greek god is HER-meez. The posh French handbags are 'air-mez'. Mix them up and it'll cost you either way.",
+        "zh": "完全两回事:希腊神读 HER-meez,卖贵包的法国牌子才读 air-mez。俩搞混了,哪边的代价都不小。"
+      },
+      {
+        "speaker": "Maya",
+        "text": "HER-meez the god, air-mez the bags. And those three women who keep circling Eurydice?",
+        "zh": "神是 HER-meez,包是 air-mez。那三个一直围着 Eurydice 转的女人是谁?"
+      },
+      {
+        "speaker": "Dan",
+        "text": "The Fates — rhymes with 'gates'. Destiny with harmonies, and they never let up for a second.",
+        "zh": "命运三女神 the Fates——和 gates 押韵。长了和声的命运,而且一秒都不放过任何人。"
+      },
+      {
+        "speaker": "Maya",
+        "text": "Fates, gates. Right — I might finally sound like I know my Greek myths.",
+        "zh": "Fates、gates。行——我总算能显得懂点希腊神话了。"
+      },
+      {
+        "speaker": "Dan",
+        "text": "One more for Saturday: Operation Mincemeat has a Major Cholmondeley. Spelt 'chol', 'mon', 'de', 'ley' — said 'Chumley'. The show milks that joke, so you're ahead of the room.",
+        "zh": "再送你一个周六用的:Operation Mincemeat 里有位 Cholmondeley 少校。拼写是 chol-mon-de-ley,读出来却是 Chumley。剧里把这个梗玩到飞起,你先懂就赢在起跑线。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "Orpheus",
+        "gloss": "读 OR-fee-us,重音在头 · 俄耳甫斯,男主,写歌的穷小子"
+      },
+      {
+        "phrase": "Eurydice",
+        "gloss": "读 yoo-RID-uh-see,四拍重音在 RID · 欧律狄刻,女主"
+      },
+      {
+        "phrase": "Persephone",
+        "gloss": "读 per-SEF-uh-nee,四拍重音在 SEF · 春神,冥王之妻"
+      },
+      {
+        "phrase": "Hades",
+        "gloss": "读 HAY-deez · 冥王,Hadestown 就是他的城"
+      },
+      {
+        "phrase": "Hermes",
+        "gloss": "读 HER-meez · 信使神,全剧叙事人(法国爱马仕才读 air-MEZ)"
+      },
+      {
+        "phrase": "The Fates",
+        "gloss": "读 FAYTS,与 gates 押韵 · 命运三女神,三人和声从头缠到尾"
+      },
+      {
+        "phrase": "Cholmondeley",
+        "gloss": "读 CHUM-lee · Mincemeat 的书呆子主角,发音梗本梗"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "台上从头讲到尾的叙事人是哪一位?",
+        "options": [
+          {
+            "text": "Hermes(HER-meez),信使神",
+            "correct": true
+          },
+          {
+            "text": "Hades(HAY-deez),冥王",
+            "correct": false
+          },
+          {
+            "text": "Orpheus(OR-fee-us),歌手",
+            "correct": false
+          }
+        ],
+        "why": "Hermes 是信使神,开场 Road to Hell 就是他报幕;他一开口讲故事就爱用 See... 起头,听到就知道是旁白。"
+      },
+      {
+        "q": "哪个名字是四个音节、重音落在第二个音节?",
+        "options": [
+          {
+            "text": "Eurydice",
+            "correct": true
+          },
+          {
+            "text": "Hades",
+            "correct": false
+          },
+          {
+            "text": "the Fates",
+            "correct": false
+          }
+        ],
+        "why": "Eurydice = you-RID-uh-see,四拍重音在 RID;Hades 只有两拍,the Fates 一拍。别被拼写骗成 dice 结尾。"
       }
     ]
   }

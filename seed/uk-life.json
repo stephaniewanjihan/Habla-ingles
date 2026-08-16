@@ -7,7 +7,11 @@
     "answer": "I'm trying to get a GP appointment — you have to ring at eight on the dot or you've got no chance.",
     "note": "GP(全科医生)是 NHS 的入口,看专科必须先经 GP 转诊(referral)。早上八点整打电话抢号是全民共同经历,吐槽它是最安全的英国话题之一。on the dot = 整点分秒不差。",
     "chunk": "on the dot",
-    "variants": [{ "prompt": "同事问你腰疼看了没有,你说在等 GP 的号" }]
+    "variants": [
+      {
+        "prompt": "同事问你腰疼看了没有,你说在等 GP 的号"
+      }
+    ]
   },
   {
     "id": "uk-life-02",
@@ -17,7 +21,11 @@
     "answer": "The pharmacist sorted me out in five minutes — saved me a two-week wait for the GP.",
     "note": "chemist/pharmacy(Boots 之类)的药剂师能处理小毛病、开非处方药,是 NHS 官方推荐的第一站。sort someone out 是英式万能动词短语:把人的问题解决掉。这句同时是对 NHS 等待时间的标准调侃。",
     "chunk": "sorted me out",
-    "variants": [{ "prompt": "同事感冒了纠结要不要约医生,你建议先去药房问问" }]
+    "variants": [
+      {
+        "prompt": "同事感冒了纠结要不要约医生,你建议先去药房问问"
+      }
+    ]
   },
   {
     "id": "uk-life-03",
@@ -27,7 +35,11 @@
     "answer": "Don't forget Monday's a bank holiday, so everything shifts back a day.",
     "note": "英国法定假日叫 bank holiday(银行休市故得名),几乎都落在周一,凑成 bank holiday weekend(长周末)。五月有两个、八月底一个。项目排期、结算日、快递全会受影响——金融行业对它尤其敏感。",
     "chunk": "a bank holiday",
-    "variants": [{ "prompt": "客户问为什么这周结算晚一天,你解释因为周一是法定假日" }]
+    "variants": [
+      {
+        "prompt": "客户问为什么这周结算晚一天,你解释因为周一是法定假日"
+      }
+    ]
   },
   {
     "id": "uk-life-04",
@@ -37,7 +49,11 @@
     "answer": "Has your council tax gone up as well? Band D is daylight robbery these days.",
     "note": "council tax 是按房产估值分档(Band A-H)交给地方政府的税,每年四月涨价,是全民吐槽项目。daylight robbery 是英式\"明抢\"。作为租客通常也要交,你完全有资格加入这个吐槽。",
     "chunk": "daylight robbery",
-    "variants": [{ "prompt": "同事说他家水电气全涨了,你接一句自己的账单也离谱" }]
+    "variants": [
+      {
+        "prompt": "同事说他家水电气全涨了,你接一句自己的账单也离谱"
+      }
+    ]
   },
   {
     "id": "uk-life-05",
@@ -47,7 +63,11 @@
     "answer": "We're on a rolling contract now — I'd rather that than be tied into another twelve months.",
     "note": "英国租房:fixed term(固定期,通常 12 个月)到期后自动转 rolling/periodic(按月滚动),搬家只需一个月通知。be tied into 是\"被合同绑住\"。相关词:deposit scheme(押金托管)、notice period、letting agent。",
     "chunk": "a rolling contract",
-    "variants": [{ "prompt": "同事问你租约什么时候到期,你说已经转成月租滚动了" }]
+    "variants": [
+      {
+        "prompt": "同事问你租约什么时候到期,你说已经转成月租滚动了"
+      }
+    ]
   },
   {
     "id": "uk-life-06",
@@ -57,7 +77,13 @@
     "answer": "I've got a railcard, so the off-peak fares aren't too brutal.",
     "note": "railcard(26-30、Two Together 等)一年 30 镑打七折。票价体系:peak(早晚高峰,天价)/off-peak/advance(提前特价,绑定车次)。吐槽火车票价是英国国民运动,这套词汇是入场券。",
     "chunk": "off-peak",
-    "variants": [{ "prompt": "同事惊讶你去曼城的票这么便宜,你解释是提前买的特价票", "answer": "It was an advance ticket — book two weeks out and it's half the price." }]
+    "variants": [
+      {
+        "prompt": "同事惊讶你去曼城的票这么便宜,你解释是提前买的特价票",
+        "answer": "It was an advance ticket — book two weeks out and it's half the price.",
+        "note": "advance ticket = 提前特价票(绑定具体车次,错过作废);book two weeks out:out 表示提前量(two weeks out = 提前两周),英式高频;it's half the price = 直接半价。给同事传授省钱经,这句是火车通勤党的标准安利。"
+      }
+    ]
   },
   {
     "id": "uk-life-07",
@@ -67,7 +93,11 @@
     "answer": "Fancy a Sunday roast this weekend? There's a decent pub round the corner from mine.",
     "note": "Sunday roast(烤肉+约克郡布丁+肉汁)是周日的制度性午餐,好酒吧要订位。fancy = 想不想要,英式邀约的标准开头。round the corner from mine 的 mine = my place。接受度极高的社交邀请,也适合你主动发起。",
     "chunk": "Fancy a Sunday roast",
-    "variants": [{ "prompt": "外地朋友周末来伦敦,你提议带他去体验一顿正经的周日烤肉" }]
+    "variants": [
+      {
+        "prompt": "外地朋友周末来伦敦,你提议带他去体验一顿正经的周日烤肉"
+      }
+    ]
   },
   {
     "id": "uk-life-08",
@@ -77,7 +107,11 @@
     "answer": "Count me in for the pub quiz — fair warning though, my specialist subject is Chinese pop from the noughties.",
     "note": "pub quiz 是英国酒吧的每周固定节目:组队答题,分 rounds(general knowledge、music、sport)。count me in = 算我一个。后半句的自嘲式免责是入队礼仪——先声明自己的冷门强项,反而是加分的幽默。noughties = 2000-2009 年代。",
     "chunk": "Count me in",
-    "variants": [{ "prompt": "团队组织周五去打保龄球,你表示参加,顺带自嘲水平很差" }]
+    "variants": [
+      {
+        "prompt": "团队组织周五去打保龄球,你表示参加,顺带自嘲水平很差"
+      }
+    ]
   },
   {
     "id": "uk-life-09",
@@ -85,11 +119,21 @@
     "scene": "uk-life",
     "prompt": "有人在咖啡店插到了你前面,你要指出来,哪句是英式的?",
     "options": [
-      { "text": "Hey, don't jump the queue!", "correct": false },
-      { "text": "Sorry — I think the queue starts back there.", "correct": true }
+      {
+        "text": "Hey, don't jump the queue!",
+        "correct": false
+      },
+      {
+        "text": "Sorry — I think the queue starts back there.",
+        "correct": true
+      }
     ],
     "note": "排队是英国的国民宗教,但指出插队也要用抱歉开头、把矛头对准队伍而不是人(the queue starts back there,好像对方只是没看见)。直接指责会让全场尴尬——包括排队的其他人。对方九成会连声道歉退回去。",
-    "variants": [{ "prompt": "地铁站有人挤到检票队伍前面,你要提醒他队尾在后面" }]
+    "variants": [
+      {
+        "prompt": "地铁站有人挤到检票队伍前面,你要提醒他队尾在后面"
+      }
+    ]
   },
   {
     "id": "uk-life-10",
@@ -99,7 +143,13 @@
     "answer": "Don't forget the clocks go back this weekend — one extra hour in bed, at least.",
     "note": "英国夏令时:三月底 clocks go forward(少睡一小时),十月底 go back(多睡一小时)。记法是 spring forward, fall back。换钟前后一周是固定闲聊话题,十月这次的标准安慰就是\"多睡一小时\",然后开始抱怨四点天黑。",
     "chunk": "the clocks go back",
-    "variants": [{ "prompt": "三月底,同事抱怨周一起不来,你点出因为刚调了夏令时少睡一小时", "answer": "The clocks went forward, didn't they — that lost hour always hurts on the Monday." }]
+    "variants": [
+      {
+        "prompt": "三月底,同事抱怨周一起不来,你点出因为刚调了夏令时少睡一小时",
+        "answer": "The clocks went forward, didn't they — that lost hour always hurts on the Monday.",
+        "note": "三月底的版本:clocks go forward = 拨快一小时(少睡一小时);that lost hour = 被偷走的那一小时;hurts on the Monday——the Monday 特指换钟后的那个周一,加 the 是英式口语的小细节。全民困一周,这句就是标准接法。"
+      }
+    ]
   },
   {
     "id": "uk-life-11",
@@ -109,7 +159,11 @@
     "answer": "Missed the delivery again — the parcel's gone back to the depot, so that's my Saturday morning sorted.",
     "note": "错过快递会收到 while-you-were-out 卡,包裹被拉回 depot(站点)自取或重约。that's my Saturday morning sorted 是英式反讽:周六上午\"有安排了\"(去取快递)。抱怨快递是稳定的共鸣话题,Evri 是全民吐槽对象。",
     "chunk": "gone back to the depot",
-    "variants": [{ "prompt": "同事说等了一天的快递没来,你分享自己上周跑站点取件的惨痛经历" }]
+    "variants": [
+      {
+        "prompt": "同事说等了一天的快递没来,你分享自己上周跑站点取件的惨痛经历"
+      }
+    ]
   },
   {
     "id": "uk-life-12",

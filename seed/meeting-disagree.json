@@ -9,7 +9,8 @@
     "variants": [
       {
         "prompt": "会议要跳到下一项,但预算那块你觉得还没说透",
-        "answer": "Sorry to jump in — before we move on, can we come back to the budget? I don't think we've closed on it."
+        "answer": "Sorry to jump in — before we move on, can we come back to the budget? I don't think we've closed on it.",
+        "note": "同一张通行证换了议题:sorry to jump in 先给打断上保险,we've not closed on the budget = 预算还没到结论。这个框架值得练到条件反射——议题名词随便换,插话的姿势不变。"
       }
     ],
     "chunk": "sorry to jump in"
@@ -24,7 +25,8 @@
     "variants": [
       {
         "prompt": "你做的成本测算被当场质疑,但你反复核过,要守住立场",
-        "answer": "I hear the concern, but these figures have been through two rounds of checks. Happy to walk through the workings after the meeting."
+        "answer": "I hear the concern, but these figures have been through two rounds of checks. Happy to walk through the workings after the meeting.",
+        "note": "figures 与 numbers 同义,金融口语里 figures 更常见(the figures don't add up = 数对不上)。walk through the workings:workings = 计算过程/底稿,英式说法。三步不变:接住质疑(I hear the concern)→ 事实顶住(两轮核对)→ 开一扇门(会后看细节)。"
       }
     ],
     "chunk": "I hear the concern"
@@ -39,7 +41,8 @@
     "variants": [
       {
         "prompt": "同事提的新流程你认同方向,但不同意上线顺序",
-        "answer": "I'm with you on the approach — where I'd differ is the sequencing. I'd pilot with one team first."
+        "answer": "I'm with you on the approach — where I'd differ is the sequencing. I'd pilot with one team first.",
+        "note": "pilot 作动词 = 先小范围试点(pilot with one team 先拿一个组试),新流程上线讨论的高频词。句式不变:I'm with you on X, where I'd differ is Y——划出共识、定位分歧,然后立刻跟上自己的替代方案。"
       }
     ],
     "chunk": "I'm with you on"
@@ -54,7 +57,8 @@
     "variants": [
       {
         "prompt": "会上要定供应商了,但你认为该等比价结果出来再决定",
-        "answer": "Could we park this until the tender results land? I'd rather we commit once, with the full picture."
+        "answer": "Could we park this until the tender results land? I'd rather we commit once, with the full picture.",
+        "note": "tender = 招标(the tender results 投标/比价结果),英国采购流程的标配词。park(暂缓但不否决)+ commit once, with the full picture 的逻辑原样适用:用问句把「暂缓」的决定权交给主持人,你只提供理由。"
       }
     ],
     "chunk": "Could we park this"
@@ -69,7 +73,8 @@
     "variants": [
       {
         "prompt": "有人把生效日期说错了,这会影响费用计算,要当场纠正",
-        "answer": "Just to be precise on one thing — the effective date is the 1st, not the 15th. It changes the maths slightly."
+        "answer": "Just to be precise on one thing — the effective date is the 1st, not the 15th. It changes the maths slightly.",
+        "note": "effective date = 生效日期,合同、费率、政策变更的关键日。just to be precise 依旧把纠错包装成补细节,changes the maths 点明有实际后果。日期类错误要当场纠——过了这个会,错日期就写进纪要了。"
       }
     ],
     "chunk": "just to be precise"
@@ -84,7 +89,8 @@
     "variants": [
       {
         "prompt": "方案本身没问题,但你担心监管口径不认,要把风险摆上桌",
-        "answer": "My worry is the regulatory side — if they push back on the classification, do we have a fallback?"
+        "answer": "My worry is the regulatory side — if they push back on the classification, do we have a fallback?",
+        "note": "the regulatory side = 监管口径;classification = (产品/交易的)归类定性,监管争议的常见焦点。my worry is 把判断标为个人担忧,do we have a fallback 用问句逼会议正面处理——对监管风险这招尤其有效,没人敢明说「不管它」。"
       }
     ],
     "chunk": "my worry is"
@@ -141,7 +147,8 @@
     "variants": [
       {
         "prompt": "你不同意对方的成本假设,想先攻假设而不是直接说结论错",
-        "answer": "Help me understand the headcount assumption — is that based on this year's plan? Because the hiring freeze changes it quite a bit."
+        "answer": "Help me understand the headcount assumption — is that based on this year's plan? Because the hiring freeze changes it quite a bit.",
+        "note": "headcount = 人头/编制,预算讨论的核心词;hiring freeze = 招聘冻结。help me understand 依旧是包装成求教的质询。攻假设不攻结论:招聘已冻结还按满编测算,结论自己就站不住了。"
       }
     ],
     "chunk": "help me understand"
@@ -156,7 +163,8 @@
     "variants": [
       {
         "prompt": "大家默认新流程能按时上线,但你知道它没留测试时间",
-        "answer": "One thing I'd flag — this plan assumes zero rework. One failed test cycle and we miss the go-live."
+        "answer": "One thing I'd flag — this plan assumes zero rework. One failed test cycle and we miss the go-live.",
+        "note": "rework = 返工;test cycle = 测试轮次;go-live = 系统上线日(名词)。one thing I'd flag 把风险登记在案,用具体场景(一轮测试失败)代替抽象的 it's too tight。说了这句,将来真出事时你是提醒过的人。"
       }
     ],
     "chunk": "one thing I'd flag"
@@ -231,7 +239,8 @@
     "variants": [
       {
         "prompt": "对方的测算漏算了税,结论因此不成立,你要指出",
-        "answer": "I'm not sure that holds — I think tax comes out before the margin, which changes the number."
+        "answer": "I'm not sure that holds — I think tax comes out before the margin, which changes the number.",
+        "note": "I'm not sure that holds:hold = 论证站得住脚,攻论证不攻人(you forgot 把错钉在人身上,是大忌)。后半句给出具体机制——tax comes out before the margin(税在算利润率之前先扣,comes out = 被扣除),证明你不是感觉不对,是看出了哪里不对。"
       }
     ],
     "chunk": "I'm not sure that holds"
@@ -255,7 +264,8 @@
     "variants": [
       {
         "prompt": "你上个季度提过的系统风险这次又出现了,要再提一次",
-        "answer": "Coming back to a point from last quarter — I still think the reconciliation risk is live."
+        "answer": "Coming back to a point from last quarter — I still think the reconciliation risk is live.",
+        "note": "coming back to a point 中性地重启旧话题,不带「你们上次没听」的怨气(as I already said 是被动攻击)。still think 表明立场未变;the risk is live = 风险仍然存在,live 读 /laɪv/,风控场合的地道用词。"
       }
     ],
     "chunk": "coming back to a point"
