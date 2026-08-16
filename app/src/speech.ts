@@ -18,7 +18,31 @@ function pickVoice(): SpeechSynthesisVoice | null {
 
 export const canSpeak = typeof window !== 'undefined' && 'speechSynthesis' in window
 
+/**
+ * 系统语音列表是异步加载的:冷启动后 getVoices() 常常先返回空数组,
+ * 直接分配就会全员落到默认声(通常是男声)。播放前必须等它就绪。
+ */
+function loadVoices(): Promise<SpeechSynthesisVoice[]> {
+  if (!canSpeak) return Promise.resolve([])
+  const now = speechSynthesis.getVoices()
+  if (now.length) return Promise.resolve(now)
+  return new Promise(resolve => {
+    let done = false
+    const finish = () => {
+      if (done) return
+      done = true
+      resolve(speechSynthesis.getVoices())
+    }
+    speechSynthesis.addEventListener('voiceschanged', finish, { once: true })
+    setTimeout(finish, 1500)
+  })
+}
+
 if (canSpeak) {
+  // 启动即预热,列表到位后刷新单句朗读用的默认声
+  void loadVoices().then(() => {
+    voice = pickVoice()
+  })
   speechSynthesis.onvoiceschanged = () => {
     voice = pickVoice()
   }
@@ -36,11 +60,10 @@ export function speak(text: string): void {
 }
 
 /** 常见系统语音的性别名单:按名字判断,不同平台通用 */
-const FEMALE_VOICES = /kate|serena|martha|sonia|libby|stephanie|susan|samantha|karen|moira|tessa|fiona|allison|ava|nicky|joelle|shelley|kathy|flo|sandy|anna|emily|catherine/i
+const FEMALE_VOICES = /kate|serena|martha|sonia|libby|stephanie|susan|samantha|karen|moira|tessa|fiona|allison|ava|nicky|joelle|shelley|kathy|flo|sandy|anna|emily|catherine|veena|zoe|kara|helena|hazel/i
 const MALE_VOICES = /daniel|arthur|oliver|alex\b|aaron|fred|gordon|lee\b|rishi|james|thomas|albert|bruce|junior|ralph|reed|rocko|eddy/i
 
-function poolByGender(): { f: SpeechSynthesisVoice[]; m: SpeechSynthesisVoice[] } {
-  const vs = canSpeak ? speechSynthesis.getVoices() : []
+function poolByGender(vs: SpeechSynthesisVoice[]): { f: SpeechSynthesisVoice[]; m: SpeechSynthesisVoice[] } {
   const en = [...vs.filter(v => v.lang === 'en-GB'), ...vs.filter(v => v.lang.startsWith('en') && v.lang !== 'en-GB')]
   return {
     f: en.filter(v => FEMALE_VOICES.test(v.name) && !MALE_VOICES.test(v.name)),
@@ -52,8 +75,9 @@ function poolByGender(): { f: SpeechSynthesisVoice[]; m: SpeechSynthesisVoice[] 
 function voicesForCast(
   speakers: string[],
   cast: Record<string, 'm' | 'f'> | undefined,
+  allVoices: SpeechSynthesisVoice[],
 ): Map<string, SpeechSynthesisVoice | null> {
-  const { f, m } = poolByGender()
+  const { f, m } = poolByGender(allVoices)
   const used = new Set<string>()
   const pickFrom = (pool: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null => {
     const fresh = pool.find(v => !used.has(v.name)) ?? pool[0] ?? null
@@ -104,7 +128,7 @@ export function playDialogue(
   }
   speechSynthesis.cancel()
   const speakers = [...new Set(lines.map(l => l.speaker))]
-  const voices = voicesForCast(speakers, cast)
+  let voices = new Map<string, SpeechSynthesisVoice | null>()
   let stopped = false
   let i = 0
   void acquireWakeLock()
@@ -147,7 +171,12 @@ export function playDialogue(
     }
     speechSynthesis.speak(u)
   }
-  next()
+  // 等系统语音列表就绪再分配角色声音,否则性别分配会整体落空
+  void loadVoices().then(vs => {
+    if (stopped) return
+    voices = voicesForCast(speakers, cast, vs)
+    next()
+  })
   return {
     stop: () => {
       stopped = true

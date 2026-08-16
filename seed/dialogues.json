@@ -883,5 +883,608 @@
         "gloss": "字面「过着梦想生活」,实际是标准反讽:惨但认了。回应吐槽的万能句。"
       }
     ]
+  },
+  {
+    "id": "dialogue-08",
+    "type": "listen",
+    "scene": "presenting",
+    "title": "早晨站会:两分钟把话说清",
+    "task": "先听两遍。站会的规矩是短:每人三句话——做了什么、接下来做什么、卡在哪。注意谁说得最好。",
+    "cast": {
+      "Emma": "f",
+      "Josh": "m",
+      "Priya": "f"
+    },
+    "dialogue": [
+      {
+        "speaker": "Emma",
+        "text": "Right, quick round the table. Josh, kick us off.",
+        "zh": "好,快速过一圈。Josh,你先来。"
+      },
+      {
+        "speaker": "Josh",
+        "text": "Yesterday I cleared the June breaks, all tied out. Today it's the dividend file. One blocker — I'm still waiting on access to the new share drive.",
+        "zh": "昨天清完了六月的差异,全部对平。今天做股息文件。一个卡点——新共享盘的权限还没批下来。"
+      },
+      {
+        "speaker": "Emma",
+        "text": "How long's that been outstanding?",
+        "zh": "这个卡多久了?"
+      },
+      {
+        "speaker": "Josh",
+        "text": "Three days. I've chased the ticket twice.",
+        "zh": "三天了。工单我催过两次。"
+      },
+      {
+        "speaker": "Emma",
+        "text": "Leave it with me — I'll lean on IT after this. Priya?",
+        "zh": "交给我——会后我去催 IT。Priya?"
+      },
+      {
+        "speaker": "Priya",
+        "text": "Client pack went out last night, one day early. Today I'm on the fee reconciliation. No blockers, but a heads-up — I'm out Thursday afternoon, so anything for me, get it in by lunchtime.",
+        "zh": "客户材料昨晚发出去了,提前了一天。今天做费用对账。没有卡点,不过提前说一声——周四下午我不在,有事找我的话中午前提。"
+      },
+      {
+        "speaker": "Emma",
+        "text": "Nice one on the early delivery. OK, that's everyone — let's crack on.",
+        "zh": "提前交付漂亮。好,都过完了——干活吧。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Emma 说 \"Leave it with me\" 的意思和分量是?",
+        "options": [
+          {
+            "text": "「交给我来处理」——当场把下属的卡点接走,这是好经理在站会上的标志性动作",
+            "correct": true
+          },
+          {
+            "text": "「先放着吧」——她想拖延这件事",
+            "correct": false
+          },
+          {
+            "text": "她在批评 Josh 不该把小事拿到会上说",
+            "correct": false
+          }
+        ],
+        "why": "leave it with me 是英式接锅句:从此这事的进展责任在我。站会上下属报 blocker,经理当场认领,是这个仪式真正的价值所在。你报卡点时也要像 Josh 一样:卡了多久、自己推过几次,一句讲清。"
+      },
+      {
+        "q": "Priya 的发言好在哪里?",
+        "options": [
+          {
+            "text": "她提前一天交付并且邀功了",
+            "correct": false
+          },
+          {
+            "text": "三句话结构完整,还预告了自己周四不在——把别人找不到她的成本提前消掉",
+            "correct": true
+          },
+          {
+            "text": "她说得最长,信息最多",
+            "correct": false
+          }
+        ],
+        "why": "站会发言的满分模板:昨天/今天/卡点,再加一个对别人有用的预告(周四下午不在,找我的事中午前提)。这种「替别人着想的预告」在英国团队里是高情商的标配动作。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "kick us off",
+        "gloss": "「你先开始」——会议开场点名的固定说法,kick off 源自足球开球。"
+      },
+      {
+        "phrase": "all tied out",
+        "gloss": "对账场景:全部对平。tie out 是财务核对的核心动词。"
+      },
+      {
+        "phrase": "Leave it with me",
+        "gloss": "「交给我」——当场接走一件事的责任,英式担当的标志句。"
+      },
+      {
+        "phrase": "lean on IT",
+        "gloss": "lean on = 施压。「我去压一压 IT」,比 chase 更有分量。"
+      },
+      {
+        "phrase": "get it in by lunchtime",
+        "gloss": "「中午前提交给我」——get it in 是口语的「交进来」。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-09",
+    "type": "listen",
+    "scene": "slack",
+    "title": "系统出故障了:应急沟通的节奏",
+    "task": "先听两遍。系统挂掉时,英国团队的沟通有固定节奏:确认影响、给出节拍、控制对外口径。注意没有人慌。",
+    "cast": {
+      "Ben": "m",
+      "Aisha": "f"
+    },
+    "dialogue": [
+      {
+        "speaker": "Ben",
+        "text": "Aisha, are you seeing this? The settlement feed's been down since half nine.",
+        "zh": "Aisha,你看到了吗?结算数据流从九点半就断了。"
+      },
+      {
+        "speaker": "Aisha",
+        "text": "Yep, just flagged it in the ops channel. IT are on it — they think it's the overnight patch.",
+        "zh": "看到了,刚在运营群里报了。IT 在处理——他们怀疑是昨晚的补丁。"
+      },
+      {
+        "speaker": "Ben",
+        "text": "Any idea on timings? We've got the eleven o'clock cut-off for the CHAPS payments.",
+        "zh": "有时间预估吗?我们十一点有 CHAPS 付款的截止。"
+      },
+      {
+        "speaker": "Aisha",
+        "text": "They're saying an hour, but I'd take that with a pinch of salt. Worst case, we key the urgent ones manually — I've dug out the old procedure.",
+        "zh": "他们说一小时,但我对这话持保留态度。最坏情况我们手工录紧急的那几笔——旧流程我已经翻出来了。"
+      },
+      {
+        "speaker": "Ben",
+        "text": "Good shout. How many are we talking?",
+        "zh": "想得周到。大概有多少笔?"
+      },
+      {
+        "speaker": "Aisha",
+        "text": "Six urgent, forty-odd that can wait till the afternoon. I'll split the six with you if it comes to it.",
+        "zh": "六笔紧急的,四十来笔可以等到下午。真到那一步,那六笔我和你分着录。"
+      },
+      {
+        "speaker": "Ben",
+        "text": "Deal. Who's telling the clients?",
+        "zh": "行。谁去通知客户?"
+      },
+      {
+        "speaker": "Aisha",
+        "text": "I'll draft a holding line now — 'aware of a delay, payments will complete today, update by noon.' Better they hear it from us first.",
+        "zh": "我现在起草一个应急口径——「已知悉延迟,付款今日内完成,中午前更新」。让他们先从我们这里听到,总比从别处听到强。"
+      },
+      {
+        "speaker": "Ben",
+        "text": "Perfect. Shout if the feed comes back before then.",
+        "zh": "完美。数据流提前恢复的话喊我一声。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Aisha 说对 IT 的预估要 \"take that with a pinch of salt\",她在表达什么?",
+        "options": [
+          {
+            "text": "IT 的人撒谎了,她很生气",
+            "correct": false
+          },
+          {
+            "text": "「持保留态度听」——不指望这个预估准,所以同步准备了手工方案",
+            "correct": true
+          },
+          {
+            "text": "她觉得问题会比一小时更快解决",
+            "correct": false
+          }
+        ],
+        "why": "with a pinch of salt(加一撮盐)= 打折扣地听。应急场景的专业姿态:不与预估争论,但用 plan B 对冲它。她提前翻出旧流程(dug out the old procedure),就是不把命运押在别人的预估上。"
+      },
+      {
+        "q": "为什么 Aisha 要抢先给客户发 \"holding line\"?",
+        "options": [
+          {
+            "text": "「让他们先从我们这里听到」——掌握口径主动权,一个有时间点的模糊承诺胜过沉默",
+            "correct": true
+          },
+          {
+            "text": "为了把责任推给 IT 部门",
+            "correct": false
+          },
+          {
+            "text": "监管要求必须立刻通知",
+            "correct": false
+          }
+        ],
+        "why": "holding line = 应急口径:事情没查清时对外的临时说法。它承诺的是节奏(中午前更新)而不是结果——和事故沟通的黄金法则一致:客户的恐慌来自沉默,不来自坏消息本身。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "are you seeing this?",
+        "gloss": "「你也看到了吗?」——发现异常时拉人共同确认的第一句。"
+      },
+      {
+        "phrase": "with a pinch of salt",
+        "gloss": "「打折扣地听」——对不可靠信息的标准态度,英式高频习语。"
+      },
+      {
+        "phrase": "Good shout",
+        "gloss": "「好主意/想得周到」——夸别人建议的口语,比 good idea 地道。"
+      },
+      {
+        "phrase": "forty-odd",
+        "gloss": "「四十来个」——数字后加 -odd 表约数,口语必备。"
+      },
+      {
+        "phrase": "if it comes to it",
+        "gloss": "「真到那一步的话」——为最坏情况铺垫的条件句。"
+      },
+      {
+        "phrase": "a holding line",
+        "gloss": "应急口径:查清前对外的临时说法,公关和运营的行话。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-10",
+    "type": "listen",
+    "scene": "asking-help",
+    "title": "和经理的 1:1:主动要反馈",
+    "task": "先听两遍。英国职场的反馈藏在委婉里,不主动要就永远听不到真话。注意 Mei 怎么把模糊的表扬追问成具体的建议。",
+    "cast": {
+      "Mei": "f",
+      "Tom": "m"
+    },
+    "dialogue": [
+      {
+        "speaker": "Tom",
+        "text": "So, three months in — how are you finding it?",
+        "zh": "来了三个月了——感觉怎么样?"
+      },
+      {
+        "speaker": "Mei",
+        "text": "Really well, I think. The processes made sense faster than I expected. The part I'm still working on is meetings — jumping in at the right moment.",
+        "zh": "我觉得挺好的。流程上手比我预期快。还在磨的是开会——怎么在对的时机插进去说话。"
+      },
+      {
+        "speaker": "Tom",
+        "text": "That comes with time. Honestly, you're doing fine.",
+        "zh": "那个需要时间,慢慢来。说真的,你做得不错。"
+      },
+      {
+        "speaker": "Mei",
+        "text": "Thanks. Can I push you on that a bit, though? 'Doing fine' — what would 'doing really well' look like, in your eyes?",
+        "zh": "谢谢。不过我能追问一下吗?「做得不错」——在你眼里,「做得非常好」是什么样子?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "Ha, fair enough. OK — two things. I'd like to see you own a client relationship end-to-end. And in team meetings, don't wait for a gap. Your read on the numbers is usually sharper than what's being said.",
+        "zh": "哈,问得好。行——两件事。我想看到你端到端地负责一个客户关系。还有开会别等空档,你对数字的判断通常比会上说出来的更锐。"
+      },
+      {
+        "speaker": "Mei",
+        "text": "That's really useful. On the client side — is there an account I could start shadowing now?",
+        "zh": "这个非常有用。客户那块——有没有哪个客户我现在就可以开始跟着看?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "Take the Meridian account. Sit in on the next quarterly call, and we'll build from there.",
+        "zh": "跟 Meridian 这个客户吧。下次季度电话会你旁听,我们从这里开始。"
+      },
+      {
+        "speaker": "Mei",
+        "text": "Great. Can we make this a regular check — say, once a quarter I ask you the same question?",
+        "zh": "太好了。我们能把这个变成固定动作吗——比如每季度我都问你一次同样的问题?"
+      },
+      {
+        "speaker": "Tom",
+        "text": "Deal. And Mei — most people don't ask. It's noticed.",
+        "zh": "成交。还有,Mei——大多数人不会主动问。这一点是会被看到的。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Tom 说 \"you're doing fine\",Mei 为什么不接受这个回答?",
+        "options": [
+          {
+            "text": "fine 在英式反馈里是温吞的中档评价,不追问就拿不到具体的改进方向",
+            "correct": true
+          },
+          {
+            "text": "她觉得自己应该被评为优秀,不满意这个评价",
+            "correct": false
+          },
+          {
+            "text": "她没听懂 fine 的意思",
+            "correct": false
+          }
+        ],
+        "why": "英式反馈的默认档位就是含糊的正面(fine / good / getting on well),它是客气,不是信息。Mei 的追问句式值得整句偷走:What would 'doing really well' look like? ——把模糊评价转换成具体标准,这是向上管理的核心技能。"
+      },
+      {
+        "q": "最后 Tom 说 \"most people don't ask. It's noticed.\" 传递了什么?",
+        "options": [
+          {
+            "text": "他嫌 Mei 问题太多",
+            "correct": false
+          },
+          {
+            "text": "主动要反馈这个行为本身,已经让她在经理心里加了分",
+            "correct": true
+          },
+          {
+            "text": "他在暗示别的同事有意见",
+            "correct": false
+          }
+        ],
+        "why": "it's noticed 用被动语态轻描淡写,恰恰是英式的高度肯定:这事被看见了、被记住了。整段对话演示了一个闭环:要反馈 → 追问到具体 → 当场要资源(shadow 客户)→ 固定成机制(每季度一问)。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "how are you finding it?",
+        "gloss": "「感觉怎么样/适应得如何?」——问新人体验的标准句,find = 体验感受。"
+      },
+      {
+        "phrase": "Can I push you on that a bit",
+        "gloss": "「我能追问一下吗」——礼貌地不放过模糊回答,向上沟通的利器。"
+      },
+      {
+        "phrase": "fair enough",
+        "gloss": "「行,有道理」——被将了一军后大方认下的口语。"
+      },
+      {
+        "phrase": "own a client relationship end-to-end",
+        "gloss": "own = 端到端负责。英国职场对「成长」的定义就是 own 的东西变大。"
+      },
+      {
+        "phrase": "Your read on the numbers",
+        "gloss": "read 作名词 = 判断、解读。your read is sharp 是对分析能力的高级夸法。"
+      },
+      {
+        "phrase": "It's noticed",
+        "gloss": "「这是会被看到的」——英式轻描淡写的高度肯定,被动语态显克制。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-11",
+    "type": "listen",
+    "scene": "small-talk",
+    "title": "离职酒:酒吧里的社交规则",
+    "task": "先听两遍。leaving drinks 是英国职场的固定仪式。注意买酒的轮次规则(rounds)、祝酒怎么说,以及不喝酒的人怎么自然融入。",
+    "cast": {
+      "Grace": "f",
+      "Callum": "m",
+      "Yuki": "f"
+    },
+    "dialogue": [
+      {
+        "speaker": "Callum",
+        "text": "Right, first round's on me. Grace, what are you having?",
+        "zh": "好,第一轮我请。Grace,你喝什么?"
+      },
+      {
+        "speaker": "Grace",
+        "text": "Pint of the pale ale, cheers. Yuki?",
+        "zh": "一品脱淡色艾尔,谢了。Yuki 呢?"
+      },
+      {
+        "speaker": "Yuki",
+        "text": "Just a lime and soda for me — I'm cycling home. But the next round's mine.",
+        "zh": "我来杯青柠苏打就好——我骑车回家。不过下一轮我来。"
+      },
+      {
+        "speaker": "Callum",
+        "text": "Noted. Bike or not, you're not escaping the round system.",
+        "zh": "记下了。骑不骑车,轮次制度你都逃不掉。"
+      },
+      {
+        "speaker": "Grace",
+        "text": "So, ten years. End of an era. What are we going to do without you keeping the auditors in line?",
+        "zh": "话说,十年了。一个时代结束了。以后没你镇着审计师们,我们可怎么办?"
+      },
+      {
+        "speaker": "Callum",
+        "text": "You'll manage. Honestly though, it's the people I'll miss. The spreadsheets, less so.",
+        "zh": "你们会有办法的。不过说真的,我舍不得的是人。表格嘛,就还好。"
+      },
+      {
+        "speaker": "Yuki",
+        "text": "We got you a little something, by the way. It's mostly tea and biscuits, because we know you.",
+        "zh": "对了,我们给你准备了点小心意。基本上是茶和饼干,因为我们了解你。"
+      },
+      {
+        "speaker": "Callum",
+        "text": "You didn't have to — but I'm glad you did. Right, glasses up. To head office finally leaving me alone!",
+        "zh": "你们不用这么客气的——但我很高兴你们客气了。来,举杯。敬总部终于要放过我了!"
+      },
+      {
+        "speaker": "Grace",
+        "text": "To Callum! Don't be a stranger.",
+        "zh": "敬 Callum!常回来看看。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Yuki 不喝酒,她的处理方式对在哪里?",
+        "options": [
+          {
+            "text": "点无酒精饮品不解释太多,但主动认下一轮——参与轮次制度比喝什么重要",
+            "correct": true
+          },
+          {
+            "text": "她应该找个借口提前离开",
+            "correct": false
+          },
+          {
+            "text": "她应该解释不喝酒的健康原因",
+            "correct": false
+          }
+        ],
+        "why": "pub 社交的核心不是酒精,是 rounds(轮流请)。不喝酒完全可以,但轮到你请时照样要请——Callum 那句玩笑(你逃不掉轮次制度)其实是在确认她被完全接纳。给一个轻理由(骑车)即可,长篇解释反而生分。"
+      },
+      {
+        "q": "Callum 的祝酒词 \"To head office finally leaving me alone!\" 是什么风格?",
+        "options": [
+          {
+            "text": "他真的在抱怨总部,场面很尴尬",
+            "correct": false
+          },
+          {
+            "text": "英式自嘲式祝酒:用吐槽代替煽情,大家笑着举杯",
+            "correct": true
+          },
+          {
+            "text": "这是失礼的,祝酒应该感谢公司",
+            "correct": false
+          }
+        ],
+        "why": "英式告别的情感表达高度依赖幽默:真话(舍不得人)轻轻说一句就够(the spreadsheets, less so 已经是深情了),祝酒词则用自嘲收尾。回应吐槽式祝酒的方式就是 Grace 那样:笑着举杯,加一句 don't be a stranger。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "first round's on me",
+        "gloss": "「第一轮我请」——rounds 是酒吧社交的宪法,on me = 我买单。"
+      },
+      {
+        "phrase": "what are you having?",
+        "gloss": "「你喝什么?」——请酒时的标准问法,不说 what do you want to drink。"
+      },
+      {
+        "phrase": "End of an era",
+        "gloss": "「一个时代结束了」——老同事离开时的固定感叹,半庄半谐。"
+      },
+      {
+        "phrase": "keeping the auditors in line",
+        "gloss": "keep someone in line = 镇得住某人。玩笑式的高度评价。"
+      },
+      {
+        "phrase": "a little something",
+        "gloss": "「一点小心意」——送礼时的轻描淡写,英式送礼必配句。"
+      },
+      {
+        "phrase": "Don't be a stranger",
+        "gloss": "「常联系/别断了来往」——告别的温暖收尾,字面「别变成陌生人」。"
+      }
+    ]
+  },
+  {
+    "id": "dialogue-12",
+    "type": "listen",
+    "scene": "uk-life",
+    "title": "给中介打电话:修洗衣机的拉锯战",
+    "task": "先听两遍。跟 letting agent 打交道是英国租房生活的必修课。注意 Lin 怎么引用邮件记录、怎么设定期限、怎么把口头承诺钉成书面的。",
+    "cast": {
+      "Lin": "f",
+      "Agent": "m"
+    },
+    "dialogue": [
+      {
+        "speaker": "Agent",
+        "text": "Good morning, lettings, how can I help?",
+        "zh": "早上好,租赁部,有什么可以帮您?"
+      },
+      {
+        "speaker": "Lin",
+        "text": "Hi, it's Lin Chen, flat four at Woodberry Court. I'm calling about the washing machine — I reported it two weeks ago and I've heard nothing since.",
+        "zh": "你好,我是 Woodberry Court 四号公寓的 Lin Chen。我打来是问洗衣机的事——两周前就报修了,之后一直没有任何消息。"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Let me have a look... I can see the job was logged. It's with the contractor.",
+        "zh": "我看一下……能看到工单已经登记了,在承包商那边。"
+      },
+      {
+        "speaker": "Lin",
+        "text": "That's what I was told last Tuesday, word for word. I've been going to the launderette for two weeks now — that's not really sustainable.",
+        "zh": "上周二你们也是一字不差这么说的。我已经跑了两周自助洗衣店了——这实在不是长久之计。"
+      },
+      {
+        "speaker": "Agent",
+        "text": "I do apologise. I'll chase the contractor today.",
+        "zh": "非常抱歉。我今天就去催承包商。"
+      },
+      {
+        "speaker": "Lin",
+        "text": "Thank you. Could I get that in writing, though? Just an email confirming today's chase and a repair date by end of week.",
+        "zh": "谢谢。不过能麻烦落实成文字吗?一封邮件,确认今天催了,并且本周内给出维修日期。"
+      },
+      {
+        "speaker": "Agent",
+        "text": "That's... yes, I can do that.",
+        "zh": "这个……可以,我能做到。"
+      },
+      {
+        "speaker": "Lin",
+        "text": "Great. And just so you're aware — if there's no date by Friday, my next step is a formal complaint under your repairs policy. I'd much rather not go down that route.",
+        "zh": "好。另外提前说明——如果周五还没有日期,我的下一步就是按你们的维修政策提正式投诉。我非常不希望走到那一步。"
+      },
+      {
+        "speaker": "Agent",
+        "text": "Understood. You'll have the email within the hour.",
+        "zh": "明白。一小时内您会收到邮件。"
+      },
+      {
+        "speaker": "Lin",
+        "text": "Thanks very much for your help. I appreciate it's not you personally holding it up.",
+        "zh": "非常感谢你的帮助。我知道卡住这事的不是你本人。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Lin 说 \"That's what I was told last Tuesday, word for word\",这句话的杀伤力在哪?",
+        "options": [
+          {
+            "text": "用记录说话:证明对方在重复套话,又没有指责任何个人",
+            "correct": true
+          },
+          {
+            "text": "她在威胁要起诉中介",
+            "correct": false
+          },
+          {
+            "text": "她记性好,想炫耀细节",
+            "correct": false
+          }
+        ],
+        "why": "word for word(一字不差)点破对方在念模板,但矛头对准的是「说法」不是「人」。英式维权的第一原则:引用记录而不是发泄情绪。后面她还给对方递了台阶(我知道不是你本人卡的)——压力给足,关系不破。"
+      },
+      {
+        "q": "Lin 要求 \"Could I get that in writing?\" 并预告投诉路径,这套组合的逻辑是?",
+        "options": [
+          {
+            "text": "口头承诺会蒸发,书面才算数;预告下一步让对方知道拖延有真实成本,而且她说了「不想走到那一步」",
+            "correct": true
+          },
+          {
+            "text": "她已经决定要投诉了,只是走流程",
+            "correct": false
+          },
+          {
+            "text": "她不信任这个接线员,想留证据整他",
+            "correct": false
+          }
+        ],
+        "why": "get it in writing 是英国生活维权的万能钥匙(对中介、银行、客服通用)。预告正式投诉时的标准姿态是 I'd much rather not go down that route——把升级说成「你我都不想要的结局」,这和职场里 go over your head 的用法一模一样。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "I've heard nothing since",
+        "gloss": "「之后杳无音信」——陈述失联事实的标准句,自带压力。"
+      },
+      {
+        "phrase": "word for word",
+        "gloss": "「一字不差」——点破对方在重复套话的利器。"
+      },
+      {
+        "phrase": "not really sustainable",
+        "gloss": "「不是长久之计」——英式缩小词包装的强抗议。"
+      },
+      {
+        "phrase": "Could I get that in writing",
+        "gloss": "「能落实成书面吗?」——英国生活维权的万能钥匙,口头承诺的天敌。"
+      },
+      {
+        "phrase": "go down that route",
+        "gloss": "「走到那一步」——升级前的标准预告,配 I'd rather not 使用。"
+      },
+      {
+        "phrase": "holding it up",
+        "gloss": "hold up = 卡住、拖住。「卡住这事的不是你本人」——给接线员的台阶。"
+      }
+    ]
   }
 ]
