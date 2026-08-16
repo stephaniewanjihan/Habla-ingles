@@ -52,7 +52,11 @@ function seedHash(): string {
  * 把内容字段同步到已有卡片上——复习进度(间隔、到期、次数、标记)原样保留。
  * 没有这一步,老设备永远拿不到新内容,只有全新安装才看得到。
  */
+/** 已从种子里移除、且要从老设备上清掉的卡(产品负责人明确不要的内容) */
+const RETIRED_IDS = ['dialogue-13']
+
 export async function ensureSeeded(): Promise<void> {
+  await db.cards.bulkDelete(RETIRED_IDS)
   const hash = seedHash()
   const now = Date.now()
   const count = await db.cards.count()
