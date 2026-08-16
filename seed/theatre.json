@@ -1,0 +1,170 @@
+[
+  {
+    "id": "theatre-01",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "到剧院取票,网上订的,报姓氏取票",
+    "answer": "Hi, I've got two tickets under Chen — booked online.",
+    "note": "under + 姓氏是取票、取预订的万能句式(餐厅、酒店通用)。西区剧院多数可以手机电子票,但 box office(票房)取纸质票仍然常见。到场比开演早 30 分钟是安全线,存包、买节目册、找座位都从容。",
+    "chunk": "under Chen",
+    "variants": [{ "prompt": "到餐厅报姓氏确认订位", "answer": "Evening — table for two under Chen, booked for half seven." }]
+  },
+  {
+    "id": "theatre-02",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "跟同事说你的座位在一楼正厅第六排,视野不错",
+    "answer": "We're in the stalls, row F — pretty decent view for the price.",
+    "note": "英国剧院座位分层:stalls(一楼正厅)、dress circle(二楼,也叫 royal circle)、upper circle(三楼)、balcony/the gods(最高层,便宜票)。restricted view = 视线遮挡票(更便宜)。报座位说 stalls row F 这个格式,英国人秒懂档次。",
+    "chunk": "in the stalls",
+    "variants": [{ "prompt": "朋友问你买的什么位置,你说二楼第一排,能看清全场调度", "answer": "Front row of the dress circle — you get the whole stage picture from up there." }]
+  },
+  {
+    "id": "theatre-03",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "开演前你要从一排人面前挤过去到自己的座位",
+    "answer": "Sorry — excuse me — thank you. Sorry, just squeezing past.",
+    "note": "挤过座位排的标准配乐:每经过一个人一句 sorry/thank you,连着说完全正常。礼仪:面朝舞台侧身过(屁股对着已坐的人),对方通常会起身或收腿。迟到的话很多剧院要等到合适的停顿才放你进去,所以别踩点。",
+    "chunk": "squeezing past",
+    "variants": [{ "prompt": "中场你要出去,再次从邻座面前挤过", "answer": "Sorry, me again — just nipping out. Thank you." }]
+  },
+  {
+    "id": "theatre-04",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "开演前提议先把中场的酒水预定好,免得挤吧台",
+    "answer": "Shall we pre-order interval drinks? Saves fighting the bar crush at half time.",
+    "note": "英国剧院最值得学的仪式:开演前在吧台预定中场酒水(pre-order),写名字放在指定桌上,中场直接取——不用在人堆里挤 15 分钟。中场休息叫 interval(美式才说 intermission),通常 20 分钟。冰淇淋小圆盒(a tub of ice cream)是另一个传统。",
+    "chunk": "pre-order interval drinks",
+    "variants": [{ "prompt": "中场你去取预定的酒水,报名字", "answer": "These two on the end should be ours — under Chen." }]
+  },
+  {
+    "id": "theatre-05",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "提议买一本节目册,想看看卡司介绍",
+    "answer": "Shall we grab a programme? I always like reading up on the cast.",
+    "note": "programme(英式拼法)是付费的(5-10 镑),含卡司介绍和制作故事,看剧人的纪念品。免费的 cast sheet 有些剧院门口可拿。开演前广播如果说 at this performance, the role of X will be played by...,意思是主演缺席、替补(understudy)上场——西区替补水平通常很高,不用失望。",
+    "chunk": "reading up on",
+    "variants": [{ "prompt": "朋友问你为什么每次都买节目册,你说想了解演员和制作背景" }]
+  },
+  {
+    "id": "theatre-06",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "散场路上问同伴对这部剧的看法",
+    "answer": "So — what did you make of it?",
+    "note": "what did you make of it 是英式征求观后感的标准句(make of = 怎么看待),比 did you like it 更开放,不预设对方喜欢。这句也是周一办公室聊周末看剧的固定开场。回答时先给总评再给一个具体点,是英式聊剧的默认结构。",
+    "chunk": "what did you make of it",
+    "variants": [{ "prompt": "同事说他周末看了一部你也想看的剧,你问他觉得怎么样" }]
+  },
+  {
+    "id": "theatre-07",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "夸这部剧的舞台调度,尤其是那个旋转舞台",
+    "answer": "The staging was something else — that revolve in the second half, wow.",
+    "note": "staging = 舞台调度,聊剧必备词;revolve = 旋转舞台(Hadestown 的招牌装置就是它)。something else 是英式高级夸法:好到没法归类。其他聊剧高频词:the set(布景)、the lighting、the band、the choreography(编舞)。",
+    "chunk": "something else",
+    "variants": [{ "prompt": "夸这部剧的灯光设计好到起鸡皮疙瘩", "answer": "The lighting design gave me goosebumps — especially that final blackout." }]
+  },
+  {
+    "id": "theatre-08",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "给出英式的混合评价:整体好,但上半场有点拖",
+    "answer": "Really enjoyed it. If I'm being picky, the first half dragged a touch — but the finale completely won me over.",
+    "note": "英式聊剧很少全盘吹捧,加一条小保留反而显得看得懂。if I'm being picky 是提出小批评的执照;drag = 节奏拖;a touch = 一点点(缩小词);win someone over = 征服。这个结构(总评+小保留+反转)可以套用在聊任何剧、书、餐厅上。",
+    "chunk": "won me over",
+    "variants": [{ "prompt": "同事问你上周那部剧怎么样,你说好看但篇幅偏长", "answer": "Well worth it — though at three hours it doesn't half test your bladder." }]
+  },
+  {
+    "id": "theatre-09",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "描述谢幕时全场起立鼓掌的场面",
+    "answer": "They got a full standing ovation at the curtain call — thoroughly deserved.",
+    "note": "curtain call = 谢幕;standing ovation = 起立鼓掌。伦敦观众比纽约克制,不是每场都全场起立,所以 full standing ovation 值得一提。thoroughly deserved 是英式的\"实至名归\"。谢幕时可以喊 bravo,但英国人多数只是用力鼓掌。",
+    "chunk": "standing ovation",
+    "variants": [{ "prompt": "跟同事描述主演谢幕时观众的反应有多热烈" }]
+  },
+  {
+    "id": "theatre-10",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "散场后提议去后台门口等演员出来签名",
+    "answer": "Fancy waiting at the stage door? The cast usually come out after about twenty minutes.",
+    "note": "stage door(后台门)文化:散场后演员从侧门出来,签节目册、合影,完全合规的追星方式。礼仪:排队、简短夸一句(you were wonderful tonight)、不拖时间。Hadestown 和 Mincemeat 的卡司都以对 stage door 友好著称。",
+    "chunk": "the stage door",
+    "variants": [{ "prompt": "朋友问怎么才能要到演员签名,你介绍后台门等人的惯例" }]
+  },
+  {
+    "id": "theatre-11",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "周一同事问你周末安排,你说周四要去看 Hadestown,顺便问他看过没有",
+    "answer": "I'm off to see Hadestown on Thursday, actually — have you seen it? I've heard the staging's incredible.",
+    "note": "I'm off to see... 是英式\"我要去看\"的自然说法。看剧是英国办公室的优质话题:说出剧名+一个期待点(听说舞台很棒),对方看过会展开,没看过会问你观后感——等于给下周一预约了一个话题。西区看剧在伦敦职场是常规爱好,不是炫耀。",
+    "chunk": "I'm off to see",
+    "variants": [{ "prompt": "周五同事问你周末干什么,你说周六要去看 Operation Mincemeat", "answer": "Saturday night I'm seeing Operation Mincemeat at last — everyone bangs on about how funny it is." }]
+  },
+  {
+    "id": "theatre-12",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "看完后向同事强烈推荐,提醒票越来越难买",
+    "answer": "Honestly, well worth seeing — and I'd book sooner rather than later, it's basically selling out every night.",
+    "note": "well worth seeing/doing 是英式推荐的标准强度;sooner rather than later = 宜早不宜迟。聊票务的相关词:day seats(当日廉价票,早上去剧院排)、rush tickets(app 抢票)、returns(退票)。能聊这些说明你是懂行的伦敦看剧人。",
+    "chunk": "sooner rather than later",
+    "variants": [{ "prompt": "朋友犹豫要不要买票,你劝他别等,好位置快没了" }]
+  },
+  {
+    "id": "theatre-13",
+    "type": "pick",
+    "scene": "theatre",
+    "prompt": "\"中场休息\"在英国剧院怎么说?",
+    "options": [
+      { "text": "the intermission", "correct": false },
+      { "text": "the interval", "correct": true }
+    ],
+    "note": "英国剧院说 interval,intermission 是美式(英国人听得懂但一耳朵美剧腔)。配套说法:in the interval(中场时)、interval drinks、the house lights come up(场灯亮起=中场开始)。顺带:剧场整体叫 the house,满座是 a full house。",
+    "variants": [{ "prompt": "你想问同伴\"中场的时候去买冰淇淋好不好\",哪个词地道?" }]
+  },
+  {
+    "id": "theatre-14",
+    "type": "pick",
+    "scene": "theatre",
+    "prompt": "同事问你昨晚的剧怎么样,哪个回答更像本地人?",
+    "options": [
+      { "text": "It was so-so. Some parts were good.", "correct": false },
+      { "text": "Loved it — clever staging, and the second half absolutely flies.", "correct": true }
+    ],
+    "note": "so-so 在英式口语里几乎不用,而且空洞。地道的观后感永远带一个具体抓手:staging、某首歌、某个演员。flies = 节奏飞快不知不觉就结束(反义词是 drags)。哪怕没完全看懂,记住一个具体亮点,就能聊出完整的观后感。",
+    "variants": [{ "prompt": "朋友问你那部音乐剧值不值得看,哪个回答更有说服力?" }]
+  },
+  {
+    "id": "theatre-15",
+    "type": "note",
+    "scene": "theatre",
+    "title": "Hadestown 观剧准备:故事、听点、词汇",
+    "body": "故事:希腊神话双线——穷小子 Orpheus(俄耳甫斯)用歌声追回死去的爱人 Eurydice(欧律狄刻),冥王 Hades 与春神 Persephone 的婚姻同时在冰冻期。叙事人是信使神 Hermes,开场那句 it's an old song 会反复回来。Hadestown 即冥界,被写成一座血汗工厂。结局是悲的,而且开头就告诉你是悲的——it's a sad song, but we sing it anyway 是全剧题眼。听点:新奥尔良爵士风,乐队就在台上;Why We Build the Wall(冥王的洗脑颂歌,墙内有多讽刺你懂的)、Wait for Me(火车灯摇摆的名场面)、Epic III。词汇:the Underworld(冥界)、six feet under(入土)、hellhound(地狱犬)、shroud(裹尸布)、doubt comes in(怀疑袭来——结局的关键)。演出为 sung-through(几乎全程唱),歌词听不全完全正常,抓住 Hermes 的旁白就不会迷路。"
+  },
+  {
+    "id": "theatre-16",
+    "type": "note",
+    "scene": "theatre",
+    "title": "Operation Mincemeat 观剧准备:真实历史 + 喜剧机关",
+    "body": "背景是真实历史:1943 年英国情报部门把一具流浪汉遗体打扮成皇家海军军官 Major William Martin,身上放伪造机密文件,让尸体漂到西班牙海岸,骗纳粹以为盟军要登陆希腊而不是西西里——行动代号就叫 Mincemeat(肉馅)。这段历史英国人从学校和纪录片里都知道,所以全场会在你没反应过来的地方笑。剧的形式:五个演员演几十个角色,男女反串是核心笑点;曲风从电子到 swing 乱跳;语速极快,笑点密集靠 wordplay(双关),听不懂三成是正常配置,抓大情节即可。关键词:MI5(军情五处)、deception(欺敌)、decoy(诱饵)、the corpse(那具遗体)、Whitehall(白厅=政府)、U-boat(德军潜艇)。两首躲不开的歌:Born to Lead、Dear Bill(全剧最催泪的一首,前面笑得越狠这里越破防)。散场后标准评语:I laughed till the last twenty minutes destroyed me。"
+  },
+  {
+    "id": "theatre-17",
+    "type": "produce",
+    "scene": "theatre",
+    "prompt": "跟同事介绍 Operation Mincemeat 讲的是什么",
+    "answer": "It's the one about the corpse with the fake invasion plans — a true story, bizarrely. Five actors playing everyone.",
+    "note": "介绍一部剧的万能句式:It's the one about...(就是讲……的那部)。a true story, bizarrely 把\"居然是真事\"的惊奇打包进一个副词。five actors playing everyone 是这部剧的招牌卖点,一句话就能让对方来兴趣。",
+    "chunk": "It's the one about",
+    "variants": [{ "prompt": "朋友没听说过 Hadestown,你一句话介绍它", "answer": "It's the one that retells the Orpheus myth in a New Orleans jazz bar — folk opera, gorgeous and heartbreaking." }]
+  }
+]

@@ -116,12 +116,13 @@ export const SCENE_LABELS: Record<string, string> = {
   presenting: '做汇报',
   'small-talk': 'Small talk',
   'uk-education': '英国学校 · 成长记忆',
+  theatre: '看剧 · 剧院英语',
   'uk-life': '英国生活',
   culture: '文化与听力',
 }
 
 /** 生活类场景。新卡引入按 商务:生活 ≈ 7:3 配比,商务始终是主菜 */
-export const LIFE_SCENES = new Set(['uk-education', 'uk-life'])
+export const LIFE_SCENES = new Set(['uk-education', 'uk-life', 'theatre'])
 
 export function sceneLabel(scene: string): string {
   return SCENE_LABELS[scene] ?? scene

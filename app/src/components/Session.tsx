@@ -24,7 +24,7 @@ function shuffle<T>(arr: T[]): T[] {
  * mode='one' 时只出 1 张(最急的到期卡,没有就出新卡)——
  * 给"只有一分钟"的日子用,照样算打卡。
  */
-export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Promise<CardRecord[]> {
+export async function buildRound(mode: 'full' | 'one' | 'listen' | 'theatre' = 'full'): Promise<CardRecord[]> {
   const endOfToday = new Date()
   endOfToday.setHours(23, 59, 59, 999)
   const due = (await db.cards.where('due').belowOrEqual(endOfToday.getTime()).toArray())
@@ -52,6 +52,28 @@ export async function buildRound(mode: 'full' | 'one' | 'listen' = 'full'): Prom
   if (mode === 'one') {
     const one = due[0] ?? takeNew()
     return one ? [one] : []
+  }
+
+  if (mode === 'theatre') {
+    // 看剧特辑:有 deadline 的速成——不限每组新卡数,把整个场景突击掉。
+    // 到期/学习中的优先,然后全上新卡;都过完了就按最久没见复习,可反复刷。
+    const theatre = (await db.cards.toArray()).filter(c => c.scene === 'theatre')
+    const reviewable = theatre.filter(c => REVIEWABLE.includes(c.type))
+    const urgent = reviewable
+      .filter(c => c.state === 'new' || (c.due ?? 0) <= Date.now())
+      .sort((a, b) => (a.state === 'new' ? 1 : 0) - (b.state === 'new' ? 1 : 0) || (a.due ?? 0) - (b.due ?? 0))
+    const queue = urgent.slice(0, 5)
+    if (queue.length < 5) {
+      const filler = reviewable
+        .filter(c => !queue.includes(c))
+        .sort((a, b) => (a.lastSeen ?? 0) - (b.lastSeen ?? 0))
+      queue.push(...filler.slice(0, 5 - queue.length))
+    }
+    const extras = theatre
+      .filter(c => c.type === 'note' || c.type === 'listen')
+      .sort((a, b) => (a.lastSeen ?? 0) - (b.lastSeen ?? 0))
+    if (extras.length) queue.splice(Math.min(2, queue.length), 0, extras[0])
+    return queue
   }
 
   if (mode === 'listen') {
@@ -321,7 +343,7 @@ const RATING_BUTTONS: { rating: Rating; label: string; cls: string }[] = [
   { rating: 'good', label: '顺', cls: 'bg-green-soft text-green' },
 ]
 
-export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'listen'; onExit: () => void }) {
+export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'listen' | 'theatre'; onExit: () => void }) {
   const [queue, setQueue] = useState<CardRecord[] | null>(null)
   const [index, setIndex] = useState(0)
   const [revealed, setRevealed] = useState(false)
@@ -414,7 +436,7 @@ export default function Session({ mode, onExit }: { mode: 'full' | 'one' | 'list
     const seenAgain = repeatedRef.current.get(card.id) ?? 0
     const cardsAhead = queue!.length - (index + 1)
     const wantsRepeat =
-      mode === 'full' &&
+      (mode === 'full' || mode === 'theatre') &&
       updated.state === 'learning' &&
       (updated.due ?? 0) <= Date.now() + 1000 &&
       cardsAhead >= 2

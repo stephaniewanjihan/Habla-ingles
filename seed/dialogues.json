@@ -1486,5 +1486,127 @@
         "gloss": "hold up = 卡住、拖住。「卡住这事的不是你本人」——给接线员的台阶。"
       }
     ]
+  },
+  {
+    "id": "dialogue-13",
+    "type": "listen",
+    "scene": "theatre",
+    "title": "中场休息:取酒、聊上半场",
+    "task": "先听两遍。这是你周四晚上会亲身经历的场景:取预定的酒水、和同伴交换上半场观感。注意他们怎么夸、怎么带保留地评价。",
+    "cast": {
+      "Hana": "f",
+      "Ollie": "m"
+    },
+    "dialogue": [
+      {
+        "speaker": "Ollie",
+        "text": "Right, our drinks should be on the shelf by the window — under Fletcher.",
+        "zh": "好,我们的酒应该在窗边那个架子上——Fletcher 名下的。"
+      },
+      {
+        "speaker": "Hana",
+        "text": "Got them. Oh, smart move pre-ordering — look at the state of that bar queue.",
+        "zh": "拿到了。预定真是明智——你看吧台那队排的。"
+      },
+      {
+        "speaker": "Ollie",
+        "text": "Twenty years of interval scrums teaches you things. So — first half. Thoughts?",
+        "zh": "二十年的中场挤吧台经验不是白来的。那么——上半场,怎么样?"
+      },
+      {
+        "speaker": "Hana",
+        "text": "Honestly? Better than I expected. The band being on stage changes everything.",
+        "zh": "说实话?比我预期的还好。乐队就在台上,整个感觉都不一样了。"
+      },
+      {
+        "speaker": "Ollie",
+        "text": "And that revolve. The way the wall came in at the end of the first act — proper spine-tingling.",
+        "zh": "还有那个旋转舞台。上半场结尾那堵墙合拢的方式——真的起鸡皮疙瘩。"
+      },
+      {
+        "speaker": "Hana",
+        "text": "I'll admit I lost some of the lyrics in the faster numbers.",
+        "zh": "我承认快歌的歌词我跟丢了一些。"
+      },
+      {
+        "speaker": "Ollie",
+        "text": "Everyone does — it's sung-through, you're not meant to catch it all. You follow the narrator and let the rest wash over you.",
+        "zh": "谁都会跟丢——它几乎全程是唱的,本来就不指望你全听清。跟住旁白,剩下的让它自然流过去就好。"
+      },
+      {
+        "speaker": "Hana",
+        "text": "That's a relief. The woman next to me was mouthing every word, I felt like a fraud.",
+        "zh": "那我就放心了。我旁边那位女士每个字都在跟着默唱,搞得我像个冒牌观众。"
+      },
+      {
+        "speaker": "Ollie",
+        "text": "Ha! Superfans. Right, that's the bell — drink up, act two waits for no one.",
+        "zh": "哈!铁杆粉丝嘛。好,铃响了——喝完它,下半场可不等人。"
+      }
+    ],
+    "quiz": [
+      {
+        "q": "Hana 说快歌歌词跟丢了,Ollie 的回应说明什么?",
+        "options": [
+          {
+            "text": "听不全 sung-through 音乐剧的歌词是所有人的常态,跟住旁白就够——这也是给你的观剧许可",
+            "correct": true
+          },
+          {
+            "text": "他觉得 Hana 英语不够好,在安慰她",
+            "correct": false
+          },
+          {
+            "text": "他建议她下次先背熟歌词再来",
+            "correct": false
+          }
+        ],
+        "why": "let it wash over you(让它流过你)是英国人聊歌剧、诗歌、复杂音乐剧的高频建议:体验优先于逐字理解。母语者也听不全快歌歌词——你周四晚上可以彻底放下「必须都听懂」的包袱。"
+      },
+      {
+        "q": "Ollie 那句 \"Twenty years of interval scrums teaches you things\" 的语气是?",
+        "options": [
+          {
+            "text": "自嘲式的经验之谈:把挤吧台说成橄榄球混战(scrum),幽默地解释自己为什么会预定",
+            "correct": true
+          },
+          {
+            "text": "他在抱怨剧院管理混乱",
+            "correct": false
+          },
+          {
+            "text": "他在炫耀自己看了二十年剧很有钱",
+            "correct": false
+          }
+        ],
+        "why": "scrum 是橄榄球的争球堆,借来形容中场吧台的人挤人,是典型的英式夸张自嘲。英国人展示资历的方式往往是讲一个吃过的亏,而不是直接说 I'm experienced。"
+      }
+    ],
+    "highlights": [
+      {
+        "phrase": "smart move",
+        "gloss": "「这步聪明」——夸对方决策的口语,后接动名词说明夸的是什么。"
+      },
+      {
+        "phrase": "look at the state of",
+        "gloss": "「你看那……成什么样了」——英式感叹混乱/糟糕的固定句式。"
+      },
+      {
+        "phrase": "proper spine-tingling",
+        "gloss": "proper 作口语强化词=「真正的」;spine-tingling 起鸡皮疙瘩的震撼。"
+      },
+      {
+        "phrase": "wash over you",
+        "gloss": "「让它自然流过」——不逐字抠、整体感受的欣赏方式,聊艺术高频。"
+      },
+      {
+        "phrase": "I felt like a fraud",
+        "gloss": "「感觉自己像个冒牌货」——自嘲不够格的幽默说法,职场也常用(impostor 感)。"
+      },
+      {
+        "phrase": "drink up",
+        "gloss": "「喝完它/干了」——催促把杯中物喝完的口语,up 表完成。"
+      }
+    ]
   }
 ]

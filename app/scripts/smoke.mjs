@@ -367,6 +367,28 @@ await page.waitForTimeout(500)
   await page.waitForTimeout(400)
 }
 
+// --- Theatre cram mode: deadline learning ignores the 1-new-per-round cap ---
+{
+  await page.getByRole('button', { name: /今天/ }).first().click()
+  await page.waitForTimeout(400)
+  await page.getByText('看剧特辑:剧院英语速成').click()
+  await page.waitForTimeout(900)
+  const total = await page.getByText(/^\d+ \/ \d+$/).first().innerText().catch(() => '0 / 0')
+  const n = parseInt(total.split('/')[1].trim(), 10)
+  ok(`theatre cram round is a full round (${total})`, n >= 5)
+  ok('cram serves theatre content', await page.getByText('看剧 · 剧院英语').first().isVisible().catch(() => false))
+  // 打完这组,确认能一路答到底
+  for (let i = 0; i < 14; i++) {
+    if (await page.getByText('这组练完了').isVisible().catch(() => false)) break
+    const outcome = await answerCurrentCard(page)
+    if (outcome === 'extra') continue
+    if (!outcome) { fails.push('theatre cram stuck'); break }
+  }
+  ok('theatre cram round completes', await page.getByText('这组练完了').isVisible().catch(() => false))
+  await page.getByRole('button', { name: '今天就到这' }).click()
+  await page.waitForTimeout(400)
+}
+
 // --- Reload: persistence check ---
 await page.reload()
 await page.waitForTimeout(1200)

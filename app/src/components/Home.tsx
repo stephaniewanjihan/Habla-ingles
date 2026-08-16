@@ -85,7 +85,7 @@ function Stat({ value, label, tone }: { value: number; label: string; tone?: 'bl
   )
 }
 
-export default function Home({ onStartSession }: { onStartSession: (mode: 'full' | 'one' | 'listen') => void }) {
+export default function Home({ onStartSession }: { onStartSession: (mode: 'full' | 'one' | 'listen' | 'theatre') => void }) {
   const [jotOpen, setJotOpen] = useState(false)
 
   const stats = useLiveQuery(async () => {
@@ -173,6 +173,13 @@ export default function Home({ onStartSession }: { onStartSession: (mode: 'full'
         className="mt-3 w-full rounded-[14px] bg-fill py-3.5 text-[15px] text-label active:opacity-70"
       >
         🎧 磨耳朵:听一段办公室对话
+      </button>
+
+      <button
+        onClick={() => onStartSession('theatre')}
+        className="mt-3 w-full rounded-[14px] bg-fill py-3.5 text-[15px] text-label active:opacity-70"
+      >
+        🎭 看剧特辑:剧院英语速成
       </button>
 
       <button
