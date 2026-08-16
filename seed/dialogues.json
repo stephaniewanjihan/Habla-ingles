@@ -8,47 +8,58 @@
     "dialogue": [
       {
         "speaker": "Priya",
-        "text": "Hi Tom, it's Priya from the corporate actions team. Have you got two minutes?"
+        "text": "Hi Tom, it's Priya from the corporate actions team. Have you got two minutes?",
+        "zh": "嗨 Tom,我是企业行动组的 Priya。有两分钟吗?"
       },
       {
         "speaker": "Tom",
-        "text": "Course. What can I do for you?"
+        "text": "Course. What can I do for you?",
+        "zh": "当然,什么事?"
       },
       {
         "speaker": "Priya",
-        "text": "It's the dividend on the BP holding — we're still showing it as outstanding. Pay date was the ninth."
+        "text": "It's the dividend on the BP holding — we're still showing it as outstanding. Pay date was the ninth.",
+        "zh": "是 BP 持仓的那笔股息——我们这边还显示未到账,派息日是九号。"
       },
       {
         "speaker": "Tom",
-        "text": "Right, let me have a look. Hmm. It's showing as processed our end, funnily enough."
+        "text": "Right, let me have a look. Hmm. It's showing as processed our end, funnily enough.",
+        "zh": "好,我看一下。嗯,有意思的是,我们这边显示已经处理完了。"
       },
       {
         "speaker": "Priya",
-        "text": "That's interesting, because nothing's landed in the client account. Could there be a break somewhere in the chain?"
+        "text": "That's interesting, because nothing's landed in the client account. Could there be a break somewhere in the chain?",
+        "zh": "这就有意思了,因为客户账户里什么都没到。会不会是链条中间哪一环断了?"
       },
       {
         "speaker": "Tom",
-        "text": "Possibly at the sub-custodian. They've been a bit slow this week, to be fair."
+        "text": "Possibly at the sub-custodian. They've been a bit slow this week, to be fair.",
+        "zh": "可能卡在次级托管行,说句公道话,他们这周确实有点慢。"
       },
       {
         "speaker": "Priya",
-        "text": "OK. The thing is, the client's month-end reporting runs on Friday, so I'm a bit up against it."
+        "text": "OK. The thing is, the client's month-end reporting runs on Friday, so I'm a bit up against it.",
+        "zh": "好。问题是客户的月末报告周五就要跑,我时间上有点顶不住了。"
       },
       {
         "speaker": "Tom",
-        "text": "Understood. I'll chase them this afternoon and come back to you."
+        "text": "Understood. I'll chase them this afternoon and come back to you.",
+        "zh": "明白,我今天下午就去催他们,然后回复你。"
       },
       {
         "speaker": "Priya",
-        "text": "Could you copy me in on that chase? Just so I've got something to show if the client asks."
+        "text": "Could you copy me in on that chase? Just so I've got something to show if the client asks.",
+        "zh": "催的时候能抄送我一下吗?客户来问的话,我手上得有点东西能给他看。"
       },
       {
         "speaker": "Tom",
-        "text": "Will do. If you've heard nothing by ten tomorrow, give me a shout and I'll escalate it properly."
+        "text": "Will do. If you've heard nothing by ten tomorrow, give me a shout and I'll escalate it properly.",
+        "zh": "没问题。如果明早十点你还没收到消息,喊我一声,我就正式升级。"
       },
       {
         "speaker": "Priya",
-        "text": "Perfect. Thanks Tom, much appreciated."
+        "text": "Perfect. Thanks Tom, much appreciated.",
+        "zh": "太好了。谢谢 Tom,非常感谢。"
       }
     ],
     "quiz": [
@@ -88,6 +99,32 @@
         ],
         "why": "抄送 = 承诺变成书面记录。她给出的理由(something to show if the client asks)让这个要求听起来完全无害,但效果是 Tom 今天下午不追就会被看见——这是英式加压的漂亮手法。"
       }
+    ],
+    "cast": {
+      "Priya": "f",
+      "Tom": "m"
+    },
+    "highlights": [
+      {
+        "phrase": "Have you got two minutes?",
+        "gloss": "开口占用别人时间的标准第一句,先要一个小额授权。"
+      },
+      {
+        "phrase": "funnily enough",
+        "gloss": "「说来有意思」——英式口语里引出巧合或矛盾信息的缓冲词。"
+      },
+      {
+        "phrase": "up against it",
+        "gloss": "「被时间逼到墙角」——deadline 压顶的地道说法,自带求助信号。"
+      },
+      {
+        "phrase": "give me a shout",
+        "gloss": "「喊我一声」——英式口语的「随时找我」,比 contact me 自然十倍。"
+      },
+      {
+        "phrase": "much appreciated",
+        "gloss": "克制版的谢谢,同事之间比 thank you so much 更常用。"
+      }
     ]
   },
   {
@@ -99,43 +136,53 @@
     "dialogue": [
       {
         "speaker": "Sarah",
-        "text": "So the proposal is we bring the migration forward to March. Thoughts?"
+        "text": "So the proposal is we bring the migration forward to March. Thoughts?",
+        "zh": "所以提案是把迁移提前到三月。大家怎么看?"
       },
       {
         "speaker": "James",
-        "text": "Can I just check what that does to the testing window?"
+        "text": "Can I just check what that does to the testing window?",
+        "zh": "我能先问一下,这对测试窗口意味着什么?"
       },
       {
         "speaker": "Sarah",
-        "text": "It compresses it, obviously, but the vendor reckons three weeks is doable."
+        "text": "It compresses it, obviously, but the vendor reckons three weeks is doable.",
+        "zh": "肯定会压缩,但供应商觉得三周够用。"
       },
       {
         "speaker": "James",
-        "text": "Hmm. I might be missing something, but three weeks feels tight for a full parallel run."
+        "text": "Hmm. I might be missing something, but three weeks feels tight for a full parallel run.",
+        "zh": "嗯……可能是我漏了什么,但三周做完整的并行测试,感觉太紧了。"
       },
       {
         "speaker": "Sarah",
-        "text": "It's tight, I'll give you that. But the client's pushing hard for Q1."
+        "text": "It's tight, I'll give you that. But the client's pushing hard for Q1.",
+        "zh": "确实紧,这点我承认。但客户在强推一季度上线。"
       },
       {
         "speaker": "James",
-        "text": "I hear that. My worry is if we hit one bad reconciliation cycle, there's no slack to recover — and then we're explaining a failed go-live instead of a late one."
+        "text": "I hear that. My worry is if we hit one bad reconciliation cycle, there's no slack to recover — and then we're explaining a failed go-live instead of a late one.",
+        "zh": "我理解。我担心的是,只要碰上一轮对账出问题,就没有任何余地恢复——到时候我们要解释的就不是延期,而是上线失败。"
       },
       {
         "speaker": "Sarah",
-        "text": "That's a fair challenge. What would make March workable for you?"
+        "text": "That's a fair challenge. What would make March workable for you?",
+        "zh": "这个质疑合理。什么条件下三月对你来说是可行的?"
       },
       {
         "speaker": "James",
-        "text": "Honestly? Either we drop the parallel run to two products instead of five, or we keep the April date. I'd rather trim scope than trim testing."
+        "text": "Honestly? Either we drop the parallel run to two products instead of five, or we keep the April date. I'd rather trim scope than trim testing.",
+        "zh": "说实话?要么并行测试从五个产品砍到两个,要么保住四月的日期。我宁可砍范围,也不砍测试。"
       },
       {
         "speaker": "Sarah",
-        "text": "OK. Let's take the scope option away and cost it properly. Can you and I grab half an hour tomorrow?"
+        "text": "OK. Let's take the scope option away and cost it properly. Can you and I grab half an hour tomorrow?",
+        "zh": "好。我们把砍范围这个选项拿去仔细核算。明天你和我碰半小时?"
       },
       {
         "speaker": "James",
-        "text": "Works for me."
+        "text": "Works for me.",
+        "zh": "没问题。"
       }
     ],
     "quiz": [
@@ -193,6 +240,28 @@
         ],
         "why": "fair challenge / fair point 是给对方质疑发的\"通行证\":承认它值得讨论,但不等于同意。她接下来做的是把方案拿去核算,不是拍板改期——听懂这个差别,才不会误判会议结果。"
       }
+    ],
+    "cast": {
+      "Sarah": "f",
+      "James": "m"
+    },
+    "highlights": [
+      {
+        "phrase": "I'll give you that",
+        "gloss": "「这点我让给你」——承认对方某个点说得对,但整体立场不变。"
+      },
+      {
+        "phrase": "I hear that",
+        "gloss": "「我听到了/我理解」——接住对方观点的最短方式,不等于同意。"
+      },
+      {
+        "phrase": "no slack to recover",
+        "gloss": "slack = 余量。没有缓冲空间,运营和项目场景高频。"
+      },
+      {
+        "phrase": "cost it properly",
+        "gloss": "cost 作动词:把方案的成本仔细算出来。财务场景必备。"
+      }
     ]
   },
   {
@@ -204,35 +273,43 @@
     "dialogue": [
       {
         "speaker": "Dan",
-        "text": "Morning! Good weekend?"
+        "text": "Morning! Good weekend?",
+        "zh": "早!周末过得好吗?"
       },
       {
         "speaker": "Amy",
-        "text": "Yeah, not bad actually. Bit of a lazy one — you?"
+        "text": "Yeah, not bad actually. Bit of a lazy one — you?",
+        "zh": "还不错,比较懒散的一个周末——你呢?"
       },
       {
         "speaker": "Dan",
-        "text": "Went up to see my parents in Leeds. Train back was carnage, mind. Two hours sat outside Peterborough."
+        "text": "Went up to see my parents in Leeds. Train back was carnage, mind. Two hours sat outside Peterborough.",
+        "zh": "去利兹看了我爸妈。不过回程的火车简直灾难,在彼得伯勒站外坐了两个小时。"
       },
       {
         "speaker": "Amy",
-        "text": "Oh no, not again. It was the same story when I went up last month."
+        "text": "Oh no, not again. It was the same story when I went up last month.",
+        "zh": "不是吧,又来?我上个月去的时候也是这样。"
       },
       {
         "speaker": "Dan",
-        "text": "Honestly, you'd have more luck walking. Anyway — you watching anything good at the moment?"
+        "text": "Honestly, you'd have more luck walking. Anyway — you watching anything good at the moment?",
+        "zh": "讲真,走路都比它快。对了——你最近在看什么好剧吗?"
       },
       {
         "speaker": "Amy",
-        "text": "We just started that new detective thing everyone's on about. Two episodes in, quite promising."
+        "text": "We just started that new detective thing everyone's on about. Two episodes in, quite promising.",
+        "zh": "我们刚开始看那部大家都在聊的侦探剧。看了两集,挺有潜力。"
       },
       {
         "speaker": "Dan",
-        "text": "Don't tell me anything, it's on my list. Right, better crack on — month-end waits for no one."
+        "text": "Don't tell me anything, it's on my list. Right, better crack on — month-end waits for no one.",
+        "zh": "别剧透,已经在我的清单上了。好了,我得干活去了——月末可不等人。"
       },
       {
         "speaker": "Amy",
-        "text": "Don't remind me. Good catching up!"
+        "text": "Don't remind me. Good catching up!",
+        "zh": "别提醒我。聊得很开心!"
       }
     ],
     "quiz": [
@@ -272,6 +349,28 @@
         ],
         "why": "right 是英式对话的官方刹车,后面接 better crack on / better get back 都是固定搭配。没人觉得被冒犯——反而是不会踩刹车、让闲聊拖到尴尬的人更让人头疼。"
       }
+    ],
+    "cast": {
+      "Dan": "m",
+      "Amy": "f"
+    },
+    "highlights": [
+      {
+        "phrase": "carnage",
+        "gloss": "字面是「大屠杀」,口语里夸张形容一片混乱——英式吐槽的招牌词。"
+      },
+      {
+        "phrase": "you'd have more luck walking",
+        "gloss": "「走路都比它快」——英式夸张吐槽句式 you'd have more luck doing X。"
+      },
+      {
+        "phrase": "Don't tell me anything",
+        "gloss": "「别剧透」——聊剧时的固定用语,完整说法是 no spoilers。"
+      },
+      {
+        "phrase": "month-end waits for no one",
+        "gloss": "套用谚语 time waits for no one,财务人的自嘲:月末不等人。"
+      }
     ]
   },
   {
@@ -283,43 +382,53 @@
     "dialogue": [
       {
         "speaker": "Wei",
-        "text": "Thanks everyone. I'll keep this short — three things: where the project is, what's changed on cost, and the decision I need today."
+        "text": "Thanks everyone. I'll keep this short — three things: where the project is, what's changed on cost, and the decision I need today.",
+        "zh": "谢谢各位,我尽量简短——三件事:项目进展、成本上的变化,以及今天需要的决定。"
       },
       {
         "speaker": "Wei",
-        "text": "The headline: delivery is on track for June, but the vendor's revised quote puts us forty thousand over the approved budget."
+        "text": "The headline: delivery is on track for June, but the vendor's revised quote puts us forty thousand over the approved budget.",
+        "zh": "先说结论:六月交付没有问题,但供应商修订后的报价让我们超出已批预算四万镑。"
       },
       {
         "speaker": "Mark",
-        "text": "Forty? Where's that come from? We signed off the scope in January."
+        "text": "Forty? Where's that come from? We signed off the scope in January.",
+        "zh": "四万?哪来的?我们一月就把范围定死了。"
       },
       {
         "speaker": "Wei",
-        "text": "Fair question. Two-thirds of it is the extra data migration work we uncovered in testing — that's genuinely new. The rest is their day-rate increase, which I've already pushed back on once."
+        "text": "Fair question. Two-thirds of it is the extra data migration work we uncovered in testing — that's genuinely new. The rest is their day-rate increase, which I've already pushed back on once.",
+        "zh": "问得好。三分之二是测试中新发现的数据迁移工作——这是真正的新增。剩下的是他们日费率涨价,这部分我已经顶回去过一次了。"
       },
       {
         "speaker": "Mark",
-        "text": "Can we absorb it by trimming somewhere else?"
+        "text": "Can we absorb it by trimming somewhere else?",
+        "zh": "能从别的地方省出来吗?"
       },
       {
         "speaker": "Wei",
-        "text": "We looked at that. The honest answer is anything we trim now is testing, and I don't want to sign us up to fail. I've set out two options in the pack — extend by four weeks, or approve the overspend."
+        "text": "We looked at that. The honest answer is anything we trim now is testing, and I don't want to sign us up to fail. I've set out two options in the pack — extend by four weeks, or approve the overspend.",
+        "zh": "我们看过了。诚实的回答是:现在能砍的只有测试,而我不想带着大家去失败。材料里我列了两个选项——延四周,或者批准超支。"
       },
       {
         "speaker": "Mark",
-        "text": "And your recommendation?"
+        "text": "And your recommendation?",
+        "zh": "你的建议呢?"
       },
       {
         "speaker": "Wei",
-        "text": "Approve the overspend. A four-week slip costs us more in contract penalties than the forty grand — the maths is on slide six."
+        "text": "Approve the overspend. A four-week slip costs us more in contract penalties than the forty grand — the maths is on slide six.",
+        "zh": "批准超支。延四周的合同罚金比这四万镑还多——账在第六页。"
       },
       {
         "speaker": "Mark",
-        "text": "Fine. Let's take it to the committee with your recommendation. Send me the pack after this."
+        "text": "Fine. Let's take it to the committee with your recommendation. Send me the pack after this.",
+        "zh": "行。带着你的建议上委员会吧。会后把材料发我。"
       },
       {
         "speaker": "Wei",
-        "text": "Will do. That's everything from me — anything I've missed?"
+        "text": "Will do. That's everything from me — anything I've missed?",
+        "zh": "好的。我这边就这些——有什么我漏掉的吗?"
       }
     ],
     "quiz": [
@@ -377,6 +486,28 @@
         ],
         "why": "这是英式管理层沟通里的重量级句式:不说 no,而是把后果讲成\"我们一起失败\"。它把拒绝包装成职业判断,配上已经算好的两个选项,反而赢得信任——注意 Mark 立刻就接受了。"
       }
+    ],
+    "cast": {
+      "Wei": "f",
+      "Mark": "m"
+    },
+    "highlights": [
+      {
+        "phrase": "Fair question",
+        "gloss": "先给对方的质疑发通行证,再开始拆解回答——被追问时的标准第一拍。"
+      },
+      {
+        "phrase": "Where's that come from?",
+        "gloss": "追问数字来源的口语问法,会议里被问到要能立刻拆解回答。"
+      },
+      {
+        "phrase": "day-rate",
+        "gloss": "外包/顾问的日费率,英国合同用工场景的核心词。"
+      },
+      {
+        "phrase": "the maths is on slide six",
+        "gloss": "英式说 maths 不说 math;「账在第六页」——用材料背书结论的标准句。"
+      }
     ]
   },
   {
@@ -388,43 +519,53 @@
     "dialogue": [
       {
         "speaker": "Lena",
-        "text": "Rob, have you got a sec? I've got a slightly cheeky ask."
+        "text": "Rob, have you got a sec? I've got a slightly cheeky ask.",
+        "zh": "Rob,有空吗?我有个有点厚脸皮的请求。"
       },
       {
         "speaker": "Rob",
-        "text": "Go on then."
+        "text": "Go on then.",
+        "zh": "说吧。"
       },
       {
         "speaker": "Lena",
-        "text": "You know the legacy system you lot still have access to? We need three years of fee history off it for an audit request, and you're the only team with a login."
+        "text": "You know the legacy system you lot still have access to? We need three years of fee history off it for an audit request, and you're the only team with a login.",
+        "zh": "你们不是还有老系统的权限吗?审计要三年的费用历史,只有你们组还能登进去。"
       },
       {
         "speaker": "Rob",
-        "text": "Ah. Strictly speaking that's not really ours to run any more."
+        "text": "Ah. Strictly speaking that's not really ours to run any more.",
+        "zh": "啊,严格说那系统已经不归我们管了。"
       },
       {
         "speaker": "Lena",
-        "text": "I know, and feel free to tell me to go away. But the audit deadline's Thursday and going through IT would take two weeks."
+        "text": "I know, and feel free to tell me to go away. But the audit deadline's Thursday and going through IT would take two weeks.",
+        "zh": "我知道,你完全可以让我走开。但审计周四截止,走 IT 流程要两周。"
       },
       {
         "speaker": "Rob",
-        "text": "Two weeks is optimistic, knowing them. How big a pull are we talking?"
+        "text": "Two weeks is optimistic, knowing them. How big a pull are we talking?",
+        "zh": "两周还是乐观估计,那帮人的速度你懂的。要拉多大的数?"
       },
       {
         "speaker": "Lena",
-        "text": "One report, maybe twenty minutes of your time. I'll write up exactly what we need so you're not guessing."
+        "text": "One report, maybe twenty minutes of your time. I'll write up exactly what we need so you're not guessing.",
+        "zh": "一份报表,大概占你二十分钟。我会把要什么写得清清楚楚,不让你猜。"
       },
       {
         "speaker": "Rob",
-        "text": "Go on then. Send me the spec and I'll run it tomorrow morning."
+        "text": "Go on then. Send me the spec and I'll run it tomorrow morning.",
+        "zh": "行吧,把说明发我,明早我跑一下。"
       },
       {
         "speaker": "Lena",
-        "text": "You're a lifesaver. Lunch is on me next week — I owe you one."
+        "text": "You're a lifesaver. Lunch is on me next week — I owe you one.",
+        "zh": "你真是救命恩人。下周午饭我请——欠你一个人情。"
       },
       {
         "speaker": "Rob",
-        "text": "I'll hold you to that."
+        "text": "I'll hold you to that.",
+        "zh": "这话我记住了。"
       }
     ],
     "quiz": [
@@ -464,6 +605,32 @@
         ],
         "why": "英国办公室的人情是真实流通的货币,I owe you one → I'll hold you to that 是标准的记账对话,带着玩笑的口吻但双方都当真。下次 Rob 找 Lena 帮忙时,这笔账就是开场白。"
       }
+    ],
+    "cast": {
+      "Lena": "f",
+      "Rob": "m"
+    },
+    "highlights": [
+      {
+        "phrase": "Go on then",
+        "gloss": "「那你说吧/行吧」——英式口语的松口信号,带一点被说动的意味。"
+      },
+      {
+        "phrase": "Strictly speaking",
+        "gloss": "「严格来说」——引出规则上的保留意见,后面往往跟着通融。"
+      },
+      {
+        "phrase": "knowing them",
+        "gloss": "「以我对他们的了解」——两个词的吐槽,全靠语境传递不信任。"
+      },
+      {
+        "phrase": "How big a pull are we talking?",
+        "gloss": "pull = 拉数/取数;are we talking 是口语的「大概什么量级」。"
+      },
+      {
+        "phrase": "I'll hold you to that",
+        "gloss": "「这话我记住了」——半开玩笑地把口头承诺登记在案。"
+      }
     ]
   },
   {
@@ -475,47 +642,58 @@
     "dialogue": [
       {
         "speaker": "Client",
-        "text": "Nadia, I've just seen the confirmation — we've been put into the cash option on the rights issue. We elected for shares. What's happened?"
+        "text": "Nadia, I've just seen the confirmation — we've been put into the cash option on the rights issue. We elected for shares. What's happened?",
+        "zh": "Nadia,我刚看到确认书——配股我们被划进了现金选项。我们选的是股票。怎么回事?"
       },
       {
         "speaker": "Nadia",
-        "text": "Let me pull it up right now. You're right, the confirmation shows cash. I completely understand the concern — give me one moment."
+        "text": "Let me pull it up right now. You're right, the confirmation shows cash. I completely understand the concern — give me one moment.",
+        "zh": "我马上调出来看。您说得对,确认书上显示的是现金。我完全理解您的担忧——给我一点时间。"
       },
       {
         "speaker": "Client",
-        "text": "This isn't a small position for us."
+        "text": "This isn't a small position for us.",
+        "zh": "这对我们不是一笔小仓位。"
       },
       {
         "speaker": "Nadia",
-        "text": "Understood. OK — I can see your election came in on the second, ahead of the deadline, so on the face of it this shouldn't have happened. I'm not going to guess at what went wrong until I've traced it properly."
+        "text": "Understood. OK — I can see your election came in on the second, ahead of the deadline, so on the face of it this shouldn't have happened. I'm not going to guess at what went wrong until I've traced it properly.",
+        "zh": "明白。好——我能看到您的选择指令二号就到了,在截止时间之前,所以表面上看这不应该发生。在彻底查清之前,我不会去猜哪里出了错。"
       },
       {
         "speaker": "Client",
-        "text": "So what happens now?"
+        "text": "So what happens now?",
+        "zh": "那现在怎么办?"
       },
       {
         "speaker": "Nadia",
-        "text": "Two things this afternoon. I'll trace the instruction through to the registrar and find where it broke. And I'll speak to our ops manager about what can be corrected, and by when."
+        "text": "Two things this afternoon. I'll trace the instruction through to the registrar and find where it broke. And I'll speak to our ops manager about what can be corrected, and by when.",
+        "zh": "今天下午两件事。第一,我把指令一路追到注册处,找到断点在哪。第二,我去和运营主管确认什么能纠正、多快能纠正。"
       },
       {
         "speaker": "Client",
-        "text": "And if it can't be corrected?"
+        "text": "And if it can't be corrected?",
+        "zh": "如果纠正不了呢?"
       },
       {
         "speaker": "Nadia",
-        "text": "Then we'll be having a different conversation, and I won't hide from it. But I'd rather not speculate before I've got the facts."
+        "text": "Then we'll be having a different conversation, and I won't hide from it. But I'd rather not speculate before I've got the facts.",
+        "zh": "那我们就得谈另一件事了,我不会回避。但在拿到事实之前,我不想妄下判断。"
       },
       {
         "speaker": "Client",
-        "text": "Fine. When do I hear from you?"
+        "text": "Fine. When do I hear from you?",
+        "zh": "行。我什么时候能收到你的消息?"
       },
       {
         "speaker": "Nadia",
-        "text": "I'll email you a written summary by five today, whatever I've found — even if it's incomplete. And I'll call you first thing tomorrow with the full picture."
+        "text": "I'll email you a written summary by five today, whatever I've found — even if it's incomplete. And I'll call you first thing tomorrow with the full picture.",
+        "zh": "今天五点前我会邮件给您一份书面小结——不管查到哪一步,哪怕不完整。明天一早我再打电话给您说完整情况。"
       },
       {
         "speaker": "Client",
-        "text": "All right. Five o'clock. Thank you, Nadia."
+        "text": "All right. Five o'clock. Thank you, Nadia.",
+        "zh": "好,五点。谢谢你,Nadia。"
       }
     ],
     "quiz": [
@@ -555,6 +733,32 @@
         ],
         "why": "even if it's incomplete 是关键:她承诺的不是结果,是节奏。客户的焦虑主要来自失控感,一个确定的时间表(五点邮件+明早电话)比任何安抚的话都有效。书面总结同时也保护了她自己——电话内容落了字。"
       }
+    ],
+    "cast": {
+      "Client": "m",
+      "Nadia": "f"
+    },
+    "highlights": [
+      {
+        "phrase": "on the face of it",
+        "gloss": "「表面上看」——先陈述现象、保留最终判断的标准短语。"
+      },
+      {
+        "phrase": "I won't hide from it",
+        "gloss": "「我不会回避」——承诺直面坏结果,重建信任的关键句。"
+      },
+      {
+        "phrase": "I'd rather not speculate",
+        "gloss": "「我不想妄加猜测」——查清前拒绝定性,合规场景的自保金句。"
+      },
+      {
+        "phrase": "even if it's incomplete",
+        "gloss": "承诺节奏而不是结果:到点必有交代,哪怕不完整。客户焦虑的解药。"
+      },
+      {
+        "phrase": "first thing tomorrow",
+        "gloss": "「明天一早」——比 tomorrow morning 更有承诺感的时间表述。"
+      }
     ]
   },
   {
@@ -566,43 +770,53 @@
     "dialogue": [
       {
         "speaker": "Claire",
-        "text": "You look cheerful for a Monday. Good weekend?"
+        "text": "You look cheerful for a Monday. Good weekend?",
+        "zh": "周一还这么精神,周末不错?"
       },
       {
         "speaker": "Raj",
-        "text": "Results day, wasn't it. Maya got her A Levels — two A's and a B."
+        "text": "Results day, wasn't it. Maya got her A Levels — two A's and a B.",
+        "zh": "放榜日嘛。Maya 的 A Level 出分了——两个 A 一个 B。"
       },
       {
         "speaker": "Claire",
-        "text": "Oh that's brilliant! She must be over the moon. Did she get her first choice?"
+        "text": "Oh that's brilliant! She must be over the moon. Did she get her first choice?",
+        "zh": "太棒了吧!她肯定高兴坏了。第一志愿录了吗?"
       },
       {
         "speaker": "Raj",
-        "text": "She did — Manchester, to do economics. The B was in maths and she needed an A, but they took her anyway."
+        "text": "She did — Manchester, to do economics. The B was in maths and she needed an A, but they took her anyway.",
+        "zh": "录了——曼彻斯特,读经济。B 是数学,本来要求 A,但学校还是收了她。"
       },
       {
         "speaker": "Claire",
-        "text": "They often do. Honestly, the stress of that envelope — I don't miss it one bit."
+        "text": "They often do. Honestly, the stress of that envelope — I don't miss it one bit.",
+        "zh": "他们经常这样的。说真的,拆信封那种紧张——我一点都不怀念。"
       },
       {
         "speaker": "Raj",
-        "text": "The worst part is pretending you're calm for their sake. I was up at six refreshing the UCAS page."
+        "text": "The worst part is pretending you're calm for their sake. I was up at six refreshing the UCAS page.",
+        "zh": "最难的是还得在孩子面前装淡定。我六点就起来刷 UCAS 页面了。"
       },
       {
         "speaker": "Claire",
-        "text": "Ha! Classic. Well, tell her congratulations from me. When does she head off?"
+        "text": "Ha! Classic. Well, tell her congratulations from me. When does she head off?",
+        "zh": "哈!太典型了。替我向她道喜。她什么时候走?"
       },
       {
         "speaker": "Raj",
-        "text": "End of September. Which reminds me — I'm off the last week of October. Half term, and my youngest will burn the house down otherwise."
+        "text": "End of September. Which reminds me — I'm off the last week of October. Half term, and my youngest will burn the house down otherwise.",
+        "zh": "九月底。说起来——我十月最后一周休假。half term,不看着点,我家小的能把房子拆了。"
       },
       {
         "speaker": "Claire",
-        "text": "Say no more. I have booked the same week — soft play and superhero films, that is my life now."
+        "text": "Say no more. I have booked the same week — soft play and superhero films, that is my life now.",
+        "zh": "懂的懂的。我订了同一周——室内游乐场加超英电影,这就是我现在的人生。"
       },
       {
         "speaker": "Raj",
-        "text": "Living the dream. Right, I'd better get back — month-end waits for no one."
+        "text": "Living the dream. Right, I'd better get back — month-end waits for no one.",
+        "zh": "羡慕死了(反话)。好了我得回去干活——月末不等人。"
       }
     ],
     "quiz": [
@@ -641,6 +855,32 @@
           }
         ],
         "why": "英式家长闲聊的固定节奏:一方吐槽带娃,另一方不安慰、不给建议,而是掏出自己更惨的版本(soft play 是室内儿童游乐场,家长的炼狱)。Raj 回的 living the dream 是标准反讽收尾:名为羡慕,实为同病相怜。"
+      }
+    ],
+    "cast": {
+      "Claire": "f",
+      "Raj": "m"
+    },
+    "highlights": [
+      {
+        "phrase": "over the moon",
+        "gloss": "「高兴坏了」——英式高频习语,报喜和接喜都用。"
+      },
+      {
+        "phrase": "her first choice",
+        "gloss": "UCAS 里的第一志愿(firm choice),放榜季的核心词。"
+      },
+      {
+        "phrase": "for their sake",
+        "gloss": "「为了他们着想」——for someone's sake 的日常用法。"
+      },
+      {
+        "phrase": "Say no more",
+        "gloss": "「懂的,不用多说」——表示完全理解的口语,自带默契感。"
+      },
+      {
+        "phrase": "Living the dream",
+        "gloss": "字面「过着梦想生活」,实际是标准反讽:惨但认了。回应吐槽的万能句。"
       }
     ]
   }

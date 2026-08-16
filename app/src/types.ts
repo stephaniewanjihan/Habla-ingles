@@ -30,6 +30,10 @@ export interface CardContent {
   dialogue?: DialogueLine[]
   /** 听力理解题,重点考言外之意 */
   quiz?: QuizQuestion[]
+  /** 角色性别表:配音按这个分配,男角色配男声、女角色配女声 */
+  cast?: Record<string, 'm' | 'f'>
+  /** 这段对话里的好表达 */
+  highlights?: DialogueHighlight[]
   // 所有可复习卡型都有 note
   note?: string
   /** 这张卡真正要练的词组,填空模式挖掉它 */
@@ -44,6 +48,14 @@ export interface CardContent {
 export interface DialogueLine {
   speaker: string
   text: string
+  /** 该句的中文翻译,显示文字时同步展示 */
+  zh?: string
+}
+
+/** 对话里值得留意的好表达:高亮 + 中文解说,不进复习队列 */
+export interface DialogueHighlight {
+  phrase: string
+  gloss: string
 }
 
 export interface QuizQuestion {

@@ -35,22 +35,56 @@ export function speak(text: string): void {
   speechSynthesis.speak(u)
 }
 
-/** 给对话里的每个说话人分配一个不同的声音,尽量一男一女的英音 */
-function voicesForDialogue(speakers: string[]): Map<string, SpeechSynthesisVoice | null> {
+/** 常见系统语音的性别名单:按名字判断,不同平台通用 */
+const FEMALE_VOICES = /kate|serena|martha|sonia|libby|stephanie|susan|samantha|karen|moira|tessa|fiona|allison|ava|nicky|joelle|shelley|kathy|flo|sandy|anna|emily|catherine/i
+const MALE_VOICES = /daniel|arthur|oliver|alex\b|aaron|fred|gordon|lee\b|rishi|james|thomas|albert|bruce|junior|ralph|reed|rocko|eddy/i
+
+function poolByGender(): { f: SpeechSynthesisVoice[]; m: SpeechSynthesisVoice[] } {
   const vs = canSpeak ? speechSynthesis.getVoices() : []
-  const gb = vs.filter(v => v.lang === 'en-GB')
-  const en = vs.filter(v => v.lang.startsWith('en'))
-  const pool: (SpeechSynthesisVoice | null)[] = []
-  const male = gb.find(v => /daniel|arthur|oliver/i.test(v.name))
-  const female = gb.find(v => /kate|serena|sonia|libby|martha/i.test(v.name))
-  if (female) pool.push(female)
-  if (male) pool.push(male)
-  for (const v of [...gb, ...en]) {
-    if (pool.length >= speakers.length) break
-    if (!pool.includes(v)) pool.push(v)
+  const en = [...vs.filter(v => v.lang === 'en-GB'), ...vs.filter(v => v.lang.startsWith('en') && v.lang !== 'en-GB')]
+  return {
+    f: en.filter(v => FEMALE_VOICES.test(v.name) && !MALE_VOICES.test(v.name)),
+    m: en.filter(v => MALE_VOICES.test(v.name) && !FEMALE_VOICES.test(v.name)),
   }
-  while (pool.length < speakers.length) pool.push(pool[0] ?? null)
-  return new Map(speakers.map((sp, i) => [sp, pool[i % pool.length]]))
+}
+
+/** 按角色声明的性别分配声音;同性别多角色尽量用不同的声音 */
+function voicesForCast(
+  speakers: string[],
+  cast: Record<string, 'm' | 'f'> | undefined,
+): Map<string, SpeechSynthesisVoice | null> {
+  const { f, m } = poolByGender()
+  const used = new Set<string>()
+  const pickFrom = (pool: SpeechSynthesisVoice[]): SpeechSynthesisVoice | null => {
+    const fresh = pool.find(v => !used.has(v.name)) ?? pool[0] ?? null
+    if (fresh) used.add(fresh.name)
+    return fresh
+  }
+  const all = [...f, ...m]
+  return new Map(
+    speakers.map(sp => {
+      const g = cast?.[sp]
+      const voice = g === 'f' ? pickFrom(f) ?? pickFrom(all) : g === 'm' ? pickFrom(m) ?? pickFrom(all) : pickFrom(all)
+      return [sp, voice]
+    }),
+  )
+}
+
+/** 播放期间保持屏幕常亮:iOS 锁屏会掐断语音合成 */
+let wakeLock: { release: () => Promise<void> } | null = null
+
+async function acquireWakeLock(): Promise<void> {
+  try {
+    const nav = navigator as Navigator & { wakeLock?: { request: (t: 'screen') => Promise<{ release: () => Promise<void> }> } }
+    if (nav.wakeLock) wakeLock = await nav.wakeLock.request('screen')
+  } catch {
+    /* 低电量模式等场景会拒绝,拒绝就算了 */
+  }
+}
+
+function releaseWakeLock(): void {
+  void wakeLock?.release().catch(() => {})
+  wakeLock = null
 }
 
 export interface DialoguePlayer {
@@ -62,6 +96,7 @@ export function playDialogue(
   lines: { speaker: string; text: string }[],
   onLine: (index: number) => void,
   onDone: () => void,
+  cast?: Record<string, 'm' | 'f'>,
 ): DialoguePlayer {
   if (!canSpeak || lines.length === 0) {
     onDone()
@@ -69,20 +104,35 @@ export function playDialogue(
   }
   speechSynthesis.cancel()
   const speakers = [...new Set(lines.map(l => l.speaker))]
-  const cast = voicesForDialogue(speakers)
+  const voices = voicesForCast(speakers, cast)
   let stopped = false
   let i = 0
+  void acquireWakeLock()
+
+  // 切到后台再回来时,iOS 会把语音挂起——回前台立刻恢复,并重新拿回屏幕常亮
+  const onVisible = () => {
+    if (document.hidden || stopped) return
+    if (speechSynthesis.paused) speechSynthesis.resume()
+    void acquireWakeLock()
+  }
+  document.addEventListener('visibilitychange', onVisible)
+
+  const cleanup = () => {
+    document.removeEventListener('visibilitychange', onVisible)
+    releaseWakeLock()
+  }
 
   const next = () => {
     if (stopped) return
     if (i >= lines.length) {
+      cleanup()
       onDone()
       return
     }
     const line = lines[i]
     onLine(i)
     const u = new SpeechSynthesisUtterance(line.text)
-    const v = cast.get(line.speaker)
+    const v = voices.get(line.speaker)
     if (v) u.voice = v
     u.lang = 'en-GB'
     u.rate = 0.92
@@ -102,6 +152,7 @@ export function playDialogue(
     stop: () => {
       stopped = true
       speechSynthesis.cancel()
+      cleanup()
     },
   }
 }

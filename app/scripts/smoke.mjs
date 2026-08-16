@@ -44,7 +44,9 @@ page.on('console', m => { if (m.type() === 'error') console.log('CONSOLE ERROR:'
 page.on('pageerror', e => { console.log('PAGE ERROR:', e.message); fails.push('pageerror: ' + e.message) })
 
 await page.goto(BASE)
-await page.waitForTimeout(1500)
+// 首次打开要灌入整套牌组,等首页真正渲染出来再断言
+await page.getByText('开始今天的一组').waitFor({ timeout: 20000 }).catch(() => {})
+await page.waitForTimeout(300)
 
 // --- Home ---
 ok('home shows start button', await page.getByText('开始今天的一组').isVisible().catch(() => false))
@@ -343,6 +345,11 @@ await page.waitForTimeout(500)
   await page.waitForTimeout(300)
   const anyLine = await page.locator('span.font-semibold').first().isVisible().catch(() => false)
   ok('transcript toggles on with speaker names', anyLine)
+  ok('transcript shows Chinese translation per line',
+     await page.getByText('我是企业行动组的').isVisible().catch(() => false) ||
+     await page.getByText('周末过得好吗').isVisible().catch(() => false) ||
+     (await page.locator('p.text-\\[13px\\].text-label3').count()) > 3)
+  ok('good-expression glossary appears', await page.getByText('这段里的好表达').isVisible().catch(() => false))
   // 点第一题的一个选项,验证判定与解析出现
   const quizBtns = page.locator('button.w-full.rounded-\\[12px\\].p-3')
   if (await quizBtns.count()) {

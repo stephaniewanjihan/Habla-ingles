@@ -132,6 +132,40 @@ function SpeakButton({ text }: { text?: string }) {
   )
 }
 
+/** 把好表达在句子里标出来(不区分大小写,按原文写法显示) */
+function markPhrases(text: string, highlights?: { phrase: string }[]) {
+  if (!highlights?.length) return text
+  let parts: (string | { hit: string })[] = [text]
+  for (const h of highlights) {
+    const next: typeof parts = []
+    for (const p of parts) {
+      if (typeof p !== 'string') {
+        next.push(p)
+        continue
+      }
+      const idx = p.toLowerCase().indexOf(h.phrase.toLowerCase())
+      if (idx < 0) {
+        next.push(p)
+      } else {
+        if (idx > 0) next.push(p.slice(0, idx))
+        next.push({ hit: p.slice(idx, idx + h.phrase.length) })
+        const rest = p.slice(idx + h.phrase.length)
+        if (rest) next.push(rest)
+      }
+    }
+    parts = next
+  }
+  return parts.map((p, i) =>
+    typeof p === 'string' ? (
+      p
+    ) : (
+      <span key={i} className="rounded-[4px] bg-orange-soft px-0.5 font-medium text-label">
+        {p.hit}
+      </span>
+    ),
+  )
+}
+
 function DialogueCard({ card }: { card: CardRecord }) {
   const [playing, setPlaying] = useState(false)
   const [line, setLine] = useState(-1)
@@ -155,6 +189,7 @@ function DialogueCard({ card }: { card: CardRecord }) {
           setPlaying(false)
           setLine(-1)
         },
+        card.cast,
       )
     }
   }
@@ -193,15 +228,34 @@ function DialogueCard({ card }: { card: CardRecord }) {
         {showText && (
           <div className="mt-4 space-y-2.5">
             {card.dialogue!.map((l, i) => (
-              <p
+              <div
                 key={i}
-                className={`rounded-[10px] px-3 py-2 text-[15px] leading-relaxed ${
-                  i === line ? 'bg-blue-soft text-label' : 'text-label2'
-                }`}
+                className={`rounded-[10px] px-3 py-2 ${i === line ? 'bg-blue-soft' : ''}`}
               >
-                <span className="font-semibold text-label">{l.speaker}:</span> {l.text}
-              </p>
+                <p className={`text-[15px] leading-relaxed ${i === line ? 'text-label' : 'text-label2'}`}>
+                  <span className="font-semibold text-label">{l.speaker}:</span>{' '}
+                  {markPhrases(l.text, card.highlights)}
+                </p>
+                {l.zh && <p className="mt-0.5 text-[13px] leading-relaxed text-label3">{l.zh}</p>}
+              </div>
             ))}
+          </div>
+        )}
+
+        {showText && card.highlights && card.highlights.length > 0 && (
+          <div className="mt-4 border-t pt-4" style={{ borderColor: 'var(--sep)' }}>
+            <p className="text-[13px] font-semibold text-label2">这段里的好表达</p>
+            <div className="mt-2.5 space-y-2.5">
+              {card.highlights.map((h, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <SpeakButton text={h.phrase} />
+                  <div className="flex-1">
+                    <p className="text-[14px] font-medium text-blue">{h.phrase}</p>
+                    <p className="text-[13px] leading-relaxed text-label2">{h.gloss}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
       </div>
