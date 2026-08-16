@@ -53,7 +53,12 @@ function seedHash(): string {
  * 没有这一步,老设备永远拿不到新内容,只有全新安装才看得到。
  */
 /** 已从种子里移除、且要从老设备上清掉的卡(产品负责人明确不要的内容) */
-const RETIRED_IDS = ['dialogue-13']
+const RETIRED_IDS = [
+  'dialogue-13',
+  // Operation Mincemeat 场次取消,纯剧情向的卡整体下架(有职场价值的词汇卡已改写并入商务/生活场景)
+  'theatre-16', 'theatre-27', 'theatre-32', 'theatre-33', 'theatre-44',
+  'theatre-49', 'theatre-52', 'theatre-55', 'theatre-56', 'theatre-57',
+]
 
 export async function ensureSeeded(): Promise<void> {
   await db.cards.bulkDelete(RETIRED_IDS)

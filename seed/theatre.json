@@ -143,7 +143,7 @@
     "scene": "theatre",
     "prompt": "散场后提议去后台门口等演员出来签名",
     "answer": "Fancy waiting at the stage door? The cast usually come out after about twenty minutes.",
-    "note": "stage door(后台门)文化:散场后演员从侧门出来,签节目册、合影,完全合规的追星方式。礼仪:排队、简短夸一句(you were wonderful tonight)、不拖时间。Hadestown 和 Mincemeat 的卡司都以对 stage door 友好著称。",
+    "note": "stage door(后台门)文化:散场后演员从侧门出来,签节目册、合影,完全合规的追星方式。礼仪:排队、简短夸一句(you were wonderful tonight)、不拖时间。Hadestown 的卡司以对 stage door 友好著称。",
     "chunk": "the stage door",
     "variants": [
       {
@@ -161,9 +161,9 @@
     "chunk": "I'm off to see",
     "variants": [
       {
-        "prompt": "周五同事问你周末干什么,你说周六要去看 Operation Mincemeat",
-        "answer": "Saturday night I'm seeing Operation Mincemeat at last — everyone bangs on about how funny it is.",
-        "note": "at last = 终于(被种草很久才去看);bang on about = 英式口语「反复念叨、安利个不停」,带一点亲昵的埋怨:everyone bangs on about how funny it is = 人人都在吹它好笑。用「大家都说」代替自己下判断,给看完之后的观后感留了悬念。"
+        "prompt": "周五同事问你周末干什么,你说周六终于要去看 Les Mis",
+        "answer": "Saturday night I'm finally seeing Les Mis — everyone bangs on about the barricade scene.",
+        "note": "finally / at last = 终于(被种草很久才去看);bang on about = 英式口语「反复念叨、安利个不停」,带一点亲昵的埋怨:everyone bangs on about X = 人人都在吹 X。用「大家都说」代替自己下判断,给观后感留悬念。Les Mis 是 Les Misérables 的通用简称,伦敦人只说简称。"
       }
     ]
   },
@@ -233,25 +233,18 @@
     "body": "故事:希腊神话双线——穷小子 Orpheus(读 OR-fee-us,重音在头;俄耳甫斯)用歌声追回死去的爱人 Eurydice(读 yoo-RID-uh-see,重音在 RID,别读成 dice 结尾;欧律狄刻),冥王 Hades(读 HAY-deez) 与春神 Persephone(读 per-SEF-uh-nee,重音在 SEF,不是 purse-phone) 的婚姻同时在冰冻期。叙事人是信使神 Hermes(读 HER-meez——爱马仕那个法语读法 air-MEZ 在这儿不通用),开场那句 it's an old song 会反复回来。Hadestown 即冥界,被写成一座血汗工厂。结局是悲的,而且开头就告诉你是悲的——it's a sad song, but we sing it anyway 是全剧题眼。听点:新奥尔良爵士风,乐队就在台上;Why We Build the Wall(冥王的洗脑颂歌,墙内有多讽刺你懂的)、Wait for Me(火车灯摇摆的名场面)、Epic III。词汇:the Underworld(冥界)、six feet under(入土)、hellhound(地狱犬)、shroud(裹尸布)、doubt comes in(怀疑袭来——结局的关键)。演出为 sung-through(几乎全程唱),歌词听不全完全正常,抓住 Hermes 的旁白就不会迷路。"
   },
   {
-    "id": "theatre-16",
-    "type": "note",
-    "scene": "theatre",
-    "title": "Operation Mincemeat 观剧准备:真实历史 + 喜剧机关",
-    "body": "背景是真实历史:1943 年英国情报部门把一具流浪汉遗体打扮成皇家海军军官 Major William Martin,身上放伪造机密文件,让尸体漂到西班牙海岸,骗纳粹以为盟军要登陆希腊而不是西西里——行动代号就叫 Mincemeat(肉馅)。这段历史英国人从学校和纪录片里都知道,所以全场会在你没反应过来的地方笑。剧的形式:五个演员演几十个角色,男女反串是核心笑点;曲风从电子到 swing 乱跳;语速极快,笑点密集靠 wordplay(双关),听不懂三成是正常配置,抓大情节即可。关键词:MI5(军情五处)、deception(欺敌)、decoy(诱饵)、the corpse(那具遗体)、Whitehall(白厅=政府)、U-boat(德军潜艇)。两首躲不开的歌:Born to Lead、Dear Bill(全剧最催泪的一首,前面笑得越狠这里越破防)。散场后标准评语:I laughed till the last twenty minutes destroyed me。"
-  },
-  {
     "id": "theatre-17",
     "type": "produce",
     "scene": "theatre",
-    "prompt": "跟同事介绍 Operation Mincemeat 讲的是什么",
-    "answer": "It's the one about the corpse with the fake invasion plans — a true story, bizarrely. Five actors playing everyone.",
-    "note": "介绍一部剧的万能句式:It's the one about...(就是讲……的那部)。a true story, bizarrely 把\"居然是真事\"的惊奇打包进一个副词。five actors playing everyone 是这部剧的招牌卖点,一句话就能让对方来兴趣。",
-    "chunk": "It's the one about",
+    "prompt": "朋友没听说过 Hadestown,你一句话介绍它",
+    "answer": "It's the one that retells the Orpheus myth in a New Orleans jazz bar — folk opera, gorgeous and heartbreaking.",
+    "note": "介绍一部剧的万能句式:It's the one that / the one about...(就是讲……的那部)。retell = 重新讲述(把老神话翻新);folk opera = 民谣歌剧,Hadestown 的官方体裁标签。gorgeous and heartbreaking 两个形容词收尾:一个夸美、一个预警虐,一句话介绍就完整了。",
+    "chunk": "It's the one that",
     "variants": [
       {
-        "prompt": "朋友没听说过 Hadestown,你一句话介绍它",
-        "answer": "It's the one that retells the Orpheus myth in a New Orleans jazz bar — folk opera, gorgeous and heartbreaking.",
-        "note": "retell = 重新讲述(retells the Orpheus myth 把老神话翻新);folk opera = 民谣歌剧,Hadestown 的官方体裁标签。gorgeous and heartbreaking 两个形容词收尾:一个夸美、一个预警虐,一句话介绍就完整了。It's the one that... 句式照旧。"
+        "prompt": "同事没看过 The Play That Goes Wrong,你一句话介绍",
+        "answer": "It's the one where an am-dram production falls apart in real time — you'll cry laughing.",
+        "note": "It's the one where... 是同款句式的第三种接法(about / that / where 都行)。am-dram = amateur dramatics(业余剧社)的英式缩略;falls apart in real time = 当着你的面塌房;cry laughing = 笑出眼泪。这部剧是伦敦「带外国朋友入坑」的常备选项,语言门槛最低。"
       }
     ]
   },
@@ -260,7 +253,7 @@
     "type": "note",
     "scene": "theatre",
     "title": "看懂音乐剧的通用技巧(比背单词更重要)",
-    "body": "最有效的一招:出发前把官方卡司专辑听一两遍(Spotify/Apple Music 搜 Hadestown Original Broadway Cast 和 Operation Mincemeat Original Cast)。旋律熟了,现场就只剩「对号入座」,理解压力直接减半——这是母语者也在用的方法。听唱词的规律:①内容词(名词/动词)重读、虚词几乎吞掉,抓重读词就够拼出意思;②韵脚可预测:听到上句尾音,下句结尾八成押韵,大脑会自动补全;③副歌会重复很多遍,第一遍没听懂完全没关系;④歌里的 gonna=going to、wanna=want to、gotta=got to、'cause=because,唱词里比口语更密集。最后:允许自己漏掉三成,剧情靠场面和音乐照样连得上——这不是妥协,是母语观众的真实状态。"
+    "body": "最有效的一招:出发前把官方卡司专辑听一两遍(Spotify/Apple Music 搜 Hadestown Original Broadway Cast)。旋律熟了,现场就只剩「对号入座」,理解压力直接减半——这是母语者也在用的方法。听唱词的规律:①内容词(名词/动词)重读、虚词几乎吞掉,抓重读词就够拼出意思;②韵脚可预测:听到上句尾音,下句结尾八成押韵,大脑会自动补全;③副歌会重复很多遍,第一遍没听懂完全没关系;④歌里的 gonna=going to、wanna=want to、gotta=got to、'cause=because,唱词里比口语更密集。最后:允许自己漏掉三成,剧情靠场面和音乐照样连得上——这不是妥协,是母语观众的真实状态。"
   },
   {
     "id": "theatre-19",
@@ -385,58 +378,44 @@
     ]
   },
   {
-    "id": "theatre-27",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:整场行动围绕的那具「遗体」,英语的正式说法",
-    "answer": "The corpse — though the officers keep calling him 'the body' or, later, Major Martin.",
-    "note": "corpse(尸体)是这部剧绕不开的词,剧里从 the body 到给他起名 Major William Martin,遗体逐渐「变成一个人」正是全剧最动人的暗线。相关词:the deceased(逝者,正式)、remains(遗骸)。",
-    "chunk": "The corpse",
-    "variants": [
-      {
-        "prompt": "向朋友介绍这部剧最特别的主角其实是一具遗体"
-      }
-    ]
-  },
-  {
     "id": "theatre-28",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:验尸、尸检的英语说法,剧里验尸官的戏份靠它展开",
-    "answer": "A post-mortem — the examination to find out how someone died.",
-    "note": "post-mortem(拉丁语「死后」)= 尸检;剧中团队最怕西班牙方面做 post-mortem 拆穿遗体身份。这个词职场也高频:项目复盘也叫 post-mortem(a post-mortem on the failed launch)——看剧顺便捡一个办公室词。相关词:coroner(验尸官)、cause of death(死因)。",
+    "scene": "slack",
+    "prompt": "在项目群里提议给失败的 launch 做一次复盘",
+    "answer": "Shall we run a quick post-mortem on the launch — what actually went wrong?",
+    "note": "post-mortem(拉丁语「死后」,原义尸检)在职场 = 项目复盘:run/do a post-mortem on X。quick 降低仪式感;what actually went wrong 里的 actually 暗示「别停在表面原因」。这个词从验尸官那里借来,办公室里毫无血腥味。",
     "chunk": "post-mortem",
     "variants": [
       {
-        "prompt": "开会时提议给失败的项目做一次复盘,用上这个词",
-        "answer": "Shall we run a quick post-mortem on the launch — what actually went wrong?",
-        "note": "post-mortem 的职场用法:run a post-mortem on X = 给 X 做复盘(动词配 run 或 do)。quick 降低仪式感;what actually went wrong 里的 actually 暗示「别停在表面原因」。从验尸官那里借来的词,办公室里毫无血腥味。"
+        "prompt": "事故处理完,你提议下周做个复盘并主动牵头",
+        "answer": "Worth a proper post-mortem once the dust settles — happy to set one up for Monday.",
+        "note": "once the dust settles = 等尘埃落定;worth a proper X = 值得正经做一次;happy to set one up 主动认领。提议+认领是最受欢迎的组合——只提议不认领,复盘多半不了了之。"
       }
     ]
   },
   {
     "id": "theatre-29",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:公文包里那份「绝密文件」怎么说,以及军方高层的俚语",
-    "answer": "Classified documents in the briefcase — and the top brass have to sign it all off.",
-    "note": "classified = 涉密的(top secret 是最高密级);briefcase(公文包)拴在遗体手腕上是行动的核心道具;top brass = 军方/机构高层(brass 原指军帽上的铜饰),办公室里也用来指大老板们。sign off = 签核放行,你的职场老朋友。",
+    "scene": "chasing",
+    "prompt": "跟同事吐槽方案早就备好了,还在等高层们签字",
+    "answer": "It's all drafted — we're just waiting on the top brass to sign it off.",
+    "note": "top brass = 高层大佬们(brass 原指军帽上的铜饰,集合名词,带点无奈的距离感)。it's all drafted = 稿子全备好了;waiting on someone to sign it off = 卡在某人签核。吐槽审批慢的标准句式:活是好的,章还没盖。",
     "chunk": "the top brass",
     "variants": [
       {
-        "prompt": "跟同事吐槽方案还在等高层们签字",
-        "answer": "It's all drafted — we're just waiting on the top brass to sign it off.",
-        "note": "top brass 的职场版:the top brass = 高层大佬们(集合名词,带点无奈的距离感)。it's all drafted = 稿子全备好了;waiting on someone to sign it off = 卡在某人签核。吐槽审批慢的标准句式:活是好的,章还没盖。"
+        "prompt": "解释这个决定不是你们组能拍的,要等高层定",
+        "answer": "That one's above my pay grade — it needs the top brass to weigh in.",
+        "note": "above my pay grade = 超出我的职级权限(自嘲式免责,毫无冒犯);weigh in = 发表意见/下场拍板。和 top brass 连用,把「等大老板定」说得轻松又清楚。"
       }
     ]
   },
   {
     "id": "theatre-30",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 发音陷阱:军衔 Lieutenant 在英式英语里怎么念?",
+    "scene": "culture",
+    "prompt": "英式发音陷阱:军衔 Lieutenant 怎么念?(战争片、王室新闻高频)",
     "answer": "Lef-tenant — the British say it with an F, nothing like the spelling.",
-    "note": "英式念 /lefˈtenənt/(「lef-」开头),美式才念 /luːˈtenənt/。剧里军衔满天飞:Lieutenant Commander(海军少校,Ewen Montagu 的军衔)、Colonel(念 KER-nel,又一个拼读分裂的词)、Admiral(上将)。提前知道这两个发音,听到就不会懵。",
+    "note": "英式念 /lefˈtenənt/(「lef-」开头),美式才念 /luːˈtenənt/,和拼写完全对不上。同族的拼读分裂词:Colonel 念 KER-nel、Admiral(上将)倒是老实。战争片、阅兵新闻、纪录片里军衔满天飞,提前知道这两个就不会懵。",
     "chunk": "Lef-tenant",
     "variants": [
       {
@@ -447,44 +426,16 @@
   {
     "id": "theatre-31",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:行动要提振的「士气」,战争剧的高频词",
-    "answer": "Morale — keeping morale up was half the war effort.",
-    "note": "morale(士气)注意和 moral(道德)只差一个字母,重音在后:mo-RALE。搭配:boost/keep up morale(提振士气)、morale is low(士气低落)。职场同样通用:team morale 是管理话题的常客。剧里战争大后方的广播、歌舞都是 morale 机器的一部分。",
-    "chunk": "Morale",
+    "scene": "meeting-disagree",
+    "prompt": "开会提醒:连续加班开始影响团队士气了",
+    "answer": "Fair warning — three weekends of overtime is starting to dent team morale.",
+    "note": "morale = 士气(重音在后:mo-RALE,别和 moral 道德混);dent = 撞出凹痕,dent morale 比 hurt 生动,量级又不到 destroy。fair warning = 把丑话说在前面。用具体事实(连续三个周末加班)托住判断,这句是提醒,不是发牢骚。",
+    "chunk": "morale",
     "variants": [
       {
-        "prompt": "开会说最近加班太多影响团队士气,用上这个词",
-        "answer": "Fair warning — three weekends of overtime is starting to dent team morale.",
-        "note": "fair warning = 把丑话说在前面(是预警,不是抱怨);dent = 撞出凹痕,dent morale = 挫伤士气——比 hurt 生动,量级又不到 destroy。用具体事实(连续三个周末加班)托住判断,这句在会上是提醒,不是发牢骚。"
-      }
-    ]
-  },
-  {
-    "id": "theatre-32",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 玩梗词:intelligence 在剧里被反复拿来做的双关是?",
-    "answer": "Intelligence means both spy work and brains — and MI5 keeps proving it only has the first kind.",
-    "note": "intelligence 双关:情报(military intelligence)与智力。剧里反复自嘲情报部门没有 intelligence(不聪明),这是英式喜剧最爱的老梗。相关词:espionage(谍报)、double agent(双面间谍)、decoy(诱饵)、cover story(掩护身份的说辞——职场里 cover story 也指对外口径)。",
-    "chunk": "Intelligence",
-    "variants": [
-      {
-        "prompt": "向朋友解释为什么「军事情报」在英语喜剧里是个自带笑点的词"
-      }
-    ]
-  },
-  {
-    "id": "theatre-33",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:剧里老派军官互相称呼的那种上流腔,比如「老伙计」",
-    "answer": "Old boy, old chap — the clipped, posh way the establishment talks to itself.",
-    "note": "old boy / old chap 是老派上流男性互称,自带俱乐部和公学(public school)气味;剧里用这种腔调讽刺 the establishment(建制精英圈)。posh = 上流做派;clipped(短促利落)形容那种含着元音的贵族口音。听到这些称呼,就是在给你标注人物的阶级。",
-    "chunk": "the establishment",
-    "variants": [
-      {
-        "prompt": "解释英剧里 old boy network(老同学关系网)指什么"
+        "prompt": "1:1 里跟经理说组里士气有点低,想聊聊原因",
+        "answer": "Morale's been a bit low on the team lately — worth a chat about what's driving it.",
+        "note": "morale is low = 士气低落;worth a chat about = 值得聊聊;what's driving it = 背后是什么在推(driver 的动词形态)。1:1 里点情绪问题,用「观察 + 邀请讨论」的姿势,不点名不指控。"
       }
     ]
   },
@@ -632,74 +583,60 @@
     "body": "名字先读顺(大写 = 重音):Orpheus = OR-fee-us、Eurydice = yoo-RID-uh-see、Hades = HAY-deez、Persephone = per-SEF-uh-nee、Hermes = HER-meez、命运三女神 the Fates 与 gates 押韵。读不准就点「名字发音课」那段对话,每个名字都能单独朗读。\n\n上半场:①Road to Hell——Hermes 报幕介绍所有人,他每次开口讲故事都爱用 See...(「你看」)起头,听到就知道是旁白;②Orpheus 一见钟情求婚(Come Home With Me),Eurydice 用 Wedding Song 泼冷水:婚床婚宴戒指哪里来?③Persephone 回人间,夏天狂欢(Livin' it Up on Top);④她被 Hades 提前接走,冬天骤至,Eurydice 挨饿,而 Orpheus 埋头写歌;⑤Hades 亲自递票(Hey, Little Songbird),Eurydice 在 When the Chips Are Down(命运三女神唱的「走投无路时」)里做出选择,下去了;⑥Orpheus 徒步追下去——Wait for Me,摇摆矿灯名场面;⑦Why We Build the Wall 收上半场。下半场:①Our Lady of the Underground——Persephone 在冥界开地下酒吧(中场后的暖场,气氛最松);②Eurydice 后悔(Flowers);③Orpheus 闯进来,If It's True 唤醒工人;④Epic III——他唱完 Hades 与 Persephone 年轻时的爱情,冥王动摇;⑤Hades 开出条件:他走前面,她跟在后,到地面前不许回头;⑥Doubt Comes In——路越走越黑,怀疑进来了;⑦他回头了。她说的最后一句是 it's you、他说 it's me,然后消失;⑧回到开场酒馆,Road to Hell 重唱:明知是悲歌,我们还是再唱一次——因为也许这一次结局会不同。这就是全剧最后留给你的那句话。"
   },
   {
-    "id": "theatre-44",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:每个行动都要起一个……?顺带这个行动名本身是个什么黑色幽默",
-    "answer": "A codename — and calling it Mincemeat, for a plan built on a corpse, is the grimmest joke in the room.",
-    "note": "codename = 行动代号。mincemeat 本意是做馅的碎肉/果料馅,而习语 make mincemeat of someone = 把人打得落花流水。给一具遗体的行动起名「肉馅」,是英国人黑色幽默的巅峰体现。grim = 冷峻黑暗(grim humour 黑色幽默)。",
-    "chunk": "A codename",
-    "variants": [
-      {
-        "prompt": "向朋友解释为什么这个行动代号本身就是个黑色笑话"
-      }
-    ]
-  },
-  {
     "id": "theatre-45",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 情节:整个计划成败悬于遗体在对的地点……?",
-    "answer": "Washing ashore — the whole plan hinges on the body washing ashore exactly where they want it.",
-    "note": "wash ashore = (被海水)冲上岸,新闻里漂浮物、遇难者报道的标准动词。hinge on = 成败系于(门轴的比喻),职场高频:The deal hinges on the pricing。一句话双份收获。",
-    "chunk": "washing ashore",
+    "scene": "presenting",
+    "prompt": "汇报里说明:整个项目成败就系在下周那个审批上",
+    "answer": "The whole project hinges on getting that approval next week.",
+    "note": "hinge on = 成败系于(门轴的比喻),后面接动名词:hinges on getting that approval。同义梯度:depends on(中性)< hinges on(命悬一线)。汇报里用它,听众立刻知道关键路径在哪。",
+    "chunk": "hinges on",
     "variants": [
       {
-        "prompt": "说「整个项目成败就系在这次审批上」,用 hinge on",
-        "answer": "The whole project hinges on getting that approval next week.",
-        "note": "hinge on 的职场版:the whole project hinges on X = 整个项目成败系于 X,后面接动名词(hinges on getting that approval)。同义梯度:depends on(中性)< hinges on(命悬一线)。汇报里用它,听众立刻知道关键路径在哪。"
+        "prompt": "说明整个时间表取决于数据迁移是否按时完成",
+        "answer": "The whole timetable hinges on the data migration landing on schedule.",
+        "note": "同一句式换了依赖项:landing on schedule = 按时落地(land 又一次出场)。把依赖关系说成 hinge,听众会自动把它标为最高风险项,追问也会围着它来——这正是你想要的。"
       }
     ]
   },
   {
     "id": "theatre-46",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:给假身份编的那套经得起盘问的说辞叫?",
-    "answer": "A cover story — one that has to hold up under questioning.",
-    "note": "cover story = 掩护身份的说辞;hold up under questioning = 经得起盘问(hold up = 站得住)。剧里给 Major Martin 编织的情书、票根、账单全是 cover story 的血肉。职场里 cover story 引申为对外口径——和你学过的 holding line 是亲戚。",
+    "scene": "email",
+    "prompt": "发给客户之前,问同事这套解释经不经得起追问",
+    "answer": "Before we send it — does this explanation hold up under questioning?",
+    "note": "hold up = 站得住(the argument doesn't hold up = 论证站不住);hold up under questioning = 经得起连环追问,questioning 泛指客户、审计、监管的盘问。发敏感邮件前的标准自检句。",
     "chunk": "hold up under questioning",
     "variants": [
       {
-        "prompt": "讨论对客户的解释口径是否经得起追问",
-        "answer": "Before we send it — does this explanation hold up under questioning?",
-        "note": "hold up under questioning 的职场版:发出去之前先自问「这套解释经得起追问吗」。hold up = 站得住(the argument doesn't hold up = 论证站不住);questioning 泛指客户、审计、监管的连环追问。发敏感邮件前的标准自检句。"
+        "prompt": "内审要来问流程细节,你提醒同事先把说法对齐",
+        "answer": "Let's make sure our version of events holds up under questioning before the auditors come knocking.",
+        "note": "version of events = 我们对事情经过的说法;come knocking = 找上门来(自带画面感)。对齐口径不是编故事,是确保大家讲的是同一件事——这条线的分寸词就是 hold up。"
       }
     ]
   },
   {
     "id": "theatre-47",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:保密原则「不该知道的就别知道」怎么说?",
-    "answer": "It's strictly need-to-know — and apparently we don't need to know.",
-    "note": "need-to-know 是情报界的保密原则,on a need-to-know basis = 只向必要的人透露。后半句的自嘲(显然我们不在名单上)是英式办公室的常用抱怨——公司重组的小道消息场景照搬可用。strictly = 严格地,加强版。",
+    "scene": "small-talk",
+    "prompt": "同事问你重组的内幕,你自嘲级别不够不知道",
+    "answer": "All very need-to-know at the moment — and clearly I don't need to know.",
+    "note": "need-to-know 是情报界的保密原则(on a need-to-know basis = 只向必要的人透露),平移到办公室:重组、并购的小道消息期人人都说这句。all very + 形容词是英式含蓄吐槽句式(all very hush-hush 同款);后半句自嘲把「我也没内幕」说得体面又好笑。",
     "chunk": "need-to-know",
     "variants": [
       {
-        "prompt": "同事问你新组织架构的内幕,你自嘲级别不够不知道",
-        "answer": "All very need-to-know at the moment — and clearly I don't need to know.",
-        "note": "all very + 形容词是英式含蓄吐槽的句式(all very hush-hush 同款);need-to-know 从情报术语平移到办公室:重组、并购的小道消息期人人都说这句。后半句自嘲 clearly I don't need to know,把「我也没内幕」说得体面又好笑。"
+        "prompt": "朋友问你们公司是不是要搬办公室,你说上面还捂着",
+        "answer": "If it's happening, it's strictly need-to-know — we'll be the last to hear.",
+        "note": "strictly need-to-know = 严格保密;we'll be the last to hear = 我们肯定是最后知道的,英式自嘲的标准结尾。传闻类话题,承认不知道 + 自嘲一句,比装知情高明得多。"
       }
     ]
   },
   {
     "id": "theatre-48",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 讽刺点:剧里一半的敌人不是纳粹,而是?",
-    "answer": "Paperwork and red tape — the British war machine runs on forms in triplicate.",
-    "note": "red tape = 官僚繁文缛节(旧时公文用红带子捆扎),英国人吐槽自家官僚主义的第一词。in triplicate = 一式三份(官僚梗)。这条讽刺线英国观众笑得最响,因为 NHS、签证、市政厅——人人都有 red tape 创伤。你办 visa 的经历就是入场券。",
+    "scene": "uk-life",
+    "prompt": "吐槽续签证的流程全是繁文缛节",
+    "answer": "The visa renewal is pure red tape — three forms all asking for the same thing.",
+    "note": "red tape = 官僚繁文缛节(旧时公文用红带子捆扎),英国人吐槽自家官僚主义的第一词。pure red tape = 纯纯的形式主义;用具体细节(三张表问同一件事)落地。NHS、市政厅、银行开户——人人都有 red tape 创伤,这句吐槽永远有共鸣。",
     "chunk": "red tape",
     "variants": [
       {
@@ -710,26 +647,12 @@
     ]
   },
   {
-    "id": "theatre-49",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 人物线:Jean 和 Hester 来自哪个部门——40 年代办公室真正的运转核心",
-    "answer": "The typing pool — the women who actually keep the whole operation running.",
-    "note": "typing pool = 打字员室,40 年代办公室的女性集中地,也是本剧最动人的暗线:真正把行动跑通的是被忽视的女性。Dear Bill(Hester 唱)就从这里长出来。相关词:shorthand(速记)、clerical work(文书工作)。这条线是全剧从爆笑转深情的枢纽,提前知道会看得更完整。",
-    "chunk": "The typing pool",
-    "variants": [
-      {
-        "prompt": "向朋友介绍这部剧里女性角色为什么是灵魂"
-      }
-    ]
-  },
-  {
     "id": "theatre-50",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 背景词:英国观众从小听到大的战时三件套——空袭、配给、灯火管制",
-    "answer": "The Blitz, rationing and the blackout — the home-front trinity every British audience grew up on.",
-    "note": "the Blitz = 1940-41 德军对伦敦大轰炸(闪电战 Blitzkrieg 的缩写);rationing = 食物配给(战后持续到 1954!);blackout = 灯火管制。这三个词是英国集体记忆的底色,剧里不解释直接用。home front = 大后方。祖辈的 Blitz spirit(轰炸精神=苦中作乐硬扛)至今是英国人自我认同的一部分。",
+    "scene": "culture",
+    "prompt": "英国人聊二战集体记忆的三件套——空袭、配给、灯火管制",
+    "answer": "The Blitz, rationing and the blackout — the home-front trinity every Brit grew up hearing about.",
+    "note": "the Blitz = 1940-41 德军对伦敦大轰炸(Blitzkrieg 闪电战的缩写);rationing = 食物配给(战后持续到 1954!);blackout = 灯火管制。home front = 大后方。这三个词是英国集体记忆的底色,纪录片、剧、日常谈话里不解释直接用;Blitz spirit(苦中作乐硬扛)至今是英国人自我认同的一部分。",
     "chunk": "The Blitz",
     "variants": [
       {
@@ -742,107 +665,48 @@
   {
     "id": "theatre-51",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 情节:遗体是怎么被送到西班牙海岸的?那个动词",
-    "answer": "A submarine surfaces off the Spanish coast and slips the body into the water.",
-    "note": "surface 作动词 = (潜艇)上浮;真实历史里执行的是皇家海军潜艇 HMS Seraph。slip = 悄悄放入。off the coast = 在近海(不是「离开海岸」)。surface 引申义职场也用:the issue resurfaced = 问题又冒出来了。",
-    "chunk": "surfaces",
+    "scene": "slack",
+    "prompt": "在群里报告:那个数据问题这周又冒出来了",
+    "answer": "That data issue has resurfaced this week, I'm afraid.",
+    "note": "resurface = (问题)再次冒头(原义潜艇上浮),老 bug、旧数据问题都用它,比 the problem happened again 高一个档位。I'm afraid 放句尾是英式报坏消息的软垫(恐怕是这样)。",
+    "chunk": "resurfaced",
     "variants": [
       {
-        "prompt": "说「这个老问题这周又冒出来了」,用 resurface",
-        "answer": "That data issue has resurfaced this week, I'm afraid.",
-        "note": "resurface = (问题)再次冒头,从潜艇上浮借来的职场高频词:老 bug、旧数据问题都用它。I'm afraid 放句尾是英式报坏消息的软垫(恐怕是这样)。比 the problem happened again 高一个档位。"
-      }
-    ]
-  },
-  {
-    "id": "theatre-52",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 词汇:搞到一具遗体,意味着要和太平间与殡葬人打交道",
-    "answer": "It means dealing with mortuaries and undertakers — awkwardly, and after hours.",
-    "note": "mortuary = 太平间;undertaker = 殡葬从业者(也叫 funeral director);coroner = 验尸官(此前学过)。真实历史中提供遗体的是伦敦验尸官 Bentley Purchase。after hours = 下班后/非工作时间(职场通用)。这条词汇线是上半场笑点最密的一段。",
-    "chunk": "undertakers",
-    "variants": [
-      {
-        "prompt": "用 after hours 说「这事只能下班后偷偷办」",
-        "answer": "That sort of favour gets sorted after hours, not in office time.",
-        "note": "after hours = 下班后、非办公时间;get sorted = 被搞定(英式万能动词 sort 的被动形态);that sort of favour = 那一类人情。整句自带心照不宣的语气——剧里太平间的交易,正是这么办成的。"
+        "prompt": "上个月修过的对账差异又出现了,你在群里报告并说明在查",
+        "answer": "The pricing break we fixed last month has resurfaced — digging into it now.",
+        "note": "break = 对账差异(运营行话,a reconciliation break);digging into it now = 正在深挖(dig into 调查)。报告问题的同时给出你的动作,是 Slack 报障的标准姿势。"
       }
     ]
   },
   {
     "id": "theatre-53",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 人物动机:办公室里一半人图的是什么——奖章、晋升、青史留名",
-    "answer": "Glory — medals, promotion, a mention in the history books.",
-    "note": "glory(荣耀)是 Montagu 一线的驱动力,Born to Lead 唱的就是它。相关词:medal(奖章)、decorated(受勋的)、legacy(身后名)。剧的后劲在于:最后被铭记的反而是无名的 Glyndwr Michael——glory 的讽刺闭环。职场版 glory:take the credit(抢功)。",
-    "chunk": "Glory",
+    "scene": "small-talk",
+    "prompt": "私下评价某位同事:更在意名头,不在意结果",
+    "answer": "He's chasing the glory more than the outcome, if we're honest.",
+    "note": "chase the glory = 追逐名头(chase 从催款平移到追名利);more than the outcome 点出对比。if we're honest 句尾 =「说句实在话」,给尖锐评价包一层布——批评了,但没上升到人品。同族:take the credit(抢功)。",
+    "chunk": "the glory",
     "variants": [
       {
-        "prompt": "评价某位同事做事更在意名头而不是结果",
-        "answer": "He's chasing the glory more than the outcome, if we're honest.",
-        "note": "chase the glory = 追逐名头(chase 从催款平移到追名利);more than the outcome 点出对比:图的是荣誉不是结果。if we're honest 句尾 =「说句实在话」,给尖锐评价包一层布。评价同事动机,这句分寸刚好:批评了,但没上升到人品。"
+        "prompt": "夸你们经理从不抢功,荣誉都归组员",
+        "answer": "To his credit, he never takes the glory — the team gets the credit every time.",
+        "note": "to his credit = 说句公道话/难得的是(先亮态度);take the glory / take the credit = 抢功;the team gets the credit = 荣誉归团队。夸领导夸在让功上,是英国职场最有分量的夸法之一。"
       }
     ]
   },
   {
     "id": "theatre-54",
     "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 背景:西班牙名义上是……,所以才成了递假情报的完美信箱",
-    "answer": "Officially neutral — which made it the perfect letterbox for planted secrets.",
-    "note": "neutral = 中立;officially(名义上)一词自带讽刺:佛朗哥的西班牙明面中立、实际亲德,情报会「恰好」流向柏林——整个计划赌的就是这个。planted = 故意放置的(plant evidence 栽赃/布饵)。letterbox 信箱的比喻很英式。",
-    "chunk": "Officially neutral",
+    "scene": "small-talk",
+    "prompt": "形容某位同事在两个部门的争端里「名义上中立」",
+    "answer": "He's officially neutral on this — though we all know which way he leans.",
+    "note": "officially neutral = 名义上中立,officially 一词自带心照不宣的讽刺。which way he leans:lean = 倾向(站队、政治立场都用 lean)。形容不表态的同事,英国人听了会心一笑。",
+    "chunk": "officially neutral",
     "variants": [
       {
-        "prompt": "形容某位同事在两个部门的争端里「名义上中立」",
-        "answer": "He's officially neutral on this — though we all know which way he leans.",
-        "note": "officially neutral 从战时西班牙平移到办公室政治:名义上中立。which way he leans:lean = 倾向(站队、政治立场都用 lean);though we all know... 是心照不宣的后半句。形容不表态的同事,英国人听了会心一笑。"
-      }
-    ]
-  },
-  {
-    "id": "theatre-55",
-    "type": "produce",
-    "scene": "theatre",
-    "prompt": "Mincemeat 语域:军官阶层满嘴的老派感叹词——「好极了」那一挂",
-    "answer": "Jolly good, splendid, first-rate — the officer class practically speaks in exclamation marks.",
-    "note": "jolly good / splendid / first-rate / marvellous 是老派上流感叹词,剧里密集出现,给人物盖阶级戳。现代英国人用它们多半带自嘲或反讽(说 jolly good 配面无表情)。听懂这个语域,Mincemeat 一半的阶级笑点就通了。",
-    "chunk": "Jolly good",
-    "variants": [
-      {
-        "prompt": "朋友问为什么英剧里贵族总说 splendid,你解释这套感叹词的阶级色彩"
-      }
-    ]
-  },
-  {
-    "id": "theatre-56",
-    "type": "note",
-    "scene": "theatre",
-    "title": "Operation Mincemeat 分幕剧情地图 + 人物表(五人演全员)",
-    "body": "人物(记住五个名字,反串和多角是常态):Ewen Montagu(读 YOO-en MON-tuh-gyoo)——主导行动的贵族军官,自信到自恋,Born to Lead 是他的歌;Charles Cholmondeley——发音是本剧头号梗,念 CHUM-lee,昆虫学书呆子,行动点子的真正来源;Hester Leggatt(读 HES-tuh LEG-it)——资深秘书,情书是她执笔,Dear Bill 是她的(也是全剧泪点);Jean Leslie——年轻打字员,她的照片成了遗体口袋里的「未婚妻 Pam」;还有各色配角(验尸官、司机、纳粹间谍、丘吉尔)全由同样五人闪电换装完成——换装本身就是笑点。剧情 beats:①MI5 办公室日常,Cholmondeley 提出「用一具尸体骗过希特勒」;②说服上级、搞到遗体(太平间线);③造人:军官证、情书、票根、当票,Major William Martin 诞生;④潜艇投放,遗体上岸;⑤西班牙拉锯:文件会不会被打开?会不会做 post-mortem?⑥情报进柏林,希特勒调兵希腊;⑦西西里登陆,伤亡远低于预期;⑧尾声:揭开遗体真名 Glyndwr Michael(威尔士名,读近似 GLIN-duh MY-kul)——一个无名流浪汉成了「从未存在过的人」,全场安静下来的时刻。节奏提示:上半场是爆笑机器,下半场笑着笑着就哭了;Dear Bill 响起时,放下理解歌词的执念,情绪全在旋律里。"
-  },
-  {
-    "id": "theatre-57",
-    "type": "pick",
-    "scene": "theatre",
-    "prompt": "英语习语 make mincemeat of someone 是什么意思?",
-    "options": [
-      {
-        "text": "把某人剁成肉馅做菜(字面)",
-        "correct": false
-      },
-      {
-        "text": "把对手打得落花流水、彻底碾压",
-        "correct": true
-      }
-    ],
-    "note": "make mincemeat of = 彻底击溃(辩论、比赛、军事都能用):Their lawyer made mincemeat of our argument。行动代号 Mincemeat 的弦外之音正在于此——这一次被做成肉馅的是希特勒的判断。看完剧,这个习语你就永远记住了。",
-    "variants": [
-      {
-        "prompt": "形容对方律师把我们的论点驳得体无完肤,用这个习语"
+        "prompt": "两个团队争方案,你表明自己保持中立不站队",
+        "answer": "I'm staying officially neutral on this one — I work with both teams.",
+        "note": "staying neutral = 保持中立;on this one = 在这件事上(缩小范围,不是永远和稀泥)。给出理由 I work with both teams,中立就成了职业判断而不是滑头。"
       }
     ]
   },
@@ -850,7 +714,7 @@
     "id": "theatre-58",
     "type": "listen",
     "scene": "theatre",
-    "title": "名字发音课:希腊众神与一个英国怪姓",
+    "title": "名字发音课:Hadestown 的希腊众神",
     "task": "别看文字先听一遍,专门听人名。听完点开文稿,每个名字都有单独的朗读按钮,跟读到顺口为止——周四晚上这些名字会被唱几十遍。",
     "cast": {
       "Maya": "f",
@@ -914,8 +778,8 @@
       },
       {
         "speaker": "Dan",
-        "text": "One more for Saturday: Operation Mincemeat has a Major Cholmondeley. Spelt 'chol', 'mon', 'de', 'ley' — said 'Chumley'. The show milks that joke, so you're ahead of the room.",
-        "zh": "再送你一个周六用的:Operation Mincemeat 里有位 Cholmondeley 少校。拼写是 chol-mon-de-ley,读出来却是 Chumley。剧里把这个梗玩到飞起,你先懂就赢在起跑线。"
+        "text": "You're set. Enjoy Thursday — and listen out for how Hermes sings every name before anyone else does.",
+        "zh": "稳了。周四好好享受——留意一下,每个名字都是 Hermes 第一个唱出来的。"
       }
     ],
     "highlights": [
@@ -942,10 +806,6 @@
       {
         "phrase": "The Fates",
         "gloss": "读 FAYTS,与 gates 押韵 · 命运三女神,三人和声从头缠到尾"
-      },
-      {
-        "phrase": "Cholmondeley",
-        "gloss": "读 CHUM-lee · Mincemeat 的书呆子主角,发音梗本梗"
       }
     ],
     "quiz": [
